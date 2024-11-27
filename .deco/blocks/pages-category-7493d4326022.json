@@ -1,0 +1,49 @@
+{
+  "name": "Busca",
+  "path": "/s",
+  "default": {
+    "possiblePaths": []
+  },
+  "sections": [
+    {
+      "jsonLD": {
+        "__resolveType": "Preview vtex/loaders/intelligentSearch/productListingPage.ts"
+      },
+      "__resolveType": "commerce/sections/Seo/SeoPLP.tsx"
+    },
+    {
+      "__resolveType": "Header"
+    },
+    {
+      "__resolveType": "site/sections/Product/SearchResult.tsx",
+      "page": {
+        "__resolveType": "Preview vtex/loaders/intelligentSearch/productListingPage.ts"
+      },
+      "layout": {
+        "columns": {
+          "mobile": 2,
+          "desktop": 4
+        },
+        "variant": "aside",
+        "pagination": "pagination"
+      },
+      "startingPage": 1
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Deals"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Newsletter"
+      }
+    },
+    {
+      "__resolveType": "Footer Component"
+    }
+  ],
+  "__resolveType": "website/pages/Page.tsx"
+}

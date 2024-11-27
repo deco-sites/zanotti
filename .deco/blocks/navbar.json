@@ -1,0 +1,9 @@
+{
+  "items": [
+    {
+      "children": [],
+      "image": []
+    }
+  ],
+  "__resolveType": "commerce/loaders/navbar.ts"
+}

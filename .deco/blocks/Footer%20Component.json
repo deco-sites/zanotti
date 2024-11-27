@@ -1,0 +1,238 @@
+{
+  "__resolveType": "site/sections/Footer/Footer.tsx",
+  "links": [
+    {
+      "children": [
+        {
+          "title": "Fale Conosco",
+          "href": "/fale-conosco"
+        },
+        {
+          "href": "/faq",
+          "title": "FAQ"
+        },
+        {
+          "href": "/politicas-de-pagamentos",
+          "title": "Política de pagamento"
+        },
+        {
+          "title": "Prazos de Entrega",
+          "href": "/politica-de-entrega"
+        },
+        {
+          "title": "Trocas e Devoluções",
+          "href": "/politica-de-troca-e-devolucao"
+        }
+      ],
+      "href": "/fale-conosco",
+      "title": "Atendimento"
+    },
+    {
+      "title": "Institucional",
+      "children": [
+        {
+          "title": "Nossa História",
+          "href": "/nossa-historia"
+        },
+        {
+          "title": "Termos de Uso",
+          "href": "/termos-de-uso"
+        },
+        {
+          "title": "Política de Privacidade",
+          "href": "/politica-de-privacidade"
+        },
+        {
+          "title": "Lojas",
+          "href": "/lojas"
+        }
+      ],
+      "href": "https://sac.allever.com/hc/pt-br/articles/11992913554836-Sobre-a-allever"
+    },
+    {
+      "title": "Fale conosco",
+      "children": [
+        {
+          "title": "(43) 3520-500"
+        },
+        {
+          "title": "08:00 às 18:00 segunda a sexta"
+        },
+        {
+          "title": "08:00 às 12:00 aos sábados"
+        },
+        {
+          "title": "faleconosco@eletrotrafo.com.br",
+          "href": "mailto:faleconosco@eletrotrafo.com.br"
+        }
+      ]
+    },
+    {
+      "title": "Marcas mais buscadas",
+      "children": [
+        {
+          "title": "Gopro",
+          "href": "#"
+        },
+        {
+          "title": "Nintendo",
+          "href": "#"
+        },
+        {
+          "title": "Xiomi",
+          "href": "#"
+        },
+        {
+          "title": "Philips Walita",
+          "href": "#"
+        },
+        {
+          "title": "Philips",
+          "href": "#"
+        },
+        {
+          "title": "Sony",
+          "href": "#"
+        },
+        {
+          "title": "Nikon",
+          "href": "#"
+        },
+        {
+          "title": "Canon",
+          "href": "#"
+        },
+        {
+          "title": "Motorola",
+          "href": "#"
+        },
+        {
+          "title": "Multi",
+          "href": "#"
+        }
+      ],
+      "href": "#"
+    }
+  ],
+  "social": [
+    {
+      "alt": "Instagram",
+      "href": "https://www.instagram.com/eletrotrafo.loja/",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/fbdfdfcb-c7c3-418d-8f7c-b7adbd891bd6",
+      "title": "Instagram"
+    },
+    {
+      "alt": "X",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/e1261d5e-5119-4649-8477-dafc77c93c43",
+      "href": "https://x.com/eletrotrafo",
+      "title": "X"
+    },
+    {
+      "alt": "linkedin",
+      "href": "https://br.linkedin.com/company/eletrotrafo",
+      "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/allever-store/8d8afe41-92e0-4f58-9476-b62b4e564e66/XMLID_801_.svg",
+      "title": "Linkedin"
+    },
+    {
+      "alt": "facebook",
+      "href": "https://www.facebook.com/Eletrotrafo",
+      "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/eletrotrafo/a74ea30f-db35-4e89-b23e-37705c5b4df3/facebook.svg",
+      "title": "Facebook"
+    }
+  ],
+  "paymentMethods": {
+    "0": {
+      "alt": "Visa",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/366fdd13-128f-4b25-857d-ef02a8dfebbc"
+    },
+    "1": {
+      "alt": "Mastercard",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/c8c528ca-f983-4f51-a429-1bd7eec794c4"
+    },
+    "2": {
+      "alt": "Pix",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/cb3cf85e-9c15-4d38-b1fa-ef184c6fd3a8",
+      "href": "#"
+    },
+    "title": "Formas de Pagamento",
+    "paymentMethods": [
+      {
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/366fdd13-128f-4b25-857d-ef02a8dfebbc",
+        "alt": "Visa"
+      },
+      {
+        "alt": "Mastercard",
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/c8c528ca-f983-4f51-a429-1bd7eec794c4"
+      },
+      {
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/cb3cf85e-9c15-4d38-b1fa-ef184c6fd3a8",
+        "alt": "Pix"
+      }
+    ]
+  },
+  "policies": [
+    {
+      "title": "Privacy Policy",
+      "href": "#"
+    },
+    {
+      "title": "Terms and Conditions",
+      "href": "#"
+    },
+    {
+      "title": "Cookies Policy",
+      "href": "#"
+    }
+  ],
+  "logo": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/eletrotrafo/cfa48c09-1f71-4b59-8238-7ee5feef5e36/dark-logo.svg",
+  "trademark": "Os preços e condições de pagamento apresentados neste “site” somente são válidos para as compras efetuadas no ato da sua exibição. Apenas aos pedidos efetivamente formulados e aceitos não se aplicarão eventuais alterações posteriores de preço. Em caso de divergência de preços no site, o valor válido é o do Carrinho de Compras. Allever Ltda - CNPJ: 43.757.816/0001-77 - Rua Francisco Regin, 339, Centro, Cornélio Procópio, PR, CEP - 86300-000 - faleconosco@allever.com - (11) 4200-0010 - Todos os direitos reservados.",
+  "service": {
+    "title": "SAC",
+    "label": "Acesse nossa área de atendimento",
+    "button": {
+      "label": "Atendimento",
+      "link": "https://sac.allever.com/hc/pt-br"
+    }
+  },
+  "copyright": "Os preços e condições de pagamento apresentados neste “site” somente são válidos para as compras efetuadas no ato da sua exibição. Apenas aos pedidos efetivamente formulados e aceitos não se aplicarão eventuais alterações posteriores de preço. Em caso de divergência de preços no site, o valor válido é o do Carrinho de Compras. Allever Ltda - CNPJ: 43.757.816/0001-77 - Rua Francisco Regin, 339, Centro, Cornélio Procópio, PR, CEP - 86300-000 - faleconosco@allever.com - (11) 4200-0010 - Todos os direitos reservados.",
+  "certified": {
+    "0": {
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/6cf82172-b8fe-4e7c-85c3-7779f0b4ee09",
+      "title": "Selo reclame aqui",
+      "height": 67,
+      "width": 200
+    },
+    "1": {
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/72aeae9f-c846-4a17-b650-fc384f90dab1",
+      "title": "Safe Browsing",
+      "width": 104,
+      "height": 32
+    },
+    "2": {
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/680d5a5e-0f85-459a-9134-b48158a2d272",
+      "width": 50,
+      "height": 53,
+      "title": "Selo Confi"
+    },
+    "3": {
+      "title": "Selo Lets Encrypt",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/91588077-b0db-42a2-9c26-231de0e6c885",
+      "width": 130,
+      "height": 29
+    },
+    "title": "Certificados",
+    "certifieds": [
+      {
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/6d5ae7c2-de9a-4f63-a3c8-4710c55a14aa",
+        "alt": "Lets Encrypt selo",
+        "width": 135,
+        "height": 32,
+        "link": "https://letsencrypt.org/"
+      },
+      {
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/eletrotrafo/745bc6a1-ce31-4714-b22d-0d8e9472de6a/pci.png"
+      }
+    ],
+    "hideSeal": false
+  }
+}

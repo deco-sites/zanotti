@@ -1,0 +1,85 @@
+{
+  "seo": {
+    "type": "website",
+    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/eletrotrafo/cfa48c09-1f71-4b59-8238-7ee5feef5e36/dark-logo.svg",
+    "title": "Eletrotrafo",
+    "jsonLDs": [],
+    "noIndexing": false,
+    "description": "A Eletrotrafo atua há mais de 30 anos na distribuição de materiais elétricos de baixa, média e alta tensão. Embora seja considerada especialista no mercado de material elétrico, a Eletrotrafo oferece em seu catálogo uma grande variedade de produtos, dos mais diversos departamentos.",
+    "favicon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/eletrotrafo/1c846a7d-728f-45d1-ad1e-2bf36ba52003/favicon.ico",
+    "themeColor": "#163970",
+    "descriptionTemplate": "%s",
+    "titleTemplate": "%s"
+  },
+  "theme": {
+    "__resolveType": "Deco"
+  },
+  "global": [
+    {
+      "__resolveType": "htmx/sections/htmx.tsx"
+    },
+    {
+      "__resolveType": "website/sections/Analytics/Analytics.tsx",
+      "dangerouslyRunOnMainThread": true,
+      "trackingIds": []
+    },
+    {
+      "__resolveType": "analytics/sections/Analytics/DecoAnalytics.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Session.tsx",
+      "minicart": null,
+      "wishlist": null,
+      "mode": "lazy",
+      "user": null
+    }
+  ],
+  "routes": [
+    {
+      "__resolveType": "vtex/loaders/proxy.ts",
+      "extraPathsToProxy": [],
+      "includeSiteMap": [],
+      "excludePathsFromDecoSiteMap": []
+    },
+    {
+      "__resolveType": "website/loaders/pages.ts"
+    },
+    {
+      "__resolveType": "website/loaders/redirects.ts"
+    }
+  ],
+  "caching": {
+    "directives": []
+  },
+  "commerce": {
+    "platform": "vtex",
+    "defaultSegment": {
+      "channelPrivacy": "public"
+    },
+    "salesChannel": "1"
+  },
+  "platform": "vtex",
+  "__resolveType": "site/apps/site.ts",
+  "firstByteThresholdMS": true,
+  "abTesting": {
+    "replaces": [],
+    "includeScriptsToHead": {
+      "includes": []
+    }
+  },
+  "flavor": {
+    "framework": "htmx"
+  },
+  "vtex": {
+    "sp": {},
+    "io": {},
+    "vcs": {},
+    "api": {},
+    "my": {}
+  },
+  "newsFlag": "145",
+  "shelfFlag1": "163",
+  "promoFlag": "145",
+  "internationalFlag": "145",
+  "minicartSuggestion": "145"
+}

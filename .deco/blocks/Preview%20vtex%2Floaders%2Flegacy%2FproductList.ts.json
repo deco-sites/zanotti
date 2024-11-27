@@ -1,0 +1,8 @@
+{
+  "__resolveType": "vtex/loaders/legacy/productList.ts",
+  "props": {
+    "sort": "OrderByPriceDESC",
+    "term": "painel",
+    "count": 4
+  }
+}

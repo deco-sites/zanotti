@@ -1,0 +1,23 @@
+{
+  "__resolveType": "website/pages/Page.tsx",
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "sections": [
+    {
+      "__resolveType": "Header"
+    },
+    {
+      "__resolveType": "site/sections/Institutional/Text.tsx",
+      "html": "<h1>Lojas</h1><p></p><h3><strong>Cornélio Procópio - PR</strong></h3><p>Av. Dr. Francisco Lacerda Jr., 1551 - Centro - CEP 86.300-000</p><p>E-mail: <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"mailto:cornelio@eletrotrafo.com.br\">cornelio@eletrotrafo.com.br</a></p><p>(43) 3520-5000</p><p></p><h3><strong>Guarapuava - PR</strong></h3><p>Av. Manoel Ribas, 4500 - Bairro Conradinho - CEP 85.055-010</p><p>E-mail: <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"mailto:guarapuava@eletrotrafo.com.br\">guarapuava@eletrotrafo.com.br</a></p><p>(42) 3629-9800</p><p></p><h3><strong>Londrina - PR</strong></h3><p>Av. Tiradentes, 1340 - Jd. Shangri-lá - CEP 86.070-000</p><p>E-mail: <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"mailto:londrina@eletrotrafo.com.br\">londrina@eletrotrafo.com.br</a></p><p>(43) 3294-5000</p><p></p><h3><strong>Pato Branco - PR</strong></h3><p>Av. Tupi, 4497 - Jd. Cristo Rei - CEP 85-507-513</p><p>E-mail: <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"mailto:patobranco@eletrotrafo.com.br\">patobranco@eletrotrafo.com.br</a></p><p>(46) 3225-5555</p><p></p><h3><strong>Telêmaco Borba - PR</strong></h3><p>Av. Paraná, 1005 - Centro - CEP 84.261-060</p><p>e-mail: <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"mailto:telemacoborba@eletrotrafo.com.br\">telemacoborba@eletrotrafo.com.br</a></p><p>(42) 3273-7000</p>"
+    },
+    {
+      "__resolveType": "Newsletter"
+    },
+    {
+      "__resolveType": "Footer Component"
+    }
+  ],
+  "name": "Lojas",
+  "path": "/lojas"
+}

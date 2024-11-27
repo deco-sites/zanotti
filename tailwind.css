@@ -1,0 +1,266 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Allow changing font family via CMS */
+  html {
+    font-size: 16px;
+    font-family: var(--font-family);
+    scroll-behavior: smooth;
+  }
+
+  html, body {
+    @apply text-black;
+  }
+
+  /** Remove default styles from input[type=number] */
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Disable scroll once drawer/modal is openned */
+  body:has(.drawer-toggle:checked),
+  body:has(.modal-toggle:checked) {
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+
+    @screen lg {
+      max-width: 1440px;
+    }
+  }
+}
+
+@layer utilities {
+  .is-scrolled #header {
+    @apply top-0 fixed bg-primary;
+  }
+
+  .is-homepage #header {
+    @apply fixed;
+  }
+
+  .is-otherpage #header {
+    @apply bg-primary;
+  }
+
+  .fluid-text br {
+    @apply block mt-3;
+    content: "";
+  }
+  
+  .fluid-text a {
+    @apply text-primary font-bold underline;
+  }
+  
+  .fluid-text h1 {
+    @apply text-black my-6 text-3xl font-semibold uppercase;
+  }
+  
+  .fluid-text h2 {
+    @apply text-primary mt-6 mb-3 text-lg font-semibold uppercase;
+  }
+  
+  .fluid-text h3,
+  .fluid-text h4 {
+    @apply text-primary mt-6 mb-2 text-base font-semibold uppercase;
+  }
+  
+  .fluid-text ul {
+    margin: 12px 0 12px 10px;
+    list-style: inside;
+  }
+  
+  .fluid-text li {
+    @apply my-2;
+  }
+  
+  .fluid-text p,
+  .fluid-text p span {
+    @apply my-2 !text-sm;
+  }
+  
+  @media (max-width: 1024px) {
+    .fluid-text h1 {
+      @apply text-xl mt-6 mb-3;
+    }
+  
+    .fluid-text h2,
+    .fluid-text h3,
+    .fluid-text h4 {
+      @apply text-base mt-3 my-2;
+    }
+    
+    .fluid-text li {
+      @apply text-xs;
+    }
+    
+    .fluid-text p,
+    .fluid-text p span {
+      @apply !text-xs;
+    }
+  }
+}
+
+.group:disabled .group-disabled\:animate-progress {
+  animation: progress-frame ease normal
+}
+
+@keyframes progress-frame {
+  0% {
+    --dot-progress: 0%
+  }
+
+  to {
+    --dot-progress: 100%
+  }
+}
+.space-between {
+  justify-content: space-between;
+}
+
+.drawer {
+  width: unset !important;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 0; /* Oculta a barra de rolagem */
+  height: 0;
+}
+
+.custom-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;    /* Firefox */
+}
+
+.cursor-grab {
+  cursor: grab;
+}
+
+.cursor-grabbing {
+  cursor: grabbing;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused; 
+}
+
+@media (min-width: 1024px) {
+  .search-bar-wrapper {
+    transition: max-width 250ms linear;
+  }
+
+  .search-bar-wrapper .suggestions-wrapper {
+    top: 19px;
+    left: -1px;
+    width: 100%;
+    display: block;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .search-bar-container {
+    z-index: 2;
+    position: relative;
+  }
+
+  .search-bar-wrapper:hover .suggestions-wrapper {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .search-bar-wrapper form {
+    width: 100%;
+    /* display: flex; */
+    /* max-width: 300px; */
+    /* transition: max-width 250ms linear; */
+    /* justify-content: flex-end; */
+  }
+
+  .search-bar-wrapper form > input {
+    /* width: 50vw;
+    max-width: 100%; */
+    width: 100%;
+  }
+
+  .search-bar-wrapper:hover form {
+    /* max-width: 100%; */
+  }
+
+  .main-logo {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Fix Safari issue related to <summary> / <details> arrow */
+details>summary::-webkit-details-marker,
+details>summary::marker {
+  display: none;
+}
+
+/* This used to work for the parent element of button divs */
+/* But it does not work with newer browsers, the below doesn't hide the play button parent div */
+
+*::-webkit-media-controls-panel {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+/* Old shadow dom for play button */
+
+*::-webkit-media-controls-play-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+/* New shadow dom for play button */
+/* This one works! */
+
+*::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+.ts-shelf-right.ts-shelf-rate-count.ts-shelf-rate-disabled {
+  display: none !important;
+}

@@ -1,0 +1,18 @@
+{
+  "__resolveType": "site/apps/deco/vtex.ts",
+  "defaultSegment": {
+    "channelPrivacy": "public"
+  },
+  "platform": "vtex",
+  "account": "eletrotrafo",
+  "appKey": {
+    "__resolveType": "website/loaders/secret.ts",
+    "encrypted": "4b801831c94b2d250517dbc5c28aeee506c08d856c2e4459c7f8b6ceec65cb17"
+  },
+  "appToken": {
+    "__resolveType": "website/loaders/secret.ts",
+    "encrypted": "61eacc315e45b0b43e63cace74be2a56e5f135711eae0cda69ac72217a1f6d51e0c02e4c2806f527151a868af0aa823f6482265c8be1ab3e5756b3a45773e110f62c34a727258029c556b2f22f29af3efe392ccbf6f71ede586dbf2d181de80148cc4579e797180b80714030a660d49236b46e97dd716e5422627fbd205e52f8b7245d249053033912c54b09ed034d3f"
+  },
+  "salesChannel": "1",
+  "publicUrl": "www.eletrotrafo.com.br"
+}

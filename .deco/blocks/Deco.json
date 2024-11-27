@@ -1,0 +1,51 @@
+{
+  "__resolveType": "site/sections/Theme/Theme.tsx",
+  "buttonStyle": {
+    "--border-btn": "1px",
+    "--rounded-btn": "2rem",
+    "--btn-focus-scale": "1",
+    "--animation-btn": "0.25s"
+  },
+  "font": {
+    "__resolveType": "website/loaders/fonts/googleFonts.ts",
+    "fonts": [
+      {
+        "variations": [
+          {
+            "weight": "400"
+          },
+          {
+            "weight": "500"
+          }
+        ],
+        "family": "Poppins"
+      }
+    ]
+  },
+  "colorScheme": "any",
+  "otherStyles": {
+    "--rounded-box": "11px",
+    "--rounded-badge": "6px",
+    "--animation-input": "0.2s",
+    "--tab-border": "1px",
+    "--tab-radius": "0.5rem"
+  },
+  "mode": "dark",
+  "mainColors": {
+    "primary": "#163970",
+    "base-100": "#FFFFFF",
+    "secondary": "#FFF",
+    "success": "#219259",
+    "warning": "#a39e0f",
+    "error": "#d10a0a",
+    "info": "#3c4cc8",
+    "neutral": "#2D2A2B",
+    "tertiary": "#2D2A2B"
+  },
+  "complementaryColors": {
+    "primary-content": "#ffffff",
+    "base-200": "#FAFAFA",
+    "base-300": "#5C5C5C",
+    "base-content": "#000000"
+  }
+}

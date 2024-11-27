@@ -1,0 +1,21 @@
+{
+  "__resolveType": "site/sections/Header/Header.tsx",
+  "alerts": [],
+  "navItems": [],
+  "searchbar": {
+    "loader": {
+      "data": {
+        "searches": [],
+        "products": []
+      },
+      "__resolveType": "resolved"
+    }
+  },
+  "logo": {
+    "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/eletrotrafo/089321b4-b628-4c2a-8bb4-ab87919cbe33/logo.svg",
+    "alt": "Eletrotrafo",
+    "width": 140,
+    "height": 33
+  },
+  "variant": "initial"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Fale Conosco",
+  "path": "/fale-conosco",
+  "sections": [
+    {
+      "__resolveType": "Header"
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institutional/Text.tsx",
+        "html": "<h1>Fale Conosco</h1><p>(43) 3520-5000 </p><p>08:00 às 18:00 segunda a sexta </p><p>08:00 às 12:00 aos sábados </p><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"mailto:faleconosco@eletrotrafo.com.br\">faleconosco@eletrotrafo.com.br</a></p>"
+      }
+    },
+    {
+      "__resolveType": "site/sections/Institutional/Form.tsx"
+    },
+    {
+      "__resolveType": "Deals"
+    },
+    {
+      "__resolveType": "Newsletter"
+    },
+    {
+      "__resolveType": "Footer Component"
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

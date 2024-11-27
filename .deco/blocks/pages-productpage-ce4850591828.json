@@ -1,0 +1,81 @@
+{
+  "name": "Product Page",
+  "path": "/:slug/p",
+  "default": {
+    "possiblePaths": []
+  },
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header"
+      }
+    },
+    {
+      "__resolveType": "site/sections/Product/ProductDetails.tsx",
+      "page": {
+        "__resolveType": "commerce/loaders/product/extensions/detailsPage.ts",
+        "data": {
+          "__resolveType": "vtex/loaders/legacy/productDetailsPage.ts",
+          "slug": {
+            "__resolveType": "website/functions/requestToParam.ts",
+            "param": "slug"
+          }
+        },
+        "extensions": [],
+        "seo": {
+          "noIndexing": false
+        },
+        "product": {
+          "isAccessoryOrSparePartFor": []
+        }
+      },
+      "buyTogether": {
+        "__resolveType": "Preview vtex/loaders/intelligentSearch/productList.ts"
+      },
+      "hiddenShipping": false
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelf.tsx",
+        "products": {
+          "__resolveType": "vtex/loaders/legacy/relatedProductsLoader.ts",
+          "crossSelling": "whosawalsosaw",
+          "count": 10,
+          "slug": {
+            "__resolveType": "website/functions/requestToParam.ts",
+            "param": "slug"
+          }
+        },
+        "title": "Quem viu, viu também"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Spacer.tsx",
+        "size": "medium"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Newsletter"
+      }
+    },
+    {
+      "__resolveType": "Footer Component"
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "commerce/sections/Seo/SeoPDP.tsx",
+        "jsonLD": {
+          "__resolveType": "PDP Loader"
+        }
+      }
+    }
+  ],
+  "__resolveType": "website/pages/Page.tsx"
+}

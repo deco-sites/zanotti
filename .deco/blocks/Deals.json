@@ -1,0 +1,34 @@
+{
+  "__resolveType": "site/sections/Images/Deals.tsx",
+  "deals": [
+    {
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/3f4f2d50-989d-435e-8d74-7544c58e7c9b",
+      "label": "Ambiente seguro e certificado",
+      "title": "Compra segura",
+      "width": 48,
+      "height": 48
+    },
+    {
+      "title": "Parcelamento",
+      "label": "Em até 21x",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/35f7795a-b79e-4b84-a866-23d68244438b",
+      "width": 39,
+      "height": 39
+    },
+    {
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/b5b98d9c-6c84-433b-8fe9-88d94033effc",
+      "title": "Até 2 cartões",
+      "label": "Use até 2 cartões no seu pagamento",
+      "width": 43,
+      "height": 43
+    },
+    {
+      "label": "Em até 7 dias",
+      "title": "Devolva grátis",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/ccdb94b6-e186-4e7a-952f-ee0be220cea5",
+      "width": 30,
+      "height": 30
+    }
+  ],
+  "preload": true
+}

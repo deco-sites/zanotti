@@ -1,0 +1,254 @@
+{
+  "name": "Faq",
+  "path": "/faq",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Spacer.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institutional/Text.tsx",
+        "html": "<p>Atendimento <br><br><strong><span style=\"color: rgb(45, 42, 43); font-size: 16pt\">FAQ</span></strong><br><strong><span style=\"color: rgb(22, 57, 112)\"><br>Para visitar nossa página de ajuda,&nbsp;</span></strong><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://eletrotrafo.zendesk.com/hc/pt-br\"><strong><u><span style=\"color: rgb(45, 42, 43)\">Clique Aqui.</span></u></strong></a></p>"
+      }
+    },
+    {
+      "__resolveType": "site/sections/Institutional/Faq.tsx",
+      "faq": [
+        {
+          "questions": [
+            {
+              "question": "<p>Consigo rastrear o status da minha Compra?</p>",
+              "response": "<p>Sim. As informações mais atualizadas sobre sua Compra e a situação de entrega de sua Compra estão disponíveis em Meus pedidos. Além disso, você será notificado do andamento do seu pedido pelo e-mail informado.</p>"
+            },
+            {
+              "question": "<p>Qual a empresa responsável pela entrega da minha Compra?</p>",
+              "response": "<p>A escolha de qual destas empresas será responsável pelo transporte de seu pedido caberá exclusivamente à ELETROTRAFO PRODUTOS ELÉTRICOS LTDA, não tendo o Cliente nenhuma influência sobre tal decisão.</p>"
+            },
+<<<<<<< HEAD
+            {},
+            {},
+            {
+              "question": "<p><strong>Como criar uma Conta de Acesso?</strong><br></p>",
+              "response": "<p>Para se cadastrar, basta realizar uma compra, e suas informações serão solicitadas durante o processo. Na sua próxima compra você vai precisar lembrar apenas de seu e-mail.</p><p><br></p>"
+=======
+            {
+              "question": "<p>Posso adicionar outro produto à Compra que eu fiz?<br></p>",
+              "response": "<p>Depois de finalizada, você tem 10 minutos para realizar alterações em seu pedido. Em caso de dúvida, entre em contato com o SAC (Central de Atendimento ELETROTRAFO PRODUTOS ELÉTRICOS LTDA) por telefone (043) 3520-5000 ou pelos outros meios de atendimento disponibilizados. .</p>"
+            },
+            {
+              "question": "<p>Não recebi todos os itens da minha Compra. O que faço?<br></p>",
+              "response": "<p>Entre em contato com o nosso SAC (Central de Atendimento ELETROTRAFO PRODUTOS ELÉTRICOS LTDA) por telefone (043) 3520-5000 ou pelos outros meios de atendimento disponibilizados.</p>"
+            },
+            {
+              "question": "<p>Posso efetuar uma Compra no Site com CNPJ?<br></p>",
+              "response": "<p>Sim, estamos trabalhando com esta opção, basta selecionar no checkout a opção \"Incluir dados de pessoa jurídica\"</p>"
+            },
+            {
+              "question": "<p>Como faço para confirmar a disponibilidade de um produto no estoque?<br></p>",
+              "response": "<p>No Site, se houver carrinho de compras visível no momento da finalização do pedido, significa que há estoque do produto.</p>"
+            },
+            {
+              "question": "<p>Posso fazer minha Compra no Site e buscar os produtos adquiridos na loja física?<br></p>",
+              "response": "<p>Sim, no momento do checkout, se disponível para seu CEP, a opção retire na loja ira aparecer. O produto ficará disponível para retirada por 15 dias corridos após prazo de disponibilidade. Para retirar o produto, o cliente devera levar nota fiscal e documento com foto, não entregamos para terceiros, somente para o titular da nota.</p>"
+            },
+            {
+              "question": "<p>Qualquer pessoa pode receber em casa o produto que eu comprei?<br></p>",
+              "response": "<p>Sim, desde que seja maior de idade, esteja munido de um documento de identificação e assine o protocolo de entrega.</p>"
+            },
+            {
+              "question": "<p>Existe um valor mínimo de pedido?<br></p>",
+              "response": "<p>Sim, o valor mínimo para o pedido é de R$10,00.</p>"
+            },
+            {
+              "question": "<p>A ELETROTRAFO PRODUTOS ELÉTRICOS LTDA faz entrega parcial?<br></p>",
+              "response": "<p>Sim, os envios dos produtos podem ser separados, em caso de duvidas entre em contato.</p>"
+            },
+            {
+              "question": "<p>Posso alterar o endereço da entrega?<br></p>",
+              "response": "<p><span style=\"color: #888888; font-size: 14px\">Depois de finalizada, você tem 60 minutos para realizar alterações em seu pedido. Em caso de dúvida, entre em contato com o SAC (Central de Atendimento ELETROTRAFO PRODUTOS ELÉTRICOS LTDA) por telefone (043) 3520-5000 ou pelos outros meios de atendimento disponibilizados.</span></p>"
+            },
+            {
+              "question": "<p>Como é calculado o frete para meu pedido?<br></p>",
+              "response": "<p><span style=\"color: #888888\">O valor do frete é calculado automaticamente, a partir dos produtos selecionados e do CEP da entrega do Cliente. A informação do valor do frete já calculado para determinado endereço e determinados produtos aparece para o Cliente no momento de finalização da Compra no Site.</span></p><p><span style=\"color: #888888\"><br></span></p>"
+            },
+            {
+              "question": "<p>Eu consigo mandar uma parte da Compra para um endereço e outra parte para outro?<br></p>",
+              "response": "<p>Não. Todos os produtos adquiridos em determinada Compra serão entregues conjuntamente, no mesmo endereço. Para enviar produtos para dois endereços diferentes, será necessário realizar duas Compras diferentes, em momentos distintivos.</p>"
+            },
+            {
+              "question": "<p>Posso incluir ou excluir produtos do carrinho de compras?<br></p>",
+              "response": "<p>Sim, mas apenas até a finalização da Compra no Site. Para incluir, basta clicar no mais e, para excluir, na lixeira. Para alterar a quantidade de produtos dentro do carrinho de compras é necessário que você coloque a quantidade (em números) que você deseja adquirir.</p>"
+            },
+            {
+              "question": "<p>Posso retomar um carrinho de compras?</p>",
+              "response": "<p>Sim, desde que os produtos nele indicados ainda estejam disponíveis em estoque, será possível recuperar o carrinho de compras e finalizar a Compra.</p>"
+            }
+          ],
+          "title": "Dúvidas em Geral"
+        },
+        {
+          "questions": [
+            {
+              "question": "<p>Quais são os meios de pagamentos disponíveis?<br></p>",
+              "response": "<p>No momento, o Site aceita: Cartões de crédito emitidos no Brasil de bandeiras: Visa, American Express, HiperCard, Diners, Credz, JCB, Mastercard e Elo. Também aceitamos pagamentos via: Apple Pay. PIX. PicPay via SpinPay. TED - Transferencia Bancaria via PayMee. Boleto, ou debito em conta para clientes Itau, basta clicar em boleto e selecionar Debito em Conta. <strong>Boleto não tem desconto á vista.</strong> Formas de pagamento sujeitas a disponibilidade no checkout e compatibilidade no seu navegador</p><p><br></p>"
+            },
+            {
+              "question": "<p>Qual o procedimento se houver pagamento em duplicidade?<br></p>",
+              "response": "<p>Você pode entrar em contato com o SAC (Central de Atendimento ELETROTRAFO PRODUTOS ELÉTRICOS LTDA) por telefone (043) 3520-5000 ou pelos outros meios de atendimento disponibilizados. Neste contato, você poderá solicitar o cancelamento do pagamento duplicado. Após análise, a ELETROTRAFO PRODUTOS ELÉTRICOS LTDA requererá à operadora do cartão que faça o estorno, se devido.</p><p><br></p>"
+            },
+            {
+              "question": "<p>E se o meu pagamento não for aprovado?<br></p>",
+              "response": "<p>Você será notificado em e sua compra será cancelada.</p><p><br></p>"
+            },
+            {
+              "question": "<p>Qual é o prazo de aprovação da Compra?<br></p>",
+              "response": "<p>O prazo é de até 5 dias utéis.</p>"
+            },
+            {
+              "question": "<p>Posso alterar o cartão depois da finalização da Compra?<br></p>",
+              "response": "<p>Depois de finalizada, você tem 60 minutos para realizar alterações em seu pedido.</p><p><br></p>"
+            },
+            {
+              "question": "<p>Quais são as formas de parcelamento?<br></p>",
+              "response": "<p>Todas as Compras feitas no cartão de crédito podem ser parceladas em até 12 (doze) vezes, com parcela minima de R$50</p><p><br></p>"
+            },
+            {
+              "question": "<p>Como solicito a segunda via do DANFE (Documento Auxiliar da Nota Fiscal Eletrônica)?<br></p>",
+              "response": "<p>Basta entrar em contato com o SAC (Central de Atendimento ELETROTRAFO PRODUTOS ELÉTRICOS LTDA), por telefone (043) 3520-5000 ou pelos outros meios de atendimento disponibilizados.</p><p><br></p>"
+            },
+            {
+              "question": "<p>Como solicitar a segunda via da Nota Fiscal?<br></p>",
+              "response": "<p>Basta entrar em contato com o SAC (Central de Atendimento ELETROTRAFO PRODUTOS ELÉTRICOS LTDA), por telefone (043) 3520-5000 ou pelos outros meios de atendimento disponibilizados.</p><p><br></p>"
+            },
+            {
+              "question": "<p>Posso utilizar meu cartão emitido no exterior?<br></p>",
+              "response": "<p>Não, aceitamos apenas cartões de crédito emitidos no Brasil.</p><p><br></p>"
+            },
+            {
+              "question": "<p>Quais são os prazos para estorno?<br></p>",
+              "response": "<p>A ELETROTRAFO PRODUTOS ELÉTRICOS LTDA pedirá o estorno à administradora de cartões em um prazo não superior a 72 (setenta e duas) horas. No entanto, você deverá aguardar o estorno na fatura. O estorno poderá acontecer em até duas faturas, de acordo com a política de cancelamento da administradora do cartão de crédito.</p><p><br></p>"
+            }
+          ],
+          "title": "2. PAGAMENTO"
+        },
+        {
+          "questions": [
+            {
+              "question": "<p>A ELETROTRAFO PRODUTOS ELÉTRICOS LTDA possui profissionais especializados para instalação e/ou montagem dos produtos?<br></p>",
+              "response": "<p>Não. Em muitas de nossas lojas físicas, é possível que vendedores e gerentes possam conhecer profissionais que prestem tais serviços e o Cliente poderá obter essas indicações diretamente com nossos vendedores e gerentes. No entanto, a ELETROTRAFO PRODUTOS ELÉTRICOS LTDA não se responsabiliza por qualquer indicação que seja feita por seus colaboradores, nem pelos serviços prestados por tais profissionais, não atestando a confiabilidade de seu trabalho ou dos resultados que possam estar a ele relacionados.</p><p><br></p>"
+            }
+          ],
+          "title": "3. SERVIÇOS"
+        },
+        {
+          "questions": [
+            {
+              "question": "<p>É possível encomendar um produto que não esteja à venda?<br></p>",
+              "response": "<p>Sim. Há produtos que não estão disponíveis para venda no Site que podem ser encontrados no nosso Televendas (043) 3520-5000 ou em nossas lojas físicas.</p><p><br></p>"
+            },
+            {
+              "question": "<p>Por que nem todos os produtos estão disponíveis para a compra?<br></p>",
+              "response": "<p>A fim de manter um alto nível no atendimento aos seus Clientes, a ELETROTRAFO PRODUTOS ELÉTRICOS LTDA disponibilizará no Site apenas determinados produtos.</p><p><br></p>"
+            },
+            {
+              "question": "<p>O Site da ELETROTRAFO PRODUTOS ELÉTRICOS LTDA prática ofertas relâmpago?<br></p>",
+              "response": "<p>Sim, você pode ver o item Promoções dos nossos Termos e Condições de Uso. Além disso, essas promoções serão sempre anunciadas em nosso Site com destaque, e por e-mail para todos os cadastrados para receber essas informações. Fique atento às ofertas disponíveis no Site e cadastre seu e-mail para receber estas notificações. As promoções são alteradas sem aviso prévio.</p><p><br></p>"
+            }
+          ],
+          "title": "4. PRODUTOS"
+        },
+        {
+          "questions": [
+            {
+              "question": "<p>Como trocar um produto do e-Commerce?<br></p>",
+              "response": "<p>Para trocar um produto adquirido no Site, entre em contato com o SAC (Central de Atendimento ELETROTRAFO PRODUTOS ELÉTRICOS LTDA), por telefone (043) 3520-5000 ou pelos outros meios de contato disponibilizados. Para mais informações, acesse nossa Política de Trocas e Devoluções.</p><p><br></p>"
+            },
+            {
+              "question": "<p>E se o produto que eu tiver que trocar não tiver mais no estoque?<br></p>",
+              "response": "<p>Providenciaremos o cancelamento da Compra e o estorno do pagamento, nos termos de nossa Política de Trocas e Devoluções.</p><p><br></p>"
+            },
+            {
+              "question": "<p>Como devolver um produto?<br></p>"
+            },
+            {
+              "question": "<p>Como fazer devolução de um produto por arrependimento ou desistência?<br></p>",
+              "response": "<p>Para fazer a devolução de um produto, basta entrar em contato para obter um código de postagem para que você possa entregar o produto em uma agência dos Correios. Caso haja qualquer dúvida, entre em contato com o SAC (Central de Atendimento ELETROTRAFO PRODUTOS ELÉTRICOS LTDA), por telefone (043) 3520-5000, ou pelos outros meios de contato disponíveis. Nesses casos, o prazo será de, no máximo, 7 (sete) dias. Para mais informações, consulte nossa Política de Trocas e Devoluções.</p><p><br></p>"
+            },
+            {
+              "question": "<p>Quais as normas para devolução por Correios?<br></p>",
+              "response": "<p>Inicialmente, você deve entrar em contato com o SAC (Central de Atendimento ELETROTRAFO PRODUTOS ELÉTRICOS LTDA), por telefone (043) 3520-5000, ou pelos outros meios de contato disponíveis, e informar os motivos da devolução. Dependendo do caso, o SAC fornecerá um código de autorização de postagem, com o qual você poderá enviar o produto à ELETROTRAFO PRODUTOS ELÉTRICOS LTDA, de qualquer Agência de Correios Própria AC ou Agência Franqueada AGF, sem qualquer custo. Para mais informações, consulte nossa Política de Trocas e Devoluções.</p><p><br></p>"
+            },
+            {
+              "question": "<p>Como faço para cancelar minha compra?<br></p>",
+              "response": "<p>Se você quiser cancelar sua compra, pode entrar em contato com o SAC (Central de Atendimento ELETROTRAFO PRODUTOS ELÉTRICOS LTDA), por telefone (043) 3520-5000, ou pelos outros meios de contato disponibilizados, e solicitar o cancelamento. Nos dois casos, nossos atendentes orientarão o Cliente com relação ao processo por completo.</p><p><br></p>"
+            },
+            {
+              "question": "<p>Ressarcimento de valores de pedidos cancelados?<br></p>",
+              "response": "<p>O ressarcimento será feito por meio de pedido de estorno do valor cobrado perante a administradora de cartão de crédito.</p><p><br></p>"
+            },
+            {
+              "question": "<p>Após o período de troca e devolução, se o produto estiver com defeito o que eu devo fazer?<br></p>",
+              "response": "<p>Você deve entrar em contato direto com o fabricante.</p><p><br></p>"
+            },
+            {
+              "question": "<p>Em que situações meu pedido pode ser cancelado?<br></p>",
+              "response": "<p>Normalmente quando não há liberação do crédito por parte da administradora do cartão. Em caso de dúvidas, consulte o SAC (Central de Atendimento ELETROTRAFO PRODUTOS ELÉTRICOS LTDA) por telefone (043) 3520-5000 ou pelos outros meios de atendimento disponibilizados.</p><p><br></p>"
+            }
+          ],
+          "title": "5. CANCELAMENTOS, TROCAS E DEVOLUÇÕES"
+        },
+        {
+          "questions": [
+            {
+              "question": "<p>Os preços são válidos em todas as lojas físicas?<br></p>"
+            },
+            {
+              "question": "<p>Os preços para venda pelo site são os mesmos das lojas físicas?<br></p>",
+              "response": "<p>Não. Os preços apresentados no Site se referem apenas às compras efetuadas no site, não se aplicando nem ao Televendas nem às lojas físicas.</p><p><br></p>"
+            },
+            {
+              "question": "<p>Se o preço praticado no Site for menor que o da loja física, terei ressarcimento da diferença?<br></p>",
+              "response": "<p>Não. Os preços são fixados de forma diferente para o Site, para o Televendas e para as lojas físicas e a ELETROTRAFO PRODUTOS ELÉTRICOS LTDA não reembolsa nenhuma diferença de preço verificada entre suas diversas formas de atuação.</p><p><br></p>"
+            }
+          ],
+          "title": "6. PREÇOS"
+        },
+        {
+          "questions": [
+            {
+              "question": "<p>Como criar uma Conta de Acesso?<br></p>",
+              "response": "<p>Para se cadastrar, basta realizar uma compra, e suas informações serão solicitadas durante o processo. Na sua próxima compra você vai precisar lembrar apenas de seu e-mail.</p><p><br></p>"
+            }
+          ],
+          "title": "7. CADASTRO DE CLIENTE"
+        }
+      ]
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Spacer.tsx"
+      }
+    },
+    {
+      "__resolveType": "Newsletter"
+    },
+    {
+      "__resolveType": "Footer Component"
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
