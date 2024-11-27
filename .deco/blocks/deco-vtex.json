@@ -4,15 +4,15 @@
     "channelPrivacy": "public"
   },
   "platform": "vtex",
-  "account": "eletrotrafo",
+  "account": "t62543",
   "appKey": {
     "__resolveType": "website/loaders/secret.ts",
-    "encrypted": "4b801831c94b2d250517dbc5c28aeee506c08d856c2e4459c7f8b6ceec65cb17"
+    "encrypted": "2796c5ea2ef0e3f1682c972f0462c8d53437be78cccad183e1ecb6c1cf27eb49"
   },
   "appToken": {
     "__resolveType": "website/loaders/secret.ts",
-    "encrypted": "61eacc315e45b0b43e63cace74be2a56e5f135711eae0cda69ac72217a1f6d51e0c02e4c2806f527151a868af0aa823f6482265c8be1ab3e5756b3a45773e110f62c34a727258029c556b2f22f29af3efe392ccbf6f71ede586dbf2d181de80148cc4579e797180b80714030a660d49236b46e97dd716e5422627fbd205e52f8b7245d249053033912c54b09ed034d3f"
+    "encrypted": "50b2ac0fe86577b74678c278c1b6f366e84bb158c15d4f85fab0719bc1e6a7d5337b44a7ed20c5086cb53bced4eb1268df2c68b56f94a74e6b081b1c39db68764154c3e073951e3b396d10725cb62b88952eae01bd5f9bfab0f2e3791e3b613c86f66d438386e4b28e6760e0986c91bc65a87c3cea3fad499a11111ddba4f810f3d6c2d2af46294aa451f55d32d687a4"
   },
   "salesChannel": "1",
-  "publicUrl": "www.eletrotrafo.com.br"
+  "publicUrl": "www.zanottirefrigeracao.com.br"
 }

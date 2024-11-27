@@ -18,17 +18,18 @@ export interface Banner {
 
   /** @description Image's alt text */
   alt?: string;
+  href?: string;
 
-  action?: {
-    /** @description when user clicks on the image, go to this link */
-    href?: string;
-    /** @description Image text title */
-    title?: string;
-    /** @description Image text subtitle */
-    subTitle?: string;
-    /** @description Button label */
-    label?: string;
-  };
+  // action?: {
+  //   /** @description when user clicks on the image, go to this link */
+  //   href?: string;
+  //   /** @description Image text title */
+  //   title?: string;
+  //   /** @description Image text subtitle */
+  //   subTitle?: string;
+  //   /** @description Button label */
+  //   label?: string;
+  // };
 }
 
 export interface Props {
@@ -47,7 +48,7 @@ function BannerItem(
     alt,
     mobile,
     desktop,
-    action,
+    href
   } = image;
   const params = { promotion_name: image.alt };
 
@@ -64,14 +65,13 @@ function BannerItem(
   return (
     <a
       {...selectPromotionEvent}
-      href={action?.href ?? "#"}
-      aria-label={action?.label}
+      href={href ?? "#"}
+      aria-label={alt}
       class="relative block overflow-y-hidden w-full"
     >
-      {action && (
+      {/* {action && (
         <div
           class={clx(
-            "absolute h-full w-full top-0 left-0",
             "flex flex-col justify-center items-center",
             "px-5 sm:px-0",
           )}
@@ -89,7 +89,7 @@ function BannerItem(
             {action.label}
           </button>
         </div>
-      )}
+      )} */}
       <Picture preload={lcp} {...viewPromotionEvent}>
         <Source
           media="(max-width: 767px)"

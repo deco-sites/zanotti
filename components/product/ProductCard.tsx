@@ -28,8 +28,8 @@ interface Props {
   hiddenAddToCartButton?: boolean;
 }
 
-const WIDTH = 270;
-const HEIGHT = 225;
+const WIDTH = 178;
+const HEIGHT = 194;
 
 export const getFlagCluster = (
   flag: string,
@@ -98,21 +98,19 @@ function ProductCard({
   return (
     <div
       {...event}
-      class={clx(
-        "card flex flex-col justify-start card-compact group text-sm bg-white p-0",
-        _class,
-      )}
+      class={"card flex flex-col justify-start card-compact group text-sm bg-white p-3 bg-base sm:w-[220px] w-[172px]"}
     >
       <div class="flex items-start justify-between">
         <div class="flex flex-wrap gap-[5px]">
           {percent > 1 && inStock && !hiddenFlags
             ? (
-              <span class="text-xs font-semibold text-white uppercase bg-primary text-center text-white px-2 py-1 rounded-[6px]">
+              <span class="text-xs font-semibold text-white uppercase bg-primary text-center text-white px-2 py-1 rounded-full family-secondary">
                 {percent}% off
               </span>
             )
             : null}
-          {hasNewsFlag && !hiddenFlags && (
+          {
+            /* {hasNewsFlag && !hiddenFlags && (
             <span
               class={clx(
                 "text-xs font-semibold text-white uppercase bg-[#FFA318] text-center text-white px-2 py-1 rounded-[6px]",
@@ -129,50 +127,45 @@ function ProductCard({
             >
               Promoção
             </span>
-          )}
+          )} */
+          }
         </div>
         <WishlistButton item={item} variant="icon" />
       </div>
-      <figure
-        class="relative overflow-hidden rounded-none"
-        style={{ aspectRatio: `${WIDTH} / ${HEIGHT}` }}
+
+      <a
+        href={relativeUrl}
+        aria-label="view product flex"
       >
-        <a
-          href={relativeUrl}
-          aria-label="view product"
-        >
-          <Image
-            src={front.url!}
-            alt={front.alternateName}
-            width={WIDTH}
-            height={HEIGHT}
-            preload={preload}
-            loading={preload ? "eager" : "lazy"}
-            decoding="async"
-          />
-        </a>
-      </figure>
+        <Image
+          class="aspect-square mx-auto"
+          src={front.url!}
+          alt={front.alternateName}
+          width={WIDTH}
+          height={HEIGHT}
+          preload={preload}
+          loading={preload ? "eager" : "lazy"}
+          decoding="async"
+        />
+      </a>
       <div>
         <a href={relativeUrl} class="flex flex-col gap-2">
-          <div class="flex flex-col gap-1">
-            {hasInternationalFlag && (
-              <p class="px-1 sm:px-6 py-1 flex items-center justify-center bg-black text-white font-semibold text-[10px] sm:text-xs">
-                Compra Internacional
-              </p>
-            )}
-          </div>
-          {brand?.name && inStock && (
+          {
+            /* {brand?.name && inStock && (
             <p class="text-sm text-middle-gray capitalize">{brand?.name}</p>
-          )}
-          <p class="font-normal text-sm text-ellipsis font-bold line-clamp-2 h-10">
+          )} */
+          }
+          <p class="font-semibold family-secondary text-sm text-ellipsis font-bold line-clamp-2 h-10 leading-5">
             {title}
           </p>
           <Price type="shelf" product={product} />
         </a>
-        <div
+        {
+          /* <div
           class="mt-2"
           data-trustvox-product-code={productGroupID}
-        />
+        /> */
+        }
         {!hiddenAddToCartButton && inStock &&
           (
             <MinicartAdd

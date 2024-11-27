@@ -68,7 +68,7 @@ const CarouselCategory = ({ brands, title }: Props) => {
   return (
     <div id={id}>
       <div className="container px-5 lg:px-0 overflow-hidden">
-        <h3 className="mb-5 text-base font-semibold sm:text-2xl px-0 sm:px-5">
+        <h3 className="mb-5 text-base font-semibold px-0 sm:px-5 lg:px-0">
           {title}
         </h3>
       </div>
@@ -90,7 +90,7 @@ const CarouselCategory = ({ brands, title }: Props) => {
       </div>
       <div
         id="content"
-        class="hidden container px-0 lg:px-10 overflow-hidden relative"
+        class="hidden container overflow-hidden relative"
       >
         <div class="overflow-hidden">
           <div class="swiper-wrapper">
@@ -109,7 +109,6 @@ const CarouselCategory = ({ brands, title }: Props) => {
           <div class="button-next absolute right-0 top-1/2 -translate-y-1/2 hidden lg:block">
             <Icon id="chevron-right" />
           </div>
-          <div class="pagination static mt-5 flex sm:hidden justify-center" />
         </div>
         <script
           type="module"

@@ -63,7 +63,7 @@ export default function ProductShelf({
       <Section.Container
         {...viewItemListEvent}
       >
-        <div class="flex flex-wrap items-center gap-x-10 gap-y-[0.5rem] px-[18px] lg:px-[25px]">
+        <div class="flex flex-wrap items-center gap-x-10 gap-y-[0.5rem] px-5 lg:px-0">
           <Section.Header title={title} />
         </div>
         <ProductSlider

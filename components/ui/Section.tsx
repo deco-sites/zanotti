@@ -3,22 +3,16 @@ import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useSection } from "@deco/deco/hooks";
 export interface Props {
-  /** @description Section title */
+  /** @title Titulo da sessão  */
   title?: string;
-  displayOfferTag?: boolean;
 }
-function Header({ title, displayOfferTag = false }: Props) {
+function Header({ title}: Props) {
   if (!title) {
     return null;
   }
   return (
     <div class={clx("flex justify-between items-center gap-2")}>
-      <span class="text-2xl sm:text-3xl font-semibold">
-        {displayOfferTag && (
-          <span class="text-primary font-semibold uppercase">
-            [Oferta]{" "}
-          </span>
-        )}
+      <span class="text-base font-semibold">
         {title}
       </span>
     </div>
@@ -73,7 +67,7 @@ function Container({ class: _class, ...props }: JSX.IntrinsicElements["div"]) {
     <div
       {...props}
       class={clx(
-        "container flex flex-col gap-4 sm:gap-6 w-full",
+        "container flex flex-col gap-3 w-full",
         _class?.toString(),
       )}
     />

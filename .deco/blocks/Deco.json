@@ -18,7 +18,21 @@
             "weight": "500"
           }
         ],
-        "family": "Poppins"
+        "family": "MuseoModerno"
+      },
+      {
+        "variations": [
+          {
+            "weight": "500"
+          },
+          {
+            "weight": "600"
+          },
+          {
+            "weight": "700"
+          }
+        ],
+        "family": "Montserrat"
       }
     ]
   },
@@ -32,10 +46,10 @@
   },
   "mode": "dark",
   "mainColors": {
-    "primary": "#163970",
-    "base-100": "#FFFFFF",
-    "secondary": "#FFF",
-    "success": "#219259",
+    "primary": "#004BCC",
+    "base-100": "#F2F2F2",
+    "secondary": "#D1D3D4",
+    "success": "#1BAE32",
     "warning": "#a39e0f",
     "error": "#d10a0a",
     "info": "#3c4cc8",
@@ -43,7 +57,7 @@
     "tertiary": "#2D2A2B"
   },
   "complementaryColors": {
-    "primary-content": "#ffffff",
+    "primary-content": "#F2F2F2",
     "base-200": "#FAFAFA",
     "base-300": "#5C5C5C",
     "base-content": "#000000"

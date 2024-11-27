@@ -23,6 +23,9 @@ export default {
       boxShadow: {
         "custom": "24px 51px 113px -17px rgba(0,0,0,0.75)",
       },
+      FontFamily:{
+       'family-secondary': 'Montserrat'
+      },
       animation: {
         sliding: "sliding 30s linear infinite",
       },

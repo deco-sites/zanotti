@@ -44,10 +44,6 @@
     @apply top-0 fixed bg-primary;
   }
 
-  .is-homepage #header {
-    @apply fixed;
-  }
-
   .is-otherpage #header {
     @apply bg-primary;
   }
@@ -129,6 +125,9 @@
 
 .drawer {
   width: unset !important;
+}
+.family-secondary{
+  font-family: 'Montserrat';
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
