@@ -80,18 +80,13 @@ function Menu({ navItems }: Props) {
             <Icon class="mr-2" id="account_blue" />
             <span />
           </a>
+        </div>
+        <div class="text-primary font-semibold px-4">
           <a
-            href="https://www.b2b.eletrotrafo.com.br/"
+            href="#"
             class="h-14 flex items-center font-semibold text-sm border-b border-b-middle-gray"
           >
-            Loja B2B
-          </a>
-          <a
-            href="/atendimento"
-            class="h-14 flex items-center font-semibold text-sm border-b border-b-middle-gray"
-          >
-            <Icon class="mr-2" id="sac" />
-            Atendimento
+            Lista de Desejos
           </a>
         </div>
         <div class="flex flex-col">

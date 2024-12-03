@@ -14,7 +14,6 @@ export interface Minicart {
   isMobile: boolean;
   /** Cart from the ecommerce platform */
   platformCart: Record<string, unknown>;
-  recommendations: Product[];
   /** Cart from storefront. This can be changed at your will */
   storefront: {
     items: Item[];
@@ -79,56 +78,15 @@ export function ErrorFallback() {
           Por favor, recarregue a página
         </span>
       </div>
-
-      {
-        /* <button
-        class="btn btn-primary"
-        hx-patch={useComponent(import.meta.url)}
-        hx-swap="outerHTML"
-        hx-target="closest div"
-      >
-        Retry
-      </button> */
-      }
     </div>
   );
 }
 export let itemCount = 0;
-function ProductRecommendations({
-  isMobile,
-  recommendations,
-}: {
-  isMobile: boolean;
-  recommendations: Product[];
-}) {
-  const _class = isMobile ? "shrink-0 w-[250px]" : "";
-
-  return (
-    <div class="w-full lg:w-[400px] lg:h-full border border-y-0 border-l-0 border-r-middle-gray">
-      <div class="px-5 py-5 lg:py-8 border border-x-0 border-t-0 border-b-middle-gray">
-        <span class="block text-left lg:text-center lg:max-w-[210px] text-lg lg:text-2xl lg:mx-auto">
-          Você também pode <b class="text-primary">[Gostar]</b>
-        </span>
-      </div>
-      <div class="flex flex-row max-lg:overflow-x-auto lg:flex-col gap-4 lg:overflow-y-auto lg:max-h-[calc(100vh-129px)] px-5 lg:px-12 pt-5 pb-8 lg:py-5">
-        {recommendations.map((item: Product, index: number) => (
-          <ProductCard
-            key={index}
-            class={_class}
-            product={item}
-            hiddenAddToCartButton={false}
-          />
-        ))}
-      </div>
-    </div>
-  );
-}
 export default function Cart(
   {
     cart: {
       isMobile,
       platformCart,
-      recommendations,
       storefront: {
         items,
         total,
@@ -149,15 +107,9 @@ export default function Cart(
   const count = items.length;
   itemCount = count;
   return (
-    <div id="minicart" class="flex flex-col lg:flex-row lg:items-stretch">
-      {isMobile === false && recommendations.length > 0 && (
-        <ProductRecommendations
-          isMobile={isMobile}
-          recommendations={recommendations}
-        />
-      )}
+    <div id="minicart" class="flex flex-col w-full h-full lg:flex-row lg:items-stretch">
       <form
-        class="block"
+        class="block w-full"
         id={MINICART_FORM_ID}
         hx-sync="this:replace"
         hx-trigger="submit, change delay:300ms"
@@ -197,7 +149,7 @@ export default function Cart(
 
         <div
           class={clx(
-            "flex flex-col items-center overflow-hidden w-full lg:w-[400px] h-full max-h-[85vh] lg:max-h-screen",
+            "flex flex-col items-center overflow-hidden w-full h-full max-h-screen",
             "[.htmx-request_&]:pointer-events-none [.htmx-request_&]:opacity-60 [.htmx-request_&]:cursor-wait transition-opacity duration-300",
           )}
         >
@@ -205,15 +157,7 @@ export default function Cart(
           <div class="bg-primary flex justify-between text-white w-full gap-[5px] py-[13px] px-[35px] h-[58px] items-center">
             <div class="flex gap-[5px]">
               <p class="font-semibold text-base">Meu carrinho</p>
-              {count === 0 ? null : (
-                <p>
-                  [{count} {items.length === 0
-                    ? ""
-                    : items.length === 1
-                    ? "Produto"
-                    : "Produtos"}]
-                </p>
-              )}
+              {count === 0 ? null : <p>({count})</p>}
             </div>
             <div>
               <label class="cursor-pointer" for={MINICART_DRAWER_ID}>
@@ -223,23 +167,19 @@ export default function Cart(
           </div>
           {count === 0
             ? (
-              <div class="flex flex-col m-auto gap-3 py-14">
-                <div class="flex justify-center">
-                  <Icon id="bag-blue" />
-                </div>
-                <div>
-                  <p class="font-semibold text-base text-center">
-                    Seu carrinho está vazio!
-                  </p>
-                  <p class="text-sm max-w-[184px] m-auto flex text-center leading-[21px]">
-                    Você ainda não possuí itens no seu carrinho.
-                  </p>
-                </div>
+              <div class="flex flex-col items-center m-auto gap-3 py-14">
+                <span class="block font-semibold text-2xl text-center">:(</span>
+                <span class="block font-semibold text-base text-center">
+                  Seu carrinho está vazio!
+                </span>
+                <p class="text-sm max-w-[184px] m-auto flex text-center leading-[21px]">
+                  Você ainda não possuí itens no seu carrinho.
+                </p>
                 <label
                   for={MINICART_DRAWER_ID}
-                  class="bg-signature-green py-[15px] w-full rounded-full text-white px-6 text-sm cursor-pointer"
+                  class="bg-signature-green py-4 rounded-full text-white px-6 text-sm cursor-pointer"
                 >
-                  Clique aqui e <b>veja os produtos</b> {">"}
+                  Começar a comprar
                 </label>
               </div>
             )
@@ -336,12 +276,6 @@ export default function Cart(
             )}
         </div>
       </form>
-      {isMobile && recommendations.length > 0 && (
-        <ProductRecommendations
-          isMobile={isMobile}
-          recommendations={recommendations}
-        />
-      )}
       <script
         type="module"
         dangerouslySetInnerHTML={{

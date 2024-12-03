@@ -18,52 +18,10 @@ import {
   SIDEMENU_CONTAINER_ID,
   SIDEMENU_DRAWER_ID,
 } from "../../constants.ts";
-import { useDevice, useScript, useSection } from "@deco/deco/hooks";
+import { useDevice, useSection } from "@deco/deco/hooks";
 export function LoadingFallback() {
   return <div class="skeleton rounded-none h-[130px] lg:h-[109px]" />;
 }
-const onLoad = () => {
-  const body = document.querySelector("body");
-
-  if (!body) {
-    console.warn("Unable to find body element");
-    return;
-  }
-
-  const homePage = globalThis.location.pathname === "/";
-  const scrollY = globalThis.scrollY;
-  if (scrollY > 50) {
-    body.classList.add("is-scrolled");
-  } else {
-    body.classList.remove("is-scrolled");
-  }
-
-  if (homePage) {
-    if (body.classList.contains("is-otherpage")) {
-      body.classList.remove("is-otherpage");
-    }
-    body.classList.add("is-homepage");
-  } else {
-    if (body.classList.contains("is-homepage")) {
-      body.classList.remove("is-homepage");
-    }
-    body.classList.add("is-otherpage");
-  }
-
-  setInterval(() => {
-    const scrollY = globalThis.scrollY;
-    if (scrollY > 50) {
-      body.classList.add("is-scrolled");
-    } else {
-      body.classList.remove("is-scrolled");
-    }
-  }, 100);
-
-  const header = document.getElementById("header");
-  if (header) {
-    header.classList.remove("hidden");
-  }
-};
 
 export interface Logo {
   src: ImageWidget;
@@ -71,6 +29,7 @@ export interface Logo {
   width?: number;
   height?: number;
 }
+
 export interface SectionProps {
   alerts?: HTMLWidget[];
   /**
@@ -89,79 +48,69 @@ export interface SectionProps {
   variant?: "initial" | "menu";
 }
 type Props = Omit<SectionProps, "alert" | "variant">;
-const Desktop = ({ logo, searchbar }: Props) => (
+const Desktop = ({ logo, searchbar, navItems }: Props) => (
   <>
-    <div class="flex flex-col gap-4 py-4 px-5 container desktop">
-      <div class="flex items-center space-between relative">
-        <div>
-          <label
-            for={SIDEMENU_DRAWER_ID}
-            class="flex items-center text-white justify-start gap-[10px] cursor-pointer"
-            aria-label="open menu"
-            hx-target={`#${SIDEMENU_CONTAINER_ID}`}
-            hx-swap="outerHTML"
-            hx-trigger="click once"
-            hx-get={useSection({ props: { variant: "menu" } })}
-          >
-            <Icon id="menu" class="mt-[2px]" />
-            Todos os departamentos
-          </label>
-        </div>
-        <Drawer
-          id={SIDEMENU_DRAWER_ID}
-          aside={
-            <Drawer.Aside
-              layout="menu"
-              drawer={SIDEMENU_DRAWER_ID}
-              sizeMenu={true}
-            >
-              <div
-                id={SIDEMENU_CONTAINER_ID}
-                class="h-full flex items-center justify-center"
-              >
-                <span class="loading loading-spinner" />
-              </div>
-            </Drawer.Aside>
-          }
+    <div class="flex flex-col gap-5 p-5 container">
+      <div class="flex items-center space-between">
+        <Logo
+          src={logo.src}
+          alt={logo.alt}
+          width={logo.width}
+          height={logo.height}
         />
 
-        <div class="main-logo">
-          <Logo
-            src={logo.src}
-            alt={logo.alt}
-            width={logo.width}
-            height={logo.height}
-          />
-        </div>
+        <Searchbar {...searchbar} />
 
         <div class="flex gap-4 items-center place-self-end">
-          <Searchbar {...searchbar} />
           <SignIn variant="desktop" />
           <Wishlist />
           <Bag />
         </div>
+      </div>
+      <div class="flex justify-between">
+        {navItems?.length && navItems.map((item, index) => {
+          return (
+            <div class="dropdown dropdown-hover static">
+              <div tabindex={index} class="text-sm text-white relative z-[2]">
+                <a class={`text-white ${item.ishighlighted && "font-semibold"}`} href={item.url || "#"}>
+                  {item.name}
+                </a>
+              </div>
+              {item.children && item.children?.length > 0 && (
+                <div tabindex={index} class="dropdown-content menu top-[72px] p-0 pt-8 left-0 z-[1] w-full">
+                  <div class="bg-base-100 shadow rounded-box rounded-t-none">
+                    <div className="container p-5 grid grid-cols-4 gap-5">
+                      <ul>
+                        {item.children.slice(0, 10).map((children) => (
+                          <li><a class="text-black" href={children.url || "#"}>{children.name}</a></li>
+                        ))}
+                      </ul>
+                      <ul>
+                        {item.children.slice(10, 20).map((children) => (
+                          <li><a href={children.url || "#"}>{children.name}</a></li>
+                        ))}
+                      </ul>
+                      <div class="col-span-2">
+                        <Image
+                          src="https://placehold.co/600x400/"
+                          class="rounded-xl"
+                          width={600}
+                          height={400}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   </>
 );
 const Mobile = ({ logo, searchbar }: Props) => (
   <>
-    <Drawer
-      id={SEARCHBAR_DRAWER_ID}
-      aside={
-        <Drawer.Aside
-          layout="searchBar"
-          title="Buscar"
-          drawer={SEARCHBAR_DRAWER_ID}
-          background="bg-primary"
-          color="text-white"
-        >
-          <div class="w-screen overflow-y-auto">
-            <Searchbar {...searchbar} searchBarDrawer={true} />
-          </div>
-        </Drawer.Aside>
-      }
-    />
     <Drawer
       id={SIDEMENU_DRAWER_ID}
       aside={
@@ -209,23 +158,13 @@ const Mobile = ({ logo, searchbar }: Props) => (
           </a>
         )}
 
-        <div class="flex gap-[15px] items-center max-h-[30px]">
+        <div class="flex gap-3 items-center max-h-[30px]">
           <SignIn variant="mobile" />
           <Bag />
         </div>
       </div>
 
-      <div class="w-full">
-        <label
-          class="flex items-center gap-[15px]"
-          for={SEARCHBAR_DRAWER_ID}
-          aria-label="search icon button"
-        >
-          <Icon id="search" />
-          <div class="bg-white w-full m-auto rounded-[33px] h-[30px]">
-          </div>
-        </label>
-      </div>
+      <Searchbar {...searchbar} />
     </div>
   </>
 );
@@ -242,26 +181,16 @@ function Header({
 }: Props) {
   const device = useDevice();
   return (
-    <>
-      {alerts.length > 0 && <Alert alerts={alerts} />}
-      <header>
-        <div
-          id="header"
-          class="hidden bg-transparent w-full z-40 group-header ease-in duration-500"
-        >
-          {device === "desktop"
-            ? <Desktop logo={logo} {...props} />
-            : <Mobile logo={logo} {...props} />}
-        </div>
-        {/* <MicroHeaderSetup threshold={50}/> */}
-        <script
-          type="module"
-          dangerouslySetInnerHTML={{
-            __html: useScript(onLoad),
-          }}
-        />
-      </header>
-    </>
+    <header>
+      <div
+        id="header"
+        class="bg-primary w-full z-40 group-header ease-in duration-500 relative rounded-b-xl"
+      >
+        {device === "desktop"
+          ? <Desktop logo={logo} {...props} />
+          : <Mobile logo={logo} {...props} />}
+      </div>
+    </header>
   );
 }
 export default function Section({ variant, ...props }: SectionProps) {

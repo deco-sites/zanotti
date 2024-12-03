@@ -178,59 +178,6 @@
   animation-play-state: paused; 
 }
 
-@media (min-width: 1024px) {
-  .search-bar-wrapper {
-    transition: max-width 250ms linear;
-  }
-
-  .search-bar-wrapper .suggestions-wrapper {
-    top: 19px;
-    left: -1px;
-    width: 100%;
-    display: block;
-    z-index: 1;
-    opacity: 0;
-    visibility: hidden;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-  }
-
-  .search-bar-container {
-    z-index: 2;
-    position: relative;
-  }
-
-  .search-bar-wrapper:hover .suggestions-wrapper {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .search-bar-wrapper form {
-    width: 100%;
-    /* display: flex; */
-    /* max-width: 300px; */
-    /* transition: max-width 250ms linear; */
-    /* justify-content: flex-end; */
-  }
-
-  .search-bar-wrapper form > input {
-    /* width: 50vw;
-    max-width: 100%; */
-    width: 100%;
-  }
-
-  .search-bar-wrapper:hover form {
-    /* max-width: 100%; */
-  }
-
-  .main-logo {
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-  }
-}
-
 /* Fix Safari issue related to <summary> / <details> arrow */
 details>summary::-webkit-details-marker,
 details>summary::marker {

@@ -71,7 +71,7 @@ function Aside({ drawer, children, layout }: AsideProps) {
   switch (layout) {
     case "minicart":
       return (
-        <div class="w-full max-w-[100vw] sm:max-w-[400px] lg:max-w-[800px] overflow-y-auto lg:overflow-y-hidden h-screen bg-base-100 sm:rounded-l-3xl">
+        <div class="w-full max-w-[100vw] sm:max-w-[400px] overflow-y-auto lg:overflow-y-hidden h-screen bg-base-100 sm:rounded-l-3xl">
           {children}
         </div>
       );

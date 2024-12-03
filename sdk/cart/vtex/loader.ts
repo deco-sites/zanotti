@@ -54,7 +54,6 @@ export const cartFrom = (
   form: Cart,
   url: string,
   isMobile: boolean,
-  recommendations?: Product[],
 ): Minicart => {
   const { items, totalizers, paymentData } = form ?? { items: [] };
   const bestInstallment =
@@ -74,7 +73,6 @@ export const cartFrom = (
   return {
     isMobile,
     platformCart: form as unknown as Record<string, unknown>,
-    recommendations: recommendations ?? [],
     storefront: {
       items: items.map((item, index) => {
         const detailUrl = new URL(item.detailUrl, url).href;
@@ -108,24 +106,10 @@ async function loader(
 ): Promise<Minicart> {
   const {
     device,
-    minicartSuggestion = "",
   } = ctx;
   const isMobile = device !== "desktop";
   // deno-lint-ignore no-explicit-any
   const response = await (ctx as any).invoke("vtex/loaders/cart.ts");
-  if (minicartSuggestion !== "") {
-    // deno-lint-ignore no-explicit-any
-    const recommendations = await (ctx as any).invoke(
-      "vtex/loaders/intelligentSearch/productList.ts",
-      {
-        collection: minicartSuggestion,
-        count: 5,
-        sort: "orders:desc",
-      },
-    );
-
-    return cartFrom(response, req.url, isMobile, recommendations);
-  }
 
   return cartFrom(response, req.url, isMobile);
 }
