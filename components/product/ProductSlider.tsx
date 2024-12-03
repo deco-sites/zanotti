@@ -6,7 +6,7 @@ import Slider from "../ui/Slider.tsx";
 import ProductCard from "./ProductCard.tsx";
 
 interface Props {
-  flags?: [internationalFlag: string, promoFlag: string, newsFlag: string];
+  flags?: [internationalFlag: string, promoFlag: string, newsFlag: string, HidePriceCollection:string];
   products: Product[];
   itemListName?: string;
 }

@@ -77,9 +77,7 @@
     "api": {},
     "my": {}
   },
-  "newsFlag": "145",
   "shelfFlag1": "163",
-  "promoFlag": "145",
-  "internationalFlag": "145",
-  "minicartSuggestion": "145"
+  "minicartSuggestion": "145",
+  "HidePriceCollection": "200"
 }

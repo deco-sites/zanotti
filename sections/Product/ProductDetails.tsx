@@ -41,6 +41,7 @@ export const loader = async (props: Props, _req: Request, ctx: AppContext) => {
     internationalFlag = "",
     promoFlag = "",
     newsFlag = "",
+    HidePriceCollection = "",
   } = ctx;
 
   const { page } = props;
@@ -58,6 +59,7 @@ export const loader = async (props: Props, _req: Request, ctx: AppContext) => {
       ...props,
       internationalFlag,
       promoFlag,
+      HidePriceCollection,
       newsFlag,
       isMobile: ctx.device !== "desktop",
       productRecommendations,
@@ -68,6 +70,7 @@ export const loader = async (props: Props, _req: Request, ctx: AppContext) => {
     ...props,
     internationalFlag,
     promoFlag,
+    HidePriceCollection,
     newsFlag,
   };
 };
@@ -76,6 +79,7 @@ export default function ProductDetails({
   internationalFlag,
   promoFlag,
   newsFlag,
+  HidePriceCollection,
   isMobile,
   productRecommendations,
   hiddenShipping = false,
@@ -158,7 +162,7 @@ export default function ProductDetails({
           </>
         )}
         <ProductInfo
-          flags={[internationalFlag, promoFlag, newsFlag]}
+          flags={[internationalFlag, promoFlag, newsFlag, HidePriceCollection]}
           page={page}
           device={device}
           hiddenShipping={hiddenShipping}

@@ -14,9 +14,11 @@ export default function Price({
   isMobile = false,
 }: Props) {
   const { offers } = product;
+  
   const { pix, listPrice = 0, price = 0, availability, installment } = useOffer(
     offers,
   );
+
   const percent = listPrice && price
     ? Math.round(((listPrice - price) / listPrice) * 100)
     : 0;

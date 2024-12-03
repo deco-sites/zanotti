@@ -22,10 +22,15 @@ export type Props = {
    */
   promoFlag?: string;
   /**
-   * @title Flags de Produtos Internacionais
+   * @title Flags de Produtos 
    * @description Insira o número da coleção:
    */
   internationalFlag?: string;
+    /**
+   * @title Esconder preço de produto 
+   * @description Insira o número da coleção:
+   */
+    HidePriceCollection?: string;
   /**
    * @title Sugestões do Minicart
    * @description Insira o número da coleção:

@@ -65,6 +65,7 @@ export const useOffer = (aggregateOffer?: AggregateOffer) => {
   const sellerName = offer?.sellerName;
   const seller = offer?.seller;
   const price = offer?.price;
+  const teaser = offer?.teasers 
 
   return {
     inventory,
@@ -75,6 +76,7 @@ export const useOffer = (aggregateOffer?: AggregateOffer) => {
     sellerName,
     pix,
     installment,
+    teaser,
     installments: installment && price
       ? installmentToString(installment, price)
       : null,

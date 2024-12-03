@@ -23,14 +23,16 @@ export const loader = (props: Props, _req: Request, ctx: AppContext) => {
     newsFlag = "",
     promoFlag = "",
     internationalFlag = "",
+    HidePriceCollection = ""
   } = ctx;
 
-  return { ...props, internationalFlag, promoFlag, newsFlag };
+  return { ...props, internationalFlag, promoFlag, newsFlag, HidePriceCollection };
 };
 export default function ProductShelf({
   internationalFlag,
   promoFlag,
   newsFlag,
+  HidePriceCollection,
   products,
   title,
   expireAt,
@@ -74,7 +76,7 @@ export default function ProductShelf({
           )}
         </div>
         <ProductSlider
-          flags={[internationalFlag, promoFlag, newsFlag]}
+          flags={[internationalFlag, promoFlag, newsFlag, HidePriceCollection]}
           products={products}
           itemListName={title}
         />

@@ -31,77 +31,62 @@ interface Props {
    */
   deals: Deal[];
 }
-  const device = useDevice();
-const onLoad = (id: string) => {
-  const carousel = document.getElementById(id);
-  if (carousel) {
-    // @ts-ignore Swiper é definido globalmente
-    new Swiper(`#${id} #content > div`, {
-      spaceBetween: 12,
-      slidesPerView: "auto",
-      breakpoints: {
-        640: {
-          spaceBetween: 30,
-        },
-      },
-      pagination: {
-        el: `#${id} .pagination`,
-        clickable: true,
-      },
-      freeMode: true,
-    });
-
-    document.querySelector(`#${id} #content`)?.classList.remove("hidden");
-    document.querySelector(`#${id} #fakeLoading`)?.classList.add("hidden");
-  }
-};
 
 const Card = ({ title, image }: Deal) => (
-  <div class="flex items-center cursor-pointer gap-2">
-    <Image
-      src={image || "https://placehold.co/24x24"}
-      alt={title || "Imagem de condição"}
-      width={24}
-      height={24}
-      fetchPriority="low"
-    />
-    <div class="flex">
-      <p class="text-base font-normal text-black family-secondary">{title}</p>
+  <div class="swiper-slide ">
+    <div class="flex items-center cursor-pointer gap-2">
+      <Image
+        src={image || "https://placehold.co/24x24"}
+        alt={title || "Imagem de condição"}
+        width={24}
+        height={24}
+        fetchPriority="low"
+      />
+      <div class="flex">
+        <p class="text-base font-normal text-black family-secondary">{title}</p>
+      </div>
     </div>
   </div>
 );
 
 const Deals = ({ deals, preload }: Props) => {
-
   const id = useId();
+  const device = useDevice();
 
   return (
-    <div class="bg-white" id={id}>
+    <div class="bg-white">
       <div class="lg:container py-1 lg:p-2">
-        {device === "mobile" ? (
-          <>
-            <div
-              id="content"
-              class="overflow-hidden relative px-5"
-            >
-              <div class="swiper-wrapper flex items-center">
-                {deals.map((deal, index) => (
-                  <div class="swiper-slide" key={index}>
-                    <Card {...deal} />
-                  </div>
-                ))}
+        {device === "mobile"
+          ? (
+            <>
+              <div class="overflow-hidden relative px-5">
+                <div id={id} class="swiper-wrapper flex items-center">
+                  {deals.map((deal) => <Card {...deal} />)}
+                </div>
               </div>
+            </>
+          )
+          : (
+            <div class="flex space-between gap-4">
+              {deals.map((deal) => <Card {...deal} />)}
             </div>
-          </>
-        ) : (
-          <div class="flex space-between gap-4">
-            {deals.map((deal) => <Card {...deal} />)}
-          </div>
-        )}
+          )}
+
         <script
-          type="module"
+          type="text/javascript"
+          defer
           dangerouslySetInnerHTML={{
-            __html: useScript(onLoad, id),
+            __html: useScript((id) => {
+              // @ts-ignore .
+              new Swiper(`#${id}`, {
+                freeMode: true,
+                grabCursor: true,
+                spaceBetween: 12,
+                slidesPerView: "1",
+                centeredSlides: false,
+                centerInsufficientSlides: true,
+              });
+            }, id),
           }}
         />
       </div>

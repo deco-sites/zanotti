@@ -8,24 +8,21 @@
       }
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Images/Deals.tsx",
-        "deals": [
-          {
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/c4a76e18-9efe-4586-91d0-667646b553d2/alt.svg",
-            "title": "Parcele nos principais cartões em até 12x"
-          },
-          {
-            "title": "Atendimento humanizado e personalizado",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/a3919c9d-2c84-44b4-90d4-434e2fa49d4f/1.svg"
-          },
-          {
-            "title": "Projetos especiais para o seu negócio",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/2c61d8a3-9527-4b52-bcaf-d3880faac77f/Icon.svg"
-          }
-        ]
-      }
+      "__resolveType": "site/sections/Images/Deals.tsx",
+      "deals": [
+        {
+          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/c4a76e18-9efe-4586-91d0-667646b553d2/alt.svg",
+          "title": "Parcele nos principais cartões em até 12x"
+        },
+        {
+          "title": "Atendimento humanizado e personalizado",
+          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/a3919c9d-2c84-44b4-90d4-434e2fa49d4f/1.svg"
+        },
+        {
+          "title": "Projetos especiais para o seu negócio",
+          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/2c61d8a3-9527-4b52-bcaf-d3880faac77f/Icon.svg"
+        }
+      ]
     },
     {
       "__resolveType": "site/sections/Images/Carousel.tsx",
@@ -288,7 +285,89 @@
       "products": {
         "__resolveType": "vtex/loaders/legacy/productList.ts",
         "props": {
-          "sort": "OrderByPriceDESC",
+          "sort": "",
+          "term": "fogao",
+          "count": 6,
+          "collection": "200",
+          "similars": true
+        }
+      }
+    },
+    {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "medium"
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Images/FirstBanner.tsx",
+        "items": [
+          {
+            "Loading": "eager",
+            "desktop": {
+              "Image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/f3c03f93-e29b-4ba3-9ec1-d2b57490c971/MOBILE-CAMARAFRIA-10.png",
+              "Width": 833,
+              "Height": 551
+            },
+            "mobile": {
+              "Image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/7dd58e99-2d75-40d3-9f2f-ca6240f0d1a2/MOBILE-CAMARAFRIA-9.png"
+            }
+          },
+          {
+            "Loading": "eager",
+            "desktop": {
+              "Image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/7dd58e99-2d75-40d3-9f2f-ca6240f0d1a2/MOBILE-CAMARAFRIA-9.png",
+              "Width": 328.74,
+              "Height": 267
+            },
+            "mobile": {
+              "Image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/7dd58e99-2d75-40d3-9f2f-ca6240f0d1a2/MOBILE-CAMARAFRIA-9.png"
+            }
+          },
+          {
+            "Loading": "eager",
+            "desktop": {
+              "Image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/7dd58e99-2d75-40d3-9f2f-ca6240f0d1a2/MOBILE-CAMARAFRIA-9.png",
+              "Width": 328.74,
+              "Height": 267
+            },
+            "mobile": {
+              "Image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/7dd58e99-2d75-40d3-9f2f-ca6240f0d1a2/MOBILE-CAMARAFRIA-9.png"
+            }
+          },
+          {
+            "Loading": "eager",
+            "desktop": {
+              "Image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/7dd58e99-2d75-40d3-9f2f-ca6240f0d1a2/MOBILE-CAMARAFRIA-9.png",
+              "Width": 328.74,
+              "Height": 267
+            },
+            "mobile": {
+              "Image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/7dd58e99-2d75-40d3-9f2f-ca6240f0d1a2/MOBILE-CAMARAFRIA-9.png"
+            }
+          },
+          {
+            "Loading": "eager",
+            "desktop": {
+              "Image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/7dd58e99-2d75-40d3-9f2f-ca6240f0d1a2/MOBILE-CAMARAFRIA-9.png",
+              "Width": 328.74,
+              "Height": 267
+            },
+            "mobile": {
+              "Image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/7dd58e99-2d75-40d3-9f2f-ca6240f0d1a2/MOBILE-CAMARAFRIA-9.png"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "site/sections/Product/ProductShelf.tsx",
+      "title": "Vitrine 1",
+      "cta": "#",
+      "products": {
+        "__resolveType": "vtex/loaders/legacy/productList.ts",
+        "props": {
+          "sort": "",
           "term": "fogao",
           "count": 6
         }
@@ -299,96 +378,16 @@
       "size": "medium"
     },
     {
-      "__resolveType": "site/sections/Images/FirstVariation.tsx",
-      "items": [
-        {
-          "Loading": "eager",
-          "desktop": {
-            "Width": 480,
-            "Height": 424
-          },
-          "mobile": {
-            "Width": 640,
-            "Height": 504
-          }
-        },
-        {
-          "Loading": "eager",
-          "desktop": {
-            "Width": 480,
-            "Height": 424
-          },
-          "mobile": {
-            "Width": 317,
-            "Height": 350
-          }
-        },
-        {
-          "Loading": "eager",
-          "desktop": {
-            "Width": 480,
-            "Height": 424
-          },
-          "mobile": {
-            "Width": 317,
-            "Height": 350
-          }
-        }
-      ],
-      "slide": [
-        {
-          "Loading": "eager",
-          "desktop": {
-            "Width": 1410,
-            "Height": 439
-          },
-          "mobile": {
-            "Width": 317,
-            "Height": 350
-          }
-        },
-        {
-          "Loading": "eager",
-          "desktop": {
-            "Width": 1410,
-            "Height": 439
-          },
-          "mobile": {
-            "Width": 317,
-            "Height": 350
-          }
-        }
-      ],
-      "bannerFull": {
-        "desktop": {
-          "Width": 1410,
-          "Height": 144
-        },
-        "mobile": {
-          "Width": 640,
-          "Height": 144
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Images/FulllBanner.tsx",
+        "banner": {
+          "srcMobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/2a2b854f-de83-4029-99e7-e71c35dd5cdb/BANNER-BNDES-1.png",
+          "srcDesktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ece393e6-d951-437d-86ef-ffb9db36a8da/Frame-921.png",
+          "alt": "Banner BNDS",
+          "link": "/"
         }
       }
-    },
-    {
-      "__resolveType": "site/sections/Spacer.tsx",
-      "size": "medium"
-    },
-    {
-      "__resolveType": "site/sections/Product/ProductShelf.tsx",
-      "products": {
-        "__resolveType": "vtex/loaders/legacy/productList.ts",
-        "props": {
-          "term": "fo",
-          "sort": "price:asc",
-          "count": 12,
-          "query": "fone de ouvido",
-          "fuzzy": "automatic",
-          "collection": "fogao"
-        }
-      },
-      "title": "Vitrine 1",
-      "cta": "#"
     },
     {
       "__resolveType": "site/sections/Spacer.tsx",
@@ -401,12 +400,9 @@
       "products": {
         "__resolveType": "vtex/loaders/legacy/productList.ts",
         "props": {
-          "sort": "price:asc",
-          "query": "fone de ouvido",
-          "count": 12,
-          "fuzzy": "automatic",
+          "sort": "",
           "term": "fogao",
-          "collection": "fogao"
+          "count": 6
         }
       }
     },
@@ -415,88 +411,9 @@
       "size": "medium"
     },
     {
-      "__resolveType": "site/sections/Product/ProductShelf.tsx",
-      "title": "Vitrine 1",
-      "cta": "#",
-      "products": {
-        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
-        "props": {
-          "query": "fone de ouvido",
-          "sort": "price:asc",
-          "count": 12,
-          "fuzzy": "automatic",
-          "term": "tv"
-        }
-      }
-    },
-    {
-      "__resolveType": "site/sections/Spacer.tsx",
-      "size": "medium"
-    },
-    {
-      "__resolveType": "site/sections/Product/ProductShelf.tsx",
-      "title": "Vitrine 1",
-      "cta": "#",
-      "products": {
-        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
-        "props": {
-          "query": "fone de ouvido",
-          "sort": "price:asc",
-          "count": 12,
-          "fuzzy": "automatic",
-          "term": "tv"
-        }
-      }
-    },
-    {
-      "__resolveType": "site/sections/Spacer.tsx",
-      "size": "medium"
-    },
-    {
-      "__resolveType": "site/sections/Spacer.tsx",
-      "size": "medium"
-    },
-    {
-      "__resolveType": "site/sections/Product/ProductShelf.tsx",
-      "title": "Vitrine 1",
-      "cta": "#",
-      "products": {
-        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
-        "props": {
-          "query": "fone de ouvido",
-          "sort": "price:asc",
-          "count": 12,
-          "fuzzy": "automatic",
-          "term": "tv"
-        }
-      }
-    },
-    {
-      "__resolveType": "site/sections/Spacer.tsx",
-      "size": "medium"
-    },
-    {
-      "__resolveType": "site/sections/Spacer.tsx",
-      "size": "medium"
-    },
-    {
-      "__resolveType": "site/sections/Product/ProductShelf.tsx",
-      "title": "Vitrine 1",
-      "cta": "#",
-      "products": {
-        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
-        "props": {
-          "query": "fone de ouvido",
-          "sort": "price:asc",
-          "count": 12,
-          "fuzzy": "automatic",
-          "term": "tv"
-        }
-      }
-    },
-    {
-      "__resolveType": "site/sections/Spacer.tsx",
-      "size": "medium"
+      "__resolveType": "site/sections/Social/InstagramPosts.tsx",
+      "nposts": 6,
+      "title": "Siga-nos no @zanotti"
     },
     {
       "__resolveType": "Newsletter"

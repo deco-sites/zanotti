@@ -23,15 +23,17 @@ export const loader = (
     newsFlag = "",
     promoFlag = "",
     internationalFlag = "",
+    HidePriceCollection = ""
   } = ctx;
 
-  return { ...props, internationalFlag, promoFlag, newsFlag };
+  return { ...props, internationalFlag, promoFlag, newsFlag, HidePriceCollection };
 };
 
 export default function ProductShelf({
   internationalFlag,
   promoFlag,
   newsFlag,
+  HidePriceCollection,
   products,
   title,
   cta,

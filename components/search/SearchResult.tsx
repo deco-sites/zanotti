@@ -58,6 +58,7 @@ function PageResult(props: SectionProps<typeof loader>) {
     url,
     internationalFlag,
     promoFlag,
+    HidePriceCollection,
     newsFlag,
   } = props;
   const page = props.page!;
@@ -355,6 +356,7 @@ export const loader = (props: Props, req: Request, ctx: AppContext) => {
     internationalFlag = "",
     promoFlag = "",
     newsFlag = "",
+    HidePriceCollection = "",
   } = ctx;
 
   return {
@@ -363,6 +365,7 @@ export const loader = (props: Props, req: Request, ctx: AppContext) => {
     internationalFlag,
     promoFlag,
     newsFlag,
+    HidePriceCollection,
   };
 };
 export default SearchResult;

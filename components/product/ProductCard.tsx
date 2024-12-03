@@ -42,6 +42,10 @@ export const getFlagCluster = (
   });
 };
 
+const shouldHidePrice = (additionalProperty?: PropertyValue[]) => {
+  return additionalProperty?.some((prop) => prop.propertyID === "200");
+};
+
 function ProductCard({
   flags,
   product,
@@ -94,6 +98,8 @@ function ProductCard({
   );
   const hasPromoFlag = getFlagCluster(promoFlag, additionalProperty);
   const hasNewsFlag = getFlagCluster(newsFlag, additionalProperty);
+
+  const isPriceHidden = shouldHidePrice(additionalProperty);
 
   return (
     <div
@@ -158,7 +164,9 @@ function ProductCard({
           <p class="font-semibold family-secondary text-sm text-ellipsis font-bold line-clamp-2 h-10 leading-5">
             {title}
           </p>
-          <Price type="shelf" product={product} />
+          {isPriceHidden
+            ? <p class="font-semibold family-secondary text-sm text-ellipsis font-bold line-clamp-2 h-10 leading-5">Sob consulta</p>
+            : <Price type="shelf" product={product} />}
         </a>
         {
           /* <div
