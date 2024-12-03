@@ -78,7 +78,6 @@ async function action(
 
   const {
     device,
-    minicartSuggestion = "",
   } = ctx;
 
   const form = cartFrom(await req.formData());
@@ -99,20 +98,6 @@ async function action(
   }
 
   const result = await handler(form, req, ctx);
-
-  if (minicartSuggestion !== "") {
-    // deno-lint-ignore no-explicit-any
-    const recommendations = await (ctx as any).invoke(
-      "vtex/loaders/intelligentSearch/productList.ts",
-      {
-        collection: minicartSuggestion,
-        count: 5,
-        sort: "orders:desc",
-      },
-    );
-
-    result.recommendations = recommendations || [];
-  }
 
   const isMobile = device !== "desktop";
   result.isMobile = isMobile;

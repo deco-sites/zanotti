@@ -46,7 +46,7 @@ function ProductSuggestionsCard({
   return (
     <div
       {...event}
-      class="inline-grid lg:block grid-cols-3 items-center gap-4 bg-white px-3 py-2 lg:p-0 rounded-lg"
+      class="grid grid-cols-3 items-center gap-4 bg-white px-3 py-2 lg:p-0 rounded-lg"
     >
       <div class="col-span-1">
         <a href={relativeUrl} aria-label="view product">
@@ -63,32 +63,25 @@ function ProductSuggestionsCard({
         </a>
       </div>
       <div class="col-span-2">
-        <a href={relativeUrl} class="pt-5">
-          {seller && inStock
-            ? (
-              <p class="my-[5px] text-sm text-middle-gray capitalize">
-                {seller}
-              </p>
-            )
-            : <span class="my-[5px]"></span>}
-          <p class="font-normal text-sm max-h-[63px] overflow-hidden">
+        <a href={relativeUrl}>
+          <p class="text-ellipsis line-clamp-2 h-8 lg:h-10 overflow-hidden text-xs lg:text-sm">
             {title}
           </p>
           {inStock
             ? (
-              <div class="flex gap-2 flex-col pt-2">
+              <div class="flex flex-col pt-2">
                 {listPrice && (
-                  <span class="line-through font-normal text-dark-gray text-sm">
+                  <span class="line-through font-normal text-middle-gray text-xs lg:text-sm">
                     {formatPrice(listPrice, offers?.priceCurrency)}
                   </span>
                 )}
-                <span class="font-semibold text-[20px] text-primary">
+                <span class="font-semibold text-base lg:text-xl text-primary">
                   {formatPrice(installment?.price)}{" "}
-                  <span class="text-primary font-normal text-base">
+                  <span class="text-primary font-normal text-xs lg:text-base">
                     no pix
                   </span>
                 </span>
-                <span class="text-dark-gray text-xs">
+                <span class="text-middle-gray text-xs lg:text-sm">
                   ou {installment?.billingDuration}x de {formatPrice(
                     installment?.billingIncrement,
                     offers!.priceCurrency!,
@@ -97,7 +90,7 @@ function ProductSuggestionsCard({
               </div>
             )
             : (
-              <p class="flex text-center mt-2 justify-center font-semibold">
+              <p class="font-semibold text-middle-gray text-xs lg:text-sm">
                 Produto Indisponível
               </p>
             )}

@@ -48,16 +48,16 @@ function Suggestions(
   { suggestion }: ComponentProps<typeof loader, typeof action>,
 ) {
   const { products = [], searches = [] } = suggestion ?? {};
-  const hasProducts = Boolean(products.length);
+  const hasProducts = Boolean(products?.length || false);
   const hasTerms = Boolean(searches.length);
 
   return (
     <div class={clx(``, !hasProducts && !hasTerms && "flex")}>
-      <div class="flex flex-col lg:grid grid-cols-4 gap-5">
+      <div class="flex flex-col lg:flex-row py-5 lg:py-8">
         {hasTerms && (
-          <div class="flex flex-col col-span-1">
+          <div class="flex flex-col lg:pr-14 pb-5">
             <span
-              class="font-extrabold text-sm uppercase text-primary pb-3"
+              class="font-semibold text-sm uppercase text-primary pb-2 lg:pb-3"
               role="heading"
               aria-level={3}
             >
@@ -66,10 +66,9 @@ function Suggestions(
             <ul class="flex flex-col gap-3">
               {searches.map(({ term }) => (
                 <li>
-                  {/* TODO @gimenes: use name and action from searchbar form */}
                   <a href={`${ACTION}?${NAME}=${term}`}>
                     <span
-                      class="text-dark-gray text-sm"
+                      class="text-dark-gray text-[13px] lg:text-sm"
                       dangerouslySetInnerHTML={{ __html: term }}
                     />
                   </a>
@@ -78,17 +77,15 @@ function Suggestions(
             </ul>
           </div>
         )}
-        <div class="flex flex-col pb-5 lg:pb-0 col-span-3 lg:inline-grid grid-cols-3 gap-3">
+        <div class="flex flex-col gap-3 max-w-80">
           {products.length > 0
             ? (
               <>
                 {products.slice(0, 3).map((product, index) => (
-                  <div class="col-span-1">
-                    <ProductSuggestionsCard
-                      index={index}
-                      product={product}
-                    />
-                  </div>
+                  <ProductSuggestionsCard
+                    index={index}
+                    product={product}
+                  />
                 ))}
               </>
             )

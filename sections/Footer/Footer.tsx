@@ -205,7 +205,6 @@ function CertifiedComponent({ title, certifieds }: CertifiedProps) {
               script.type = "text/javascript";
               script.src = "//certificate.trustvox.com.br/widget.js";
               script.defer = false;
-              console.log("script", script);
               document.body.appendChild(script);
             })
           }}

@@ -7,8 +7,7 @@ export interface Props {
 function Coupon({ coupon }: Props) {
   return (
     <div class="flex gap-2 justify-between items-center px-4 pt-[10px] pb-5">
-      <span class="text-sm lg:text-base text-dark-gray flex items-center gap-2">
-        <Icon width={29} height={24} id="ecomm-ticket" />
+      <span class="text-sm lg:text-base text-black">
         Cupom
       </span>
 
@@ -17,7 +16,7 @@ function Coupon({ coupon }: Props) {
         <input
           form={MINICART_FORM_ID}
           name="coupon"
-          class="max-w-[167px] h-[34px] w-full rounded-[10px] border border-dark-gray pl-[10px]"
+          class="max-w-full h-[34px] w-full rounded-full border border-dark-gray pl-3"
           type="text"
           value={coupon ?? ""}
         />

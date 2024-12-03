@@ -59,29 +59,13 @@ function CartItem({ item, index, locale, currency }: Props) {
         <div class="flex flex-col gap-[10px] ml-[10px]">
           {/* Name and Remove button */}
           <div class="flex justify-between items-center">
-            <div>
-              <legend class="block text-xs text-black text-ellipsis font-bold line-clamp-2 max-h-8">
-                {name}
-              </legend>
-              {attachments.map((attachment) => {
-                if (attachment.name.indexOf("subscription") !== -1) {
-                  return (
-                    <div class="text-xs text-black bg-light-gray py-1/2 px-1 rounded mt-1">
-                      <b>Assinatura:</b>{" "}
-                      <span>
-                        {usePeriod(
-                          attachment.content["vtex.subscription.key.frequency"],
-                        )}
-                      </span>
-                    </div>
-                  );
-                }
-              })}
-            </div>
+            <legend class="block text-xs text-black text-ellipsis line-clamp-2 max-h-8">
+              {name}
+            </legend>
             <button
               class={clx(
                 isGift && "hidden",
-                "btn btn-ghost btn-square no-animation",
+                "btn btn-ghost btn-square no-animation text-primary",
               )}
               hx-on:click={useScript(removeItemHandler)}
             >

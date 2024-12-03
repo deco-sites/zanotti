@@ -14,10 +14,11 @@ export default {
     },
     extend: {
       colors: {
-        "black": "#2D2A2B",
-        "dark-gray": "#A8A8A8",
-        "light-gray": "#F2F2F2",
-        "middle-gray": "#D3D3D3",
+        "black": "#1D1D1B",
+        "dark-gray": "#808285",
+        "light-gray": "#D1D3D4",
+        "middle-gray": "#9D9D9C",
+        "regular-gray": "#A7A9AC",
         "signature-green": "#1BAE32",
       },
       boxShadow: {

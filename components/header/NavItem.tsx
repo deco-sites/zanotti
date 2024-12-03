@@ -3,15 +3,12 @@ import {
   NAVBAR_HEIGHT_DESKTOP,
 } from "../../constants.ts";
 
-import Icon from "../ui/Icon.tsx";
-
 /** @titleBy name */
 export interface Children {
+  /** @title Texto */
   name: string;
+  /** @title Link */
   url: string;
-  isBold?: boolean;
-  /** @title Filhos */
-  children?: Children[];
 }
 
 /** @titleBy name */
@@ -20,14 +17,10 @@ export interface INavItem {
   name: string;
   /** @title Link */
   url?: string;
-  /** @title Icone */
-  icon?: "sac" | "account_blue";
   /** @title Filhos */
   children?: Children[];
   /** @title Item possui destaque? */
   ishighlighted?: boolean;
-  /** @title Item possui negrito? */
-  isBold?: boolean;
 }
 
 interface Props {
@@ -65,16 +58,6 @@ function NavItem({ item }: Props) {
                   <a class="hover:underline" href={node.url}>
                     <span>{node.name}</span>
                   </a>
-
-                  <ul class="flex flex-col gap-1 mt-4">
-                    {node.children?.map((leaf) => (
-                      <li>
-                        <a class="hover:underline" href={leaf.url}>
-                          <span class="text-xs">{leaf.name}</span>
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
                 </li>
               ))}
             </ul>

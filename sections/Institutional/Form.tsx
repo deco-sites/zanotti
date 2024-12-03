@@ -245,7 +245,6 @@ export const action = async (
         data,
       },
     );
-    console.log("response", response);
 
     return {
       toast: "success",
