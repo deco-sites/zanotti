@@ -30,9 +30,9 @@ import * as $$$$$$9 from "./sections/Content/Logos.tsx";
 import * as $$$$$$10 from "./sections/Content/SeoComponent.tsx";
 import * as $$$$$$11 from "./sections/Content/ShowCaseCounter.tsx";
 import * as $$$$$$12 from "./sections/Footer/Footer.tsx";
-import * as $$$$$$13 from "./sections/Footer/PoweredByDeco.tsx";
-import * as $$$$$$14 from "./sections/Footer/PoweredByVtex.tsx";
-import * as $$$$$$15 from "./sections/Footer/PoweredByWave.tsx";
+import * as $$$$$$13 from "./sections/Footer/PoweredByBetoven.tsx";
+import * as $$$$$$14 from "./sections/Footer/PoweredByDeco.tsx";
+import * as $$$$$$15 from "./sections/Footer/PoweredByVtex.tsx";
 import * as $$$$$$16 from "./sections/Header/Header.tsx";
 import * as $$$$$$17 from "./sections/Images/Banner.tsx";
 import * as $$$$$$18 from "./sections/Images/Carousel.tsx";
@@ -94,9 +94,9 @@ const manifest = {
     "site/sections/Content/SeoComponent.tsx": $$$$$$10,
     "site/sections/Content/ShowCaseCounter.tsx": $$$$$$11,
     "site/sections/Footer/Footer.tsx": $$$$$$12,
-    "site/sections/Footer/PoweredByDeco.tsx": $$$$$$13,
-    "site/sections/Footer/PoweredByVtex.tsx": $$$$$$14,
-    "site/sections/Footer/PoweredByWave.tsx": $$$$$$15,
+    "site/sections/Footer/PoweredByBetoven.tsx": $$$$$$13,
+    "site/sections/Footer/PoweredByDeco.tsx": $$$$$$14,
+    "site/sections/Footer/PoweredByVtex.tsx": $$$$$$15,
     "site/sections/Header/Header.tsx": $$$$$$16,
     "site/sections/Images/Banner.tsx": $$$$$$17,
     "site/sections/Images/Carousel.tsx": $$$$$$18,

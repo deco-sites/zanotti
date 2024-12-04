@@ -1,3 +1,5 @@
+import { useDevice } from "@deco/deco/hooks";
+
 export function LoadingFallback() {
   return (
     <div
@@ -6,9 +8,13 @@ export function LoadingFallback() {
   );
 }
 export default function Spacer() {
+  const device = useDevice();
+
   return (
     <div
-      style={{ height: "2rem" }}
+      style={{
+        height: device === "mobile" ? "1rem" : "2rem",
+      }}
     />
   );
 }

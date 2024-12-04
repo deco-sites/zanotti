@@ -4,114 +4,80 @@
     {
       "children": [
         {
-          "title": "Fale Conosco",
-          "href": "/fale-conosco"
+          "title": "Sobre a Zanotti",
+          "href": "/sobre-a-zanotti"
         },
         {
-          "href": "/faq",
-          "title": "FAQ"
+          "href": "/termos-e-condicoes",
+          "title": "Termos e Condições"
         },
         {
-          "href": "/politicas-de-pagamentos",
-          "title": "Política de pagamento"
-        },
-        {
-          "title": "Prazos de Entrega",
-          "href": "/politica-de-entrega"
-        },
-        {
-          "title": "Trocas e Devoluções",
-          "href": "/politica-de-troca-e-devolucao"
-        }
-      ],
-      "href": "/fale-conosco",
-      "title": "Atendimento"
-    },
-    {
-      "title": "Institucional",
-      "children": [
-        {
-          "title": "Nossa História",
-          "href": "/nossa-historia"
-        },
-        {
-          "title": "Termos de Uso",
-          "href": "/termos-de-uso"
-        },
-        {
-          "title": "Política de Privacidade",
-          "href": "/politica-de-privacidade"
+          "href": "/visite-nossa-loja",
+          "title": "Visite Nossa Loja"
         },
         {
           "title": "Lojas",
           "href": "/lojas"
         }
       ],
-      "href": "https://sac.allever.com/hc/pt-br/articles/11992913554836-Sobre-a-allever"
+      "title": "Institucional"
     },
     {
-      "title": "Fale conosco",
+      "title": "Conta",
       "children": [
         {
-          "title": "(43) 3520-500"
+          "title": "Minha Conta",
+          "href": "/account"
         },
         {
-          "title": "08:00 às 18:00 segunda a sexta"
+          "title": "Meus Pedidos"
         },
         {
-          "title": "08:00 às 12:00 aos sábados"
-        },
-        {
-          "title": "faleconosco@eletrotrafo.com.br",
-          "href": "mailto:faleconosco@eletrotrafo.com.br"
+          "title": "Favoritos"
         }
       ]
     },
     {
-      "title": "Marcas mais buscadas",
+      "title": "Atendimento",
       "children": [
         {
-          "title": "Gopro",
-          "href": "#"
+          "title": "Trabalhe Conosco",
+          "href": "/trabalhe-conosco"
         },
         {
-          "title": "Nintendo",
-          "href": "#"
+          "title": "Dúvidas Frequentes",
+          "href": "/duvidas-frequentes"
         },
         {
-          "title": "Xiomi",
-          "href": "#"
+          "href": "/politica-de-entrega",
+          "title": "Política de Entrega"
         },
         {
-          "title": "Philips Walita",
-          "href": "#"
+          "href": "/politica-de-privacidade-de-dados",
+          "title": "Política de Privacidade de Dados "
         },
         {
-          "title": "Philips",
-          "href": "#"
-        },
-        {
-          "title": "Sony",
-          "href": "#"
-        },
-        {
-          "title": "Nikon",
-          "href": "#"
-        },
-        {
-          "title": "Canon",
-          "href": "#"
-        },
-        {
-          "title": "Motorola",
-          "href": "#"
-        },
-        {
-          "title": "Multi",
-          "href": "#"
+          "title": "Política de troca,  Devolução e Cancelamento",
+          "href": "/politica-de-troca-devolucao-e-cancelamento"
         }
       ],
-      "href": "#"
+      "href": "/fale-conosco"
+    },
+    {
+      "children": [
+        {
+          "title": "WhatsApp"
+        },
+        {
+          "title": "16 3961-8800",
+          "href": "https://wa.me/1639618800"
+        },
+        {
+          "title": "sac@zanottirefrigeracao.com.br",
+          "href": "mailto:sac@zanottirefrigeracao.com.br"
+        }
+      ],
+      "title": "Sac"
     }
   ],
   "social": [
@@ -194,7 +160,7 @@
       "link": "https://sac.allever.com/hc/pt-br"
     }
   },
-  "copyright": "Os preços e condições de pagamento apresentados neste “site” somente são válidos para as compras efetuadas no ato da sua exibição. Apenas aos pedidos efetivamente formulados e aceitos não se aplicarão eventuais alterações posteriores de preço. Em caso de divergência de preços no site, o valor válido é o do Carrinho de Compras. Allever Ltda - CNPJ: 43.757.816/0001-77 - Rua Francisco Regin, 339, Centro, Cornélio Procópio, PR, CEP - 86300-000 - faleconosco@allever.com - (11) 4200-0010 - Todos os direitos reservados.",
+  "copyright": "Preços e condições de pagamento válidos exclusivamente para compras efetuadas no site. As imagens dos produtos são meramente ilustrativas. Todos os preços e condições comerciais estão sujeitos a alteração sem aviso prévio.  Zanotti Indústria e Comércio de Refrigeração LTDA. - CNPJ: 55.963.771/0001-76 | Inscrição Estadual: 582.023.236.111Rua João Clapp, n° 421, Campos Elíseos - CEP: 14080-350 - Ribeirão Preto/SP - Telefone: (16)3961-8800 / sac@zanottirefrigeracao.com.br",
   "certified": {
     "0": {
       "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/6cf82172-b8fe-4e7c-85c3-7779f0b4ee09",

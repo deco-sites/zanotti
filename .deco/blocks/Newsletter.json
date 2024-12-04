@@ -1,8 +1,8 @@
 {
   "__resolveType": "site/sections/Newsletter/Newsletter.tsx",
   "empty": {
-    "description": "Receba nossas novidades, promoções exclusivas e muito mais!",
-    "title": "Assine nossa Newsletter"
+    "description": "Cadastre-se e fique por dentro de novidades e as melhores ofertas.",
+    "title": "FIQUE POR DENTRO!"
   },
   "status": "success"
 }

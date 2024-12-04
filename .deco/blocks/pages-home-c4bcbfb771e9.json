@@ -8,23 +8,6 @@
       }
     },
     {
-      "__resolveType": "site/sections/Images/Deals.tsx",
-      "deals": [
-        {
-          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/c4a76e18-9efe-4586-91d0-667646b553d2/alt.svg",
-          "title": "Parcele nos principais cartões em até 12x"
-        },
-        {
-          "title": "Atendimento humanizado e personalizado",
-          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/a3919c9d-2c84-44b4-90d4-434e2fa49d4f/1.svg"
-        },
-        {
-          "title": "Projetos especiais para o seu negócio",
-          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/2c61d8a3-9527-4b52-bcaf-d3880faac77f/Icon.svg"
-        }
-      ]
-    },
-    {
       "__resolveType": "site/sections/Images/Carousel.tsx",
       "images": [
         {
@@ -361,6 +344,10 @@
       }
     },
     {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "medium"
+    },
+    {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
       "title": "Vitrine 1",
       "cta": "#",
@@ -369,7 +356,8 @@
         "props": {
           "sort": "",
           "term": "fogao",
-          "count": 6
+          "count": 31,
+          "collection": "197"
         }
       }
     },
@@ -402,7 +390,8 @@
         "props": {
           "sort": "",
           "term": "fogao",
-          "count": 6
+          "count": 30,
+          "collection": "197"
         }
       }
     },
@@ -413,7 +402,24 @@
     {
       "__resolveType": "site/sections/Social/InstagramPosts.tsx",
       "nposts": 6,
-      "title": "Siga-nos no @zanotti"
+      "title": "Siga-nos no @zanotti",
+      "facebookToken": "aaa"
+    },
+    {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "medium"
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/SeoComponent.tsx",
+        "title": "Texto base SEO",
+        "content": "<p><span>Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+      }
+    },
+    {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "medium"
     },
     {
       "__resolveType": "Newsletter"
