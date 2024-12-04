@@ -48,7 +48,7 @@ function BannerItem(
     alt,
     mobile,
     desktop,
-    href
+    href,
   } = image;
   const params = { promotion_name: image.alt };
 
@@ -69,7 +69,8 @@ function BannerItem(
       aria-label={alt}
       class="relative block overflow-y-hidden w-full"
     >
-      {/* {action && (
+      {
+        /* {action && (
         <div
           class={clx(
             "flex flex-col justify-center items-center",
@@ -89,7 +90,8 @@ function BannerItem(
             {action.label}
           </button>
         </div>
-      )} */}
+      )} */
+      }
       <Picture preload={lcp} {...viewPromotionEvent}>
         <Source
           media="(max-width: 767px)"
@@ -145,17 +147,17 @@ function Carousel({ images = [], preload }: Props) {
         ? (
           <div class="container absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-10 flex items-center">
             <Slider.PrevButton
-              class="btn-sm px-5 hidden sm:flex disabled:hidden"
+              class="btn-sm px-5 sm:flex bg-transparent"
               disabled={false}
             >
-              <Icon id="chevron-right" class="rotate-180" />
+              <Icon id="arrow-carrosel" />
             </Slider.PrevButton>
 
             <Slider.NextButton
-              class="btn-sm px-5 hidden sm:flex disabled:hidden ml-auto"
+              class="btn-sm px-5 sm:flex bg-transparent  ml-auto"
               disabled={false}
             >
-              <Icon id="chevron-right" />
+              <Icon id="arrow-carrosel" class="rotate-180 bg-transparent" />
             </Slider.NextButton>
           </div>
         )

@@ -18,6 +18,24 @@
             "label": "Confira"
           },
           "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/4a2fcc64-11b6-4600-869f-18016b2c89aa/MOBILE-freezer-vertical-1.svg"
+        },
+        {
+          "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/23dc7945-a4e2-4f18-aac1-c65288f5ddaa/image-9.svg",
+          "alt": "/",
+          "action": {
+            "href": "/",
+            "label": "Confira"
+          },
+          "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/4a2fcc64-11b6-4600-869f-18016b2c89aa/MOBILE-freezer-vertical-1.svg"
+        },
+        {
+          "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/23dc7945-a4e2-4f18-aac1-c65288f5ddaa/image-9.svg",
+          "alt": "/",
+          "action": {
+            "href": "/",
+            "label": "Confira"
+          },
+          "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/4a2fcc64-11b6-4600-869f-18016b2c89aa/MOBILE-freezer-vertical-1.svg"
         }
       ],
       "preload": true

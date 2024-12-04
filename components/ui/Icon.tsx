@@ -44,6 +44,7 @@ export type AvailableIcons =
   | "facebook"
   | "copy-paste"
   | "mail"
+  | "arrow-carrosel"
   | "x-twitter";
 
 interface Props extends JSX.SVGAttributes<SVGSVGElement> {
