@@ -1,13 +1,13 @@
 {
   "seo": {
     "type": "website",
-    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/eletrotrafo/cfa48c09-1f71-4b59-8238-7ee5feef5e36/dark-logo.svg",
-    "title": "Eletrotrafo",
+    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/6e91361f-9633-4b91-8638-8c1040a26c4a/logo-zanotti.svg",
+    "title": "Zanotti",
     "jsonLDs": [],
     "noIndexing": false,
-    "description": "A Eletrotrafo atua há mais de 30 anos na distribuição de materiais elétricos de baixa, média e alta tensão. Embora seja considerada especialista no mercado de material elétrico, a Eletrotrafo oferece em seu catálogo uma grande variedade de produtos, dos mais diversos departamentos.",
-    "favicon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/eletrotrafo/1c846a7d-728f-45d1-ad1e-2bf36ba52003/favicon.ico",
-    "themeColor": "#163970",
+    "description": "A Zanotti Refrigeração é uma empresa brasileira com 67 anos de história onde você compra os seus equipamentos para qualquer negócio do ramo alimentício.",
+    "favicon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/e9f13661-f1c7-4e61-bb6d-912afa05fc77/t62543-favicon.ico",
+    "themeColor": "#004BCC",
     "descriptionTemplate": "%s",
     "titleTemplate": "%s"
   },
