@@ -40,9 +40,13 @@ export interface Social {
    */
   href?: string;
   /**
-   * @title Icone da rede social
+   * @title Icone da rede social desktop
    */
-  image: ImageWidget;
+  imageDesktop: ImageWidget;
+  /**
+   * @title Icone da rede social Mobile
+   */
+  imageMobile: ImageWidget;
 }
 interface Props {
   /**
@@ -235,8 +239,12 @@ function Service({ title, label, button }: Service) {
 function Payments({ title, paymentMethods }: PaymentsProps) {
   return (
     <>
-      {title && <p class="text-base-200 font-medium text-base">{title}</p>}
-      <ul class="flex flex-wrap gap-2">
+      {title && (
+        <p class="text-base text-sm font-normal lg:text-base-200 lg:font-medium lg:text-base">
+          {title}
+        </p>
+      )}
+      <ul class="flex flex-wrap gap-4 lg:gap-2">
         {paymentMethods?.map(({ image, alt }, index) => (
           <li
             key={index}
@@ -270,9 +278,7 @@ function Footer(
   return (
     <>
       {device === "desktop" && (
-        <footer
-          class="footer px-5 sm:px-0 pt-10 pb-14 flex flex-col bg-primary"
-        >
+        <footer class="footer px-5 sm:px-0 pt-10 pb-14 flex flex-col bg-primary">
           <div class=" container flex flex-col gap-5 sm:gap-10 px-5 py-10">
             <div class="grid grid-cols-5">
               {links.map((link, index) => (
@@ -316,15 +322,15 @@ function Footer(
                     />
                     <div class="flex flex-col gap-4">
                       <p class="text-base-200 font-medium text-base">{label}</p>
-                      <ul class="flex items-center gap-3">
-                        {social.map(({ image, href, alt }, index) => (
+                      <ul class="flex items-center gap-6">
+                        {social.map(({ imageDesktop, href, alt }, index) => (
                           <li
                             key={index}
                             class="rounded-full"
                           >
                             <a href={href} target="_blank">
                               <Image
-                                src={image}
+                                src={imageDesktop}
                                 alt={alt}
                                 loading="lazy"
                                 width={27}
@@ -354,33 +360,15 @@ function Footer(
       )}
       {device === "mobile" &&
         (
-          <div class="container px-5 pb-14">
-            <div class="flex flex-col py-[35px] mt-5">
-              <p class="text-base">{label}</p>
-              <ul class="flex mt-5 gap-[10px]">
-                {social.map(({ image, href, alt }) => (
-                  <li class="bg-primary p-[9px] rounded-[7px]">
-                    <a href={href} target="_blank">
-                      <Image
-                        src={image}
-                        alt={alt}
-                        loading="lazy"
-                        width={25}
-                        height={25}
-                      />
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div class="container px-5 pb-14 mt-6">
             <div>
               {links.map(({ title, children }, index) => (
                 <ul key={index} class="flex flex-col gap-2 mb-[10px]">
                   <Collapsable
-                    class="bg-light-gray py-[29px] rounded-[20px]"
+                    class="bg-base-200 py-4 rounded"
                     title={
-                      <div class="px-5 flex flex-row space-between items-center">
-                        <div class="text-base font-normal">{title}</div>
+                      <div class="px-5 flex flex-row space-between items-center py-2">
+                        <div class="text-sm font-normal">{title}</div>
                         {children && children.length > 0 && (
                           <Icon
                             class="group-open:rotate-180 transition-all ease-in-out duration-[400ms]"
@@ -391,46 +379,70 @@ function Footer(
                       </div>
                     }
                   >
-                    {children &&
-                      children.map(({ title, href }) => (
-                        <li
-                          class="flex flex-row gap-[10px] px-5 mt-5"
-                          key={href}
-                        >
-                          <a
-                            class="text-base font-normal text-base"
-                            target="_blank"
-                            href={href}
+                    <div class="flex flex-col gap-1 mt-2">
+                      {children &&
+                        children.map(({ title, href }) => (
+                          <li
+                            class="flex flex-row gap-1 px-5"
+                            key={href}
                           >
-                            {title}
-                          </a>
-                        </li>
-                      ))}
+                            <a
+                              class="text-xs font-normal text-base family-secondary bg-gray-medium py-4 w-full rounded px-2"
+                              target="_blank"
+                              href={href}
+                            >
+                              {title}
+                            </a>
+                          </li>
+                        ))}
+                    </div>
                   </Collapsable>
                 </ul>
               ))}
             </div>
-            <div class="flex flex-col gap-[23px] my-[23px]">
-              <Payments
-                title={paymentMethods?.title}
-                paymentMethods={paymentMethods?.paymentMethods}
-              />
+            <div class="flex flex-col bg-base-200 rounded">
+              <div class="px-5 py-4 flex flex-col gap-3 ">
+                <Payments
+                  title={paymentMethods?.title}
+                  paymentMethods={paymentMethods?.paymentMethods}
+                />
+
+                <div class="flex flex-col gap-3 ">
+                  <p class="text-sm">{label}</p>
+                  <div class="flex flex-row items-center gap-3">
+                    {social.map(({ imageMobile, href, alt }) => (
+                      <div>
+                        <a href={href} target="_blank">
+                          <Image
+                            src={imageMobile}
+                            alt={alt}
+                            loading="lazy"
+                            width={25}
+                            height={25}
+                          />
+                        </a>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
-            {certified && (
+            <div>
+              <p class="text-middle-gray family-secondary text-[10px] py-5 ">
+                {copyright}
+              </p>
+            </div>
+
+            {
+              /* {certified && (
               <CertifiedComponent
                 title={certified?.title}
                 certifieds={certified?.certifieds}
               />
-            )}
-            <div>
-              <img loading="lazy" src={logo} alt={label} width={144} />
-            </div>
-            <div>
-              <p class="text-base text-xs py-5 ">
-                {copyright}
-              </p>
-            </div>
-            <div class="flex flex-nowrap items-center justify-start gap-5 pb-[38px] ">
+            )} */
+            }
+
+            <div class="flex flex-nowrap items-center justify-start gap-5 pb-[380px] ">
               <PoweredByBetoven />
               <PoweredByDeco />
               <PoweredByVtex />

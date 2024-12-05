@@ -12,6 +12,7 @@ export default {
       center: true,
       screens: {},
     },
+
     extend: {
       colors: {
         "black": "#1D1D1B",
@@ -20,6 +21,7 @@ export default {
         "middle-gray": "#9D9D9C",
         "regular-gray": "#A7A9AC",
         "signature-green": "#1BAE32",
+        "gray-medium": "#F2F1F1"
       },
       boxShadow: {
         "custom": "24px 51px 113px -17px rgba(0,0,0,0.75)",

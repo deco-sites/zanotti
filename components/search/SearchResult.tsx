@@ -226,10 +226,10 @@ function Result(props: SectionProps<typeof loader>) {
           <div class="w-full flex flex-col gap-8">
             <div class="border-b border-gray-300 mb-8">
               <div class="flex items-center space-between w-full container py-8 px-5">
-                <h1 class="text-xl lg:text-3xl uppercase font-semibold flex items-center">
+                <h1 class="text-sm lg:text-2xl capitalize font-semibold flex items-center">
                   {result}{" "}
-                  <span class="text-base lg:text-xl ml-2">
-                    [{page.pageInfo.records}]
+                  <span class="text-sm lg:text-2xl font-light ml-2">
+                    ({page.pageInfo.records})
                   </span>
                 </h1>
                 <div class="w-fit">

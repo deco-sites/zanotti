@@ -82,28 +82,28 @@
   ],
   "social": [
     {
-      "alt": "Instagram",
-      "href": "https://www.instagram.com/eletrotrafo.loja/",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/fbdfdfcb-c7c3-418d-8f7c-b7adbd891bd6",
-      "title": "Instagram"
-    },
-    {
-      "alt": "X",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/e1261d5e-5119-4649-8477-dafc77c93c43",
-      "href": "https://x.com/eletrotrafo",
-      "title": "X"
-    },
-    {
-      "alt": "linkedin",
-      "href": "https://br.linkedin.com/company/eletrotrafo",
-      "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/allever-store/8d8afe41-92e0-4f58-9476-b62b4e564e66/XMLID_801_.svg",
-      "title": "Linkedin"
-    },
-    {
       "alt": "facebook",
-      "href": "https://www.facebook.com/Eletrotrafo",
-      "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/eletrotrafo/a74ea30f-db35-4e89-b23e-37705c5b4df3/facebook.svg",
-      "title": "Facebook"
+      "href": "facebook",
+      "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/1ad5aee3-d446-4a8e-95f5-ee52d23fda88/Frame-(1).svg",
+      "title": "facebook",
+      "imageDesktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/1ad5aee3-d446-4a8e-95f5-ee52d23fda88/Frame-(1).svg",
+      "imageMobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/722b1dc9-046a-4662-adf6-69cf1dbbf0d6/Frame-(3).svg"
+    },
+    {
+      "alt": "Instagram",
+      "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/02c476f1-3c77-4c2d-9b72-bf31c9557d7c/Vector-(1).svg",
+      "href": "Instagram",
+      "title": "Instagram",
+      "imageDesktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/02c476f1-3c77-4c2d-9b72-bf31c9557d7c/Vector-(1).svg",
+      "imageMobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/d90d7122-1a60-4da3-be47-77161963d29c/Frame-(5).svg"
+    },
+    {
+      "alt": "youtube",
+      "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/fc559024-cac5-455d-bce0-2edd99a4ec70/Frame.svg",
+      "title": "youtube",
+      "href": "https://www.instagram.com/",
+      "imageDesktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/fc559024-cac5-455d-bce0-2edd99a4ec70/Frame.svg",
+      "imageMobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/b5b95878-bc15-4293-8d42-6eee110b70e2/Frame-(4).svg"
     }
   ],
   "paymentMethods": {
@@ -156,8 +156,7 @@
     "title": "SAC",
     "label": "Acesse nossa área de atendimento",
     "button": {
-      "label": "Atendimento",
-      "link": "https://sac.allever.com/hc/pt-br"
+      "label": "Atendimento"
     }
   },
   "copyright": "Preços e condições de pagamento válidos exclusivamente para compras efetuadas no site. As imagens dos produtos são meramente ilustrativas. Todos os preços e condições comerciais estão sujeitos a alteração sem aviso prévio.  Zanotti Indústria e Comércio de Refrigeração LTDA. - CNPJ: 55.963.771/0001-76 | Inscrição Estadual: 582.023.236.111Rua João Clapp, n° 421, Campos Elíseos - CEP: 14080-350 - Ribeirão Preto/SP - Telefone: (16)3961-8800 / sac@zanottirefrigeracao.com.br",
