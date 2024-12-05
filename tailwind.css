@@ -29,11 +29,13 @@
   }
 
   .container {
+    padding: 0 16px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    max-width: 100%;
 
     @screen lg {
+      padding: 0 32px;
       max-width: 1440px;
     }
   }
@@ -209,4 +211,8 @@ details>summary::marker {
 
 .ts-shelf-right.ts-shelf-rate-count.ts-shelf-rate-disabled {
   display: none !important;
+}
+
+.font-secondary {
+  font-family: 'MuseoModerno';
 }

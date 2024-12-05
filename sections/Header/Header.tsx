@@ -26,8 +26,8 @@ export function LoadingFallback() {
 export interface Logo {
   src: ImageWidget;
   alt: string;
-  width?: number;
-  height?: number;
+  width: number;
+  height: number;
 }
 
 export interface SectionProps {
@@ -72,7 +72,7 @@ const Desktop = ({ logo, searchbar, navItems }: Props) => (
           return (
             <div class="dropdown dropdown-hover static">
               <div tabindex={index} class="text-sm text-white relative z-[2]">
-                <a class={`text-white ${item.ishighlighted && "font-semibold"}`} href={item.url || "#"}>
+                <a class={`font-secondary text-white ${item.ishighlighted && "font-semibold"}`} href={item.url || "#"}>
                   {item.name}
                 </a>
               </div>
@@ -154,7 +154,7 @@ const Mobile = ({ logo, searchbar }: Props) => (
             aria-label="Store logo"
             class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
           >
-            <Image src={logo.src} alt={logo.alt} width={94} height={21} />
+            <Image src={logo.src} alt={logo.alt} width={logo.width} height={logo.height} />
           </a>
         )}
 

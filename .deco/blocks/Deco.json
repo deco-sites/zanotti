@@ -12,17 +12,6 @@
       {
         "variations": [
           {
-            "weight": "400"
-          },
-          {
-            "weight": "500"
-          }
-        ],
-        "family": "MuseoModerno"
-      },
-      {
-        "variations": [
-          {
             "weight": "500"
           },
           {
@@ -33,6 +22,17 @@
           }
         ],
         "family": "Montserrat"
+      },
+      {
+        "variations": [
+          {
+            "weight": "400"
+          },
+          {
+            "weight": "500"
+          }
+        ],
+        "family": "MuseoModerno"
       }
     ]
   },
@@ -48,13 +48,13 @@
   "mainColors": {
     "primary": "#004BCC",
     "base-100": "#F2F2F2",
-    "secondary": "#D1D3D4",
+    "secondary": "#1D1D1B",
     "success": "#1BAE32",
     "warning": "#a39e0f",
     "error": "#d10a0a",
     "info": "#3c4cc8",
-    "neutral": "#2D2A2B",
-    "tertiary": "#2D2A2B"
+    "neutral": "#1D1D1B",
+    "tertiary": "#1D1D1B"
   },
   "complementaryColors": {
     "primary-content": "#F2F2F2",

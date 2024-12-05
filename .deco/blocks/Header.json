@@ -105,9 +105,9 @@
   ],
   "variant": "initial",
   "logo": {
-    "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/eletrotrafo/089321b4-b628-4c2a-8bb4-ab87919cbe33/logo.svg",
-    "alt": "Eletrotrafo",
-    "width": 140,
-    "height": 33
+    "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/6e91361f-9633-4b91-8638-8c1040a26c4a/logo-zanotti.svg",
+    "alt": "Zanotti",
+    "width": 128,
+    "height": 43
   }
 }
