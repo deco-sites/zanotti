@@ -1,7 +1,6 @@
 import Image from "apps/website/components/Image.tsx";
 import WishlistButton from "../wishlist/WishlistButton.tsx";
 
-import { clx } from "../../sdk/clx.ts";
 import { relative } from "../../sdk/url.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
@@ -11,7 +10,6 @@ import MinicartAdd from "./MinicartAdd.tsx";
 import Price from "./Price.tsx";
 
 interface Props {
-  flags?: [internationalFlag: string, promoFlag: string, newsFlag: string];
   product: Product;
   /** Preload card image */
   preload?: boolean;
@@ -47,7 +45,6 @@ const shouldHidePrice = (additionalProperty?: PropertyValue[]) => {
 };
 
 function ProductCard({
-  flags,
   product,
   preload,
   itemListName,
@@ -56,16 +53,9 @@ function ProductCard({
   hiddenFlags = false,
   hiddenAddToCartButton = true,
 }: Props) {
-  const [
-    internationalFlag = "",
-    promoFlag = "",
-    newsFlag = "",
-  ] = flags ?? [];
-
-  const { url, image: images, offers, isVariantOf, brand, additionalProperty } =
+  const { url, image: images, offers, isVariantOf, additionalProperty } =
     product;
 
-  const productGroupID = isVariantOf?.productGroupID ?? "";
   const title = isVariantOf?.name ?? product.name;
   const [front] = images ?? [];
 
@@ -92,13 +82,6 @@ function ProductCard({
     },
   });
 
-  const hasInternationalFlag = getFlagCluster(
-    internationalFlag,
-    additionalProperty,
-  );
-  const hasPromoFlag = getFlagCluster(promoFlag, additionalProperty);
-  const hasNewsFlag = getFlagCluster(newsFlag, additionalProperty);
-
   const isPriceHidden = shouldHidePrice(additionalProperty);
 
   return (
@@ -115,26 +98,6 @@ function ProductCard({
               </span>
             )
             : null}
-          {
-            /* {hasNewsFlag && !hiddenFlags && (
-            <span
-              class={clx(
-                "text-xs font-semibold text-white uppercase bg-[#FFA318] text-center text-white px-2 py-1 rounded-[6px]",
-              )}
-            >
-              Novidade
-            </span>
-          )}
-          {hasPromoFlag && !hiddenFlags && (
-            <span
-              class={clx(
-                "text-xs font-semibold text-white uppercase bg-[#F22E2E] text-center text-white px-2 py-1 rounded-[6px]",
-              )}
-            >
-              Promoção
-            </span>
-          )} */
-          }
         </div>
         <WishlistButton item={item} variant="icon" />
       </div>

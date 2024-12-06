@@ -1,6 +1,5 @@
 import Image from "apps/website/components/Image.tsx";
-import { useDevice } from "@deco/deco/hooks";
-import Section, {
+import {
   type Props as SectionHeaderProps,
 } from "../../components/ui/Section.tsx";
 import { type SectionProps } from "@deco/deco";
@@ -116,10 +115,11 @@ export default function InstagramPosts({
     },
   ],
 }: SectionProps<typeof loader>) {
-  const device = useDevice();
   return (
-    <div class="container px-5 lg:px-0">
-      <p class="mb-3 font-semibold text-base">{title}</p>
+    <div class="container">
+      <div class="mb-3">
+        <span class="text-lg lg:text-xl font-semibold font-secondary">{title}</span>
+      </div>
       <div class="grid grid-cols-2 lg:grid-cols-6 gap-3 lg:gap-4 ">
         {posts.map((item) => (
           <a href={item.permalink} target="_blank">
@@ -130,8 +130,8 @@ export default function InstagramPosts({
                   class="max-w-full max-h-full object-cover rounded-lg"
                   style={{ aspectRatio: "1 / 1" }}
                   src={item.media_url ?? ""}
-                  width={device === "mobile" ? 175 : 237.6}
-                  height={device === "mobile" ? 160 : 250}
+                  width={320}
+                  height={320}
                 />
               )
               : (

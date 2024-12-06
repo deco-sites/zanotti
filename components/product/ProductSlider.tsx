@@ -6,18 +6,17 @@ import Slider from "../ui/Slider.tsx";
 import ProductCard from "./ProductCard.tsx";
 
 interface Props {
-  flags?: [internationalFlag: string, promoFlag: string, newsFlag: string, HidePriceCollection:string];
   products: Product[];
   itemListName?: string;
 }
 
-function ProductSlider({ flags, products, itemListName }: Props) {
+function ProductSlider({ products, itemListName }: Props) {
   const id = useId();
   return (
     <>
       <div
         id={id}
-        class="grid grid-rows-1 px-5 lg:px-0"
+        class="grid grid-rows-1"
         style={{
           gridTemplateColumns: "min-content 1fr min-content",
         }}
@@ -28,11 +27,10 @@ function ProductSlider({ flags, products, itemListName }: Props) {
               <Slider.Item
                 index={index}
                 class={clx(
-                  "carousel-item",
+                  "carousel-item first:ml-5 last:mr-5 lg:!m-0",
                 )}
               >
                 <ProductCard
-                  flags={flags}
                   index={index}
                   product={product}
                   itemListName={itemListName}
@@ -44,13 +42,13 @@ function ProductSlider({ flags, products, itemListName }: Props) {
         </div>
 
         <div class="col-start-1 col-span-1 row-start-1 row-span-1 z-10 self-center">
-          <Slider.PrevButton class="hidden sm:flex bg-white btn-sm btn-circle no-animation relative -left-8 p-2 box-content border border-secondary items-center justify-center">
+          <Slider.PrevButton class="hidden sm:flex bg-white btn-sm btn-circle no-animation relative -left-7 p-2 box-content border border-light-gray items-center justify-center disabled:hidden">
             <Icon id="chevron-right" class="rotate-180" />
           </Slider.PrevButton>
         </div>
 
         <div class="col-start-3 col-span-1 row-start-1 row-span-1 z-10 self-center">
-          <Slider.NextButton class="hidden sm:flex bg-white btn-sm btn-circle no-animation relative -right-8 p-2 box-content border border-secondary items-center justify-center">
+          <Slider.NextButton class="hidden sm:flex bg-white btn-sm btn-circle no-animation relative -right-7 p-2 box-content border border-light-gray items-center justify-center disabled:hidden">
             <Icon id="chevron-right" />
           </Slider.NextButton>
         </div>
