@@ -105,7 +105,7 @@ function Carousel({ images = [], preload }: Props) {
         "grid-rows-[1fr_32px_1fr_64px]",
         "grid-cols-[32px_1fr_32px]",
         "sm:grid-cols-[112px_1fr_112px] sm:min-h-min",
-        "w-full -mt-3 relative",
+        "w-full relative",
       )}
     >
       <div class="col-span-full row-span-full leading-[1]">
@@ -119,12 +119,12 @@ function Carousel({ images = [], preload }: Props) {
       </div>
       {images.length > 1
         ? (
-          <div class="container absolute top-1/2 -translate-y-1/2 z-10 flex items-center">
-            <Slider.PrevButton class="btn-sm pr-5 sm:flex bg-transparent disabled:hidden text-white">
+          <div class="container absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-10 flex items-center">
+            <Slider.PrevButton class="btn-sm pr-5 flex items-center justify-center bg-transparent disabled:hidden text-white pl-0">
               <Icon id="arrow-left" size={20} />
             </Slider.PrevButton>
 
-            <Slider.NextButton class="btn-sm pl-5 sm:flex bg-transparent ml-auto disabled:hidden text-white">
+            <Slider.NextButton class="btn-sm pl-5 flex items-center justify-center bg-transparent ml-auto disabled:hidden text-white pr-0">
               <Icon id="arrow-right" size={20} />
             </Slider.NextButton>
           </div>

@@ -40,10 +40,6 @@ export const getFlagCluster = (
   });
 };
 
-const shouldHidePrice = (additionalProperty?: PropertyValue[]) => {
-  return additionalProperty?.some((prop) => prop.propertyID === "200");
-};
-
 function ProductCard({
   product,
   preload,
@@ -82,7 +78,11 @@ function ProductCard({
     },
   });
 
-  const isPriceHidden = shouldHidePrice(additionalProperty);
+  const isPriceHidden = additionalProperty?.some((prop) => prop.propertyID === "200");
+
+  const message = encodeURIComponent(
+    `Olá, estou interessado nesse produto: ${title}`
+  );
 
   return (
     <div
@@ -119,24 +119,13 @@ function ProductCard({
       </a>
       <div>
         <a href={relativeUrl} class="flex flex-col gap-2">
-          {
-            /* {brand?.name && inStock && (
-            <p class="text-sm text-middle-gray capitalize">{brand?.name}</p>
-          )} */
-          }
           <p class="font-semibold family-secondary text-sm text-ellipsis font-bold line-clamp-2 h-10 leading-5">
             {title}
           </p>
           {isPriceHidden
-            ? <p class="font-semibold family-secondary text-sm text-ellipsis font-bold line-clamp-2 h-10 leading-5">Sob consulta</p>
+            ? <a href={`https://wa.me/11987939455?text=${message}`} class="flex items-center justify-center gap-3 mt-2 bg-primary border-0 text-white py-2 text-center font-semibold rounded-full">Consultar Preço</a>
             : <Price type="shelf" product={product} />}
         </a>
-        {
-          /* <div
-          class="mt-2"
-          data-trustvox-product-code={productGroupID}
-        /> */
-        }
         {!hiddenAddToCartButton && inStock &&
           (
             <MinicartAdd

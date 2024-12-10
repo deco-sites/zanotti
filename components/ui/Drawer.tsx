@@ -79,10 +79,10 @@ function Aside({ drawer, children, layout }: AsideProps) {
       return (
         <div
           data-aside
-          class="bg-white h-full divide-y w-full max-w-[388px] flex flex-col overflow-y-auto"
+          class="bg-white h-full divide-y w-full flex flex-col overflow-y-auto"
         >
           <div
-            class={`flex justify-between items-center pr-5 max-w-[388px] absolute right-0 top-[20px]`}
+            class={`flex justify-between items-center pr-5 absolute right-0 top-[20px]`}
           >
             <label class="cursor-pointer" for={drawer} aria-label="X">
               <Icon id="close-black" />

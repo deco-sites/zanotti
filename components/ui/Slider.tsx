@@ -68,6 +68,7 @@ const onLoad = ({ rootId, scroll, interval, infinite }: Props) => {
       // deno-lint-ignore no-explicit-any
       typeof (x as any).offsetLeft === "number";
     const root = document.getElementById(rootId);
+    console.log("root", root);
     const slider = root?.querySelector("[data-slider]");
     const items = root?.querySelectorAll("[data-slider-item]");
     const prev = root?.querySelector('[data-slide="prev"]');

@@ -1,6 +1,7 @@
 import Icon from "../ui/Icon.tsx";
 import Collapsable from "./../ui/Collapsable.tsx";
 import { useScript } from "@deco/deco/hooks";
+import type { ImageWidget } from "apps/admin/widgets.ts";
 
 /** @titleBy name */
 export interface Children {
@@ -11,14 +12,24 @@ export interface Children {
 }
 /** @titleBy name */
 export interface INavItem {
+  icon?: ImageWidget;
   /** @title Texto */
   name: string;
-  /** @title Link */
-  url?: string;
-  /** @title Filhos */
-  children?: Children[];
   /** @title Item possui destaque? */
   ishighlighted?: boolean;
+  /** @title Link */
+  url?: string;
+  /**
+   * @title Imagem do Submenu
+   * @description Aparece apenas no desktop, subir no formato 600x400
+   */
+  navImage?: ImageWidget;
+  /**
+   * @title Mostrar a Imagem?
+   */
+  hasNavImage?: boolean;
+  /** @title Filhos */
+  children?: Children[];
 }
 export interface Props {
   navItems: INavItem[];
@@ -41,8 +52,9 @@ function MenuItem({ item }: { item: INavItem }) {
           </a>
           {item?.children && item?.children.length > 0 && (
             <Icon
-              class="group-open:rotate-180 transition-all ease-in-out duration-[400ms]"
-              id="arrow-right"
+              // class="group-open:rotate-180 transition-all ease-in-out duration-[400ms]"
+              size={13}
+              id="arrow-down"
             />
           )}
         </div>
@@ -71,7 +83,7 @@ function MenuItem({ item }: { item: INavItem }) {
 function Menu({ navItems }: Props) {
   return (
     <>
-      <div class="bg-white min-h-screen">
+      <div class="bg-white min-h-screen w-screen">
         <div class="text-primary font-semibold px-4">
           <a
             id="loginButton"

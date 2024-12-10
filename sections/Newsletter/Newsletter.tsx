@@ -2,7 +2,6 @@ import { AppContext } from "../../apps/site.ts";
 import Icon from "../../components/ui/Icon.tsx";
 import Section from "../../components/ui/Section.tsx";
 import { clx } from "../../sdk/clx.ts";
-import { usePlatform } from "../../sdk/usePlatform.tsx";
 import { useComponent } from "../Component.tsx";
 import { type SectionProps } from "@deco/deco";
 import { useScript } from "@deco/deco/hooks";
@@ -24,19 +23,22 @@ export interface Props {
   status?: "success" | "failed";
 }
 const onLoad = () => {
-  (document.getElementById("birthday") as HTMLInputElement).oninput = (e) => {
-    const target = e.target as HTMLInputElement;
-    const value = target.value.replace(/\D/g, "");
-    if (value.length > 2 && value.length <= 4) {
-      target.value = value.replace(/(\d{2})(\d{1,2})/, "$1/$2").substring(
-        0,
-        10,
-      );
-    } else if (value.length > 4) {
-      target.value = value.replace(
-        /(\d{2})(\d{2})(\d{1,4})/,
-        "$1/$2/$3",
-      ).substring(0, 10);
+  const bday = document.getElementById("birthday") as HTMLInputElement;
+  if (bday) {
+    bday.oninput = (e) => {
+      const target = e.target as HTMLInputElement;
+      const value = target.value.replace(/\D/g, "");
+      if (value.length > 2 && value.length <= 4) {
+        target.value = value.replace(/(\d{2})(\d{1,2})/, "$1/$2").substring(
+          0,
+          10,
+        );
+      } else if (value.length > 4) {
+        target.value = value.replace(
+          /(\d{2})(\d{2})(\d{1,4})/,
+          "$1/$2/$3",
+        ).substring(0, 10);
+      }
     }
   };
 };

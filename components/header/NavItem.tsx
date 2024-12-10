@@ -2,6 +2,7 @@ import {
   HEADER_HEIGHT_DESKTOP,
   NAVBAR_HEIGHT_DESKTOP,
 } from "../../constants.ts";
+import type { ImageWidget } from "apps/admin/widgets.ts";
 
 /** @titleBy name */
 export interface Children {
@@ -13,14 +14,25 @@ export interface Children {
 
 /** @titleBy name */
 export interface INavItem {
+  /** @description Subir no formato 18x18, aparecerá apenas no Desktop */
+  icon?: ImageWidget;
   /** @title Texto */
   name: string;
-  /** @title Link */
-  url?: string;
-  /** @title Filhos */
-  children?: Children[];
   /** @title Item possui destaque? */
   ishighlighted?: boolean;
+  /** @title Link */
+  url?: string;
+  /**
+   * @title Imagem do Submenu
+   * @description Aparece apenas no desktop, subir no formato 600x400
+   */
+  navImage?: ImageWidget;
+  /**
+   * @title Mostrar a Imagem?
+   */
+  hasNavImage?: boolean;
+  /** @title Filhos */
+  children?: Children[];
 }
 
 interface Props {

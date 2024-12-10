@@ -3,18 +3,17 @@ import Icon from "../../components/ui/Icon.tsx";
 import Logo from "../../components/header/Logo.tsx";
 import Menu from "../../components/header/Menu.tsx";
 import Image from "apps/website/components/Image.tsx";
-import Alert from "../../components/header/Alert.tsx";
 import Drawer from "../../components/ui/Drawer.tsx";
 import SignIn from "../../components/header/SignIn.tsx";
+import Alert from "../../components/header/Alert.tsx";
 import Wishlist from "../../components/header/Wishlist.tsx";
 import { INavItem } from "../../components/header/NavItem.tsx";
-import type { HTMLWidget, ImageWidget } from "apps/admin/widgets.ts";
+import type { ImageWidget, RichText } from "apps/admin/widgets.ts";
 import Searchbar, {
   type SearchbarProps,
 } from "../../components/search/Searchbar/Form.tsx";
 import {
   NAVBAR_HEIGHT_MOBILE,
-  SEARCHBAR_DRAWER_ID,
   SIDEMENU_CONTAINER_ID,
   SIDEMENU_DRAWER_ID,
 } from "../../constants.ts";
@@ -30,27 +29,29 @@ export interface Logo {
   height: number;
 }
 
+
 export interface SectionProps {
-  alerts?: HTMLWidget[];
-  /**
-   * @title Navigation items
-   * @description Navigation items used both on mobile and desktop menus
-   */
-  navItems?: INavItem[] | null;
+  alerts?: RichText[];
   /**
    * @title Searchbar
    * @description Searchbar configuration
    */
   searchbar: SearchbarProps;
+  /** @title Menu */
+  navItems?: INavItem[] | null;
   /** @title Logo */
   logo: Logo;
   /** @hide true */
   variant?: "initial" | "menu";
 }
 type Props = Omit<SectionProps, "alert" | "variant">;
-const Desktop = ({ logo, searchbar, navItems }: Props) => (
+const Desktop = ({
+  logo,
+  searchbar,
+  navItems = [],
+}: Props) => (
   <>
-    <div class="flex flex-col gap-5 p-5 container">
+    <div class="flex flex-col gap-5 py-5 container">
       <div class="flex items-center space-between">
         <Logo
           src={logo.src}
@@ -69,35 +70,84 @@ const Desktop = ({ logo, searchbar, navItems }: Props) => (
       </div>
       <div class="flex justify-between">
         {navItems?.length && navItems.map((item, index) => {
+          const {
+            navImage = "https://placehold.co/600x400",
+            hasNavImage = false
+          } = item;
+
           return (
             <div class="dropdown dropdown-hover static">
               <div tabindex={index} class="text-sm text-white relative z-[2]">
-                <a class={`font-secondary text-white ${item.ishighlighted && "font-semibold"}`} href={item.url || "#"}>
+                <a
+                  class={`flex items-center gap-2 text-white ${item.ishighlighted && "font-semibold"}`}
+                  href={item.url || "#"}
+                >
+                  {item.icon && (
+                    <Image
+                      src={item.icon}
+                      width={18}
+                      height={18}
+                    />
+                  )}
                   {item.name}
                 </a>
               </div>
               {item.children && item.children?.length > 0 && (
-                <div tabindex={index} class="dropdown-content menu top-[72px] p-0 pt-8 left-0 z-[1] w-full">
+                <div
+                  tabindex={index}
+                  class="dropdown-content menu top-[83px] p-0 pt-8 left-0 z-[1] w-full"
+                >
                   <div class="bg-base-100 shadow rounded-box rounded-t-none">
                     <div className="container p-5 grid grid-cols-4 gap-5">
                       <ul>
                         {item.children.slice(0, 10).map((children) => (
-                          <li><a class="text-black" href={children.url || "#"}>{children.name}</a></li>
+                          <li>
+                            <a class="text-black" href={children.url || "#"}>
+                              {children.name}
+                            </a>
+                          </li>
                         ))}
                       </ul>
                       <ul>
                         {item.children.slice(10, 20).map((children) => (
-                          <li><a href={children.url || "#"}>{children.name}</a></li>
+                          <li>
+                            <a href={children.url || "#"}>{children.name}</a>
+                          </li>
                         ))}
                       </ul>
-                      <div class="col-span-2">
-                        <Image
-                          src="https://placehold.co/600x400/"
-                          class="rounded-xl"
-                          width={600}
-                          height={400}
-                        />
-                      </div>
+                      {hasNavImage
+                        ? (
+                          <div class="col-span-2">
+                            <Image
+                              src={navImage}
+                              class="rounded-xl"
+                              width={600}
+                              height={400}
+                            />
+                          </div>
+                        )
+                        : (
+                          <>
+                            <ul>
+                              {item.children.slice(20, 30).map((children) => (
+                                <li>
+                                  <a href={children.url || "#"}>
+                                    {children.name}
+                                  </a>
+                                </li>
+                              ))}
+                            </ul>
+                            <ul>
+                              {item.children.slice(30, 40).map((children) => (
+                                <li>
+                                  <a href={children.url || "#"}>
+                                    {children.name}
+                                  </a>
+                                </li>
+                              ))}
+                            </ul>
+                          </>
+                        )}
                     </div>
                   </div>
                 </div>
@@ -154,7 +204,12 @@ const Mobile = ({ logo, searchbar }: Props) => (
             aria-label="Store logo"
             class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
           >
-            <Image src={logo.src} alt={logo.alt} width={logo.width} height={logo.height} />
+            <Image
+              src={logo.src}
+              alt={logo.alt}
+              width={logo.width}
+              height={logo.height}
+            />
           </a>
         )}
 
@@ -181,16 +236,19 @@ function Header({
 }: Props) {
   const device = useDevice();
   return (
-    <header>
-      <div
-        id="header"
-        class="bg-primary w-full z-40 group-header ease-in duration-500 relative rounded-b-xl"
-      >
-        {device === "desktop"
-          ? <Desktop logo={logo} {...props} />
-          : <Mobile logo={logo} {...props} />}
-      </div>
-    </header>
+    <>
+      <header>
+        <div
+          id="header"
+          class="bg-primary w-full z-40 group-header ease-in duration-500 relative rounded-b-xl"
+        >
+          {device === "desktop"
+            ? <Desktop logo={logo} {...props} />
+            : <Mobile logo={logo} {...props} />}
+        </div>
+      </header>
+      <Alert alerts={alerts} />
+    </>
   );
 }
 export default function Section({ variant, ...props }: SectionProps) {
