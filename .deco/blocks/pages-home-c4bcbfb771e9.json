@@ -2,40 +2,30 @@
   "name": "Home",
   "sections": [
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "Header"
-      }
+      "__resolveType": "Header"
     },
     {
       "__resolveType": "site/sections/Images/Carousel.tsx",
       "images": [
         {
-          "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/23dc7945-a4e2-4f18-aac1-c65288f5ddaa/image-9.svg",
+          "desktop": "https://placehold.co/1920x600",
           "alt": "/",
           "action": {
             "href": "/",
             "label": "Confira"
           },
-          "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/4a2fcc64-11b6-4600-869f-18016b2c89aa/MOBILE-freezer-vertical-1.svg"
+          "mobile": "https://placehold.co/640x600",
+          "href": "#"
         },
         {
-          "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/23dc7945-a4e2-4f18-aac1-c65288f5ddaa/image-9.svg",
+          "desktop": "https://placehold.co/1920x600",
           "alt": "/",
           "action": {
             "href": "/",
             "label": "Confira"
           },
-          "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/4a2fcc64-11b6-4600-869f-18016b2c89aa/MOBILE-freezer-vertical-1.svg"
-        },
-        {
-          "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/23dc7945-a4e2-4f18-aac1-c65288f5ddaa/image-9.svg",
-          "alt": "/",
-          "action": {
-            "href": "/",
-            "label": "Confira"
-          },
-          "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/4a2fcc64-11b6-4600-869f-18016b2c89aa/MOBILE-freezer-vertical-1.svg"
+          "mobile": "https://placehold.co/640x600",
+          "href": "#"
         }
       ],
       "preload": true
@@ -272,7 +262,17 @@
         {
           "label": "categoria 1",
           "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg"
-        }
+        },
+        {
+          "label": "categoria 1",
+          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg"
+        },
+        {
+          "label": "categoria 1",
+          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg"
+        },
+        {},
+        {}
       ]
     },
     {
@@ -306,56 +306,66 @@
           {
             "Loading": "eager",
             "desktop": {
-              "Image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/f3c03f93-e29b-4ba3-9ec1-d2b57490c971/MOBILE-CAMARAFRIA-10.png",
-              "Width": 833,
-              "Height": 551
+              "Image": "https://placehold.co/480x600",
+              "Height": 600,
+              "Width": 480
             },
             "mobile": {
-              "Image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/7dd58e99-2d75-40d3-9f2f-ca6240f0d1a2/MOBILE-CAMARAFRIA-9.png"
+              "Image": "https://placehold.co/320x200",
+              "Width": 320,
+              "Height": 200
             }
           },
           {
             "Loading": "eager",
             "desktop": {
-              "Image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/7dd58e99-2d75-40d3-9f2f-ca6240f0d1a2/MOBILE-CAMARAFRIA-9.png",
-              "Width": 328.74,
-              "Height": 267
+              "Image": "https://placehold.co/480x292",
+              "Height": 292,
+              "Width": 480
             },
             "mobile": {
-              "Image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/7dd58e99-2d75-40d3-9f2f-ca6240f0d1a2/MOBILE-CAMARAFRIA-9.png"
+              "Image": "https://placehold.co/320x200",
+              "Width": 320,
+              "Height": 200
             }
           },
           {
             "Loading": "eager",
             "desktop": {
-              "Image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/7dd58e99-2d75-40d3-9f2f-ca6240f0d1a2/MOBILE-CAMARAFRIA-9.png",
-              "Width": 328.74,
-              "Height": 267
+              "Image": "https://placehold.co/480x292",
+              "Height": 292,
+              "Width": 480
             },
             "mobile": {
-              "Image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/7dd58e99-2d75-40d3-9f2f-ca6240f0d1a2/MOBILE-CAMARAFRIA-9.png"
+              "Image": "https://placehold.co/320x200",
+              "Width": 320,
+              "Height": 200
             }
           },
           {
             "Loading": "eager",
             "desktop": {
-              "Image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/7dd58e99-2d75-40d3-9f2f-ca6240f0d1a2/MOBILE-CAMARAFRIA-9.png",
-              "Width": 328.74,
-              "Height": 267
+              "Image": "https://placehold.co/480x292",
+              "Height": 292,
+              "Width": 480
             },
             "mobile": {
-              "Image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/7dd58e99-2d75-40d3-9f2f-ca6240f0d1a2/MOBILE-CAMARAFRIA-9.png"
+              "Image": "https://placehold.co/320x200",
+              "Width": 320,
+              "Height": 200
             }
           },
           {
             "Loading": "eager",
             "desktop": {
-              "Image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/7dd58e99-2d75-40d3-9f2f-ca6240f0d1a2/MOBILE-CAMARAFRIA-9.png",
-              "Width": 328.74,
-              "Height": 267
+              "Image": "https://placehold.co/480x292",
+              "Width": 480,
+              "Height": 292
             },
             "mobile": {
-              "Image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/7dd58e99-2d75-40d3-9f2f-ca6240f0d1a2/MOBILE-CAMARAFRIA-9.png"
+              "Image": "https://placehold.co/320x200",
+              "Height": 200,
+              "Width": 320
             }
           }
         ]
@@ -388,11 +398,15 @@
       "section": {
         "__resolveType": "site/sections/Images/FulllBanner.tsx",
         "banner": {
-          "srcMobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/2a2b854f-de83-4029-99e7-e71c35dd5cdb/BANNER-BNDES-1.png",
-          "srcDesktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ece393e6-d951-437d-86ef-ffb9db36a8da/Frame-921.png",
+          "srcMobile": "https://placehold.co/640x400",
+          "srcDesktop": "https://placehold.co/1440x400",
           "alt": "Banner BNDS",
           "link": "/"
-        }
+        },
+        "srcDesktop": "https://placehold.co/1440x400",
+        "srcMobile": "https://placehold.co/640x400",
+        "alt": "imagem",
+        "link": "#"
       }
     },
     {

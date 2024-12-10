@@ -1,7 +1,6 @@
 import Image from "apps/website/components/Image.tsx";
 import WishlistButton from "../wishlist/WishlistButton.tsx";
 
-import { clx } from "../../sdk/clx.ts";
 import { relative } from "../../sdk/url.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
@@ -11,7 +10,6 @@ import MinicartAdd from "./MinicartAdd.tsx";
 import Price from "./Price.tsx";
 
 interface Props {
-  flags?: [internationalFlag: string, promoFlag: string, newsFlag: string];
   product: Product;
   /** Preload card image */
   preload?: boolean;
@@ -42,12 +40,7 @@ export const getFlagCluster = (
   });
 };
 
-const shouldHidePrice = (additionalProperty?: PropertyValue[]) => {
-  return additionalProperty?.some((prop) => prop.propertyID === "200");
-};
-
 function ProductCard({
-  flags,
   product,
   preload,
   itemListName,
@@ -56,16 +49,9 @@ function ProductCard({
   hiddenFlags = false,
   hiddenAddToCartButton = true,
 }: Props) {
-  const [
-    internationalFlag = "",
-    promoFlag = "",
-    newsFlag = "",
-  ] = flags ?? [];
-
-  const { url, image: images, offers, isVariantOf, brand, additionalProperty } =
+  const { url, image: images, offers, isVariantOf, additionalProperty } =
     product;
 
-  const productGroupID = isVariantOf?.productGroupID ?? "";
   const title = isVariantOf?.name ?? product.name;
   const [front] = images ?? [];
 
@@ -92,14 +78,11 @@ function ProductCard({
     },
   });
 
-  const hasInternationalFlag = getFlagCluster(
-    internationalFlag,
-    additionalProperty,
-  );
-  const hasPromoFlag = getFlagCluster(promoFlag, additionalProperty);
-  const hasNewsFlag = getFlagCluster(newsFlag, additionalProperty);
+  const isPriceHidden = additionalProperty?.some((prop) => prop.propertyID === "200");
 
-  const isPriceHidden = shouldHidePrice(additionalProperty);
+  const message = encodeURIComponent(
+    `Olá, estou interessado nesse produto: ${title}`
+  );
 
   return (
     <div
@@ -115,26 +98,6 @@ function ProductCard({
               </span>
             )
             : null}
-          {
-            /* {hasNewsFlag && !hiddenFlags && (
-            <span
-              class={clx(
-                "text-xs font-semibold text-white uppercase bg-[#FFA318] text-center text-white px-2 py-1 rounded-[6px]",
-              )}
-            >
-              Novidade
-            </span>
-          )}
-          {hasPromoFlag && !hiddenFlags && (
-            <span
-              class={clx(
-                "text-xs font-semibold text-white uppercase bg-[#F22E2E] text-center text-white px-2 py-1 rounded-[6px]",
-              )}
-            >
-              Promoção
-            </span>
-          )} */
-          }
         </div>
         <WishlistButton item={item} variant="icon" />
       </div>
@@ -156,24 +119,13 @@ function ProductCard({
       </a>
       <div>
         <a href={relativeUrl} class="flex flex-col gap-2">
-          {
-            /* {brand?.name && inStock && (
-            <p class="text-sm text-middle-gray capitalize">{brand?.name}</p>
-          )} */
-          }
           <p class="font-semibold family-secondary text-sm text-ellipsis font-bold line-clamp-2 h-10 leading-5">
             {title}
           </p>
           {isPriceHidden
-            ? <p class="font-semibold family-secondary text-sm text-ellipsis font-bold line-clamp-2 h-10 leading-5">Sob consulta</p>
+            ? <a href={`https://wa.me/11987939455?text=${message}`} class="flex items-center justify-center gap-3 mt-2 bg-primary border-0 text-white py-2 text-center font-semibold rounded-full">Consultar Preço</a>
             : <Price type="shelf" product={product} />}
         </a>
-        {
-          /* <div
-          class="mt-2"
-          data-trustvox-product-code={productGroupID}
-        /> */
-        }
         {!hiddenAddToCartButton && inStock &&
           (
             <MinicartAdd

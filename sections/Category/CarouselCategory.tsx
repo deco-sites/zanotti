@@ -1,9 +1,9 @@
-import { useId } from "../../sdk/useId.ts";
-import { useScript } from "deco/hooks/useScript.ts";
-import type { ImageWidget } from "apps/admin/widgets.ts";
-
 import Icon from "../../components/ui/Icon.tsx";
 import Image from "apps/website/components/Image.tsx";
+import Slider from "../../components/ui/Slider.tsx";
+import { useId } from "../../sdk/useId.ts";
+import { useDevice } from "@deco/deco/hooks";
+import type { ImageWidget } from "apps/admin/widgets.ts";
 
 /**
  * @titleBy label
@@ -35,48 +35,17 @@ interface Props {
   categories?: Category[];
 }
 
-const onLoad = (id: string) => {
-  const carousel = document.getElementById(id);
-  if (carousel) {
-    // @ts-ignore swiper exists
-    new Swiper(`#${id} #content > div`, {
-      spaceBetween: 12,
-      slidesPerView: "auto",
-      breakpoints: {
-        640: {
-          spaceBetween: 30,
-        },
-      },
-      navigation: {
-        nextEl: `#${id} .button-next`,
-        prevEl: `#${id} .button-prev`,
-      },
-      pagination: {
-        el: `#${id} .pagination`,
-        clickable: true,
-      },
-    });
-
-    document.querySelector(`#${id} #content`)?.classList.remove("hidden");
-    document.querySelector(`#${id} #fakeLoading`)?.classList.add("hidden");
-  }
-};
-
 function Card(
-  {
-    image = "https://placehold.co/114x106",
-    label = "Categoria",
-    link,
-  }: Category,
+  { image, label = "Categoria", link }: Category,
 ) {
   return (
     <a class="flex flex-col group" href={link}>
       <Image
-        class="rounded-xl mb-2"
-        src={image ?? "https://placehold.co/114x106"}
+        class="rounded-full"
+        src={image ?? "https://placehold.co/115x115"}
         alt={label}
-        width={114}
-        height={106}
+        width={115}
+        height={115}
         loading="lazy"
       />
       <p class="text-base text-center group-hover:text-primary ease-in duration-300">
@@ -85,59 +54,56 @@ function Card(
     </a>
   );
 }
-
 const CarouselCategory = ({ categories, title }: Props) => {
   const id = useId();
+  const device = useDevice();
 
-  return (
-    <div id={id}>
-      <div class="container px-5 lg:px-0 overflow-hidden">
-          <h3 class="mb-3 text-base font-semibold">
-            {title}
-          </h3>
-        <div
-          id="fakeLoading"
-          class="container px-5 flex gap-5 overflow-x-hidden"
-        >
-          {new Array(10).fill("").map((_, index) => (
-            <div key={index}>
-              <div
-                class="rounded-xl mb-2 skeleton"
-                style={{
-                  width: "114px",
-                  height: "106px",
-                }}
-              />
-              <div class="skeleton h-6 w-full rounded-xl" />
+  if (device === "desktop") {
+    
+    return (
+      <div class="container overflow-hidden">
+        <h2 class="text-lg lg:text-xl font-semibold font-secondary mb-3">
+          {title}
+        </h2>
+        <div id={id} class="relative">
+          <Slider class="carousel carousel-center sm:carousel-end gap-2 w-full justify-between">
+            {categories?.map((item, index) => (
+              <Slider.Item
+                index={index}
+                class="carousel-item"
+              >
+                <Card {...item} />
+              </Slider.Item>
+            ))}
+          </Slider>
+
+          <Slider.PrevButton class="hidden sm:flex bg-white btn-sm btn-circle no-animation absolute top-1/2 -translate-y-1/2 -left-7 p-2 box-content border border-light-gray items-center justify-center disabled:hidden">
+            <Icon id="chevron-right" class="rotate-180" />
+          </Slider.PrevButton>
+
+          <Slider.NextButton class="hidden sm:flex bg-white btn-sm btn-circle no-animation absolute top-1/2 -translate-y-1/2 -right-7 p-2 box-content border border-light-gray items-center justify-center disabled:hidden">
+            <Icon id="chevron-right" />
+          </Slider.NextButton>
+
+          <Slider.JS rootId={id} />
+        </div>
+      </div>
+    );
+  } else {
+    return (
+      <div class="overflow-hidden">
+        <h2 class="container text-lg lg:text-xl font-semibold font-secondary mb-3">
+          {title}
+        </h2>
+        <div id={id} class="flex flex-row flex-nowrap gap-2 overflow-x-auto">
+          {categories?.map((item) => (
+            <div className="shrink-0 first:ml-5 last:mr-5">
+              <Card {...item} />
             </div>
           ))}
         </div>
-        <div
-          id="content"
-          class="hidden container overflow-hidden relative"
-        >
-          <div class="overflow-hidden">
-            <div class="swiper-wrapper">
-              {categories?.map((item, index) => (
-                <div
-                  class="swiper-slide max-w-[114px] lg:first:ml-0 lg:last:mr-0 cursor-pointer"
-                  key={index}
-                >
-                  <Card {...item} />
-                </div>
-              ))}
-            </div>
-          </div>
-          <script
-            type="module"
-            dangerouslySetInnerHTML={{
-              __html: useScript(onLoad, id),
-            }}
-          />
-        </div>
       </div>
-    </div>
-  );
+    );
+  }
 };
-
 export default CarouselCategory;

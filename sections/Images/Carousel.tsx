@@ -10,26 +10,23 @@ import { useSendEvent } from "../../sdk/useSendEvent.ts";
  * @titleBy alt
  */
 export interface Banner {
-  /** @description desktop otimized image */
+  /** 
+   * @title Imagem para o Desktop 
+   * @description Subir imagem no formato 1920x600
+   */
   desktop: ImageWidget;
 
-  /** @description mobile otimized image */
+  /** 
+   * @title Imagem para o Mobile 
+   * @description Subir imagem no formato 640x600
+   */
   mobile: ImageWidget;
 
-  /** @description Image's alt text */
+  /** @title Texto alternativo para as imagens */
   alt?: string;
-  href?: string;
 
-  // action?: {
-  //   /** @description when user clicks on the image, go to this link */
-  //   href?: string;
-  //   /** @description Image text title */
-  //   title?: string;
-  //   /** @description Image text subtitle */
-  //   subTitle?: string;
-  //   /** @description Button label */
-  //   label?: string;
-  // };
+  /** @title Link */
+  href?: string;
 }
 
 export interface Props {
@@ -69,50 +66,27 @@ function BannerItem(
       aria-label={alt}
       class="relative block overflow-y-hidden w-full"
     >
-      {
-        /* {action && (
-        <div
-          class={clx(
-            "flex flex-col justify-center items-center",
-            "px-5 sm:px-0",
-          )}
-        >
-          <span class="text-7xl font-bold text-base-100">
-            {action.title}
-          </span>
-          <span class="font-normal text-base text-base-100 pt-4 pb-12">
-            {action.subTitle}
-          </span>
-          <button
-            class="bg-white hover:bg-primary px-[50px] py-[10px] text-black hover:text-white ease-in duration-300 rounded-full absolute bottom-[20px]"
-            aria-label={action.label}
-          >
-            {action.label}
-          </button>
-        </div>
-      )} */
-      }
       <Picture preload={lcp} {...viewPromotionEvent}>
         <Source
           media="(max-width: 767px)"
           fetchPriority={lcp ? "high" : "auto"}
           src={mobile}
-          width={412}
-          height={660}
+          width={640}
+          height={600}
         />
         <Source
           media="(min-width: 768px)"
           fetchPriority={lcp ? "high" : "auto"}
           src={desktop}
-          width={1440}
+          width={1920}
           height={600}
         />
         <img
-          class="object-cover w-full h-full max-h-[75vh]"
+          class="object-cover w-full"
           loading={lcp ? "eager" : "lazy"}
           src={desktop}
           alt={alt}
-          width={1440}
+          width={1920}
           height={600}
         />
       </Picture>
@@ -131,7 +105,7 @@ function Carousel({ images = [], preload }: Props) {
         "grid-rows-[1fr_32px_1fr_64px]",
         "grid-cols-[32px_1fr_32px]",
         "sm:grid-cols-[112px_1fr_112px] sm:min-h-min",
-        "w-full -mt-3",
+        "w-full relative",
       )}
     >
       <div class="col-span-full row-span-full leading-[1]">
@@ -145,24 +119,17 @@ function Carousel({ images = [], preload }: Props) {
       </div>
       {images.length > 1
         ? (
-          <div class="container absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-10 flex items-center">
-            <Slider.PrevButton
-              class="btn-sm px-5 sm:flex bg-transparent"
-              disabled={false}
-            >
-              <Icon id="arrow-carrosel" />
+          <div class="container absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-10 flex items-center">
+            <Slider.PrevButton class="btn-sm pr-5 flex items-center justify-center bg-transparent disabled:hidden text-white pl-0">
+              <Icon id="arrow-left" size={20} />
             </Slider.PrevButton>
 
-            <Slider.NextButton
-              class="btn-sm px-5 sm:flex bg-transparent  ml-auto"
-              disabled={false}
-            >
-              <Icon id="arrow-carrosel" class="rotate-180 bg-transparent" />
+            <Slider.NextButton class="btn-sm pl-5 flex items-center justify-center bg-transparent ml-auto disabled:hidden text-white pr-0">
+              <Icon id="arrow-right" size={20} />
             </Slider.NextButton>
           </div>
         )
         : null}
-
       <Slider.JS rootId={id} />
     </div>
   );

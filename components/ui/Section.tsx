@@ -6,16 +6,14 @@ export interface Props {
   /** @title Titulo da sessão  */
   title?: string;
 }
-function Header({ title}: Props) {
+function Header({ title }: Props) {
   if (!title) {
     return null;
   }
   return (
-    <div class={clx("flex justify-between items-center gap-2")}>
-      <span class="text-base font-semibold">
-        {title}
-      </span>
-    </div>
+    <h2 class="text-lg lg:text-xl font-semibold font-secondary">
+      {title}
+    </h2>
   );
 }
 interface Tab {

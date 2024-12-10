@@ -7,37 +7,15 @@ import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
 
 import type { Product } from "apps/commerce/types.ts";
-import type { AppContext } from "../../apps/site.ts";
-import type { SectionProps } from "@deco/deco";
 
 export interface Props extends SectionHeaderProps {
   products: Product[] | null;
 }
 
-export const loader = (
-  props: Props,
-  req: Request,
-  ctx: AppContext,
-) => {
-  const {
-    newsFlag = "",
-    promoFlag = "",
-    internationalFlag = "",
-    HidePriceCollection = ""
-  } = ctx;
-
-  return { ...props, internationalFlag, promoFlag, newsFlag, HidePriceCollection };
-};
-
 export default function ProductShelf({
-  internationalFlag,
-  promoFlag,
-  newsFlag,
-  HidePriceCollection,
   products,
   title,
-  cta,
-}: SectionProps<typeof loader>) {
+}: Props) {
   const id = useId();
   if (!products || products.length === 0) {
     return null;
@@ -62,18 +40,18 @@ export default function ProductShelf({
 
   return (
     <div id={id}>
-      <Section.Container
+      <div
+        class="lg:container"
         {...viewItemListEvent}
       >
-        <div class="flex flex-wrap items-center gap-x-10 gap-y-[0.5rem] px-5 lg:px-0">
+        <div class="px-5 lg:px-0 mb-3">
           <Section.Header title={title} />
         </div>
         <ProductSlider
-          flags={[internationalFlag, promoFlag, newsFlag]}
           products={products}
           itemListName={title}
         />
-      </Section.Container>
+      </div>
     </div>
   );
 }
