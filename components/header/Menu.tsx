@@ -52,7 +52,7 @@ function MenuItem({ item }: { item: INavItem }) {
           </a>
           {item?.children && item?.children.length > 0 && (
             <Icon
-              // class="group-open:rotate-180 transition-all ease-in-out duration-[400ms]"
+              class="group-open:rotate-180 transition-all ease-in-out duration-[400ms]"
               size={13}
               id="arrow-down"
             />

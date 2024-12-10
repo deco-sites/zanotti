@@ -240,7 +240,7 @@ function Payments({ title, paymentMethods }: PaymentsProps) {
   return (
     <>
       {title && (
-        <p class="text-base text-sm font-normal lg:text-base-200 lg:font-medium lg:text-base">
+        <p class="text-base text-sm font-semibold lg:text-base-200 lg:font-semibold font-secondary lg:text-base">
           {title}
         </p>
       )}
@@ -279,7 +279,7 @@ function Footer(
     <>
       {device === "desktop" && (
         <footer class="footer px-5 sm:px-0 pt-10 pb-14 flex flex-col bg-primary">
-          <div class=" container flex flex-col gap-5 sm:gap-10 px-5 py-10">
+          <div class=" container flex flex-col gap-5 sm:gap-10 py-10">
             <div class="grid grid-cols-5">
               {links.map((link, index) => (
                 <div
@@ -289,7 +289,7 @@ function Footer(
                   {link && (
                     <>
                       <a
-                        class="text-base-200 text-base font-medium"
+                        class="text-base-200 text-base font-semibold font-secondary"
                         target="_blank"
                         href={link.href}
                       >
@@ -321,7 +321,7 @@ function Footer(
                       paymentMethods={paymentMethods?.paymentMethods}
                     />
                     <div class="flex flex-col gap-4">
-                      <p class="text-base-200 font-medium text-base">{label}</p>
+                      <p class="text-base-200 font-semibold text-base font-secondary">{label}</p>
                       <ul class="flex items-center gap-6">
                         {social.map(({ imageDesktop, href, alt }, index) => (
                           <li
@@ -347,7 +347,7 @@ function Footer(
             </div>
           </div>
           <div class="container flex flex-col lg:gap-10 justify-between">
-            <p class="text-base-200 text-[10px] px-5 py-0  family-secondary text-center">
+            <p class="text-base-200 text-xs px-5 py-0 family-secondary text-center">
               {copyright}
             </p>
             <div class="flex mx-auto gap-5 px-5">
@@ -360,20 +360,20 @@ function Footer(
       )}
       {device === "mobile" &&
         (
-          <div class="container px-5 pb-14 mt-6">
+          <div class="container px-5 pb-5 mt-6">
             <div>
               {links.map(({ title, children }, index) => (
                 <ul key={index} class="flex flex-col gap-2 mb-[10px]">
                   <Collapsable
-                    class="bg-base-200 py-4 rounded"
+                    class="bg-base-200 py-3 rounded"
                     title={
                       <div class="px-5 flex flex-row space-between items-center py-2">
-                        <div class="text-sm font-normal">{title}</div>
+                        <div class="text-sm font-semibold font-secondary">{title}</div>
                         {children && children.length > 0 && (
                           <Icon
                             class="group-open:rotate-180 transition-all ease-in-out duration-[400ms]"
                             size={13}
-                            id={"arrow-right"}
+                            id="arrow-down"
                           />
                         )}
                       </div>
@@ -407,8 +407,8 @@ function Footer(
                   paymentMethods={paymentMethods?.paymentMethods}
                 />
 
-                <div class="flex flex-col gap-3 ">
-                  <p class="text-sm">{label}</p>
+                <div class="flex flex-col gap-3">
+                  <p class="text-sm font-semibold font-secondary">{label}</p>
                   <div class="flex flex-row items-center gap-3">
                     {social.map(({ imageMobile, href, alt }) => (
                       <div>
@@ -428,21 +428,11 @@ function Footer(
               </div>
             </div>
             <div>
-              <p class="text-middle-gray family-secondary text-[10px] py-5 ">
+              <p class="text-middle-gray family-secondary text-xs py-5 ">
                 {copyright}
               </p>
             </div>
-
-            {
-              /* {certified && (
-              <CertifiedComponent
-                title={certified?.title}
-                certifieds={certified?.certifieds}
-              />
-            )} */
-            }
-
-            <div class="flex flex-nowrap items-center justify-start gap-5 pb-[380px] ">
+            <div class="flex flex-nowrap items-center justify-start gap-5">
               <PoweredByBetoven />
               <PoweredByDeco />
               <PoweredByVtex />

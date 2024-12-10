@@ -77,7 +77,7 @@ function Notice({ title, description }: {
 }) {
   return (
     <div class="flex flex-col justify-center items-center lg:items-start gap-2 max-w-sm">
-      <span class="text-xl font-semibold text-center lg:text-start  text-white">
+      <span class="text-xl font-semibold font-secondary text-center lg:text-start  text-white">
         {title}
       </span>
       <span class="text-xs font-normal text-base-300 text-center lg:text-start text-white max-w-[100%] lg:max-w-unset family-secondary">
@@ -125,7 +125,7 @@ function Newsletter({
     <div class="px-5 lg:px-0">
       <div class="bg-neutral rounded-tl-xl rounded-tr-xl rounded-bl-xl rounded-br-xl lg:rounded-bl-none  lg:rounded-br-none ">
         <Section.Container>
-          <div class="flex space-between flex-col lg:flex-row items-center px-5 py-8 gap-5">
+          <div class="flex space-between flex-col lg:flex-row items-center py-8 gap-5">
             <Notice {...empty} />
             <form
               class="flex justify-between flex-col lg:gap-4 w-full"
