@@ -71,4 +71,10 @@
 	<symbol id="x-twitter" xmlns="http://www.w3.org/2000/svg" width="27" height="25" viewBox="0 0 27 25" fill="none">
 		<path d="M21.2641 -0.00292969H25.4042L16.3592 10.5868L27 24.9971H18.6683L12.1427 16.2573L4.67586 24.9971H0.533142L10.2078 13.6701L0 -0.00292969H8.54313L14.4418 7.98555L21.2641 -0.00292969ZM19.811 22.4586H22.1051L7.29664 2.40218H4.83478L19.811 22.4586Z" fill="#163970"/>
 	</symbol>
+	<symbol id="arrow-right-dark" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M4.82593 11.29L8.35759 7.75829C8.77468 7.34121 8.77468 6.65871 8.35759 6.24163L4.82593 2.70996" stroke="#1D1D1B" stroke-width="0.875" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+	</symbol>
+	<symbol id="arrow-left-dark" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M8.17407 11.29L4.64241 7.75829C4.22532 7.34121 4.22532 6.65871 4.64241 6.24163L8.17407 2.70996" stroke="#1D1D1B" stroke-width="0.875" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+	</symbol>
 </svg>

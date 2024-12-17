@@ -87,7 +87,7 @@ function ProductCard({
   return (
     <div
       {...event}
-      class={"card flex flex-col justify-start card-compact group text-sm bg-white p-3 bg-base sm:w-[220px] w-[172px]"}
+      class="card flex flex-col justify-start card-compact group text-sm bg-white p-3 bg-base max-w-[220px]"
     >
       <div class="flex items-start justify-between">
         <div class="flex flex-wrap gap-[5px]">

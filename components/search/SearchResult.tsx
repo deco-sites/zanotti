@@ -97,12 +97,12 @@ function PageResult(props: SectionProps<typeof loader>) {
         <div class="join lg:flex gap-[30px] items-center text-base">
           <a
             rel="prev"
-            aria-label="previous page link"
+            aria-label="previous page link text-primary"
             href={prevPageUrl ?? "#"}
             disabled={!prevPageUrl}
             class=""
           >
-            <Icon id="arrow-right" class="rotate-90" size={13} />
+            <Icon id="arrow-left-dark" width={13} height={14} />
           </a>
           {prev === 0 ? null : (
             <a
@@ -116,9 +116,10 @@ function PageResult(props: SectionProps<typeof loader>) {
             </a>
           )}
 
-          <span class="py-2 px-3 border border-primary">
+          <span class="w-9 h-9 border border-primary bg-primary flex items-center justify-center text-white rounded-full">
             {zeroIndexedOffsetPage + 1}
           </span>
+
           {nextPageUrl
             ? (
               <a
@@ -140,7 +141,7 @@ function PageResult(props: SectionProps<typeof loader>) {
             disabled={!nextPageUrl}
             class=""
           >
-            <Icon id="arrow-right" class="-rotate-90" size={13} />
+            <Icon id="arrow-right-dark" width={13} height={14} />
           </a>
         </div>
       </div>
@@ -225,7 +226,7 @@ function Result(props: SectionProps<typeof loader>) {
         <div class="flex justify-between flex-col items-start">
           <div class="w-full flex flex-col gap-8">
             <div class="border-b border-gray-300 mb-8">
-              <div class="flex items-center space-between w-full container py-8 px-5">
+              <div class="flex items-center space-between w-full container py-8">
                 <h1 class="text-sm lg:text-2xl capitalize font-semibold flex items-center">
                   {result}{" "}
                   <span class="text-sm lg:text-2xl font-light ml-2">
@@ -249,8 +250,8 @@ function Result(props: SectionProps<typeof loader>) {
                 <>
                   <div class="w-full flex flex-col gap-6">
                     <div class="border-b border-gray-300">
-                      <div class="flex items-center space-between w-full pt-5 pb-6 container mt-[5px]">
-                        <h1 class="px-5 text-[20px] uppercase font-semibold flex items-center">
+                      <div class="flex items-center space-between w-full py-4 container">
+                        <h1 class="text-2xl uppercase font-semibold flex items-center">
                           {result}{" "}
                           <span class="text-[14px] font-normal ml-4">
                             [{page.pageInfo.records}]
@@ -291,8 +292,8 @@ function Result(props: SectionProps<typeof loader>) {
                           Filtrar
 
                           <Icon
-                            class={` transition-all ease-in-out duration-[400ms]`}
-                            id={"arrowRight"}
+                            class="transition-all ease-in-out duration-[400ms]"
+                            id="arrowRight"
                             size={13}
                           />
                         </label>
@@ -307,18 +308,18 @@ function Result(props: SectionProps<typeof loader>) {
               )}
 
               {device === "desktop" && (
-                <div class="container px-5">
+                <div class="container">
                   <Breadcrumb
                     itemListElement={breadcrumb?.itemListElement}
                   />
                 </div>
               )}
-              <div class="grid grid-cols-1 sm:grid-cols-[250px_1fr] gap-12 container px-5">
+              <div class="grid grid-cols-1 sm:grid-cols-[250px_1fr] gap-12 container">
                 {device === "desktop" && (
                   <aside class="place-self-start flex flex-col w-full">
-                    <span class="text-base lg:text-lg font-semibold pb-4 flex items-center border-b border-gray-300">
+                    <label class="text-base lg:text-lg font-semibold pb-4 flex items-center border-b border-gray-300">
                       Filtros
-                    </span>
+                    </label>
 
                     <Filters filters={filters} />
                   </aside>
@@ -346,7 +347,8 @@ function Result(props: SectionProps<typeof loader>) {
   );
 }
 function SearchResult({ page, ...props }: SectionProps<typeof loader>) {
-  if (!page) {
+  console.log("page", page);
+  if (!page || page.products.length === 0) {
     return <NotFound />;
   }
   return <Result {...props} page={page} />;

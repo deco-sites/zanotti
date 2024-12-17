@@ -50,29 +50,44 @@ const script = (formId: string, name: string, slot: string) => {
 const Suggestions = import.meta.resolve("./Suggestions.tsx");
 export default function Searchbar({ placeholder = "O que deseja?", loader }: SearchbarProps) {
     const slot = useId();
-    return (<div class="w-full max-w-2xl">
-      <div class="w-full relative z-[3]">
-        <div class="join flex gap-[20px] lg:gap-0 bg-white rounded-full pr-5 relative z-[2]">
-          <form id={SEARCHBAR_INPUT_FORM_ID} action={ACTION} class="w-full">
-            <input type="text" name={NAME} class="text-[13px] lg:text-sm border-0 bg-transparent rounded-full outline-none py-2 pl-5 placeholder-middle-gray w-full" placeholder={placeholder} autocomplete="off" data-hx-target={`#${slot}`} data-hx-post={loader &&
-            useComponent<SuggestionProps>(Suggestions, {
-                loader: asResolved(loader),
-            })} data-hx-trigger={`input changed delay:100ms, ${NAME}`} data-hx-indicator={`#${SEARCHBAR_INPUT_FORM_ID}`} data-hx-swap="innerHTML" data-hx-focus="border-black"/>
-          </form>
-          <button id="search" type="submit" form={SEARCHBAR_INPUT_FORM_ID} class="flex items-center justify-center bg-transparent border-none" aria-label="Search" tabIndex={-1}>
-            <Icon id="search" size={18} class="inline"/>
-          </button>
-          <button id="close" class="hidden items-center justify-center bg-transparent border-none">
-            <Icon id="close" size={18} class="inline"/>
-          </button>
+    return (
+        <div class="w-full max-w-2xl">
+          <div class="w-full relative z-[3]">
+            <div class="join flex gap-[20px] lg:gap-0 bg-white rounded-full pr-5 relative z-[2]">
+              <form id={SEARCHBAR_INPUT_FORM_ID} action={ACTION} class="w-full">
+                <input
+                    type="text"
+                    name={NAME}
+                    class="text-[13px] lg:text-sm border-0 bg-transparent rounded-full outline-none py-2 pl-5 placeholder-middle-gray w-full"
+                    placeholder={placeholder}
+                    autocomplete="off"
+                    data-hx-target={`#${slot}`}
+                    data-hx-post={loader &&
+                        useComponent<SuggestionProps>(Suggestions, {
+                            loader: asResolved(loader),
+                        }
+                    )}
+                    data-hx-indicator={`#${SEARCHBAR_INPUT_FORM_ID}`}
+                    data-hx-trigger={`input changed delay:100ms, ${NAME}`}
+                    data-hx-focus="border-black"
+                    data-hx-swap="innerHTML" 
+                />
+              </form>
+              <button id="search" type="submit" form={SEARCHBAR_INPUT_FORM_ID} class="flex items-center justify-center bg-transparent border-none" aria-label="Search" tabIndex={-1}>
+                <Icon id="search" size={18} class="inline"/>
+              </button>
+              <button id="close" class="hidden items-center justify-center bg-transparent border-none">
+                <Icon id="close" size={18} class="inline"/>
+              </button>
+            </div>
+
+            {/* Suggestions slot */}
+            <div id={slot} class="w-full absolute left-0 top-[19px] bg-white px-5 z-[1] rounded-b-3xl shadow" />
+
+            <script type="module" dangerouslySetInnerHTML={{
+                __html: useScript(script, SEARCHBAR_INPUT_FORM_ID, NAME, slot),
+            }}/>
+          </div>
         </div>
-
-        {/* Suggestions slot */}
-        <div id={slot} class="w-full absolute left-0 top-[19px] bg-white px-5 z-[1] rounded-b-3xl shadow"/>
-
-        <script type="module" dangerouslySetInnerHTML={{
-            __html: useScript(script, SEARCHBAR_INPUT_FORM_ID, NAME, slot),
-        }}/>
-      </div>
-    </div>);
+    );
 }

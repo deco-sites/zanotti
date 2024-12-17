@@ -37,21 +37,9 @@ function ValueItem(
 function FilterValues({ key, values }: FilterToggle) {
   const avatars = key === "tamanho" || key === "cor";
   const flexDirection = avatars ? "flex-row items-center" : "flex-col";
-
   return (
     <ul class={clx(`flex flex-wrap gap-2 pb-4`, flexDirection)}>
       {values.map((item) => {
-        if (key === "price") {
-          const range = parseRange(item.value);
-
-          return range && (
-            <ValueItem
-              {...item}
-              label={`${formatPrice(range.from)} - ${formatPrice(range.to)}`}
-            />
-          );
-        }
-
         return <ValueItem {...item} />;
       })}
     </ul>
@@ -70,6 +58,8 @@ function Filters({ filters }: Props) {
         .map((filter) => {
           let label = filter.label;
           if (label === "sellerName") label = "Vendedores";
+          if (label === "PriceRanges") label = "Preços";
+          if (filter.values.length <= 0) return null;
           return (
             <li class="flex flex-col gap-4 border-b border-gray-300">
               <Collapsable
@@ -80,7 +70,7 @@ function Filters({ filters }: Props) {
                     <div class="w-[14px] h-[14px]">
                       <Icon
                         class="group-open:rotate-180 transition-all ease-in-out duration-[400ms]"
-                        id={"arrow-right"}
+                        id="arrow-down"
                         size={13}
                       />
                     </div>

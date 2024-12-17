@@ -1,6 +1,6 @@
 {
-  "name": "Departamento",
-  "path": "/*",
+  "name": "Busca",
+  "path": "/s",
   "default": {
     "possiblePaths": []
   },
