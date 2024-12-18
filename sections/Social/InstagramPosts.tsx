@@ -118,7 +118,9 @@ export default function InstagramPosts({
   return (
     <div class="container">
       <div class="mb-3">
-        <span class="text-lg lg:text-xl font-semibold font-secondary">{title}</span>
+        <span class="text-lg lg:text-xl font-semibold font-secondary">
+          {title}
+        </span>
       </div>
       <div class="grid grid-cols-2 lg:grid-cols-6 gap-3 lg:gap-4 ">
         {posts.map((item) => (

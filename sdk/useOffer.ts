@@ -65,7 +65,7 @@ export const useOffer = (aggregateOffer?: AggregateOffer) => {
   const sellerName = offer?.sellerName;
   const seller = offer?.seller;
   const price = offer?.price;
-  const teaser = offer?.teasers 
+  const teaser = offer?.teasers;
 
   return {
     inventory,

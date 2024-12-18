@@ -107,7 +107,10 @@ export default function Cart(
   const count = items.length;
   itemCount = count;
   return (
-    <div id="minicart" class="flex flex-col w-full h-full lg:flex-row lg:items-stretch">
+    <div
+      id="minicart"
+      class="flex flex-col w-full h-full lg:flex-row lg:items-stretch"
+    >
       <form
         class="block w-full"
         id={MINICART_FORM_ID}

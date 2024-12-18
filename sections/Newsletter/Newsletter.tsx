@@ -39,8 +39,8 @@ const onLoad = () => {
           "$1/$2/$3",
         ).substring(0, 10);
       }
-    }
-  };
+    };
+  }
 };
 export async function action(props: Props, req: Request, ctx: AppContext) {
   const form = await req.formData();

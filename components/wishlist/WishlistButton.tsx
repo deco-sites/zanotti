@@ -56,14 +56,13 @@ function WishlistButton({ item, variant = "full", pdp }: Props) {
         aria-label="Add to wishlist"
         hx-on:click={useScript(onClick, productID, productGroupID)}
       >
-            <Icon
-              id="wishlist-icon"
-              class="[.htmx-request_&]:hidden"
-              fill="none"
-              width={20}
-              height={20}
-            />
-         
+        <Icon
+          id="wishlist-icon"
+          class="[.htmx-request_&]:hidden"
+          fill="none"
+          width={20}
+          height={20}
+        />
 
         <span class="[.htmx-request_&]:inline hidden loading loading-spinner" />
       </button>

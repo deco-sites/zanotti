@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: plugins({
     manifest,
     htmx: true,
-          }),
+  }),
   render: (ctx, render) => {
     ctx.lang = "pt-BR";
     render();

@@ -10,14 +10,14 @@ import { useSendEvent } from "../../sdk/useSendEvent.ts";
  * @titleBy alt
  */
 export interface Banner {
-  /** 
-   * @title Imagem para o Desktop 
+  /**
+   * @title Imagem para o Desktop
    * @description Subir imagem no formato 1920x600
    */
   desktop: ImageWidget;
 
-  /** 
-   * @title Imagem para o Mobile 
+  /**
+   * @title Imagem para o Mobile
    * @description Subir imagem no formato 640x600
    */
   mobile: ImageWidget;

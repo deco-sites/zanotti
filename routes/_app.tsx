@@ -67,9 +67,16 @@ export default defineApp(async (_req, ctx) => {
           src="//rate.trustvox.com.br/widget.js"
         />
 
-        <link type="text/css" rel="stylesheet" href="//certificate.trustvox.com.br/widget.css" />
+        <link
+          type="text/css"
+          rel="stylesheet"
+          href="//certificate.trustvox.com.br/widget.css"
+        />
 
-        <script type="text/javascript" src="//certificate.trustvox.com.br/widget.js" />
+        <script
+          type="text/javascript"
+          src="//certificate.trustvox.com.br/widget.js"
+        />
 
         <link
           rel="stylesheet"

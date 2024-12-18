@@ -59,7 +59,6 @@ const CarouselCategory = ({ categories, title }: Props) => {
   const device = useDevice();
 
   if (device === "desktop") {
-    
     return (
       <div class="container overflow-hidden">
         <h2 class="text-lg lg:text-xl font-semibold font-secondary mb-3">

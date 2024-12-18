@@ -14,7 +14,7 @@ export default function Price({
   isMobile = false,
 }: Props) {
   const { offers } = product;
-  
+
   const { pix, listPrice = 0, price = 0, availability, installment } = useOffer(
     offers,
   );

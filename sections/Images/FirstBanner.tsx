@@ -60,7 +60,7 @@ export default function GridImages({ title, items }: Props) {
           )}
           {items.length > 1 && (
             <div class="col-span-2 grid grid-rows-2 grid-cols-2 gap-4">
-              {items.slice(1,5).map((item) => (
+              {items.slice(1, 5).map((item) => (
                 <a href={item.link} class="flex">
                   <Image
                     src={item.desktopImage || "https://placehold.co/480x292"}
@@ -94,7 +94,8 @@ export default function GridImages({ title, items }: Props) {
             <div class="shrink-0 first:ml-5 last:mr-5">
               <a href={item.link} class="flex">
                 <Image
-                  src={item.mobileImage || item.desktopImage || "https://placehold.co/320x200"}
+                  src={item.mobileImage || item.desktopImage ||
+                    "https://placehold.co/320x200"}
                   alt={item.alt || "Image"}
                   width={320}
                   height={200}
@@ -110,4 +111,4 @@ export default function GridImages({ title, items }: Props) {
   }
 
   return null;
-};
+}

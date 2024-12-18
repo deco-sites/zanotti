@@ -29,7 +29,6 @@ export interface Logo {
   height: number;
 }
 
-
 export interface SectionProps {
   alerts?: RichText[];
   /**
@@ -72,14 +71,16 @@ const Desktop = ({
         {navItems?.length && navItems.map((item, index) => {
           const {
             navImage = "https://placehold.co/600x400",
-            hasNavImage = false
+            hasNavImage = false,
           } = item;
 
           return (
             <div class="dropdown dropdown-hover static">
               <div tabindex={index} class="text-sm text-white relative z-[2]">
                 <a
-                  class={`flex items-center gap-2 text-white ${item.ishighlighted && "font-semibold"}`}
+                  class={`flex items-center gap-2 text-white ${
+                    item.ishighlighted && "font-semibold"
+                  }`}
                   href={item.url || "#"}
                 >
                   {item.icon && (

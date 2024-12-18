@@ -3,64 +3,64 @@ import { useDevice } from "@deco/deco/hooks";
 import type { ImageWidget } from "apps/admin/widgets.ts";
 
 interface Props {
-    /**
-     * @title  Imagem desktop
-     * @description Tamanho da imagem 1440 x 400
-     */
-    srcDesktop?: ImageWidget;
-    /**
-     * @title  Imagem mobile
-     * @description Tamanho da imagem 640 x 400
-     */
-    srcMobile?: ImageWidget;
-    /**
-     * @title Texto alternativo da imagem
-     */
-    alt: string;
-    /**
-     * @title  Link da Imagem
-     * @description Obrigatório preenchimento para leitores de tela
-     */
-    link?: string;
+  /**
+   * @title  Imagem desktop
+   * @description Tamanho da imagem 1440 x 400
+   */
+  srcDesktop?: ImageWidget;
+  /**
+   * @title  Imagem mobile
+   * @description Tamanho da imagem 640 x 400
+   */
+  srcMobile?: ImageWidget;
+  /**
+   * @title Texto alternativo da imagem
+   */
+  alt: string;
+  /**
+   * @title  Link da Imagem
+   * @description Obrigatório preenchimento para leitores de tela
+   */
+  link?: string;
 }
 
 export default function FulllBanner(props: Props) {
-    const device = useDevice();
+  const device = useDevice();
 
-    const {
-        srcDesktop = "",
-        srcMobile = "",
-        link = "",
-        alt = "",
-    } = props;
+  const {
+    srcDesktop = "",
+    srcMobile = "",
+    link = "",
+    alt = "",
+  } = props;
 
-    if (device === "desktop") {
-        return (
-            <div class="container">
-                <a href={link}>
-                    <Image
-                        height={400}
-                        width={1440}
-                        class="rounded-xl"
-                        src={srcDesktop}
-                        alt={alt}
-                    />
-                </a>
-            </div>
-        );
-    } else {
-        return (
-            <div class="container">
-                <a href={link}>
-                    <Image
-                        height={400}
-                        width={640}
-                        class="rounded-xl"
-                        src={srcMobile || srcDesktop}
-                        alt={alt}
-                    />
-                </a>
-            </div>
-        );
-    }
+  if (device === "desktop") {
+    return (
+      <div class="container">
+        <a href={link}>
+          <Image
+            height={400}
+            width={1440}
+            class="rounded-xl"
+            src={srcDesktop}
+            alt={alt}
+          />
+        </a>
+      </div>
+    );
+  } else {
+    return (
+      <div class="container">
+        <a href={link}>
+          <Image
+            height={400}
+            width={640}
+            class="rounded-xl"
+            src={srcMobile || srcDesktop}
+            alt={alt}
+          />
+        </a>
+      </div>
+    );
+  }
 }

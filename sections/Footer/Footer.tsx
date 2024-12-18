@@ -321,7 +321,9 @@ function Footer(
                       paymentMethods={paymentMethods?.paymentMethods}
                     />
                     <div class="flex flex-col gap-4">
-                      <p class="text-base-200 font-semibold text-base font-secondary">{label}</p>
+                      <p class="text-base-200 font-semibold text-base font-secondary">
+                        {label}
+                      </p>
                       <ul class="flex items-center gap-6">
                         {social.map(({ imageDesktop, href, alt }, index) => (
                           <li
@@ -368,7 +370,9 @@ function Footer(
                     class="bg-base-200 py-3 rounded"
                     title={
                       <div class="px-5 flex flex-row space-between items-center py-2">
-                        <div class="text-sm font-semibold font-secondary">{title}</div>
+                        <div class="text-sm font-semibold font-secondary">
+                          {title}
+                        </div>
                         {children && children.length > 0 && (
                           <Icon
                             class="group-open:rotate-180 transition-all ease-in-out duration-[400ms]"

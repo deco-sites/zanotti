@@ -20,7 +20,12 @@ import Icon from "../ui/Icon.tsx";
 import Price from "./Price.tsx";
 interface Props {
   page: ProductDetailsPage | null;
-  flags?: [internationalFlag: string, promoFlag: string, newsFlag: string , HidePriceCollection: string] | [];
+  flags?: [
+    internationalFlag: string,
+    promoFlag: string,
+    newsFlag: string,
+    HidePriceCollection: string,
+  ] | [];
   device: Device;
   hiddenShipping: boolean;
 }

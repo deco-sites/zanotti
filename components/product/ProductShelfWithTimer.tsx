@@ -23,10 +23,16 @@ export const loader = (props: Props, _req: Request, ctx: AppContext) => {
     newsFlag = "",
     promoFlag = "",
     internationalFlag = "",
-    HidePriceCollection = ""
+    HidePriceCollection = "",
   } = ctx;
 
-  return { ...props, internationalFlag, promoFlag, newsFlag, HidePriceCollection };
+  return {
+    ...props,
+    internationalFlag,
+    promoFlag,
+    newsFlag,
+    HidePriceCollection,
+  };
 };
 export default function ProductShelf({
   internationalFlag,
