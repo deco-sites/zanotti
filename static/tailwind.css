@@ -469,8 +469,8 @@ html {
 }
 
   /** Remove default styles from input[type=number] */
-  input[type=number]::-webkit-inner-spin-button,
-  input[type=number]::-webkit-outer-spin-button {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
@@ -5722,7 +5722,7 @@ details.collapse summary::-webkit-details-marker {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
-  
+
     .fluid-text h2,
     .fluid-text h3,
     .fluid-text h4 {
@@ -5731,12 +5731,12 @@ details.collapse summary::-webkit-details-marker {
     font-size: 1rem;
     line-height: 1.5rem;
   }
-    
+
     .fluid-text li {
     font-size: 0.75rem;
     line-height: 1rem;
   }
-    
+
     .fluid-text p,
     .fluid-text p span {
     font-size: 0.75rem !important;
@@ -5753,16 +5753,16 @@ details.collapse summary::-webkit-details-marker {
 }
 
 .group:disabled .group-disabled\:animate-progress {
-  animation: progress-frame ease normal
+  animation: progress-frame ease normal;
 }
 
 @keyframes progress-frame {
   0% {
-    --dot-progress: 0%
+    --dot-progress: 0%;
   }
 
   to {
-    --dot-progress: 100%
+    --dot-progress: 100%;
   }
 }
 .space-between {
@@ -5772,8 +5772,8 @@ details.collapse summary::-webkit-details-marker {
 .drawer {
   width: unset !important;
 }
-.family-secondary{
-  font-family: 'Montserrat';
+.family-secondary {
+  font-family: "Montserrat";
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -5796,7 +5796,7 @@ details.collapse summary::-webkit-details-marker {
 
 .custom-scrollbar {
   -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none;    /* Firefox */
+  scrollbar-width: none; /* Firefox */
 }
 
 .cursor-grab {
@@ -5821,12 +5821,12 @@ details.collapse summary::-webkit-details-marker {
 }
 
 .animate-scroll:hover {
-  animation-play-state: paused; 
+  animation-play-state: paused;
 }
 
 /* Fix Safari issue related to <summary> / <details> arrow */
-details>summary::-webkit-details-marker,
-details>summary::marker {
+details > summary::-webkit-details-marker,
+details > summary::marker {
   display: none;
 }
 
@@ -5858,7 +5858,7 @@ details>summary::marker {
 }
 
 .font-secondary {
-  font-family: 'MuseoModerno';
+  font-family: "MuseoModerno";
 }
 
 @media (min-width: 1024px) {
