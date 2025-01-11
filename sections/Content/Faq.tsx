@@ -3,15 +3,14 @@ import Section, {
   type Props as SectionHeaderProps,
 } from "../../components/ui/Section.tsx";
 
+/** @titleBy question */
 export interface Question {
   question: string;
-
   answer: HTMLWidget;
 }
 
 export interface Contact {
   title?: string;
-  description?: HTMLWidget;
   link?: {
     text: string;
     href: string;
@@ -20,38 +19,19 @@ export interface Contact {
 
 export interface Props extends SectionHeaderProps {
   questions?: Question[];
-  contact?: Contact;
 }
 
 function Question({ question, answer }: Question) {
   return (
     <details class="collapse collapse-arrow border-t border-base-200">
-      <summary class="collapse-title text-lg font-medium">
+      <summary class="collapse-title text-xs lg:text-sm font-medium bg-white">
         {question}
       </summary>
       <div
-        class="collapse-content"
+        class="collapse-content bg-white text-xs lg:text-sm "
         dangerouslySetInnerHTML={{ __html: answer }}
       />
     </details>
-  );
-}
-
-function Contact({ title, description, link }: Contact) {
-  return (
-    <div class="flex flex-col gap-6 items-center text-center">
-      <div class="flex flex-col gap-2">
-        {title && <h2 class="text-xl lg:text-3xl">{title}</h2>}
-        {description && (
-          <div
-            class="text-lg lg:text-xl"
-            dangerouslySetInnerHTML={{ __html: description }}
-          />
-        )}
-      </div>
-      {link &&
-        <a href={link.href} class="btn">{link.text}</a>}
-    </div>
   );
 }
 
@@ -83,12 +63,10 @@ export default function FAQ({
       <Section.Header title={title} />
 
       <ul class="w-full">
-        <li>
+        <li class="flex flex-col gap-2">
           {questions.map((question) => <Question {...question} />)}
         </li>
       </ul>
-
-      <Contact {...contact} />
     </Section.Container>
   );
 }

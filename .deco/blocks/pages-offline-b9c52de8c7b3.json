@@ -11,14 +11,20 @@
       "content": "Sua conexão foi perdida. Verifique sua internet e tente novamente.",
       "cta": {
         "content": "Atendimento",
-        "link": "/fale-c"
+        "link": "/fale-conosco"
       }
     },
     {
-      "__resolveType": "site/sections/Product/ProductShelf.tsx",
-      "title": "Oh no! You are offline!",
-      "products": null,
-      "description": "Maybe take some time to explore"
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Spacer.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Spacer.tsx"
+      }
     },
     {
       "__resolveType": "Footer Component"

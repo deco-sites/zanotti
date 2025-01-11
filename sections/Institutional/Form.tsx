@@ -53,141 +53,120 @@ export default function Form({
         )}
 
         <form
-          class="p-4 lg:p-5 w-full mx-auto my-5 bg-white rounded-3xl border border-light-gray"
+          class="p-4 lg:p-5 w-full mx-auto my-5"
           hx-swap="outerHTML"
           hx-post={useComponent(import.meta.url)}
           hx-target="closest section"
         >
-          <div class="mb-4">
+                   <div class="mb-4">
             <label
-              class="block text-xs mb-1"
-              htmlFor="email"
-            >
-              E-mail*
-            </label>
-            <input
-              class="appearance-none border border-light-gray rounded w-full py-2 px-3 text-xs placeholder:text-middle-gray leading-tight focus:outline-none focus:shadow-outline"
-              id="email"
-              type="email"
-              name="email"
-              placeholder="Digite aqui"
-              required
-            />
-          </div>
-          <div class="mb-4">
-            <label
-              class="block text-xs mb-1"
+              class="block text-sm mb-1"
               htmlFor="nome"
             >
               Nome completo*
             </label>
             <input
-              class="appearance-none border border-light-gray rounded w-full py-2 px-3 text-xs placeholder:text-middle-gray leading-tight focus:outline-none focus:shadow-outline"
+              class="appearance-none border border-light-gray rounded-3xl h-10 bg-transparent w-full py-2 px-3 text-sm placeholder:text-middle-gray leading-tight focus:outline-none focus:shadow-outline"
               id="nome"
               type="text"
               name="nome"
-              placeholder="Digite aqui"
               required
             />
           </div>
           <div class="mb-4">
             <label
-              class="block text-xs mb-1"
+              class="block text-sm mb-1"
+              htmlFor="email"
+            >
+              E-mail*
+            </label>
+            <input
+              class="appearance-none border border-light-gray rounded-3xl h-10 bg-transparent  w-full py-2 px-3 text-sm placeholder:text-middle-gray leading-tight focus:outline-none focus:shadow-outline"
+              id="email"
+              type="email"
+              name="email"
+              required
+            />
+          </div>
+ 
+          <div class="mb-4">
+            <label
+              class="block text-sm mb-1"
               htmlFor="cpf"
             >
               CPF/CNPJ*
             </label>
             <input
-              class="appearance-none border border-light-gray rounded w-full py-2 px-3 text-xs placeholder:text-middle-gray leading-tight focus:outline-none focus:shadow-outline"
+              class="appearance-none border border-light-gray rounded-3xl h-10 bg-transparent w-full py-2 px-3 text-sm placeholder:text-middle-gray leading-tight focus:outline-none focus:shadow-outline"
               id="cpf"
               type="text"
               name="cpf"
-              placeholder="Digite aqui"
               required
             />
           </div>
           <div class="mb-4">
             <label
-              class="block text-xs mb-1"
+              class="block text-sm mb-1"
               htmlFor="telefone"
             >
               Telefone*
             </label>
             <input
-              class="appearance-none border border-light-gray rounded w-full py-2 px-3 text-xs placeholder:text-middle-gray leading-tight focus:outline-none focus:shadow-outline"
+              class="appearance-none border border-light-gray rounded-3xl h-10 bg-transparent w-full py-2 px-3 text-sm placeholder:text-middle-gray leading-tight focus:outline-none focus:shadow-outline"
               id="telefone"
               type="tel"
               name="telefone"
-              placeholder="Digite aqui"
               required
             />
           </div>
           <div class="mb-4">
             <label
-              class="block text-xs mb-1"
+              class="block text-sm mb-1"
               htmlFor="orderNumber"
             >
               Número do pedido (opcional)
             </label>
             <input
-              class="appearance-none border border-light-gray rounded w-full py-2 px-3 text-xs placeholder:text-middle-gray leading-tight focus:outline-none focus:shadow-outline"
+              class="appearance-none border border-light-gray rounded-3xl h-10 bg-transparent w-full py-2 px-3 text-sm placeholder:text-middle-gray leading-tight focus:outline-none focus:shadow-outline"
               id="orderNumber"
               type="text"
               name="orderNumber"
-              placeholder="Digite aqui"
             />
           </div>
+
           <div class="mb-4">
             <label
-              class="block text-xs mb-1"
-              htmlFor="reason"
-            >
-              Motivo do seu contato*
-            </label>
-            <input
-              class="appearance-none border border-light-gray rounded w-full py-2 px-3 text-xs placeholder:text-middle-gray leading-tight focus:outline-none focus:shadow-outline"
-              id="reason"
-              type="text"
-              name="reason"
-              placeholder="Digite aqui"
-              required
-            />
-          </div>
-          <div class="mb-4">
-            <label
-              class="block text-xs mb-1"
+              class="block text-sm mb-1"
               htmlFor="subject"
             >
               Assunto*
             </label>
             <input
-              class="appearance-none border border-light-gray rounded w-full py-2 px-3 text-xs placeholder:text-middle-gray leading-tight focus:outline-none focus:shadow-outline"
+              class="appearance-none border border-light-gray rounded-3xl h-10 bg-transparent w-full py-2 px-3 text-sm placeholder:text-middle-gray leading-tight focus:outline-none focus:shadow-outline"
               id="subject"
               type="text"
               name="subject"
-              placeholder="Digite aqui"
               required
             />
           </div>
           <div class="mb-4">
             <label
-              class="block text-xs mb-1"
+              class="block text-sm mb-1"
               htmlFor="mensagem"
             >
               Mensagem*
             </label>
             <textarea
-              class="appearance-none border border-light-gray rounded min-h-[300px] w-full py-2 px-3 text-xs placeholder:text-middle-gray leading-tight focus:outline-none focus:shadow-outline"
+              class="appearance-none border border-light-gray rounded-3xl h-10 bg-transparent min-h-[300px] w-full py-2 px-3 text-sm placeholder:text-middle-gray leading-tight focus:outline-none focus:shadow-outline"
               id="mensagem"
               name="mensagem"
-              placeholder="Digite aqui"
               required
             >
             </textarea>
           </div>
           <div class="flex items-center justify-center lg:justify-start">
             <button
-              class="bg-black font-bold py-3 px-4 rounded rounded-[30px] w-full focus:outline-none focus:shadow-outline"
+              class="bg-black font-semibold py-3 px-4 rounded-[30px] w-full focus:outline-none focus:shadow-outline"
               type="submit"
             >
               <span class="[.htmx-request_&]:hidden inline text-white ">
@@ -248,7 +227,7 @@ export const action = async (
 
     return {
       toast: "success",
-      message: "Menssagem enviada com sucesso!",
+      message: "Mensagem enviada com sucesso!",
     };
   } catch {
     return {

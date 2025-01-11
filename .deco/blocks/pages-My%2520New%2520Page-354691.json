@@ -1,0 +1,66 @@
+{
+  "path": "/visite-nossa-loja",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Images/FulllBanner.tsx",
+        "srcDesktop": "https://data.decoassets.com/zanotti/f7e1333d-05c6-48ad-9659-2768c820b162/Banner.png",
+        "srcMobile": "https://data.decoassets.com/zanotti/d9b4a55d-f553-4815-8417-dfdd9e10ed77/Frame-37153.png"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Spacer.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institutional/OurStores.tsx",
+        "props": [
+          {
+            "url": "https://www.google.com.br/maps/place/Rua+Jo%C3%A3o+Clapp,+421+-+Campos+El%C3%ADsios,+Ribeir%C3%A3o+Preto+-+SP,+14080-350/@-21.1599586,-47.8033194,17z/data=!4m16!1m9!3m8!1s0x94b9bfad4d36909d:0xdd2c9ee98896fee8!2sRua+Jo%C3%A3o+Clapp,+421+-+Campos+El%C3%ADsios,+Ribeir%C3%A3o+Preto+-+SP,+14080-350!3b1!8m2!3d-21.159763!4d-47.8032092!10e5!16s%2Fg%2F11cnchcfgk!3m5!1s0x94b9bfad4d36909d:0xdd2c9ee98896fee8!8m2!3d-21.159763!4d-47.8032092!16s%2Fg%2F11cnchcfgk?entry=ttu&g_ep=EgoyMDI1MDEwOC4wIKXMDSoASAFQAw%3D%3D",
+            "adress": {
+              "street": "Rua João Clapp, 421 - Campos Elíseos CEP 14080-350 Ribeirão Preto - SP",
+              "number": " ",
+              "phone": "16 3961-8800",
+              "zipCode": "14080-350"
+            },
+            "content": "Especializada em refrigeração comercial, equipamentos, instalações comerciais, painéis isotérmicos e câmaras frigoríficas.",
+            "title": "Matriz",
+            "cta": {
+              "openNewTab": true,
+              "link": "/",
+              "label": "Conhecer"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Spacer.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer Component"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx",
+  "name": "Visite Nossa Loja"
+}

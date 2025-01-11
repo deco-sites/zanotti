@@ -1,0 +1,49 @@
+{
+  "name": "Política de dados",
+  "path": "/politica-de-privacidade-de-dados",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Images/FulllBanner.tsx",
+        "srcDesktop": "https://data.decoassets.com/zanotti/f7e1333d-05c6-48ad-9659-2768c820b162/Banner.png",
+        "srcMobile": "https://data.decoassets.com/zanotti/d9b4a55d-f553-4815-8417-dfdd9e10ed77/Frame-37153.png"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Spacer.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institutional/Text.tsx",
+        "html": "<h2><strong><span style=\"color: #000000\">POLÍTICA DE PRIVACIDADE DE DADOS DA ZANOTTI REFRIGERAÇÃO</span></strong></h2><p style=\"text-align: start\">Esta política de privacidade de dados explica como coletamos, usamos e protegemos suas informações pessoais quando você utiliza nossos serviços. Ao comprar conosco ou navegar no nosso site, você concorda com esta política.</p><h2 style=\"text-align: start\"><strong><span style=\"color: #000000\">INFORMAÇÕES QUE COLETAMOS</span></strong></h2><p style=\"text-align: start\">Coletamos informações pessoais quando você faz uma compra em nosso e-commerce. Isso inclui seu nome, endereço de e-mail, endereço residencial, informações de pagamento e informações sobre o produto que você comprou.</p><h2 style=\"text-align: start\"><strong><span style=\"color: #030303\">COMO USAMOS SUAS INFORMAÇÕES</span></strong></h2><p style=\"text-align: start\">Usamos suas informações pessoais para processar suas compras, enviar informações sobre o status da sua encomenda e oferecer suporte ao cliente. Além disso, podemos usar suas informações para enviar comunicações de marketing e promocionais, desde que você tenha nos dado seu consentimento para fazê-lo.</p><h2 style=\"text-align: start\"><strong><span style=\"color: #0a0a0a\">COMPARTILHAMENTO DE INFORMAÇÕES</span></strong></h2><p style=\"text-align: start\">Não compartilhamos suas informações pessoais com terceiros, exceto quando necessário para processar sua compra ou cumprir com uma obrigação legal. Isso inclui o compartilhamento de informações com fornecedores e provedores de serviços, como processadores de pagamento e empresas de logística. No entanto, não vendemos, alugamos ou divulgamos suas informações pessoais a terceiros para fins de marketing.</p><h2 style=\"text-align: start\"><strong><span style=\"color: #000000\">PROTEÇÃO DE INFORMAÇÕES</span></strong></h2><p style=\"text-align: start\">Temos medidas de segurança técnicas e organizacionais em vigor para proteger suas informações pessoais contra perda, roubo e uso não autorizado. Armazenamos suas informações pessoais em servidores seguros e criptografamos as informações de pagamento. Além disso, limitamos o acesso às suas informações pessoais apenas para os funcionários que precisam delas para realizar suas funções.</p><h2 style=\"text-align: start\"><strong><span style=\"color: #000000\">SEUS DIREITOS</span></strong></h2><p style=\"text-align: start\">Você tem o direito de solicitar informações sobre as informações pessoais que mantemos sobre você e pode solicitar que suas informações pessoais sejam atualizadas ou excluídas. Para exercer seus direitos, entre em contato conosco.</p><h2 style=\"text-align: start\"><strong><span style=\"color: #000000\">MUDANÇAS NA POLÍTICA DE PRIVACIDADE</span></strong></h2><p style=\"text-align: start\">Podemos atualizar esta Política de Privacidade de tempos em tempos. Quaisquer alterações serão publicadas em nosso site. Seu uso continuado de nossos serviços após a publicação de alterações nesta Política de Privacidade constitui sua aceitação dessas alterações.</p><h2 style=\"text-align: start\"><strong><span style=\"color: #030303\">O QUE SÃO COOKIES?</span></strong></h2><p style=\"text-align: start\">Um cookie é um pequeno arquivo armazenado no dispositivo do usuário (computador, smartphone, tablet etc.) com informações que podem ser necessárias para a navegação na internet. É um arquivo de texto com pedacinhos de dados usados para identificar o computador do usuário quando ele usa uma rede de computadores. Assim que o usuário se conecta a um site, o servidor cria um cookie. Esses dados são rotulados com um ID exclusivo para cada pessoa, sessão e dispositivo. Quando o cookie é compartilhado entre o navegador e o servidor de rede, o servidor lê a identificação e sabe quais informações entregar a esse usuário específico. Os cookies são essenciais para o funcionamento da internet. Em geral, eles viabilizam vários serviços interativos e facilitam a navegação e a usabilidade do site, podendo, assim, proporcionar uma melhor experiência online, baseada nos dados do usuário.</p><h2 style=\"text-align: start\"><strong><span style=\"color: #000000\">O QUE É O CONSENTIMENTO DE COOKIES?</span></strong></h2><p style=\"text-align: start\">Resumidamente, é como os sites garantem que o tratamento dos dados pessoais de seus usuários esteja em conformidade com a lei. Através dos cookies, o proprietário do site compartilha informações sobre a navegação dos usuários com parceiros de mídias sociais, publicidade e inteligência analítica, que podem combiná-las com outras informações fornecidas a eles ou coletadas de suas próprias fontes.</p><h2 style=\"text-align: start\"><strong><span style=\"color: #000000\">POR QUE OS COOKIES SÃO NECESSÁRIOS?</span></strong></h2><p style=\"text-align: start\">Como parte essencial da navegação na web, os cookies HTTP ajudam os desenvolvedores a exibir um conteúdo virtual mais personalizado e conveniente aos usuários. Os cookies permitem que os sites lembrem quem são os visitantes, seus dados de login, carrinhos de compras e muito mais. Os cookies não causam danos aos dispositivos dos visitantes e seus dados.</p><h2 style=\"text-align: start\"><strong><span style=\"color: #0d0d0d\">COMO OS COOKIES AJUDAM OS </span><span style=\"color: #000000\">COMPRADORES A NAVEGAR NOS SITES DE COMÉRCIO ELETRÔNICO?</span></strong></h2><p style=\"text-align: start\">Os cookies permitem que os sites se lembrem de todos os itens que o comprador colocou no carrinho enquanto ele continua navegando. Se o comprador desativar os cookies no navegador enquanto estiver fazendo compras, os itens do carrinho poderão desaparecer a cada clique em um novo link. Desse modo, as compras online são praticamente impossíveis sem cookies, e a navegação se torna impraticável. Esse é apenas um exemplo de por que os cookies são necessários em certos sites.</p><h2 style=\"text-align: start\"><strong><span style=\"color: #000000\">Tipos de Cookies que utilizamos</span></strong></h2><ol><li><p>Cookies necessários Como o próprio nome diz, são os necessários para o funcionamento das nossas plataformas. Portanto, os clientes que desabilitarem os cookies em seus navegadores poderão não ter a melhor experiência durante a navegação, incluindo o comprometimento de funcionalidades essenciais.</p></li><li><p>Cookies de desempenho/performance Este tipo de cookie coleta informações anônimas sobre as páginas acessadas, possibilitando validar, por exemplo, se houve erros, quanto tempo o usuário permaneceu na página, como o usuário interage entre as páginas e como chegou até a página.</p></li><li><p>Cookies de funcionalidade Eles memorizam as preferências e escolhas dos clientes, evitando a necessidade de configuração e/ou preenchimento das informações novamente, toda vez que há o acesso às nossas plataformas.</p></li><li><p>Cookies de publicidade/propaganda Eles direcionam anúncios com base nos interesses do cliente, auxiliando na busca, por exemplo, de produtos. Estes anúncios podem ser exibidos em forma de banner. Quando este tipo de cookie não estiver habilitado, as publicidades continuarão a ser exibidas, porém não propriamente direcionadas aos interesses do usuário.</p></li></ol>"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Spacer.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer Component"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

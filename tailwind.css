@@ -60,16 +60,16 @@
   }
 
   .fluid-text h1 {
-    @apply text-black my-6 text-3xl font-semibold uppercase;
+    @apply text-black my-6 text-3xl font-semibold uppercase font-secondary;
   }
 
   .fluid-text h2 {
-    @apply text-primary mt-6 mb-3 text-lg font-semibold uppercase;
+    @apply text-primary mt-6 mb-3 text-lg font-semibold uppercase font-secondary;
   }
 
   .fluid-text h3,
   .fluid-text h4 {
-    @apply text-primary mt-6 mb-2 text-base font-semibold uppercase;
+    @apply text-primary mt-6 mb-2 text-base font-semibold uppercase font-secondary;
   }
 
   .fluid-text ul {
@@ -88,13 +88,13 @@
 
   @media (max-width: 1024px) {
     .fluid-text h1 {
-      @apply text-xl mt-6 mb-3;
+      @apply text-xl mt-6 mb-3 font-secondary;
     }
 
     .fluid-text h2,
     .fluid-text h3,
     .fluid-text h4 {
-      @apply text-base mt-3 my-2;
+      @apply text-base mt-3 my-2 font-secondary;
     }
 
     .fluid-text li {

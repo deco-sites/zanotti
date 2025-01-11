@@ -6,14 +6,14 @@ interface Props {
 
 const Text = ({ html }: Props) => {
   return (
-    <>
+    <div class="container">
       {html && (
         <div
-          class="fluid-text text-xs lg:text-sm mb-5 container px-5"
+          class="fluid-text text-xs lg:text-sm mb-5"
           dangerouslySetInnerHTML={{ __html: html }}
         />
       )}
-    </>
+    </div>
   );
 };
 

@@ -1,0 +1,43 @@
+{
+  "name": "Trabalhe Conosco",
+  "path": "/trabalhe-conosco",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Images/FulllBanner.tsx",
+        "srcDesktop": "https://data.decoassets.com/zanotti/f7e1333d-05c6-48ad-9659-2768c820b162/Banner.png",
+        "srcMobile": "https://data.decoassets.com/zanotti/d9b4a55d-f553-4815-8417-dfdd9e10ed77/Frame-37153.png"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institutional/Text.tsx",
+        "html": "<h2><strong><span style=\"color: #000000\">FAÇA PARTE DO NOSSO TIME</span></strong></h2><p style=\"text-align: start\">Obrigado pelo interesse em fazer parte da equipe da Zanotti Refrigeração! Se você se identifica com os valores e missão de nossa empresa, isto é, acima de tudo, procura crescer profissionalmente através do trabalho contínuo para a excelência no atendimento aos nossos clientes, participe de nossos processos de recrutamento e seleção enviando o seu currículo atualizado e o cargo/vaga pretendido para o e-mail <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"mailto:talentos@zanottirefrigeracao.com.br\">talentos@zanottirefrigeracao.com.br</a></p>"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Spacer.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer Component"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

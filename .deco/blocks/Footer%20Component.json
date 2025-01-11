@@ -8,16 +8,8 @@
           "href": "/sobre-a-zanotti"
         },
         {
-          "href": "/termos-e-condicoes",
-          "title": "Termos e Condições"
-        },
-        {
           "href": "/visite-nossa-loja",
           "title": "Visite Nossa Loja"
-        },
-        {
-          "title": "Lojas",
-          "href": "/lojas"
         }
       ],
       "title": "Institucional"
@@ -58,7 +50,7 @@
         },
         {
           "title": "Política de troca,  Devolução e Cancelamento",
-          "href": "/politica-de-troca-devolucao-e-cancelamento"
+          "href": "/politica-de-troca"
         }
       ],
       "href": "/fale-conosco"
