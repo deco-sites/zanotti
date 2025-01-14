@@ -51,19 +51,15 @@
   "caching": {
     "directives": []
   },
-  "commerce": {
-    "platform": "vtex",
-    "defaultSegment": {
-      "channelPrivacy": "public"
-    },
-    "salesChannel": "1"
-  },
   "platform": "vtex",
   "__resolveType": "site/apps/site.ts",
   "firstByteThresholdMS": true,
   "abTesting": {
     "replaces": [],
     "includeScriptsToHead": {
+      "includes": []
+    },
+    "includeScriptsToBody": {
       "includes": []
     }
   },
@@ -79,5 +75,11 @@
   },
   "shelfFlag1": "163",
   "minicartSuggestion": "145",
-  "HidePriceCollection": "200"
+  "HidePriceCollection": "200",
+  "commerce": {
+    "account": "deco",
+    "publicUrl": "www.mystore.com.br",
+    "authToken": {},
+    "platform": "vnda"
+  }
 }

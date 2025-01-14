@@ -2,6 +2,9 @@ import { asset, Head } from "$fresh/runtime.ts";
 import { defineApp } from "$fresh/server.ts";
 import { useScript } from "@deco/deco/hooks";
 import { Context } from "@deco/deco";
+
+const ADMIN_PATH = "/live/previews";
+
 declare global {
   interface Window {
     _trustvox_shelf_rate: Array<[
@@ -20,8 +23,10 @@ function setupTrustvoxRateConfig(storeId: string) {
   window._trustvox_shelf_rate.push(["_productContainer", "body"]);
   window._trustvox_shelf_rate.push(["_watchSubtree", "true"]);
 }
-export default defineApp(async (_req, ctx) => {
+export default defineApp(async (req, ctx) => {
   const revision = await Context.active().release?.revision();
+  const url = new URL(req.url);
+  const isOnAdmin = url.pathname.includes(ADMIN_PATH);
   return (
     <>
       {/* Include Icons and manifest */}
@@ -55,28 +60,36 @@ export default defineApp(async (_req, ctx) => {
         {/* Web Manifest */}
         <link rel="manifest" href={asset("/site.webmanifest")} />
 
-        <script
-          type="text/javascript"
-          dangerouslySetInnerHTML={{
-            __html: useScript(setupTrustvoxRateConfig, "121576"),
-          }}
-        />
-        <script
-          defer
-          type="text/javascript"
-          src="//rate.trustvox.com.br/widget.js"
-        />
+        {!isOnAdmin && (
+          <script
+            type="text/javascript"
+            dangerouslySetInnerHTML={{
+              __html: useScript(setupTrustvoxRateConfig, "121576"),
+            }}
+          />
+        )}
+        {!isOnAdmin && (
+          <script
+            defer
+            type="text/javascript"
+            src="//rate.trustvox.com.br/widget.js"
+          />
+        )}
 
-        <link
-          type="text/css"
-          rel="stylesheet"
-          href="//certificate.trustvox.com.br/widget.css"
-        />
+        {!isOnAdmin && (
+          <link
+            type="text/css"
+            rel="stylesheet"
+            href="//certificate.trustvox.com.br/widget.css"
+          />
+        )}
 
-        <script
-          type="text/javascript"
-          src="//certificate.trustvox.com.br/widget.js"
-        />
+        {!isOnAdmin && (
+          <script
+            type="text/javascript"
+            src="//certificate.trustvox.com.br/widget.js"
+          />
+        )}
 
         <link
           rel="stylesheet"
