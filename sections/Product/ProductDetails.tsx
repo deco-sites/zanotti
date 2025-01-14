@@ -20,21 +20,21 @@ export interface Props {
 }
 const onLoad = (productId: string, productName: string, image: string) => {
   // @ts-ignore _trustvox exists
-  globalThis._trustvox = [
-    ["_storeId", "123535"],
-    ["_productId", productId],
-    ["_productName", productName],
-    ["_productPhotos", [image]],
-  ];
-  const script = document.createElement("script");
-  script.id = "_trustvox_widget_script";
-  script.async = true;
-  script.type = "text/javascript";
-  script.src = "//static.trustvox.com.br/sincero/sincero.js";
-  document.head.append(script);
-  // @ts-ignore _trustvox_shelf_rate exists
-  const _trustvox_shelf_rate = globalThis._trustvox_shelf_rate || [];
-  _trustvox_shelf_rate.push(["_storeId", "123535"]);
+  // globalThis._trustvox = [
+  //   ["_storeId", "123535"],
+  //   ["_productId", productId],
+  //   ["_productName", productName],
+  //   ["_productPhotos", [image]],
+  // ];
+  // const script = document.createElement("script");
+  // script.id = "_trustvox_widget_script";
+  // script.async = true;
+  // script.type = "text/javascript";
+  // script.src = "//static.trustvox.com.br/sincero/sincero.js";
+  // document.head.append(script);
+  // // @ts-ignore _trustvox_shelf_rate exists
+  // const _trustvox_shelf_rate = globalThis._trustvox_shelf_rate || [];
+  // _trustvox_shelf_rate.push(["_storeId", "123535"]);
 };
 export const loader = async (props: Props, _req: Request, ctx: AppContext) => {
   const {
@@ -209,9 +209,9 @@ export default function ProductDetails({
           </div>
         )}
         <ProductGrid page={page} />
-        <div className="container px-5 pb-5">
+        {/* <div className="container px-5 pb-5">
           <div id="_trustvox_widget" />
-        </div>
+        </div> */}
         <script
           type="text/javascript"
           defer

@@ -191,7 +191,7 @@ function CertifiedComponent({ title, certifieds }: CertifiedProps) {
             </div>
           ))}
         </div>
-        <div data-trustvox-certificate-fixed="data-trustvox-certificate-fixed">
+        {/* <div data-trustvox-certificate-fixed="data-trustvox-certificate-fixed">
           <a
             href="https://certificados.trustvox.com.br/www.eletrotrafo.com.br?hidden=false"
             class="trustvox-certificate__modal-btn-js"
@@ -200,8 +200,8 @@ function CertifiedComponent({ title, certifieds }: CertifiedProps) {
             <span class="trustvox-certificate__fixed trustvox-certificate__fixed-full-left">
             </span>
           </a>
-        </div>
-        <script
+        </div> */}
+        {/* <script
           type="text/javascript"
           defer
           dangerouslySetInnerHTML={{
@@ -213,7 +213,7 @@ function CertifiedComponent({ title, certifieds }: CertifiedProps) {
               document.body.appendChild(script);
             }),
           }}
-        />
+        /> */}
       </div>
     </div>
   );

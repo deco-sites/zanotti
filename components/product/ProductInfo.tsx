@@ -308,9 +308,9 @@ function ProductInfo({
             {availability === "https://schema.org/InStock"
               ? (
                 <>
-                  <div
+                  {/* <div
                     data-trustvox-product-code={productGroupID}
-                  />
+                  /> */}
                   <Price type="details" product={product} isMobile={true} />
                   <PaymentMethods
                     offers={offers}
@@ -427,9 +427,9 @@ function ProductInfo({
                   <h1 class="text-xl font-bold flex-grow">
                     {title}
                   </h1>
-                  <div
+                  {/* <div
                     data-trustvox-product-code={productGroupID}
-                  />
+                  /> */}
                   <WishlistButton item={item} pdp={true} />
                 </div>
                 <div className="flex items-center justify-between">
