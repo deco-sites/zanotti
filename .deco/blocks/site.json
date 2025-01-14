@@ -75,11 +75,5 @@
   },
   "shelfFlag1": "163",
   "minicartSuggestion": "145",
-  "HidePriceCollection": "200",
-  "commerce": {
-    "account": "deco",
-    "publicUrl": "www.mystore.com.br",
-    "authToken": {},
-    "platform": "vnda"
-  }
+  "HidePriceCollection": "200"
 }
