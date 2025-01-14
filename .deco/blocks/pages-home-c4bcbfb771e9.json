@@ -284,13 +284,12 @@
       "title": "Vitrine 1",
       "cta": "#",
       "products": {
-        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+        "__resolveType": "vtex/loaders/legacy/productList.ts",
         "props": {
           "sort": "",
           "term": "fogao",
           "count": 6,
-          "collection": "200",
-          "similars": true
+          "collection": "200"
         }
       }
     },
@@ -380,7 +379,7 @@
       "title": "Vitrine 1",
       "cta": "#",
       "products": {
-        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+        "__resolveType": "vtex/loaders/legacy/productList.ts",
         "props": {
           "sort": "",
           "term": "fogao",

@@ -870,6 +870,14 @@ html {
 .carousel-end .carousel-item {
   scroll-snap-align: end;
 }
+.chat {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
 .checkbox {
   flex-shrink: 0;
   --chkbg: var(--fallback-bc,oklch(var(--bc)/1));
@@ -1610,11 +1618,6 @@ html {
   pointer-events: auto;
   visibility: visible;
   opacity: 1;
-}
-.modal-action {
-  display: flex;
-  margin-top: 1.5rem;
-  justify-content: flex-end;
 }
 .modal-toggle {
   position: fixed;
@@ -2743,11 +2746,6 @@ details.collapse summary::-webkit-details-marker {
   --tw-scale-y: 1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-.modal-action > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
-}
 @keyframes modal-pop {
 
   0% {
@@ -3751,9 +3749,6 @@ details.collapse summary::-webkit-details-marker {
 .float-right {
   float: right;
 }
-.\!m-0 {
-  margin: 0px !important;
-}
 .m-0 {
   margin: 0px;
 }
@@ -4700,6 +4695,9 @@ details.collapse summary::-webkit-details-marker {
 .rounded-none {
   border-radius: 0px;
 }
+.rounded-sm {
+  border-radius: 0.125rem;
+}
 .rounded-xl {
   border-radius: 0.75rem;
 }
@@ -5117,10 +5115,6 @@ details.collapse summary::-webkit-details-marker {
 .py-20 {
   padding-top: 5rem;
   padding-bottom: 5rem;
-}
-.py-28 {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
 }
 .py-3 {
   padding-top: 0.75rem;
