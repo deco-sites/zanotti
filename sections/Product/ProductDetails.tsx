@@ -86,13 +86,24 @@ export default function ProductDetails({
 }: SectionProps<typeof loader>) {
   if (!page) {
     return (
-      <div class="w-full flex justify-center items-center py-28">
-        <div class="flex flex-col items-center justify-center gap-6">
-          <span class="font-medium text-2xl">Oops!</span>
-          <a href="/" class="btn no-animation">
-            Go back to Home
-          </a>
+      <div class=" py-[100px]">
+        <div class="container px-5">
+          <p class="text-[32px] lg:text-[64px] text-middle-gray text-start lg:text-center mx-auto">
+            Oops!
+          </p>
+          <p class="text-[32px] lg:text-[64px] text-middle-gray text-start lg:text-center mx-auto">
+            Página não encontrada.
+          </p>
         </div>
+        <div class={`mx-auto flex flex-col items-center px-5`}>
+          <p
+            class={`text-black font-normal justify-center text-start lg:text-center text-base lg:text-[30px] w-full gap-1 lg:leading-[45px]`}
+          >
+            Tente ajustar os termos da sua busca ou verificar se não há erros de
+            digitação.
+          </p>
+        </div>
+        <a href="/" class="bg-primary rounded-full py-3 px-10 text-white mx-auto flex w-fit justify-center my-10">Voltar para a home</a>
       </div>
     );
   }
@@ -104,9 +115,6 @@ export default function ProductDetails({
       isVariantOf,
       additionalProperty: productProperties,
     } = product;
-    const itsForAdults = productProperties?.find((p) =>
-      p.value === "Maior de 18"
-    ) || null;
     const productName = (isVariantOf?.name ?? product.name) || "";
     const [front] = images ?? [];
     const image = front?.url || "";
@@ -114,53 +122,6 @@ export default function ProductDetails({
     const { additionalProperty = [] } = isVariantOf ?? {};
     return (
       <>
-        {itsForAdults !== null && (
-          <>
-            <dialog id="itsForAdults" class="modal">
-              <div class="modal-box flex flex-col gap-3 items-center">
-                <Icon id="18" size={47} />
-                <p class="text-center text-sm">
-                  Olá! Precisamos confirmar a sua idade para continuar acessando
-                  a página!
-                </p>
-                <h3 class="text-lg font-bold text-center">
-                  Você tem mais de 18 anos?
-                </h3>
-                <div class="modal-action flex gap-3 justify-center !m-0">
-                  <a class="btn m-0" href="/">Não</a>
-                  <form method="dialog">
-                    <button
-                      class="btn btn-primary"
-                      hx-on:click={useScript(() => {
-                        if (!localStorage.getItem("showAdultModal")) {
-                          localStorage.setItem("showAdultModal", "no");
-                        }
-                      })}
-                    >
-                      Sim
-                    </button>
-                  </form>
-                </div>
-                <p class="text-center text-xs text-dark-gray m-0">
-                  Continuando você estará aceitando as políticas de{" "}
-                  <b>Privacidade e termos de uso</b> e{" "}
-                  <b>políticas de cookies</b>
-                </p>
-              </div>
-            </dialog>
-            <script
-              type="text/javascript"
-              dangerouslySetInnerHTML={{
-                __html: useScript(() => {
-                  if (!localStorage.getItem("showAdultModal")) {
-                    // @ts-ignore showModal exists on daisyUi
-                    itsForAdults.showModal();
-                  }
-                }),
-              }}
-            />
-          </>
-        )}
         <ProductInfo
           flags={[internationalFlag, promoFlag, newsFlag, HidePriceCollection]}
           page={page}
