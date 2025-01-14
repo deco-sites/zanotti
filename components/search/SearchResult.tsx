@@ -32,8 +32,24 @@ export interface Props {
 function NotFound() {
   return (
     <>
-      <div class="w-full flex justify-center items-center py-10">
-        <span>Not Found!</span>
+      <div class=" py-[100px]">
+        <div class="container px-5">
+          <p class="text-[32px] lg:text-[64px] text-middle-gray text-start lg:text-center mx-auto">
+            Oops 
+          </p>
+          <p class="text-[32px] lg:text-[64px] text-middle-gray text-start lg:text-center mx-auto">
+            Nenhum resultado encontrado.
+          </p>
+        </div>
+        <div class={`mx-auto flex flex-col items-center px-5`}>
+          <p
+            class={`text-black font-normal justify-center text-start lg:text-center text-base lg:text-[30px] w-full gap-1 lg:leading-[45px]`}
+          >
+            Tente ajustar os termos da sua busca ou verificar se não há erros de
+            digitação.
+          </p>
+        </div>
+        <a href="/" class="bg-primary rounded-full py-3 px-10 text-white mx-auto flex w-fit justify-center my-10">Voltar para a home</a>
       </div>
     </>
   );
