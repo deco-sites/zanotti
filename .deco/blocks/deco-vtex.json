@@ -7,11 +7,11 @@
   "account": "t62543",
   "appKey": {
     "__resolveType": "website/loaders/secret.ts",
-    "encrypted": "2796c5ea2ef0e3f1682c972f0462c8d53437be78cccad183e1ecb6c1cf27eb49"
+    "encrypted": "117ad8c65e069706bf65d8061a9cc1fb3a6fcbd77a394492c2f9617e3eaab2ea"
   },
   "appToken": {
     "__resolveType": "website/loaders/secret.ts",
-    "encrypted": "50b2ac0fe86577b74678c278c1b6f366e84bb158c15d4f85fab0719bc1e6a7d5337b44a7ed20c5086cb53bced4eb1268df2c68b56f94a74e6b081b1c39db68764154c3e073951e3b396d10725cb62b88952eae01bd5f9bfab0f2e3791e3b613c86f66d438386e4b28e6760e0986c91bc65a87c3cea3fad499a11111ddba4f810f3d6c2d2af46294aa451f55d32d687a4"
+    "encrypted": "4797c2bde5e74faa6009cc8ca88221be02b9368fe54a22da98914d5fa3e780308c411146b34d18f55f49e03966ea2dc166f2b2571fd51ba4b46add4d1eca6313a26472b819e3237e3674adeccf37ab9b286878080590e12ff020c086f592f710b7428a3fce2eadefe00d0ba7be449d0fc5728f489810c8a4761e37112d1cc21b74c188be5867f2a6f42813874d934906"
   },
   "salesChannel": "1",
   "publicUrl": "www.zanottirefrigeracao.com.br"

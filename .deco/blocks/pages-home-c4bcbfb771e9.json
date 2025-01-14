@@ -284,7 +284,7 @@
       "title": "Vitrine 1",
       "cta": "#",
       "products": {
-        "__resolveType": "vtex/loaders/legacy/productList.ts",
+        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
         "props": {
           "sort": "",
           "term": "fogao",
@@ -380,12 +380,13 @@
       "title": "Vitrine 1",
       "cta": "#",
       "products": {
-        "__resolveType": "vtex/loaders/legacy/productList.ts",
+        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
         "props": {
           "sort": "",
           "term": "fogao",
           "count": 31,
-          "collection": "197"
+          "fuzzy": "automatic",
+          "query": "geladeira"
         }
       }
     },
