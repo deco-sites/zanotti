@@ -44,9 +44,7 @@ function AddToCartButton(props: Props) {
   const platformProps = useAddToCart(props);
   const { product, item, class: _class, hiddenIcon = false } = props;
 
-  console.log("item", item);
-  console.log("product", product);
-// @ts-ignore item_id exists
+  // @ts-ignore item_id exists
   const { item_id: itemId } = item;
   const { isVariantOf } = product;
   const  selectedVariant = isVariantOf?.hasVariant.find((v) => v.productID === itemId) || {};
@@ -57,8 +55,6 @@ function AddToCartButton(props: Props) {
   const specs = additionalProperty.filter(({ name }) => {
     return !omit.has(name!);
   });
-
-  console.log("specs", specs);
 
   if (Object.keys(specs).length === 0) {
     return null;

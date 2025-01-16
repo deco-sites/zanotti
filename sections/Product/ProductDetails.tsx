@@ -13,13 +13,17 @@ export interface Props {
 }
 
 export const loader = (props: Props, _req: Request, ctx: AppContext) => {
-  return {...props, device: ctx.device};
+  const {
+    device,
+    pixDiscount = 0
+  } = ctx;
+  return {...props, device, pixDiscount};
 }
 
-export default function ProductDetails({ page, device }: SectionProps<typeof loader>) {
+export default function ProductDetails({ page, device, pixDiscount }: SectionProps<typeof loader>) {
   if (!page) {
     return (
-      <div class="w-full flex justify-center items-center py-28">
+      <div class="w-full flex justify-center ite  ms-center py-28">
         <div class="flex flex-col items-center justify-center gap-6">
           <span class="font-medium text-2xl">Oops!</span>
           <a href="/" class="btn no-animation">
@@ -40,6 +44,7 @@ export default function ProductDetails({ page, device }: SectionProps<typeof loa
         <ProductInfo
           page={page}
           device={device}
+          pixDiscount={pixDiscount}
         />
         <div class="mt-0 lg:mt-12 relative z-[1] container">
           <Description page={page} />

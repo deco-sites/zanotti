@@ -65,6 +65,9 @@
     "replaces": [],
     "includeScriptsToHead": {
       "includes": []
+    },
+    "includeScriptsToBody": {
+      "includes": []
     }
   },
   "flavor": {
@@ -79,5 +82,6 @@
   },
   "shelfFlag1": "163",
   "minicartSuggestion": "145",
-  "HidePriceCollection": "200"
+  "HidePriceCollection": "200",
+  "pixDiscount": 3
 }

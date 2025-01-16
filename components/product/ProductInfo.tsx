@@ -16,6 +16,7 @@ import Icon from "../ui/Icon.tsx";
 interface Props {
   page: ProductDetailsPage | null;
   device: string;
+  pixDiscount: number;
 }
 
 const onLoad = () => {
@@ -43,7 +44,7 @@ function ReadyForDeliveryTag() {
   );
 }
 
-function ProductInfo({ page, device }: Props) {
+function ProductInfo({ page, device, pixDiscount }: Props) {
   if (page === null) {
     throw new Error("Missing Product Details Page Info");
   }
@@ -99,7 +100,7 @@ function ProductInfo({ page, device }: Props) {
                   <div
                     data-trustvox-product-code={productGroupID}
                   />
-                  <Price type="details" product={product} isMobile={true} />
+                  <Price type="details" product={product} isMobile={true} pixDiscount={pixDiscount} />
                   <PaymentMethods offers={offers} />
                   <div class="divider m-0" />
                   <ProductSelector product={product} />
@@ -107,7 +108,7 @@ function ProductInfo({ page, device }: Props) {
                     item={item}
                     seller={seller}
                     product={product}
-                    class="uppercase bg-signature-green text-[20px] flex justify-center items-center gap-2 py-[10px] rounded-[30px] no-animation text-white font-semibold hover:bg-[#1bae3299] ease-in"
+                    class="w-full uppercase bg-signature-green text-[20px] flex justify-center items-center gap-2 py-[10px] rounded-[30px] no-animation text-white font-semibold hover:bg-[#1bae3299] ease-in"
                     disabled={false}
                   />
                   <div class="divider m-0" />
@@ -132,7 +133,7 @@ function ProductInfo({ page, device }: Props) {
         </div>
         <div class="fixed bottom-0 left-0 right-0 rounded-t-2xl bg-white shadow-2xl z-[11]">
           <div class="container px-5 py-4 flex gap-4 items-center">
-            <Price type="fixed" product={product} isMobile={true} />
+            <Price type="fixed" product={product} isMobile={true} pixDiscount={pixDiscount} />
             <AddToCartButton
               item={item}
               seller={seller}
@@ -180,7 +181,7 @@ function ProductInfo({ page, device }: Props) {
                   <>
                     <div class="divider m-0" />
                     <div class="flex flex-col gap-2">
-                      <Price type="details" product={product} isMobile={false} />
+                      <Price type="details" product={product} isMobile={false} pixDiscount={pixDiscount} />
                       <PaymentMethods offers={offers} />
                     </div>
                     <div class="divider m-0" />
@@ -190,7 +191,7 @@ function ProductInfo({ page, device }: Props) {
                         item={item}
                         seller={seller}
                         product={product}
-                        class="uppercase bg-signature-green text-[20px] flex justify-center items-center gap-2 py-[10px] rounded-[30px] no-animation text-white font-semibold hover:bg-[#1bae3299] ease-in"
+                        class="w-full uppercase bg-signature-green text-[20px] flex justify-center items-center gap-2 py-[10px] rounded-[30px] no-animation text-white font-semibold hover:bg-[#1bae3299] ease-in"
                         disabled={false}
                       />
                       <div class="divider m-0" />
@@ -224,7 +225,7 @@ function ProductInfo({ page, device }: Props) {
             <div class="hidden lg:block text-xl font-semibold text-black col-span-3">
               {title}
             </div>
-            <Price type="fixed" product={product} isMobile={false} />
+            <Price type="fixed" product={product} isMobile={false} pixDiscount={pixDiscount} />
             <div class="col-span-2">
               <AddToCartButton
                 item={item}

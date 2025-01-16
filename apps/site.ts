@@ -8,34 +8,13 @@ import { color as nuvemshop } from "apps/nuvemshop/mod.ts";
 // import type { Section } from "deco/blocks/section.ts";
 import { rgb24 } from "std/fmt/colors.ts";
 import manifest, { type Manifest } from "../manifest.gen.ts";
-import type { Config } from "apps/vtex/loaders/config.ts";
 import { type App as A, type AppContext as AC } from "@deco/deco";
 export type Props = {
   /**
-   * @title Flags de Novidades
-   * @description Insira o número da coleção:
+   * @title Desconto no Pix
+   * @description Adicione o valor percentual
    */
-  newsFlag?: string;
-  /**
-   * @title Flags de Promoções
-   * @description Insira o número da coleção:
-   */
-  promoFlag?: string;
-  /**
-   * @title Flags de Produtos
-   * @description Insira o número da coleção:
-   */
-  internationalFlag?: string;
-  /**
-   * @title Esconder preço de produto
-   * @description Insira o número da coleção:
-   */
-  HidePriceCollection?: string;
-  /**
-   * @title Sugestões do Minicart
-   * @description Insira o número da coleção:
-   */
-  minicartSuggestion?: string;
+  pixDiscount?: number;
   /**
    * @title Active Commerce Platform
    * @description Choose the active ecommerce platform
