@@ -37,9 +37,11 @@ const onLoad = () => {
 
 function ReadyForDeliveryTag() {
   return (
-    <div class="flex items-center font-secondary text-white gap-2 bg-signature-green py-1 px-3 rounded-full text-sm">
-      <Icon id="check-truck" />
-      Produto a pronta entrega
+    <div class="w-fit">
+      <span class="flex items-center font-secondary text-white gap-2 bg-signature-green py-1 px-3 rounded-full text-sm">
+        <Icon id="check-truck" />
+        Produto a pronta entrega
+      </span>
     </div>
   );
 }
@@ -56,9 +58,15 @@ function ProductInfo({ page, device, pixDiscount }: Props) {
     brand,
     additionalProperty
   } = product;
+  const isPriceHidden = additionalProperty?.some((prop) =>
+    prop.propertyID === "200"
+  );
+  console.log("isPriceHidden", isPriceHidden);
   const title = isVariantOf?.name ?? product.name;
+  const message = encodeURIComponent(
+    `Olá, estou interessado nesse produto: ${title}`,
+  );
   const refId = additionalProperty?.find((p) => p.name === "RefId")?.value || "";
-  const productGroupID = isVariantOf?.productGroupID ?? "";
   const {
     price = 0,
     listPrice = 0,
@@ -80,7 +88,7 @@ function ProductInfo({ page, device, pixDiscount }: Props) {
   if (device === "mobile" || device === "tablet") {
     return (
       <>
-        <div class="flex flex-col gap-3 px-5 pt-5 items-start">
+        <div class="flex flex-col gap-3 px-5 pt-5 items-stretch">
           <Breadcrumb itemListElement={page.breadcrumbList.itemListElement} />
           <h1 class="text-lg font-semibold font-secondary">
             {title}
@@ -91,33 +99,44 @@ function ProductInfo({ page, device, pixDiscount }: Props) {
             </p>
             <WishlistButton item={item} pdp={true} />
           </div>
-          <ReadyForDeliveryTag />
+          {!isPriceHidden && <ReadyForDeliveryTag />}
           <GallerySlider page={page} />
           <div class="flex flex-col gap-2">
             {availability === "https://schema.org/InStock"
               ? (
                 <>
-                  <Price type="details" product={product} isMobile={true} pixDiscount={pixDiscount} />
-                  <PaymentMethods offers={offers} />
-                  <div class="divider m-0" />
-                  <ProductSelector product={product} />
-                  <AddToCartButton
-                    item={item}
-                    seller={seller}
-                    product={product}
-                    class="w-full uppercase bg-signature-green text-[20px] flex justify-center items-center gap-2 py-[10px] rounded-[30px] no-animation text-white font-semibold hover:bg-[#1bae3299] ease-in"
-                    disabled={false}
-                  />
-                  <div class="divider m-0" />
-                  <div class="pt-1.5 pb-4">
-                    <ShippingSimulationForm
-                      items={[{
-                        id: Number(product.sku),
-                        quantity: 1,
-                        seller: seller,
-                      }]}
-                    />
-                  </div>
+                  {isPriceHidden ? (
+                    <a
+                      href={`https://wa.me/11987939455?text=${message}`}
+                      class="flex items-center justify-center gap-3 mt-2 mb-4 bg-primary border-0 text-white py-2 text-center font-semibold rounded-full"
+                    >
+                      Consultar Preço
+                    </a>
+                  ) : (
+                    <>
+                      <Price type="details" product={product} isMobile={true} pixDiscount={pixDiscount} />
+                      <PaymentMethods offers={offers} />
+                      <div class="divider m-0" />
+                      <ProductSelector product={product} />
+                      <AddToCartButton
+                        item={item}
+                        seller={seller}
+                        product={product}
+                        class="w-full uppercase bg-signature-green text-[20px] flex justify-center items-center gap-2 py-[10px] rounded-[30px] no-animation text-white font-semibold hover:bg-[#1bae3299] ease-in"
+                        disabled={false}
+                      />
+                      <div class="divider m-0" />
+                      <div class="pt-1.5 pb-4">
+                        <ShippingSimulationForm
+                          items={[{
+                            id: Number(product.sku),
+                            quantity: 1,
+                            seller: seller,
+                          }]}
+                        />
+                      </div>
+                    </>
+                  )}
                 </>
               )
               : (
@@ -128,18 +147,20 @@ function ProductInfo({ page, device, pixDiscount }: Props) {
               )}
           </div>
         </div>
-        <div class="fixed bottom-0 left-0 right-0 rounded-t-2xl bg-white shadow-2xl z-[11]">
-          <div class="container px-5 py-4 flex gap-4 items-center">
-            <Price type="fixed" product={product} isMobile={true} pixDiscount={pixDiscount} />
-            <AddToCartButton
-              item={item}
-              seller={seller}
-              product={product}
-              class="w-full uppercase bg-signature-green text-base flex justify-center items-center gap-2 py-3 rounded-full no-animation text-white font-semibold hover:bg-[#1bae3299]"
-              disabled={false}
-            />
+        {!isPriceHidden && (
+          <div class="fixed bottom-0 left-0 right-0 rounded-t-2xl bg-white shadow-2xl z-[11]">
+            <div class="container px-5 py-4 flex gap-4 items-center">
+              <Price type="fixed" product={product} isMobile={true} pixDiscount={pixDiscount} />
+              <AddToCartButton
+                item={item}
+                seller={seller}
+                product={product}
+                class="w-full uppercase bg-signature-green text-base flex justify-center items-center gap-2 py-3 rounded-full no-animation text-white font-semibold hover:bg-[#1bae3299]"
+                disabled={false}
+              />
+            </div>
           </div>
-        </div>
+        )}
       </>
     );
   }
@@ -171,69 +192,84 @@ function ProductInfo({ page, device, pixDiscount }: Props) {
                     Cod: {refId} | {brand?.name}
                   </p>
                 </div>
-                <ReadyForDeliveryTag />
+                {!isPriceHidden && <ReadyForDeliveryTag />}
               </div>
               {availability === "https://schema.org/InStock" &&
                 (
                   <>
-                    <div class="divider m-0" />
-                    <div class="flex flex-col gap-2">
-                      <Price type="details" product={product} isMobile={false} pixDiscount={pixDiscount} />
-                      <PaymentMethods offers={offers} />
-                    </div>
-                    <div class="divider m-0" />
-                    <ProductSelector product={product} />
-                    <div class="flex flex-col gap-3 items-start">
-                      <AddToCartButton
-                        item={item}
-                        seller={seller}
-                        product={product}
-                        class="w-full uppercase bg-signature-green text-[20px] flex justify-center items-center gap-2 py-[10px] rounded-[30px] no-animation text-white font-semibold hover:bg-[#1bae3299] ease-in"
-                        disabled={false}
-                      />
-                      <div class="divider m-0" />
-                      <ShippingSimulationForm
-                        items={[{
-                          id: Number(product.sku),
-                          quantity: 1,
-                          seller: seller,
-                        }]}
-                      />
-                    </div>
+                    {isPriceHidden ? (
+                      <a
+                        href={`https://wa.me/11987939455?text=${message}`}
+                        class="flex items-center justify-center gap-3 mt-2 bg-primary border-0 text-white py-2 text-center font-semibold rounded-full"
+                      >
+                        Consultar Preço
+                      </a>
+                    ) : (
+                      <>
+                        <div class="divider m-0" />
+                        <div class="flex flex-col gap-2">
+                          <Price type="details" product={product} isMobile={false} pixDiscount={pixDiscount} />
+                          <PaymentMethods offers={offers} />
+                        </div>
+                        <div class="divider m-0" />
+                        <ProductSelector product={product} />
+                        <div class="flex flex-col gap-3 items-start">
+                          <AddToCartButton
+                            item={item}
+                            seller={seller}
+                            product={product}
+                            class="w-full uppercase bg-signature-green text-[20px] flex justify-center items-center gap-2 py-[10px] rounded-[30px] no-animation text-white font-semibold hover:bg-[#1bae3299] ease-in"
+                            disabled={false}
+                          />
+                          <div class="divider m-0" />
+                          <ShippingSimulationForm
+                            items={[{
+                              id: Number(product.sku),
+                              quantity: 1,
+                              seller: seller,
+                            }]}
+                          />
+                        </div>
+                      </>
+                    )}
                   </>
                 )}
             </div>
-            <div class="flex flex-col gap-[14px] py-[14px]">
-              {availability !== "https://schema.org/InStock" &&
-                (
-                  <>
-                    <ProductSelector product={product} />
-                    <OutOfStock productID={productID} />
-                  </>
-                )}
-            </div>
+            {!isPriceHidden && (
+              <div class="flex flex-col gap-[14px] py-[14px]">
+                {availability !== "https://schema.org/InStock" &&
+                  (
+                    <>
+                      <ProductSelector product={product} />
+                      <OutOfStock productID={productID} />
+                    </>
+                  )}
+              </div>
+            )}
           </div>
         </div>
-        <div
-          id="fixed-add-to-cart"
-          class="invisible fixed bottom-0 left-0 right-0 rounded-t-2xl bg-white shadow-2xl z-[11]"
-        >
-          <div class="container px-5 py-4 grid grid-cols-4 lg:grid-cols-7 gap-12 items-center">
-            <div class="hidden lg:block text-xl font-semibold text-black col-span-3">
-              {title}
-            </div>
-            <Price type="fixed" product={product} isMobile={false} pixDiscount={pixDiscount} />
-            <div class="col-span-2">
-              <AddToCartButton
-                item={item}
-                seller={seller}
-                product={product}
-                class="w-full uppercase bg-signature-green text-[20px] flex justify-center items-center gap-2 py-[10px] rounded-[30px] no-animation text-white font-semibold hover:bg-[#1bae3299] ease-in"
-                disabled={false}
-              />
+        {!isPriceHidden && (
+          <div
+            id="fixed-add-to-cart"
+            class="invisible fixed bottom-0 left-0 right-0 rounded-t-2xl bg-white shadow-2xl z-[11]"
+          >
+            <div class="container px-5 py-4 grid grid-cols-4 lg:grid-cols-7 gap-12 items-center">
+              <div class="hidden lg:block text-xl font-semibold text-black col-span-3">
+                {title}
+              </div>
+              <Price type="fixed" product={product} isMobile={false} pixDiscount={pixDiscount} />
+              <div class="col-span-2">
+                <AddToCartButton
+                  item={item}
+                  seller={seller}
+                  product={product}
+                  class="w-full uppercase bg-signature-green text-[20px] flex justify-center items-center gap-2 py-[10px] rounded-[30px] no-animation text-white font-semibold hover:bg-[#1bae3299] ease-in"
+                  disabled={false}
+                />
+              </div>
             </div>
           </div>
-        </div>
+        )}
         <script
           type="module"
           dangerouslySetInnerHTML={{ __html: useScript(onLoad) }}
