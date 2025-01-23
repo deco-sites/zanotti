@@ -14,8 +14,6 @@ function PaymentMethods({ offers }: PaymentMethodsProps) {
       o.availability === "https://schema.org/InStock"
     ) || offers?.offers[0];
 
-  console.log("offer", offer);
-
   const maxIntallments = offer?.priceSpecification.reduce(
     (acc: UnitPriceSpecification | null, curr: UnitPriceSpecification) => {
       if (

@@ -61,7 +61,6 @@ function ProductInfo({ page, device, pixDiscount }: Props) {
   const isPriceHidden = additionalProperty?.some((prop) =>
     prop.propertyID === "200"
   );
-  console.log("isPriceHidden", isPriceHidden);
   const title = isVariantOf?.name ?? product.name;
   const message = encodeURIComponent(
     `Olá, estou interessado nesse produto: ${title}`,

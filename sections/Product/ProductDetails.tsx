@@ -77,7 +77,7 @@ export default function ProductDetails({ page, device, pixDiscount }: SectionPro
             >
               <div class="mb-5 w-full">
                 {isVariantOf?.additionalProperty.map((property) => {
-                  if (["viavarejogarantia"].includes(property?.name ?? "")) return null;
+                  if (["viavarejogarantia", "FAQ"].includes(property?.name ?? "")) return null;
                   return (
                     <div class="px-3 py-2 w-full text-sm sm:text-base odd:bg-light-gray">
                       <span class="font-semibold after:content-[':'] max-sm:pb-0 mr-2">
@@ -86,6 +86,40 @@ export default function ProductDetails({ page, device, pixDiscount }: SectionPro
                       {property.value}
                     </div>
                   )
+                })}
+              </div>
+            </Collapsable>
+          </div>
+        )}
+        {additionalProperty.length > 0 && (
+          <div class="container mt-3">
+            <Collapsable
+              class="px-6 bg-white rounded-[35px]"
+              title={
+                <div class="flex space-between items-center">
+                  <span class="text-base py-5 font-semibold">
+                    Dúvidas Frequentes
+                  </span>
+                  <Icon
+                    id="arrow-down"
+                    size={13}
+                    class="group-open:rotate-180 transition-all ease-in-out duration-[400ms]"
+                  />
+                </div>
+              }
+            >
+              <div class="mb-5 w-full">
+                {isVariantOf?.additionalProperty.map((property) => {
+                  if (property?.name === "FAQ") {
+                    return (
+                      <div 
+                        class="px-3 py-2 w-full text-sm sm:text-base"
+                        dangerouslySetInnerHTML={{
+                          __html: property.value?.replace(/\n/gi, "<br />") || ""
+                        }} 
+                      />
+                    )
+                  }
                 })}
               </div>
             </Collapsable>
