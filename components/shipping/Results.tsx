@@ -41,11 +41,7 @@ export default function Results({ result }: ComponentProps<typeof action>) {
   ) ?? [];
 
   if (!methods.length) {
-    return (
-      <div class="p-2">
-        <span>CEP inválido</span>
-      </div>
-    );
+    return <span class="text-red-700 text-sm font-semibold">CEP inválido</span>;
   }
 
   return (

@@ -1,99 +1,34 @@
 import Icon from "../../components/ui/Icon.tsx";
 import Collapsable from "../../components/ui/Collapsable.tsx";
-import BuyTogether from "../../components/product/BuyTogether.tsx";
 import ProductInfo from "../../components/product/ProductInfo.tsx";
 import Description from "../../components/product/Description.tsx";
-import ProductGrid from "../../components/product/ProductGrid.tsx";
-import { useScript } from "@deco/deco/hooks";
+
 import type { SectionProps } from "@deco/deco";
 import type { AppContext } from "../../apps/site.ts";
-import type { Product, ProductDetailsPage } from "apps/commerce/types.ts";
+import type { ProductDetailsPage } from "apps/commerce/types.ts";
+
 export interface Props {
   /** @title Integration */
   page: ProductDetailsPage | null;
-  /** @hidden */
-  isMobile: boolean;
-  /** @hidden */
-  productRecommendations: Product[];
-  /** @title Omitir seção de entrega? */
-  hiddenShipping?: boolean;
 }
-const onLoad = (productId: string, productName: string, image: string) => {
-  // @ts-ignore _trustvox exists
-  // globalThis._trustvox = [
-  //   ["_storeId", "123535"],
-  //   ["_productId", productId],
-  //   ["_productName", productName],
-  //   ["_productPhotos", [image]],
-  // ];
-  // const script = document.createElement("script");
-  // script.id = "_trustvox_widget_script";
-  // script.async = true;
-  // script.type = "text/javascript";
-  // script.src = "//static.trustvox.com.br/sincero/sincero.js";
-  // document.head.append(script);
-  // // @ts-ignore _trustvox_shelf_rate exists
-  // const _trustvox_shelf_rate = globalThis._trustvox_shelf_rate || [];
-  // _trustvox_shelf_rate.push(["_storeId", "123535"]);
-};
-export const loader = async (props: Props, _req: Request, ctx: AppContext) => {
+
+export const loader = (props: Props, _req: Request, ctx: AppContext) => {
   const {
-    internationalFlag = "",
-    promoFlag = "",
-    newsFlag = "",
-    HidePriceCollection = "",
+    device,
+    pixDiscount = 0
   } = ctx;
+  return {...props, device, pixDiscount};
+}
 
-  const { page } = props;
-  if (page) {
-    const { product } = page;
-
-    // deno-lint-ignore no-explicit-any
-    const productRecommendations = await (ctx as any).invoke.vtex.loaders.legacy
-      .relatedProductsLoader({
-        crossSelling: "whosawalsosaw",
-        id: product.inProductGroupWithID,
-      });
-
-    return {
-      ...props,
-      internationalFlag,
-      promoFlag,
-      HidePriceCollection,
-      newsFlag,
-      isMobile: ctx.device !== "desktop",
-      productRecommendations,
-    };
-  }
-
-  return {
-    ...props,
-    internationalFlag,
-    promoFlag,
-    HidePriceCollection,
-    newsFlag,
-  };
-};
-export default function ProductDetails({
-  page,
-  internationalFlag,
-  promoFlag,
-  newsFlag,
-  HidePriceCollection,
-  isMobile,
-  productRecommendations,
-  hiddenShipping = false,
-}: SectionProps<typeof loader>) {
+export default function ProductDetails({ page, device, pixDiscount }: SectionProps<typeof loader>) {
   if (!page) {
     return (
-      <div class=" py-[100px]">
-        <div class="container px-5">
-          <p class="text-[32px] lg:text-[64px] text-middle-gray text-start lg:text-center mx-auto">
-            Oops!
-          </p>
-          <p class="text-[32px] lg:text-[64px] text-middle-gray text-start lg:text-center mx-auto">
-            Página não encontrada.
-          </p>
+      <div class="w-full flex justify-center ite  ms-center py-28">
+        <div class="flex flex-col items-center justify-center gap-6">
+          <span class="font-medium text-2xl">Oops!</span>
+          <a href="/" class="btn no-animation">
+            Go back to Home
+          </a>
         </div>
         <div class={`mx-auto flex flex-col items-center px-5`}>
           <p
@@ -110,46 +45,30 @@ export default function ProductDetails({
   if (page) {
     const { product } = page;
     const {
-      productID: productId,
-      image: images,
       isVariantOf,
-      additionalProperty: productProperties,
+      additionalProperty = [],
     } = product;
-    const productName = (isVariantOf?.name ?? product.name) || "";
-    const [front] = images ?? [];
-    const image = front?.url || "";
-    const device = isMobile ? "mobile" : "desktop";
-    const { additionalProperty = [] } = isVariantOf ?? {};
     return (
       <>
         <ProductInfo
-          flags={[internationalFlag, promoFlag, newsFlag, HidePriceCollection]}
           page={page}
           device={device}
-          hiddenShipping={hiddenShipping}
+          pixDiscount={pixDiscount}
         />
-        <BuyTogether
-          page={page}
-          device={device}
-          productRecommendations={productRecommendations}
-        />
-        <div class="border border-x-0 border-b-dark-gray border-t-0 lg:border-t-[1px] lg:border-t-dark-gray mt-0 lg:mt-12 relative z-[1]">
+        <div class="mt-0 lg:mt-12 relative z-[1] container">
           <Description page={page} />
         </div>
         {additionalProperty.length > 0 && (
-          <div
-            id="specifications"
-            class="pt-32 -mt-32 border border-x-0 border-b-dark-gray border-t-0"
-          >
+          <div class="container mt-3">
             <Collapsable
-              class="container px-5"
+              class="px-6 bg-white rounded-[35px]"
               title={
                 <div class="flex space-between items-center">
-                  <span class="text-base lg:text-xl py-5 sm:py-12 font-semibold">
+                  <span class="text-base py-5 font-semibold">
                     Especificações Técnicas
                   </span>
                   <Icon
-                    id={"arrow-right"}
+                    id="arrow-down"
                     size={13}
                     class="group-open:rotate-180 transition-all ease-in-out duration-[400ms]"
                   />
@@ -157,33 +76,26 @@ export default function ProductDetails({
               }
             >
               <div class="mb-5 w-full">
-                {isVariantOf?.additionalProperty.map((property) => (
-                  <div class="px-3 py-2 w-full text-sm sm:text-base odd:bg-middle-gray">
-                    <span class="font-semibold after:content-[':'] max-sm:pb-0 mr-2">
-                      {property.name}
-                    </span>
-                    {property.value}
-                  </div>
-                ))}
+                {isVariantOf?.additionalProperty.map((property) => {
+                  if (["viavarejogarantia"].includes(property?.name ?? "")) return null;
+                  return (
+                    <div class="px-3 py-2 w-full text-sm sm:text-base odd:bg-light-gray">
+                      <span class="font-semibold after:content-[':'] max-sm:pb-0 mr-2">
+                        {property.name}
+                      </span>
+                      {property.value}
+                    </div>
+                  )
+                })}
               </div>
             </Collapsable>
           </div>
         )}
-        <ProductGrid page={page} />
-        {/* <div className="container px-5 pb-5">
-          <div id="_trustvox_widget" />
-        </div> */}
-        <script
-          type="text/javascript"
-          defer
-          dangerouslySetInnerHTML={{
-            __html: useScript(onLoad, productId, productName, image),
-          }}
-        />
       </>
     );
   }
 }
+
 export function LoadingFallback() {
   return (
     <div

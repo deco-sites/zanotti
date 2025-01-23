@@ -22,7 +22,7 @@ const useStyles = (value: string, checked: boolean) => {
     );
   }
   return clx(
-    "p-3 rounded-[10px] text-xs font-bold w-max",
+    "p-3 rounded-full text-xs font-bold w-max",
     checked && "bg-primary text-white ",
     !checked && "bg-middle-gray text-black ",
   );
@@ -53,7 +53,7 @@ function VariantSelector({ product }: Props) {
   }
   return (
     <ul
-      class="flex flex-col gap-4"
+      class="flex flex-col"
       hx-target="closest section"
       hx-swap="outerHTML"
       hx-sync="this:replace"

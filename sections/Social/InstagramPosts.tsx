@@ -29,7 +29,6 @@ const fetchPosts = async (token: string): Promise<Data[]> => {
       throw new Error(await response.text());
     }
     const json = await response.json();
-    console.log(json);
     return json.data;
   } catch (error) {
     console.error("Instagram API returned the following error:", error);

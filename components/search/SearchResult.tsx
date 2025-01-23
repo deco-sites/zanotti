@@ -363,7 +363,6 @@ function Result(props: SectionProps<typeof loader>) {
   );
 }
 function SearchResult({ page, ...props }: SectionProps<typeof loader>) {
-  console.log("page", page);
   if (!page || page.products.length === 0) {
     return <NotFound />;
   }

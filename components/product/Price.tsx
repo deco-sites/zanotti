@@ -6,23 +6,27 @@ interface Props {
   type?: "shelf" | "details" | "fixed";
   product: Product;
   isMobile?: boolean;
+  pixDiscount: number;
 }
 
 export default function Price({
   type = "details",
   product,
   isMobile = false,
+  pixDiscount,
 }: Props) {
   const { offers } = product;
 
-  const { pix, listPrice = 0, price = 0, availability, installment } = useOffer(
+  const { listPrice = 0, price = 0, availability, installment } = useOffer(
     offers,
   );
+
+  const pix = price - (price * (pixDiscount / 100));
 
   const percent = listPrice && price
     ? Math.round(((listPrice - price) / listPrice) * 100)
     : 0;
-  const hasPixDiscount = pix > 0 && pix < price;
+  const hasPixDiscount =  pixDiscount > 0;
 
   if (type === "shelf") {
     return (
