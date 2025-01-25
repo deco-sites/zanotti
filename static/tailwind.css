@@ -6597,10 +6597,6 @@ details > summary::marker {
     height: 48px;
   }
 
-  .lg\:max-h-\[107px\] {
-    max-height: 107px;
-  }
-
   .lg\:max-h-\[600px\] {
     max-height: 600px;
   }
@@ -6635,10 +6631,6 @@ details > summary::marker {
 
   .lg\:max-w-3xl {
     max-width: 48rem;
-  }
-
-  .lg\:max-w-\[148px\] {
-    max-width: 148px;
   }
 
   .lg\:max-w-\[350px\] {
@@ -6786,11 +6778,6 @@ details > summary::marker {
   .lg\:bg-primary {
     --tw-bg-opacity: 1;
     background-color: var(--fallback-p,oklch(var(--p)/var(--tw-bg-opacity)));
-  }
-
-  .lg\:object-cover {
-    -o-object-fit: cover;
-       object-fit: cover;
   }
 
   .lg\:p-0 {

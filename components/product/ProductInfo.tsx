@@ -22,13 +22,20 @@ interface Props {
 const onLoad = () => {
   const handleScroll = () => {
     const fixedAddToCart = document.getElementById("fixed-add-to-cart");
+    const addToCartModal = document.getElementById("add_to_cart_modal");
     if (fixedAddToCart) {
       if (globalThis.scrollY > 450) {
         fixedAddToCart.classList.add("visible");
         fixedAddToCart.classList.remove("invisible");
+        if (addToCartModal) {
+          addToCartModal.classList.add("hidden");
+        }
       } else {
         fixedAddToCart.classList.add("invisible");
         fixedAddToCart.classList.remove("visible");
+        if (addToCartModal) {
+          addToCartModal.classList.remove("hidden");
+        }
       }
     }
   };
@@ -147,7 +154,10 @@ function ProductInfo({ page, device, pixDiscount }: Props) {
           </div>
         </div>
         {!isPriceHidden && (
-          <div class="fixed bottom-0 left-0 right-0 rounded-t-2xl bg-white shadow-2xl z-[11]">
+          <div 
+            id="fixed-add-to-cart"
+            class="invisible fixed bottom-0 left-0 right-0 rounded-t-2xl bg-white shadow-2xl z-[11]"
+          >
             <div class="container px-5 py-4 flex gap-4 items-center">
               <Price type="fixed" product={product} isMobile={true} pixDiscount={pixDiscount} />
               <AddToCartButton
@@ -160,6 +170,10 @@ function ProductInfo({ page, device, pixDiscount }: Props) {
             </div>
           </div>
         )}
+        <script
+          type="module"
+          dangerouslySetInnerHTML={{ __html: useScript(onLoad) }}
+        />
       </>
     );
   }
@@ -181,9 +195,6 @@ function ProductInfo({ page, device, pixDiscount }: Props) {
                   <h1 class="text-xl font-bold flex-grow">
                     {title}
                   </h1>
-                  {/* <div
-                    data-trustvox-product-code={productGroupID}
-                  /> */}
                   <WishlistButton item={item} pdp={true} />
                 </div>
                 <div className="flex items-center justify-between">

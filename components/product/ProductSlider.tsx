@@ -7,10 +7,11 @@ import ProductCard from "./ProductCard.tsx";
 
 interface Props {
   products: Product[];
+  pixDiscount?: number;
   itemListName?: string;
 }
 
-function ProductSlider({ products, itemListName }: Props) {
+function ProductSlider({ products, itemListName, pixDiscount = 0 }: Props) {
   const id = useId();
   return (
     <>
@@ -33,6 +34,7 @@ function ProductSlider({ products, itemListName }: Props) {
                 <ProductCard
                   index={index}
                   product={product}
+                  pixDiscount={pixDiscount}
                   itemListName={itemListName}
                   class="w-[287px] sm:w-[300px]"
                 />

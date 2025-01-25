@@ -57,12 +57,24 @@ function AddToCartButton(props: Props) {
   });
 
   if (Object.keys(specs).length === 0) {
-    return null;
+    return (
+      <button
+        id="add_to_cart_modal"
+        class={clx("flex-grow cursor-pointer", _class?.toString())}
+        hx-on:click={useScript(onClick)}
+      >
+        {!hiddenIcon && (
+          <Icon id="shopping_bag" class="max-[375px]:hidden" size={21} />
+        )}
+        Comprar
+      </button>
+    );
   }
 
   return (
     <>
       <button 
+        id="add_to_cart_modal"
         class={clx("flex-grow cursor-pointer", _class?.toString())}
         hx-on:click={
           useScript(() => {
@@ -90,6 +102,11 @@ function AddToCartButton(props: Props) {
             )}
           >
             {specs.map((spec) => {
+              if (spec.name === "Voltagem") {
+                if (spec.value === "n/a") {
+                  return null;
+                }
+              }
               return (
                 <div class="flex items-center flex-col gap-2">
                   <span class="block">A <b>{spec.name}</b> escolhida foi:</span>

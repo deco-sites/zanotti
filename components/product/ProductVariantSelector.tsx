@@ -44,11 +44,12 @@ function VariantSelector({ product }: Props) {
   const { url, isVariantOf, image: images } = product;
   const hasVariant = isVariantOf?.hasVariant ?? [];
   const possibilities = useVariantPossibilities(hasVariant, product);
+  const keys = Object.keys(possibilities);
   const relativeUrl = relative(url);
   const id = useId();
   const hasMeasurementTableImage =
     images?.find((img) => img.name === "measurementtable") || null;
-  if (Object.keys(possibilities).length === 0) {
+  if (keys.length === 0) {
     return null;
   }
   return (
@@ -58,66 +59,69 @@ function VariantSelector({ product }: Props) {
       hx-swap="outerHTML"
       hx-sync="this:replace"
     >
-      {Object.keys(possibilities).map((name) => (
-        <li class="flex flex-col gap-2">
-          <span class="text-base font-bold uppercase">
-            {name}
-            {name.toLowerCase() === "tamanho" && hasMeasurementTableImage && (
-              <button
-                class="btn btn-ghost text-dark-gray underline h-auto min-h-auto hover:bg-transparent"
-                hx-on:click={useScript(() => {
-                  // @ts-ignore .
-                  document.getElementById("measurement_table")?.showModal();
+      {Object.keys(possibilities).map((name) => {
+        if (possibilities[name]["n/a"]) return null;
+        return (
+          <li class="flex flex-col gap-2">
+            <span class="text-base font-bold uppercase">
+              {name}
+              {name.toLowerCase() === "tamanho" && hasMeasurementTableImage && (
+                <button
+                  class="btn btn-ghost text-dark-gray underline h-auto min-h-auto hover:bg-transparent"
+                  hx-on:click={useScript(() => {
+                    // @ts-ignore .
+                    document.getElementById("measurement_table")?.showModal();
+                  })}
+                >
+                  Guia de medidas
+                </button>
+              )}
+            </span>
+            <ul class="flex flex-row gap-2 mb-[10px] flex-wrap">
+              {Object.entries(possibilities[name])
+                .filter(([value]) => value)
+                .map(([value, link]) => {
+                  const relativeLink = relative(link);
+                  const checked = relativeLink === relativeUrl;
+                  return (
+                    <li>
+                      <label
+                        class="cursor-pointer grid grid-cols-1 grid-rows-1 place-items-center"
+                        hx-get={useSection({ href: relativeLink })}
+                      >
+                        {/* Checkbox for radio button on the frontend */}
+                        <input
+                          class="hidden peer"
+                          type="radio"
+                          name={`${id}-${name}`}
+                          checked={checked}
+                        />
+                        <div
+                          class={clx(
+                            "col-start-1 row-start-1 col-span-1 row-span-1 ",
+                            "[.htmx-request_&]:opacity-0 transition-opacity",
+                          )}
+                        >
+                          <Ring value={value} checked={checked} />
+                        </div>
+                        {/* Loading spinner */}
+                        <div
+                          class={clx(
+                            "col-start-1 row-start-1 col-span-1 row-span-1",
+                            "opacity-0 [.htmx-request_&]:opacity-100 transition-opacity",
+                            "flex justify-center items-center",
+                          )}
+                        >
+                          <span class="loading loading-sm loading-spinner" />
+                        </div>
+                      </label>
+                    </li>
+                  );
                 })}
-              >
-                Guia de medidas
-              </button>
-            )}
-          </span>
-          <ul class="flex flex-row gap-2 mb-[10px] flex-wrap">
-            {Object.entries(possibilities[name])
-              .filter(([value]) => value)
-              .map(([value, link]) => {
-                const relativeLink = relative(link);
-                const checked = relativeLink === relativeUrl;
-                return (
-                  <li>
-                    <label
-                      class="cursor-pointer grid grid-cols-1 grid-rows-1 place-items-center"
-                      hx-get={useSection({ href: relativeLink })}
-                    >
-                      {/* Checkbox for radio button on the frontend */}
-                      <input
-                        class="hidden peer"
-                        type="radio"
-                        name={`${id}-${name}`}
-                        checked={checked}
-                      />
-                      <div
-                        class={clx(
-                          "col-start-1 row-start-1 col-span-1 row-span-1 ",
-                          "[.htmx-request_&]:opacity-0 transition-opacity",
-                        )}
-                      >
-                        <Ring value={value} checked={checked} />
-                      </div>
-                      {/* Loading spinner */}
-                      <div
-                        class={clx(
-                          "col-start-1 row-start-1 col-span-1 row-span-1",
-                          "opacity-0 [.htmx-request_&]:opacity-100 transition-opacity",
-                          "flex justify-center items-center",
-                        )}
-                      >
-                        <span class="loading loading-sm loading-spinner" />
-                      </div>
-                    </label>
-                  </li>
-                );
-              })}
-          </ul>
-        </li>
-      ))}
+            </ul>
+          </li>
+        )
+      })}
     </ul>
   );
 }

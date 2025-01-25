@@ -14,6 +14,8 @@ function PaymentMethods({ offers }: PaymentMethodsProps) {
       o.availability === "https://schema.org/InStock"
     ) || offers?.offers[0];
 
+  const { price } = offer;
+
   const maxIntallments = offer?.priceSpecification.reduce(
     (acc: UnitPriceSpecification | null, curr: UnitPriceSpecification) => {
       if (
@@ -63,7 +65,7 @@ function PaymentMethods({ offers }: PaymentMethodsProps) {
                 {offer?.priceSpecification.map(
                   (priceSpecification, index) => {
                     if (maxIntallments?.name === priceSpecification.name) {
-                      const { billingDuration = 0, billingIncrement = 0, price } =
+                      const { billingDuration = 0, billingIncrement = 0, price: installment } =
                         priceSpecification;
                       return (
                         <tr
@@ -75,7 +77,7 @@ function PaymentMethods({ offers }: PaymentMethodsProps) {
                             {formatPrice(billingIncrement)}
                           </td>
                           <td class="text-right">
-                            {(billingIncrement * billingDuration) > price ? "com juros" : "sem juros"}
+                            {installment > price ? "com juros" : "sem juros"}
                           </td>
                         </tr>
                       );

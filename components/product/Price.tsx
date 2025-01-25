@@ -26,7 +26,7 @@ export default function Price({
   const percent = listPrice && price
     ? Math.round(((listPrice - price) / listPrice) * 100)
     : 0;
-  const hasPixDiscount =  pixDiscount > 0;
+  const hasPixDiscount = pixDiscount > 0;
 
   if (type === "shelf") {
     return (
@@ -43,7 +43,7 @@ export default function Price({
                     )}
                   </span>
                 )}
-              <span class="text-xl text-primary family-secondary font-bold">
+              <span class="text-lg lg:text-xl text-primary family-secondary font-bold text-nowrap">
                 {hasPixDiscount
                   ? formatPrice(pix, offers?.priceCurrency)
                   : formatPrice(price, offers?.priceCurrency)}{" "}

@@ -7,15 +7,23 @@ import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
 
 import type { Product } from "apps/commerce/types.ts";
+import type { AppContext } from "../../apps/site.ts";
+import type { SectionProps } from "@deco/deco";
 
 export interface Props extends SectionHeaderProps {
   products: Product[] | null;
 }
 
+export const loader = (props: Props, _req: Request, ctx: AppContext) => {
+  const { pixDiscount = 0 } = ctx;
+  return {...props, pixDiscount};
+}
+
 export default function ProductShelf({
+  pixDiscount,
   products,
   title,
-}: Props) {
+}: SectionProps<typeof loader>) {
   const id = useId();
   if (!products || products.length === 0) {
     return null;
@@ -49,6 +57,7 @@ export default function ProductShelf({
         </div>
         <ProductSlider
           products={products}
+          pixDiscount={pixDiscount}
           itemListName={title}
         />
       </div>
