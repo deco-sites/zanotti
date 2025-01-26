@@ -4,6 +4,12 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "Seov2"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "Header"
       }
     },
@@ -34,12 +40,10 @@
               "phone": "16 3961-8800",
               "zipCode": "14080-350"
             },
-            "content": "Especializada em refrigeração comercial, equipamentos, instalações comerciais, painéis isotérmicos e câmaras frigoríficas.",
-            "title": "Matriz",
             "cta": {
               "openNewTab": true,
-              "link": "/",
-              "label": "Conhecer"
+              "link": "https://maps.app.goo.gl/fyhdpex5u6RkuzuW9",
+              "label": "Ir até a loja"
             }
           }
         ]

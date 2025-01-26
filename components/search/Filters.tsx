@@ -59,6 +59,8 @@ function Filters({ filters }: Props) {
           let label = filter.label;
           if (label === "sellerName") label = "Vendedores";
           if (label === "PriceRanges") label = "Preços";
+          if (label === "Departments") label = "Departamentos";
+          if (label === "Brands") label = "Marcas";
           if (filter.values.length <= 0) return null;
           return (
             <li class="flex flex-col gap-4 border-b border-gray-300">

@@ -2,6 +2,12 @@
   "name": "Home",
   "sections": [
     {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Seov2"
+      }
+    },
+    {
       "__resolveType": "Header"
     },
     {
@@ -458,16 +464,6 @@
     },
     {
       "__resolveType": "Footer Component"
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "website/sections/Seo/SeoV2.tsx",
-        "title": "Zanotti",
-        "titleTemplate": "Zanotti",
-        "description": "A Zanotti Refrigeração é uma empresa brasileira com 67 anos de história onde você compra os seus equipamentos para qualquer negócio do ramo alimentício.",
-        "favicon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/333f100a-089e-40b1-b572-5a2313892bcc/t62543-favicon.ico"
-      }
     }
   ],
   "__resolveType": "website/pages/Page.tsx",

@@ -35,7 +35,7 @@ function NotFound() {
       <div class=" py-[100px]">
         <div class="container px-5">
           <p class="text-[32px] lg:text-[64px] text-middle-gray text-start lg:text-center mx-auto">
-            Oops 
+            Oops
           </p>
           <p class="text-[32px] lg:text-[64px] text-middle-gray text-start lg:text-center mx-auto">
             Nenhum resultado encontrado.
@@ -49,7 +49,12 @@ function NotFound() {
             digitação.
           </p>
         </div>
-        <a href="/" class="bg-primary rounded-full py-3 px-10 text-white mx-auto flex w-fit justify-center my-10">Voltar para a home</a>
+        <a
+          href="/"
+          class="bg-primary rounded-full py-3 px-10 text-white mx-auto flex w-fit justify-center my-10"
+        >
+          Voltar para a home
+        </a>
       </div>
     </>
   );
@@ -105,6 +110,7 @@ function PageResult(props: SectionProps<typeof loader>) {
             preload={index === 0}
             index={offset + index}
             class="h-full min-w-[160px] max-w-[300px]"
+            hiddenAddToCartButton={false}
           />
         ))}
       </div>

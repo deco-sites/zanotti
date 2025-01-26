@@ -142,7 +142,7 @@ function CardOurStores({ ...cards }: Cards) {
                         href={cards?.cta?.link}
                         target={cards?.cta?.openNewTab && "_blank"}
                     >
-                      {cards?.cta?.label || "conhecer"}
+                      {cards?.cta?.label || "Ir até a loja"}
                     </a>
                 </div>
             </div>

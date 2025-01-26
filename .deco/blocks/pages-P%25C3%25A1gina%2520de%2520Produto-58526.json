@@ -82,6 +82,12 @@
       "section": {
         "__resolveType": "site/sections/Spacer.tsx"
       }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Seov2"
+      }
     }
   ],
   "seo": {
