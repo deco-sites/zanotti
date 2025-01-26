@@ -61,6 +61,7 @@ function Filters({ filters }: Props) {
           if (label === "PriceRanges") label = "Preços";
           if (label === "Departments") label = "Departamentos";
           if (label === "Brands") label = "Marcas";
+          if (label === "Categories") label = "Categorias";
           if (filter.values.length <= 0) return null;
           return (
             <li class="flex flex-col gap-4 border-b border-gray-300">
