@@ -191,29 +191,6 @@ function CertifiedComponent({ title, certifieds }: CertifiedProps) {
             </div>
           ))}
         </div>
-        {/* <div data-trustvox-certificate-fixed="data-trustvox-certificate-fixed">
-          <a
-            href="https://certificados.trustvox.com.br/www.eletrotrafo.com.br?hidden=false"
-            class="trustvox-certificate__modal-btn-js"
-            target="_blank"
-          >
-            <span class="trustvox-certificate__fixed trustvox-certificate__fixed-full-left">
-            </span>
-          </a>
-        </div> */}
-        {/* <script
-          type="text/javascript"
-          defer
-          dangerouslySetInnerHTML={{
-            __html: useScript(() => {
-              const script = document.createElement("script");
-              script.type = "text/javascript";
-              script.src = "//certificate.trustvox.com.br/widget.js";
-              script.defer = false;
-              document.body.appendChild(script);
-            }),
-          }}
-        /> */}
       </div>
     </div>
   );
@@ -352,11 +329,11 @@ function Footer(
             <p class="text-base-200 text-xs px-5 py-0 family-secondary text-center">
               {copyright}
             </p>
-            <div class="flex mx-auto gap-5 px-5">
+            {/* <div class="flex mx-auto gap-5 px-5">
               <PoweredByBetoven />
               <PoweredByDeco />
               <PoweredByVtex />
-            </div>
+            </div> */}
           </div>
         </footer>
       )}

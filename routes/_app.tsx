@@ -5,24 +5,11 @@ import { Context } from "@deco/deco";
 
 const ADMIN_PATH = "/live/previews";
 
-declare global {
-  interface Window {
-    _trustvox_shelf_rate: Array<[
-      string,
-      string | number | Array<string | undefined> | undefined,
-    ]>;
-  }
-}
 const serviceWorkerScript = () =>
   addEventListener("load", () =>
     navigator && navigator.serviceWorker &&
     navigator.serviceWorker.register("/sw.js"));
-function setupTrustvoxRateConfig(storeId: string) {
-  window._trustvox_shelf_rate = [];
-  window._trustvox_shelf_rate.push(["_storeId", storeId]);
-  window._trustvox_shelf_rate.push(["_productContainer", "body"]);
-  window._trustvox_shelf_rate.push(["_watchSubtree", "true"]);
-}
+
 export default defineApp(async (req, ctx) => {
   const revision = await Context.active().release?.revision();
   const url = new URL(req.url);
@@ -59,37 +46,7 @@ export default defineApp(async (req, ctx) => {
 
         {/* Web Manifest */}
         <link rel="manifest" href={asset("/site.webmanifest")} />
-
-        {!isOnAdmin && (
-          <script
-            type="text/javascript"
-            dangerouslySetInnerHTML={{
-              __html: useScript(setupTrustvoxRateConfig, "121576"),
-            }}
-          />
-        )}
-        {!isOnAdmin && (
-          <script
-            defer
-            type="text/javascript"
-            src="//rate.trustvox.com.br/widget.js"
-          />
-        )}
-
-        {!isOnAdmin && (
-          <link
-            type="text/css"
-            rel="stylesheet"
-            href="//certificate.trustvox.com.br/widget.css"
-          />
-        )}
-
-        {!isOnAdmin && (
-          <script
-            type="text/javascript"
-            src="//certificate.trustvox.com.br/widget.js"
-          />
-        )}
+ 
 
         <link
           rel="stylesheet"

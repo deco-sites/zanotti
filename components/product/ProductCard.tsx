@@ -89,7 +89,7 @@ function ProductCard({
   return (
     <div
       {...event}
-      class="card flex flex-col justify-start card-compact group text-sm bg-white p-3 bg-base max-w-[220px]"
+      class="card flex flex-col card-compact group text-sm bg-white p-3 bg-base max-w-[220px] h-full justify-between"
     >
       <div class="flex items-start justify-between">
         <div class="flex flex-wrap gap-[5px]">
@@ -135,7 +135,7 @@ function ProductCard({
             )
             : <Price type="shelf" product={product} />}
         </a>
-        {!hiddenAddToCartButton && inStock &&
+        { !isPriceHidden && !hiddenAddToCartButton && inStock &&
           (
             <MinicartAdd
               product={product}

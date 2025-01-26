@@ -11,7 +11,9 @@ interface Props {
   pdp?: boolean;
 }
 
-function Toast({ message, onClose }: { message: string; onClose: () => void }) {
+export function Toast(
+  { message, onClose }: { message: string; onClose: () => void },
+) {
   useEffect(() => {
     const timer = setTimeout(onClose, 7000);
     return () => clearTimeout(timer);
@@ -19,20 +21,6 @@ function Toast({ message, onClose }: { message: string; onClose: () => void }) {
 
   return (
     <div role="alert" class="alert shadow-lg fixed bottom-4 left-4 w-fit z-50">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        class="stroke-info h-6 w-6 shrink-0"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-        >
-        </path>
-      </svg>
       <div>
         <span>{message}</span>
       </div>
@@ -67,6 +55,10 @@ function WishlistButton({ item, variant = "full", pdp }: Props) {
     if (user?.email) {
       button.classList.add("htmx-request");
       window.STOREFRONT.WISHLIST.toggle(productID, productGroupID);
+      setToastMessage(
+        "item adicionado à sua lista de desejos.",
+      );
+      setShowToast(true);
     } else {
       setToastMessage(
         "Faça login para adicionar itens à sua lista de desejos.",

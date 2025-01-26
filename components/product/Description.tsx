@@ -31,7 +31,7 @@ const Description = ({ page }: Props) => {
       >
         <div>
           <div
-            class="fluid-text text-sm pb-5"
+            class="text-sm sm:text-base pb-5"
             dangerouslySetInnerHTML={{ __html: description }}
           />
         </div>

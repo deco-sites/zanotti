@@ -181,9 +181,7 @@ function ProductInfo({ page, device, pixDiscount }: Props) {
                   <h1 class="text-xl font-bold flex-grow">
                     {title}
                   </h1>
-                  {/* <div
-                    data-trustvox-product-code={productGroupID}
-                  /> */}
+              
                   <WishlistButton item={item} pdp={true} />
                 </div>
                 <div className="flex items-center justify-between">
