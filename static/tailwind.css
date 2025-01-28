@@ -6295,13 +6295,12 @@ details>summary::marker {
     height: 457px;
   }
 
-<<<<<<< HEAD
   .lg\:max-h-\[107px\] {
     max-height: 107px;
-=======
+  }
+  
   .lg\:h-\[48px\] {
     height: 48px;
->>>>>>> refact/pdp
   }
 
   .lg\:max-h-\[600px\] {
@@ -6432,15 +6431,14 @@ details>summary::marker {
     border-bottom-right-radius: 0px;
   }
 
-<<<<<<< HEAD
   .lg\:object-cover {
     -o-object-fit: cover;
        object-fit: cover;
-=======
+  }
+  
   .lg\:bg-primary {
     --tw-bg-opacity: 1;
     background-color: var(--fallback-p,oklch(var(--p)/var(--tw-bg-opacity)));
->>>>>>> refact/pdp
   }
 
   .lg\:p-0 {
