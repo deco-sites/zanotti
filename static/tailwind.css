@@ -456,7 +456,6 @@ video {
 html {
   -webkit-tap-highlight-color: transparent;
 }
-
   /* Allow changing font family via CMS */
   html {
     font-size: 16px;
@@ -843,6 +842,14 @@ html {
 }
 .carousel-end .carousel-item {
   scroll-snap-align: end;
+}
+.chat {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 .checkbox {
   flex-shrink: 0;
@@ -4441,6 +4448,9 @@ details.collapse summary::-webkit-details-marker {
 .rounded-none {
   border-radius: 0px;
 }
+.rounded-sm {
+  border-radius: 0.125rem;
+}
 .rounded-xl {
   border-radius: 0.75rem;
 }
@@ -5493,8 +5503,8 @@ details.collapse summary::-webkit-details-marker {
 }
 
 /* Fix Safari issue related to <summary> / <details> arrow */
-details>summary::-webkit-details-marker,
-details>summary::marker {
+details > summary::-webkit-details-marker,
+details > summary::marker {
   display: none;
 }
 
@@ -5541,7 +5551,15 @@ details>summary::marker {
   border-radius: 12px;
   background-size: 300% 300% !important;
   animation: animation-flag 6s ease infinite;
-  background: linear-gradient(45deg, oklch(47% 0.21 262deg / 1), oklch(47% 0.21 262deg / 1), oklch(47% 0.21 262deg / 1), oklch(47% 0.21 262deg / 1), #001b4e, oklch(47% 0.21 262deg / 1));
+  background: linear-gradient(
+    45deg,
+    oklch(47% 0.21 262deg / 1),
+    oklch(47% 0.21 262deg / 1),
+    oklch(47% 0.21 262deg / 1),
+    oklch(47% 0.21 262deg / 1),
+    #001b4e,
+    oklch(47% 0.21 262deg / 1)
+  );
 }
 
 .flag-bf {
@@ -5554,7 +5572,15 @@ details>summary::marker {
   position: relative;
   text-align: center;
   border-radius: 12px;
-  background: linear-gradient(45deg, #000000, #000000, #000000, #000, #3b3b3b, #000);
+  background: linear-gradient(
+    45deg,
+    #000000,
+    #000000,
+    #000000,
+    #000,
+    #3b3b3b,
+    #000
+  );
   background-size: 300% 300%;
   animation: animation-flag 6s ease infinite;
 }
@@ -6295,14 +6321,6 @@ details>summary::marker {
     height: 457px;
   }
 
-  .lg\:max-h-\[107px\] {
-    max-height: 107px;
-  }
-  
-  .lg\:h-\[48px\] {
-    height: 48px;
-  }
-
   .lg\:max-h-\[600px\] {
     max-height: 600px;
   }
@@ -6429,16 +6447,6 @@ details>summary::marker {
 
   .lg\:rounded-br-none {
     border-bottom-right-radius: 0px;
-  }
-
-  .lg\:object-cover {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  
-  .lg\:bg-primary {
-    --tw-bg-opacity: 1;
-    background-color: var(--fallback-p,oklch(var(--p)/var(--tw-bg-opacity)));
   }
 
   .lg\:p-0 {
