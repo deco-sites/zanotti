@@ -70,6 +70,9 @@ interface Props {
    */
   copyright?: string;
 }
+  /**
+   * @titleBy alt
+   */
 interface Payments {
   /**
    * @title Texto alternativo
@@ -104,6 +107,9 @@ interface Service {
     link?: string;
   };
 }
+ /**
+   * @titleBy title
+   */
 interface CertifiedProps {
   /**
    * @title Titulo da sessão de certificados

@@ -123,8 +123,28 @@
         "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/c8c528ca-f983-4f51-a429-1bd7eec794c4"
       },
       {
+        "image": "https://data.decoassets.com/zanotti/743f6308-2bd3-4e25-a435-f72583bbfed2/Frame-37167.svg",
+        "alt": "dinners"
+      },
+      {
+        "image": "https://data.decoassets.com/zanotti/c05fbde9-c52f-4914-9065-8035c3fc7f67/Frame-37169.svg",
+        "alt": "elo"
+      },
+      {
+        "image": "https://data.decoassets.com/zanotti/fcb4f8d6-518e-4f80-8b8f-4b5139760cb9/Frame-37170.svg",
+        "alt": "american"
+      },
+      {
         "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/cb3cf85e-9c15-4d38-b1fa-ef184c6fd3a8",
         "alt": "Pix"
+      },
+      {
+        "image": "https://data.decoassets.com/zanotti/103462c4-07e4-48d4-ab74-cf9691f9a12c/Group-36834.svg",
+        "alt": "Boleto"
+      },
+      {
+        "image": "https://data.decoassets.com/zanotti/a2388cc0-7bb9-4153-9f54-075706da0da9/Frame-37168.svg",
+        "alt": "bnds"
       }
     ]
   },
@@ -156,11 +176,10 @@
     {
       "certifieds": [
         {
-          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/0637eb60-7105-4317-bab9-ef09b4421f88/Frame.svg",
+          "image": "https://data.decoassets.com/zanotti/4b3345c4-50b1-4296-9095-791b1968bfcb/Frame-(1).svg",
           "alt": "texto",
-          "link": "/texto",
-          "width": 40,
-          "height": 40
+          "width": 100,
+          "height": 50
         }
       ],
       "title": "Certificados de Segurança"
