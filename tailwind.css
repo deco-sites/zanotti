@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+
   /* Allow changing font family via CMS */
   html {
     font-size: 16px;
@@ -10,7 +11,8 @@
     scroll-behavior: smooth;
   }
 
-  html, body {
+  html,
+  body {
     @apply text-black;
   }
 
@@ -121,6 +123,7 @@
     --dot-progress: 100%;
   }
 }
+
 .space-between {
   justify-content: space-between;
 }
@@ -128,6 +131,7 @@
 .drawer {
   width: unset !important;
 }
+
 .family-secondary {
   font-family: "Montserrat";
 }
@@ -146,13 +150,16 @@
 }
 
 .custom-scrollbar::-webkit-scrollbar {
-  width: 0; /* Oculta a barra de rolagem */
+  width: 0;
+  /* Oculta a barra de rolagem */
   height: 0;
 }
 
 .custom-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .cursor-grab {
@@ -167,6 +174,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -181,8 +189,8 @@
 }
 
 /* Fix Safari issue related to <summary> / <details> arrow */
-details > summary::-webkit-details-marker,
-details > summary::marker {
+details>summary::-webkit-details-marker,
+details>summary::marker {
   display: none;
 }
 
@@ -215,4 +223,48 @@ details > summary::marker {
 
 .font-secondary {
   font-family: "MuseoModerno";
+}
+
+.flag-superpromo {
+  padding: 8px 12px;
+  font-size: 12px;
+  color: white;
+  font-weight: 600 !important;
+  /* width: 100%; */
+  z-index: 10;
+  position: relative;
+  text-align: center;
+  border-radius: 12px;
+  background-size: 300% 300% !important;
+  animation: animation-flag 6s ease infinite;
+  background: linear-gradient(45deg, oklch(47% 0.21 262deg / 1), oklch(47% 0.21 262deg / 1), oklch(47% 0.21 262deg / 1), oklch(47% 0.21 262deg / 1), #001b4e, oklch(47% 0.21 262deg / 1));
+}
+
+.flag-bf {
+  padding: 8px 12px;
+  font-size: 12px;
+  color: white;
+  font-weight: 600 !important;
+  /* width: 100%; */
+  z-index: 10;
+  position: relative;
+  text-align: center;
+  border-radius: 12px;
+  background: linear-gradient(45deg, #000000, #000000, #000000, #000, #3b3b3b, #000);
+  background-size: 300% 300%;
+  animation: animation-flag 6s ease infinite;
+}
+
+@keyframes animation-flag {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }

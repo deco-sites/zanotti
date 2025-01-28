@@ -89,7 +89,7 @@ export default function GridImages({ title, items }: Props) {
             </p>
           </div>
         )}
-        <div class="flex flex-row gap-3 flex-nowrap overflow-x-auto">
+        <div class="flex flex-row gap-3 flex-nowrap overflow-x-auto no-scrollbar">
           {items.map((item) => (
             <div class="shrink-0 first:ml-5 last:mr-5">
               <a href={item.link} class="flex">

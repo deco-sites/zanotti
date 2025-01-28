@@ -100,6 +100,12 @@ function ProductCard({
               </span>
             )
             : null}
+          <p class="flag-bf uppercase">
+            Black Friday
+          </p>
+          <p class="flag-superpromo uppercase">
+            super promo
+          </p>
         </div>
         <WishlistButton item={item} variant="icon" />
       </div>
@@ -135,7 +141,7 @@ function ProductCard({
             )
             : <Price type="shelf" product={product} />}
         </a>
-        { !isPriceHidden && !hiddenAddToCartButton && inStock &&
+        {!isPriceHidden && !hiddenAddToCartButton && inStock &&
           (
             <MinicartAdd
               product={product}

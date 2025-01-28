@@ -152,44 +152,18 @@
     }
   },
   "copyright": "Preços e condições de pagamento válidos exclusivamente para compras efetuadas no site. As imagens dos produtos são meramente ilustrativas. Todos os preços e condições comerciais estão sujeitos a alteração sem aviso prévio.  Zanotti Indústria e Comércio de Refrigeração LTDA. - CNPJ: 55.963.771/0001-76 | Inscrição Estadual: 582.023.236.111Rua João Clapp, n° 421, Campos Elíseos - CEP: 14080-350 - Ribeirão Preto/SP - Telefone: (16)3961-8800 / sac@zanottirefrigeracao.com.br",
-  "certified": {
-    "0": {
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/6cf82172-b8fe-4e7c-85c3-7779f0b4ee09",
-      "title": "Selo reclame aqui",
-      "height": 67,
-      "width": 200
-    },
-    "1": {
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/72aeae9f-c846-4a17-b650-fc384f90dab1",
-      "title": "Safe Browsing",
-      "width": 104,
-      "height": 32
-    },
-    "2": {
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/680d5a5e-0f85-459a-9134-b48158a2d272",
-      "width": 50,
-      "height": 53,
-      "title": "Selo Confi"
-    },
-    "3": {
-      "title": "Selo Lets Encrypt",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/91588077-b0db-42a2-9c26-231de0e6c885",
-      "width": 130,
-      "height": 29
-    },
-    "title": "Certificados",
-    "certifieds": [
-      {
-        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/6d5ae7c2-de9a-4f63-a3c8-4710c55a14aa",
-        "alt": "Lets Encrypt selo",
-        "width": 135,
-        "height": 32,
-        "link": "https://letsencrypt.org/"
-      },
-      {
-        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/eletrotrafo/745bc6a1-ce31-4714-b22d-0d8e9472de6a/pci.png"
-      }
-    ],
-    "hideSeal": false
-  }
+  "certified": [
+    {
+      "certifieds": [
+        {
+          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/0637eb60-7105-4317-bab9-ef09b4421f88/Frame.svg",
+          "alt": "texto",
+          "link": "/texto",
+          "width": 40,
+          "height": 40
+        }
+      ],
+      "title": "Certificados de Segurança"
+    }
+  ]
 }

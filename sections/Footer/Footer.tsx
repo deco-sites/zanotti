@@ -54,29 +54,21 @@ interface Props {
    */
   links?: Link[];
   /**
-   * @title Adicionar nova rede social?
-   */
-  social?: Social[];
-  /**
-   * @title Texto de apoio das redes sociais
-   */
-  label?: string;
-  /**
-   * @title Texto de copyright
-   */
-  copyright?: string;
-  /**
    * @title Metodo de pagamento
    */
   paymentMethods?: PaymentsProps;
   /**
-   * @title Sac
+   * @title Adicionar nova rede social?
    */
-  service?: Service;
+  social?: Social[];
   /**
    * @title Certificados de segurança
    */
-  certified?: CertifiedProps;
+  certified?: CertifiedProps[];
+  /**
+   * @title Texto de copyright
+   */
+  copyright?: string;
 }
 interface Payments {
   /**
@@ -86,6 +78,7 @@ interface Payments {
   alt?: string;
   /**
    * @title Adicionar imagem?
+   * @description subir icone no tamanho 53 x 54?
    */
   image: ImageWidget;
 }
@@ -121,6 +114,9 @@ interface CertifiedProps {
    */
   certifieds?: Certified[];
 }
+/**
+ *   @titleBy alt
+ */
 interface Certified {
   /**
    * @title Adicionar nova imagem?
@@ -146,8 +142,12 @@ interface Certified {
 }
 function CertifiedComponent({ title, certifieds }: CertifiedProps) {
   return (
-    <div class="">
-      {title && <p class="text-base font-normal mb-[10px]">{title}</p>}
+    <div class="flex flex-col gap-4">
+      {title && (
+        <p class="text-base text-sm font-semibold lg:text-base-200 lg:font-semibold font-secondary lg:text-base lg:mt-5">
+          {title}
+        </p>
+      )}
       <div class="flex flex-col  gap-3">
         <div class="flex flex-row gap-4">
           {certifieds?.slice(0, 2).map((
@@ -192,24 +192,6 @@ function CertifiedComponent({ title, certifieds }: CertifiedProps) {
           ))}
         </div>
       </div>
-    </div>
-  );
-}
-function Service({ title, label, button }: Service) {
-  return (
-    <div class="flex gap-[21px] flex-col max-w-[200px]">
-      {title && <p class="text-base font-normal">{title}</p>}
-      {label && <p class="text-base font-normal text-base">{label}</p>}
-      {button?.label && button?.link && (
-        <a
-          href={button.link}
-          target="_blank"
-          class="flex justify-center gap-[10px] px-5 py-[13px] bg-primary text-white rounded-[20px] hover:bg-blue-600 text-center"
-        >
-          <Icon id="contact-white" />
-          {button.label}
-        </a>
-      )}
     </div>
   );
 }
@@ -322,6 +304,15 @@ function Footer(
                     </div>
                   </div>
                 )}
+                <div>
+                  {certified?.map(({ title, certifieds }, index) => (
+                    <CertifiedComponent
+                      key={index}
+                      title={title}
+                      certifieds={certifieds}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -329,11 +320,6 @@ function Footer(
             <p class="text-base-200 text-xs px-5 py-0 family-secondary text-center">
               {copyright}
             </p>
-            {/* <div class="flex mx-auto gap-5 px-5">
-              <PoweredByBetoven />
-              <PoweredByDeco />
-              <PoweredByVtex />
-            </div> */}
           </div>
         </footer>
       )}
@@ -406,17 +392,21 @@ function Footer(
                     ))}
                   </div>
                 </div>
+                <div>
+                  {certified?.map(({ title, certifieds }, index) => (
+                    <CertifiedComponent
+                      key={index}
+                      title={title}
+                      certifieds={certifieds}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
             <div>
               <p class="text-middle-gray family-secondary text-xs py-5 ">
                 {copyright}
               </p>
-            </div>
-            <div class="flex flex-nowrap items-center justify-start gap-5">
-              <PoweredByBetoven />
-              <PoweredByDeco />
-              <PoweredByVtex />
             </div>
           </div>
         )}

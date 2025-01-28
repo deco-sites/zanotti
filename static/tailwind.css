@@ -456,6 +456,7 @@ video {
 html {
   -webkit-tap-highlight-color: transparent;
 }
+
   /* Allow changing font family via CMS */
   html {
     font-size: 16px;
@@ -463,7 +464,8 @@ html {
     scroll-behavior: smooth;
   }
 
-  html, body {
+  html,
+  body {
   --tw-text-opacity: 1;
   color: rgb(29 29 27 / var(--tw-text-opacity));
 }
@@ -4037,9 +4039,6 @@ details.collapse summary::-webkit-details-marker {
 .max-w-\[184px\] {
   max-width: 184px;
 }
-.max-w-\[200px\] {
-  max-width: 200px;
-}
 .max-w-\[220px\] {
   max-width: 220px;
 }
@@ -4299,9 +4298,6 @@ details.collapse summary::-webkit-details-marker {
 .gap-\[20px\] {
   gap: 20px;
 }
-.gap-\[21px\] {
-  gap: 21px;
-}
 .gap-\[2px\] {
   gap: 2px;
 }
@@ -4408,9 +4404,6 @@ details.collapse summary::-webkit-details-marker {
 }
 .rounded-\[16px\] {
   border-radius: 16px;
-}
-.rounded-\[20px\] {
-  border-radius: 20px;
 }
 .rounded-\[30px\] {
   border-radius: 30px;
@@ -5434,6 +5427,7 @@ details.collapse summary::-webkit-details-marker {
     --dot-progress: 100%;
   }
 }
+
 .space-between {
   justify-content: space-between;
 }
@@ -5441,6 +5435,7 @@ details.collapse summary::-webkit-details-marker {
 .drawer {
   width: unset !important;
 }
+
 .family-secondary {
   font-family: "Montserrat";
 }
@@ -5459,13 +5454,16 @@ details.collapse summary::-webkit-details-marker {
 }
 
 .custom-scrollbar::-webkit-scrollbar {
-  width: 0; /* Oculta a barra de rolagem */
+  width: 0;
+  /* Oculta a barra de rolagem */
   height: 0;
 }
 
 .custom-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .cursor-grab {
@@ -5480,6 +5478,7 @@ details.collapse summary::-webkit-details-marker {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -5494,8 +5493,8 @@ details.collapse summary::-webkit-details-marker {
 }
 
 /* Fix Safari issue related to <summary> / <details> arrow */
-details > summary::-webkit-details-marker,
-details > summary::marker {
+details>summary::-webkit-details-marker,
+details>summary::marker {
   display: none;
 }
 
@@ -5528,6 +5527,50 @@ details > summary::marker {
 
 .font-secondary {
   font-family: "MuseoModerno";
+}
+
+.flag-superpromo {
+  padding: 8px 12px;
+  font-size: 12px;
+  color: white;
+  font-weight: 600 !important;
+  /* width: 100%; */
+  z-index: 10;
+  position: relative;
+  text-align: center;
+  border-radius: 12px;
+  background-size: 300% 300% !important;
+  animation: animation-flag 6s ease infinite;
+  background: linear-gradient(45deg, oklch(47% 0.21 262deg / 1), oklch(47% 0.21 262deg / 1), oklch(47% 0.21 262deg / 1), oklch(47% 0.21 262deg / 1), #001b4e, oklch(47% 0.21 262deg / 1));
+}
+
+.flag-bf {
+  padding: 8px 12px;
+  font-size: 12px;
+  color: white;
+  font-weight: 600 !important;
+  /* width: 100%; */
+  z-index: 10;
+  position: relative;
+  text-align: center;
+  border-radius: 12px;
+  background: linear-gradient(45deg, #000000, #000000, #000000, #000, #3b3b3b, #000);
+  background-size: 300% 300%;
+  animation: animation-flag 6s ease infinite;
+}
+
+@keyframes animation-flag {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -5844,11 +5887,6 @@ details > summary::marker {
 .hover\:bg-black:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(29 29 27 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-blue-600:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-blue-700:hover {
@@ -6223,6 +6261,10 @@ details > summary::marker {
 
   .lg\:mt-12 {
     margin-top: 3rem;
+  }
+
+  .lg\:mt-5 {
+    margin-top: 1.25rem;
   }
 
   .lg\:block {
