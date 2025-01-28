@@ -76,11 +76,8 @@ function PageResult(props: SectionProps<typeof loader>) {
   const {
     layout,
     startingPage = 0,
+    pixDiscount = 0,
     url,
-    internationalFlag,
-    promoFlag,
-    HidePriceCollection,
-    newsFlag,
   } = props;
   const page = props.page!;
   const { products, pageInfo } = page;
@@ -105,9 +102,9 @@ function PageResult(props: SectionProps<typeof loader>) {
         {products?.map((product, index) => (
           <ProductCard
             key={`product-card-${product.productID}`}
-            flags={[internationalFlag, promoFlag, newsFlag]}
             product={product}
             preload={index === 0}
+            pixDiscount={pixDiscount}
             index={offset + index}
             class="h-full min-w-[160px] max-w-[300px]"
             hiddenAddToCartButton={false}
@@ -198,7 +195,7 @@ function Result(props: SectionProps<typeof loader>) {
   const controls = useId();
   const device = useDevice();
   const page = props.page!;
-  const { startingPage = 0, url, partial } = props;
+  const { startingPage = 0, url, partial, pixDiscount = 0 } = props;
   const { products, filters, breadcrumb, pageInfo, sortOptions } = page;
   const perPage = pageInfo?.recordPerPage || products.length;
   const zeroIndexedOffsetPage = pageInfo.currentPage - startingPage;
@@ -376,19 +373,13 @@ function SearchResult({ page, ...props }: SectionProps<typeof loader>) {
 }
 export const loader = (props: Props, req: Request, ctx: AppContext) => {
   const {
-    internationalFlag = "",
-    promoFlag = "",
-    newsFlag = "",
-    HidePriceCollection = "",
+    pixDiscount = 0,
   } = ctx;
 
   return {
     ...props,
     url: req.url,
-    internationalFlag,
-    promoFlag,
-    newsFlag,
-    HidePriceCollection,
+    pixDiscount,
   };
 };
 export default SearchResult;

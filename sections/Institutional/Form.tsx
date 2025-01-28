@@ -58,7 +58,7 @@ export default function Form({
           hx-post={useComponent(import.meta.url)}
           hx-target="closest section"
         >
-                   <div class="mb-4">
+          <div class="mb-4">
             <label
               class="block text-sm mb-1"
               htmlFor="nome"
@@ -88,7 +88,7 @@ export default function Form({
               required
             />
           </div>
- 
+
           <div class="mb-4">
             <label
               class="block text-sm mb-1"

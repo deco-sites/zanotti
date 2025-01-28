@@ -13,6 +13,9 @@ export interface Props {
 const WIDTH = 532;
 const HEIGHT = 532;
 const ASPECT_RATIO = `${WIDTH} / ${HEIGHT}`;
+function addDimensionsToUrl(url: string) {
+  return url.replace(/(\/ids\/\d+)/, "$1-100-100");
+}
 /**
  * @title Product Image Slider
  * @description Creates a three columned grid on destkop, one for the dots preview, one for the image slider and the other for product info
@@ -31,6 +34,7 @@ export default function GallerySlider(props: Props) {
   if (!images) {
     return null;
   }
+  console.log("images", images);
   return (
     <>
       <div id={id} class="flex flex-col">
@@ -83,22 +87,25 @@ export default function GallerySlider(props: Props) {
         <ul class="grid grid-cols-5 gap-3 lg:gap-2">
           {images.length > 1 && (
             <>
-              {images.map((img, index) => (
-                <li class="carousel-item">
-                  <Slider.Dot
-                    index={index}
-                    class="h-fit w-fit h-full rounded-2xl overflow-hidden"
-                  >
-                    <Image
-                      class="rounded object-contain lg:object-cover lg:max-w-[148px] lg:max-h-[107px] bg-white rounded-[10px] lg:rounded-[20px]"
-                      width={device === "desktop" ? 148 : 60}
-                      height={device === "desktop" ? 107 : 60}
-                      src={img.url!}
-                      alt={img.alternateName}
-                    />
-                  </Slider.Dot>
-                </li>
-              ))}
+              {images.map((img, index) => {
+                const updatedUrl = addDimensionsToUrl(img.url!);
+                return (
+                  <li class="carousel-item bg-white p-1 flex items-center justify-center  rounded-[10px] lg:rounded-[20px] overflow-hidden">
+                    <Slider.Dot
+                      index={index}
+                      class="h-fit w-fit h-full rounded-2xl overflow-hidden"
+                    >
+                      <Image
+                        class="max-w-full h-auto"
+                        width={device === "desktop" ? 100 : 60}
+                        height={device === "desktop" ? 100 : 60}
+                        src={updatedUrl}
+                        alt={img.alternateName}
+                      />
+                    </Slider.Dot>
+                  </li>
+                );
+              })}
             </>
           )}
         </ul>

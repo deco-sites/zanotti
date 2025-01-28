@@ -21,6 +21,7 @@ interface Props {
   index?: number;
 
   class?: string;
+  pixDiscount?: number;
   hiddenFlags?: boolean;
   productGroupID?: string;
   hiddenAddToCartButton?: boolean;
@@ -43,6 +44,7 @@ export const getFlagCluster = (
 function ProductCard({
   product,
   preload,
+  pixDiscount = 0,
   itemListName,
   index,
   class: _class,
@@ -139,7 +141,13 @@ function ProductCard({
                 Consultar Preço
               </a>
             )
-            : <Price type="shelf" product={product} />}
+            : (
+              <Price
+                type="shelf"
+                pixDiscount={pixDiscount}
+                product={product}
+              />
+            )}
         </a>
         {!isPriceHidden && !hiddenAddToCartButton && inStock &&
           (

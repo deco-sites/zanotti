@@ -15,12 +15,14 @@ export interface Props {
 export const loader = (props: Props, _req: Request, ctx: AppContext) => {
   const {
     device,
-    pixDiscount = 0
+    pixDiscount = 0,
   } = ctx;
-  return {...props, device, pixDiscount};
-}
+  return { ...props, device, pixDiscount };
+};
 
-export default function ProductDetails({ page, device, pixDiscount }: SectionProps<typeof loader>) {
+export default function ProductDetails(
+  { page, device, pixDiscount }: SectionProps<typeof loader>,
+) {
   if (!page) {
     return (
       <div class="w-full flex justify-center ite  ms-center py-28">
@@ -38,7 +40,12 @@ export default function ProductDetails({ page, device, pixDiscount }: SectionPro
             digitação.
           </p>
         </div>
-        <a href="/" class="bg-primary rounded-full py-3 px-10 text-white mx-auto flex w-fit justify-center my-10">Voltar para a home</a>
+        <a
+          href="/"
+          class="bg-primary rounded-full py-3 px-10 text-white mx-auto flex w-fit justify-center my-10"
+        >
+          Voltar para a home
+        </a>
       </div>
     );
   }
@@ -77,7 +84,9 @@ export default function ProductDetails({ page, device, pixDiscount }: SectionPro
             >
               <div class="mb-5 w-full">
                 {isVariantOf?.additionalProperty.map((property) => {
-                  if (["viavarejogarantia", "FAQ"].includes(property?.name ?? "")) return null;
+                  if (
+                    ["viavarejogarantia", "FAQ"].includes(property?.name ?? "")
+                  ) return null;
                   return (
                     <div class="px-3 py-2 w-full text-sm sm:text-base odd:bg-light-gray">
                       <span class="font-semibold after:content-[':'] max-sm:pb-0 mr-2">
@@ -85,7 +94,7 @@ export default function ProductDetails({ page, device, pixDiscount }: SectionPro
                       </span>
                       {property.value}
                     </div>
-                  )
+                  );
                 })}
               </div>
             </Collapsable>
@@ -113,16 +122,17 @@ export default function ProductDetails({ page, device, pixDiscount }: SectionPro
                       }
                     >
                       <div class="mb-5 w-full">
-                        <div 
+                        <div
                           class="px-3 py-2 w-full text-sm sm:text-base"
                           dangerouslySetInnerHTML={{
-                            __html: property.value?.replace(/\n/gi, "<br />") || ""
-                          }} 
+                            __html: property.value?.replace(/\n/gi, "<br />") ||
+                              "",
+                          }}
                         />
                       </div>
                     </Collapsable>
                   </div>
-                )
+                );
               }
             })}
           </>

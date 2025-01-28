@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-
   /* Allow changing font family via CMS */
   html {
     font-size: 16px;
@@ -66,12 +65,14 @@
   }
 
   .fluid-text h2 {
-    @apply text-primary mt-6 mb-3 text-lg font-semibold uppercase font-secondary;
+    @apply text-primary mt-6 mb-3 text-lg font-semibold uppercase
+      font-secondary;
   }
 
   .fluid-text h3,
   .fluid-text h4 {
-    @apply text-primary mt-6 mb-2 text-base font-semibold uppercase font-secondary;
+    @apply text-primary mt-6 mb-2 text-base font-semibold uppercase
+      font-secondary;
   }
 
   .fluid-text ul {
@@ -189,8 +190,8 @@
 }
 
 /* Fix Safari issue related to <summary> / <details> arrow */
-details>summary::-webkit-details-marker,
-details>summary::marker {
+details > summary::-webkit-details-marker,
+details > summary::marker {
   display: none;
 }
 
@@ -237,7 +238,15 @@ details>summary::marker {
   border-radius: 12px;
   background-size: 300% 300% !important;
   animation: animation-flag 6s ease infinite;
-  background: linear-gradient(45deg, oklch(47% 0.21 262deg / 1), oklch(47% 0.21 262deg / 1), oklch(47% 0.21 262deg / 1), oklch(47% 0.21 262deg / 1), #001b4e, oklch(47% 0.21 262deg / 1));
+  background: linear-gradient(
+    45deg,
+    oklch(47% 0.21 262deg / 1),
+    oklch(47% 0.21 262deg / 1),
+    oklch(47% 0.21 262deg / 1),
+    oklch(47% 0.21 262deg / 1),
+    #001b4e,
+    oklch(47% 0.21 262deg / 1)
+  );
 }
 
 .flag-bf {
@@ -250,7 +259,15 @@ details>summary::marker {
   position: relative;
   text-align: center;
   border-radius: 12px;
-  background: linear-gradient(45deg, #000000, #000000, #000000, #000, #3b3b3b, #000);
+  background: linear-gradient(
+    45deg,
+    #000000,
+    #000000,
+    #000000,
+    #000,
+    #3b3b3b,
+    #000
+  );
   background-size: 300% 300%;
   animation: animation-flag 6s ease infinite;
 }

@@ -47,7 +47,8 @@ function AddToCartButton(props: Props) {
   // @ts-ignore item_id exists
   const { item_id: itemId } = item;
   const { isVariantOf } = product;
-  const  selectedVariant = isVariantOf?.hasVariant.find((v) => v.productID === itemId) || {};
+  const selectedVariant =
+    isVariantOf?.hasVariant.find((v) => v.productID === itemId) || {};
 
   if (!selectedVariant) return null;
 
@@ -57,19 +58,29 @@ function AddToCartButton(props: Props) {
   });
 
   if (Object.keys(specs).length === 0) {
-    return null;
+    return (
+      <button
+        id="add_to_cart_modal"
+        class={clx("flex-grow cursor-pointer", _class?.toString())}
+        hx-on:click={useScript(onClick)}
+      >
+        {!hiddenIcon && (
+          <Icon id="shopping_bag" class="max-[375px]:hidden" size={21} />
+        )}
+        Comprar
+      </button>
+    );
   }
 
   return (
     <>
-      <button 
+      <button
+        id="add_to_cart_modal"
         class={clx("flex-grow cursor-pointer", _class?.toString())}
-        hx-on:click={
-          useScript(() => {
-            // @ts-ignore showModal exists
-            document.querySelector("#add_to_cart_modal")?.showModal()
-          })
-        }
+        hx-on:click={useScript(() => {
+          // @ts-ignore showModal exists
+          document.querySelector("#add_to_cart_modal")?.showModal();
+        })}
       >
         {!hiddenIcon && (
           <Icon id="shopping_bag" class="max-[375px]:hidden" size={21} />
@@ -79,7 +90,9 @@ function AddToCartButton(props: Props) {
       <dialog id="add_to_cart_modal" class="modal">
         <div class="modal-box">
           <form method="dialog">
-            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+              ✕
+            </button>
           </form>
           <div
             id={id}
@@ -90,12 +103,21 @@ function AddToCartButton(props: Props) {
             )}
           >
             {specs.map((spec) => {
+              if (spec.name === "Voltagem") {
+                if (spec.value === "n/a") {
+                  return null;
+                }
+              }
               return (
                 <div class="flex items-center flex-col gap-2">
-                  <span class="block">A <b>{spec.name}</b> escolhida foi:</span>
-                  <span class="p-3 rounded-full text-xs font-bold w-max bg-primary text-white w-full flex">{spec.value}</span>
+                  <span class="block">
+                    A <b>{spec.name}</b> escolhida foi:
+                  </span>
+                  <span class="p-3 rounded-full text-xs font-bold w-max bg-primary text-white w-full flex">
+                    {spec.value}
+                  </span>
                 </div>
-              )
+              );
             })}
             <button
               class="flex-grow cursor-pointer bg-signature-green text-base flex justify-center items-center gap-2 py-2 rounded-full no-animation text-white font-semibold hover:bg-[#1bae3299] ease-in"

@@ -46,7 +46,6 @@ export default defineApp(async (req, ctx) => {
 
         {/* Web Manifest */}
         <link rel="manifest" href={asset("/site.webmanifest")} />
- 
 
         <link
           rel="stylesheet"

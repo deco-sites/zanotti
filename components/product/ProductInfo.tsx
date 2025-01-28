@@ -22,13 +22,20 @@ interface Props {
 const onLoad = () => {
   const handleScroll = () => {
     const fixedAddToCart = document.getElementById("fixed-add-to-cart");
+    const addToCartModal = document.getElementById("add_to_cart_modal");
     if (fixedAddToCart) {
       if (globalThis.scrollY > 450) {
         fixedAddToCart.classList.add("visible");
         fixedAddToCart.classList.remove("invisible");
+        if (addToCartModal) {
+          addToCartModal.classList.add("hidden");
+        }
       } else {
         fixedAddToCart.classList.add("invisible");
         fixedAddToCart.classList.remove("visible");
+        if (addToCartModal) {
+          addToCartModal.classList.remove("hidden");
+        }
       }
     }
   };
@@ -56,7 +63,7 @@ function ProductInfo({ page, device, pixDiscount }: Props) {
     offers,
     isVariantOf,
     brand,
-    additionalProperty
+    additionalProperty,
   } = product;
   const isPriceHidden = additionalProperty?.some((prop) =>
     prop.propertyID === "200"
@@ -65,7 +72,8 @@ function ProductInfo({ page, device, pixDiscount }: Props) {
   const message = encodeURIComponent(
     `Olá, estou interessado nesse produto: ${title}`,
   );
-  const refId = additionalProperty?.find((p) => p.name === "RefId")?.value || "";
+  const refId = additionalProperty?.find((p) => p.name === "RefId")?.value ||
+    "";
   const {
     price = 0,
     listPrice = 0,
@@ -104,38 +112,45 @@ function ProductInfo({ page, device, pixDiscount }: Props) {
             {availability === "https://schema.org/InStock"
               ? (
                 <>
-                  {isPriceHidden ? (
-                    <a
-                      href={`https://wa.me/11987939455?text=${message}`}
-                      class="flex items-center justify-center gap-3 mt-2 mb-4 bg-primary border-0 text-white py-2 text-center font-semibold rounded-full"
-                    >
-                      Consultar Preço
-                    </a>
-                  ) : (
-                    <>
-                      <Price type="details" product={product} isMobile={true} pixDiscount={pixDiscount} />
-                      <PaymentMethods offers={offers} />
-                      <div class="divider m-0" />
-                      <ProductSelector product={product} />
-                      <AddToCartButton
-                        item={item}
-                        seller={seller}
-                        product={product}
-                        class="w-full uppercase bg-signature-green text-[20px] flex justify-center items-center gap-2 py-[10px] rounded-[30px] no-animation text-white font-semibold hover:bg-[#1bae3299] ease-in"
-                        disabled={false}
-                      />
-                      <div class="divider m-0" />
-                      <div class="pt-1.5 pb-4">
-                        <ShippingSimulationForm
-                          items={[{
-                            id: Number(product.sku),
-                            quantity: 1,
-                            seller: seller,
-                          }]}
+                  {isPriceHidden
+                    ? (
+                      <a
+                        href={`https://wa.me/11987939455?text=${message}`}
+                        class="flex items-center justify-center gap-3 mt-2 mb-4 bg-primary border-0 text-white py-2 text-center font-semibold rounded-full"
+                      >
+                        Consultar Preço
+                      </a>
+                    )
+                    : (
+                      <>
+                        <Price
+                          type="details"
+                          product={product}
+                          isMobile={true}
+                          pixDiscount={pixDiscount}
                         />
-                      </div>
-                    </>
-                  )}
+                        <PaymentMethods offers={offers} />
+                        <div class="divider m-0" />
+                        <ProductSelector product={product} />
+                        <AddToCartButton
+                          item={item}
+                          seller={seller}
+                          product={product}
+                          class="w-full uppercase bg-signature-green text-[20px] flex justify-center items-center gap-2 py-[10px] rounded-[30px] no-animation text-white font-semibold hover:bg-[#1bae3299] ease-in"
+                          disabled={false}
+                        />
+                        <div class="divider m-0" />
+                        <div class="pt-1.5 pb-4">
+                          <ShippingSimulationForm
+                            items={[{
+                              id: Number(product.sku),
+                              quantity: 1,
+                              seller: seller,
+                            }]}
+                          />
+                        </div>
+                      </>
+                    )}
                 </>
               )
               : (
@@ -147,9 +162,17 @@ function ProductInfo({ page, device, pixDiscount }: Props) {
           </div>
         </div>
         {!isPriceHidden && (
-          <div class="fixed bottom-0 left-0 right-0 rounded-t-2xl bg-white shadow-2xl z-[11]">
+          <div
+            id="fixed-add-to-cart"
+            class="invisible fixed bottom-0 left-0 right-0 rounded-t-2xl bg-white shadow-2xl z-[11]"
+          >
             <div class="container px-5 py-4 flex gap-4 items-center">
-              <Price type="fixed" product={product} isMobile={true} pixDiscount={pixDiscount} />
+              <Price
+                type="fixed"
+                product={product}
+                isMobile={true}
+                pixDiscount={pixDiscount}
+              />
               <AddToCartButton
                 item={item}
                 seller={seller}
@@ -160,6 +183,10 @@ function ProductInfo({ page, device, pixDiscount }: Props) {
             </div>
           </div>
         )}
+        <script
+          type="module"
+          dangerouslySetInnerHTML={{ __html: useScript(onLoad) }}
+        />
       </>
     );
   }
@@ -181,7 +208,6 @@ function ProductInfo({ page, device, pixDiscount }: Props) {
                   <h1 class="text-xl font-bold flex-grow">
                     {title}
                   </h1>
-              
                   <WishlistButton item={item} pdp={true} />
                 </div>
                 <div className="flex items-center justify-between">
@@ -194,41 +220,48 @@ function ProductInfo({ page, device, pixDiscount }: Props) {
               {availability === "https://schema.org/InStock" &&
                 (
                   <>
-                    {isPriceHidden ? (
-                      <a
-                        href={`https://wa.me/11987939455?text=${message}`}
-                        class="flex items-center justify-center gap-3 mt-2 bg-primary border-0 text-white py-2 text-center font-semibold rounded-full"
-                      >
-                        Consultar Preço
-                      </a>
-                    ) : (
-                      <>
-                        <div class="divider m-0" />
-                        <div class="flex flex-col gap-2">
-                          <Price type="details" product={product} isMobile={false} pixDiscount={pixDiscount} />
-                          <PaymentMethods offers={offers} />
-                        </div>
-                        <div class="divider m-0" />
-                        <ProductSelector product={product} />
-                        <div class="flex flex-col gap-3 items-start">
-                          <AddToCartButton
-                            item={item}
-                            seller={seller}
-                            product={product}
-                            class="w-full uppercase bg-signature-green text-[20px] flex justify-center items-center gap-2 py-[10px] rounded-[30px] no-animation text-white font-semibold hover:bg-[#1bae3299] ease-in"
-                            disabled={false}
-                          />
+                    {isPriceHidden
+                      ? (
+                        <a
+                          href={`https://wa.me/11987939455?text=${message}`}
+                          class="flex items-center justify-center gap-3 mt-2 bg-primary border-0 text-white py-2 text-center font-semibold rounded-full"
+                        >
+                          Consultar Preço
+                        </a>
+                      )
+                      : (
+                        <>
                           <div class="divider m-0" />
-                          <ShippingSimulationForm
-                            items={[{
-                              id: Number(product.sku),
-                              quantity: 1,
-                              seller: seller,
-                            }]}
-                          />
-                        </div>
-                      </>
-                    )}
+                          <div class="flex flex-col gap-2">
+                            <Price
+                              type="details"
+                              product={product}
+                              isMobile={false}
+                              pixDiscount={pixDiscount}
+                            />
+                            <PaymentMethods offers={offers} />
+                          </div>
+                          <div class="divider m-0" />
+                          <ProductSelector product={product} />
+                          <div class="flex flex-col gap-3 items-start">
+                            <AddToCartButton
+                              item={item}
+                              seller={seller}
+                              product={product}
+                              class="w-full uppercase bg-signature-green text-[20px] flex justify-center items-center gap-2 py-[10px] rounded-[30px] no-animation text-white font-semibold hover:bg-[#1bae3299] ease-in"
+                              disabled={false}
+                            />
+                            <div class="divider m-0" />
+                            <ShippingSimulationForm
+                              items={[{
+                                id: Number(product.sku),
+                                quantity: 1,
+                                seller: seller,
+                              }]}
+                            />
+                          </div>
+                        </>
+                      )}
                   </>
                 )}
             </div>
@@ -254,7 +287,12 @@ function ProductInfo({ page, device, pixDiscount }: Props) {
               <div class="hidden lg:block text-xl font-semibold text-black col-span-3">
                 {title}
               </div>
-              <Price type="fixed" product={product} isMobile={false} pixDiscount={pixDiscount} />
+              <Price
+                type="fixed"
+                product={product}
+                isMobile={false}
+                pixDiscount={pixDiscount}
+              />
               <div class="col-span-2">
                 <AddToCartButton
                   item={item}

@@ -12,15 +12,14 @@ export interface Props extends JSX.HTMLAttributes<HTMLButtonElement> {
 
 function showToast(message: string) {
   const toast = document.createElement("div");
-  toast.className =
-    "alert shadow-lg fixed bottom-4 left-4 w-fit z-50";
+  toast.className = "alert shadow-lg fixed bottom-4 left-4 w-fit z-50";
   toast.textContent = message;
 
   document.body.appendChild(toast);
 
   setTimeout(() => {
     toast.remove();
-  }, 7000); 
+  }, 7000);
 }
 
 function AddToCartButton(props: Props) {
@@ -32,7 +31,7 @@ function AddToCartButton(props: Props) {
     if (!event) return;
 
     event.stopPropagation();
-    setIsClicked(true); 
+    setIsClicked(true);
 
     const button = event.currentTarget as HTMLButtonElement | null;
     const container = button?.closest<HTMLDivElement>("div[data-cart-item]")!;
@@ -41,7 +40,6 @@ function AddToCartButton(props: Props) {
     );
 
     window.STOREFRONT.CART.addToCart(item, platformProps);
-
 
     showToast("Produto adicionado ao carrinho!");
 
@@ -60,7 +58,11 @@ function AddToCartButton(props: Props) {
           item,
           platformProps: {
             allowedOutdatedData: ["paymentData"],
-            orderItems: [{ quantity: 1, seller: seller, id: product.productID }],
+            orderItems: [{
+              quantity: 1,
+              seller: seller,
+              id: product.productID,
+            }],
           },
         }),
       )}
