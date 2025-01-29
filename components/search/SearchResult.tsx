@@ -196,7 +196,8 @@ function Result(props: SectionProps<typeof loader>) {
   const device = useDevice();
   const page = props.page!;
   const { startingPage = 0, url, partial, pixDiscount = 0 } = props;
-  const { products, filters, breadcrumb, pageInfo, sortOptions } = page;
+  const { products, filters, breadcrumb, pageInfo, sortOptions, seo = {} } = page;
+  const { title: seoTitle = "" } = seo;
   const perPage = pageInfo?.recordPerPage || products.length;
   const zeroIndexedOffsetPage = pageInfo.currentPage - startingPage;
   const offset = zeroIndexedOffsetPage * perPage;
@@ -222,18 +223,11 @@ function Result(props: SectionProps<typeof loader>) {
   function extractSearchTerms() {
     const newURL = new URL(url);
     const search = newURL.search;
-    const pathname = newURL.pathname;
     const match = search.match(/q=([^&]*)/);
     if (!match) {
-      const temp = pathname.split("/");
-      return temp[temp.length - 1];
+      return breadcrumb?.itemListElement[0]?.name || "";
     }
-    if (match) {
-      return match[1].replace(/\+/g, " ");
-    } else {
-      const pathMatch = url.match(/\/s\/([^?]*)/);
-      return pathMatch ? pathMatch[1].replace(/\+/g, " ") : "";
-    }
+    return seoTitle;
   }
   const result = extractSearchTerms();
   const sortBy = sortOptions.length > 0 && (
@@ -246,7 +240,7 @@ function Result(props: SectionProps<typeof loader>) {
           <div class="w-full flex flex-col gap-8">
             <div class="border-b border-gray-300 mb-8">
               <div class="flex items-center space-between w-full container py-8">
-                <h1 class="text-sm lg:text-2xl capitalize font-semibold flex items-center">
+                <h1 id="result_title" class="text-sm lg:text-2xl font-semibold flex items-center">
                   {result}{" "}
                   <span class="text-sm lg:text-2xl font-light ml-2">
                     ({page.pageInfo.records})
@@ -270,7 +264,7 @@ function Result(props: SectionProps<typeof loader>) {
                   <div class="w-full flex flex-col gap-6">
                     <div class="border-b border-gray-300">
                       <div class="flex items-center space-between w-full py-4 container">
-                        <h1 class="text-2xl uppercase font-semibold flex items-center">
+                        <h1 id="result_title" class="text-2xl font-semibold flex items-center">
                           {result}{" "}
                           <span class="text-[14px] font-normal ml-4">
                             [{page.pageInfo.records}]
@@ -336,7 +330,7 @@ function Result(props: SectionProps<typeof loader>) {
               <div class="grid grid-cols-1 sm:grid-cols-[250px_1fr] gap-12 container">
                 {device === "desktop" && (
                   <aside class="place-self-start flex flex-col w-full">
-                    <label class="text-base lg:text-lg font-semibold pb-4 flex items-center border-b border-gray-300">
+                    <label class="flex justify-between text-base lg:text-lg font-semibold pb-4 flex items-center border-b border-gray-300">
                       Filtros
                     </label>
 

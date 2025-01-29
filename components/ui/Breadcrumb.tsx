@@ -6,6 +6,8 @@ interface Props {
 }
 
 function Breadcrumb({ itemListElement = [] }: Props) {
+  if (itemListElement.length === 0) return null;
+
   const items = [{ name: "Home", item: "/" }, ...itemListElement];
 
   return (
