@@ -88,6 +88,7 @@ function PageResult(props: SectionProps<typeof loader>) {
   const offset = zeroIndexedOffsetPage * perPage;
   const nextPageUrl = useUrlRebased(pageInfo.nextPage, url);
   const prevPageUrl = useUrlRebased(pageInfo.previousPage, url);
+
   return (
     <div class="grid grid-flow-row grid-cols-1 place-items-center mx-auto">
       <div
@@ -219,26 +220,32 @@ function Result(props: SectionProps<typeof loader>) {
       },
     },
   });
+
   function extractSearchTerms() {
     const newURL = new URL(url);
     const search = newURL.search;
     const pathname = newURL.pathname;
     const match = search.match(/q=([^&]*)/);
+
     if (!match) {
       const temp = pathname.split("/");
-      return temp[temp.length - 1];
+      return decodeURIComponent(temp[temp.length - 1]);
     }
+
     if (match) {
-      return match[1].replace(/\+/g, " ");
+      return decodeURIComponent(match[1].replace(/\+/g, " "));
     } else {
       const pathMatch = url.match(/\/s\/([^?]*)/);
-      return pathMatch ? pathMatch[1].replace(/\+/g, " ") : "";
+      return pathMatch
+        ? decodeURIComponent(pathMatch[1].replace(/\+/g, " "))
+        : "";
     }
   }
   const result = extractSearchTerms();
   const sortBy = sortOptions.length > 0 && (
     <Sort sortOptions={sortOptions} url={url} />
   );
+
   return (
     <>
       {device === "desktop" && (
