@@ -5297,9 +5297,6 @@ details.collapse summary::-webkit-details-marker {
 .duration-1000 {
   transition-duration: 1000ms;
 }
-.duration-200 {
-  transition-duration: 200ms;
-}
 .duration-300 {
   transition-duration: 300ms;
 }
@@ -5943,10 +5940,6 @@ details > summary::marker {
 
 .hover\:underline:hover {
   text-decoration-line: underline;
-}
-
-.hover\:opacity-80:hover {
-  opacity: 0.8;
 }
 
 .focus\:outline-none:focus {
