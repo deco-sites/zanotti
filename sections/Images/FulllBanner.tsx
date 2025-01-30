@@ -15,11 +15,13 @@ interface Props {
   srcMobile?: ImageWidget;
   /**
    * @title Texto alternativo da imagem
+   *    * @description Obrigatório preenchimento para leitores de tela
    */
   alt: string;
   /**
    * @title  Link da Imagem
-   * @description Obrigatório preenchimento para leitores de tela
+   * @description Não obrigatório no caso das institucionais
+
    */
   link?: string;
 }
