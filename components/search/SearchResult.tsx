@@ -76,7 +76,9 @@ function PageResult(props: SectionProps<typeof loader>) {
   const {
     layout,
     startingPage = 0,
-    pixDiscount = 0,
+    pixDiscount,
+    blackFriday,
+    superPromo,
     url,
   } = props;
   const page = props.page!;
@@ -104,7 +106,9 @@ function PageResult(props: SectionProps<typeof loader>) {
             key={`product-card-${product.productID}`}
             product={product}
             preload={index === 0}
+            blackFriday={blackFriday}
             pixDiscount={pixDiscount}
+            superPromo={superPromo}
             index={offset + index}
             class="h-full min-w-[160px] max-w-[300px]"
             hiddenAddToCartButton={false}
@@ -195,7 +199,7 @@ function Result(props: SectionProps<typeof loader>) {
   const controls = useId();
   const device = useDevice();
   const page = props.page!;
-  const { startingPage = 0, url, partial, pixDiscount = 0 } = props;
+  const { startingPage = 0, url, partial } = props;
   const { products, filters, breadcrumb, pageInfo, sortOptions, seo = {} } = page;
   const { title: seoTitle = "" } = seo;
   const perPage = pageInfo?.recordPerPage || products.length;
@@ -367,13 +371,17 @@ function SearchResult({ page, ...props }: SectionProps<typeof loader>) {
 }
 export const loader = (props: Props, req: Request, ctx: AppContext) => {
   const {
+    blackFriday = 0,
     pixDiscount = 0,
+    superPromo = 0,
   } = ctx;
 
   return {
     ...props,
     url: req.url,
+    blackFriday,
     pixDiscount,
+    superPromo
   };
 };
 export default SearchResult;

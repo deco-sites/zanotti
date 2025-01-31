@@ -88,5 +88,7 @@
       "channelPrivacy": "public"
     },
     "authToken": {}
-  }
+  },
+  "superPromo": 198,
+  "blackFriday": 197
 }

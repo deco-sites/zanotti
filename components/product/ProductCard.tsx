@@ -21,7 +21,9 @@ interface Props {
   index?: number;
 
   class?: string;
+  superPromo?: number;
   pixDiscount?: number;
+  blackFriday?: number;
   hiddenFlags?: boolean;
   productGroupID?: string;
   hiddenAddToCartButton?: boolean;
@@ -50,6 +52,8 @@ function ProductCard({
   class: _class,
   hiddenFlags = false,
   hiddenAddToCartButton = true,
+  superPromo = 0,
+  blackFriday = 0,
 }: Props) {
   const { url, image: images, offers, isVariantOf, additionalProperty } =
     product;
@@ -84,6 +88,14 @@ function ProductCard({
     prop.propertyID === "200"
   );
 
+  const isSuperPromo = additionalProperty?.some((prop) =>
+    prop.propertyID === superPromo.toString()
+  );
+
+  const isBlackFriday = additionalProperty?.some((prop) =>
+    prop.propertyID === blackFriday.toString()
+  );
+
   const message = encodeURIComponent(
     `Olá, estou interessado nesse produto: ${title}`,
   );
@@ -102,12 +114,12 @@ function ProductCard({
               </span>
             )
             : null}
-          <p class="flag-bf uppercase">
+          {isBlackFriday && <p class="flag-bf uppercase">
             Black Friday
-          </p>
-          <p class="flag-superpromo uppercase">
+          </p>}
+          {isSuperPromo && <p class="flag-superpromo uppercase">
             super promo
-          </p>
+          </p>}
         </div>
         <WishlistButton item={item} variant="icon" />
       </div>

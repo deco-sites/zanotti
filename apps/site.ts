@@ -16,6 +16,16 @@ export type Props = {
    */
   pixDiscount?: number;
   /**
+   * @title Tag Super Promo
+   * @description Aponte o ID da coleção desejada
+   */
+  superPromo?: number;
+  /**
+   * @title Tag Black Friday
+   * @description Aponte o ID da coleção desejada
+   */
+  blackFriday?: number;
+  /**
    * @title Active Commerce Platform
    * @description Choose the active ecommerce platform
    * @default custom
