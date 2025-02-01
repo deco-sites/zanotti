@@ -88,5 +88,22 @@
       "channelPrivacy": "public"
     },
     "authToken": {}
-  }
+  },
+  "superPromo": 198,
+  "blackFriday": 197,
+  "productFlags": [
+    {
+      "textColor": "#fff",
+      "color": "#000000",
+      "text": "Black Friday",
+      "collectionID": "198",
+      "backgroundImage": "https://data.decoassets.com/zanotti/9397377b-232b-4497-b3a3-d55842a16ad2/Unsplash-picture.jpg"
+    },
+    {
+      "textColor": "#FFF",
+      "color": "#064cce",
+      "text": "Super ",
+      "collectionID": "198"
+    }
+  ]
 }

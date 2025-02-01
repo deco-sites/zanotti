@@ -51,7 +51,7 @@ function ProductSuggestionsCard({
       <div class="col-span-1">
         <a href={relativeUrl} aria-label="view product">
           <Image
-            src={front.url!}
+            src={front.url?.replace("-25-25", "-256-256") || ""}
             alt={front.alternateName}
             class="lg:w-full"
             width={WIDTH}

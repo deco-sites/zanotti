@@ -8,6 +8,7 @@ import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalytic
 import type { Product, PropertyValue } from "apps/commerce/types.ts";
 import MinicartAdd from "./MinicartAdd.tsx";
 import Price from "./Price.tsx";
+import { ProductFlag } from "../../apps/site.ts";
 
 interface Props {
   product: Product;
@@ -23,6 +24,7 @@ interface Props {
   class?: string;
   pixDiscount?: number;
   hiddenFlags?: boolean;
+  productFlags: ProductFlag[];
   productGroupID?: string;
   hiddenAddToCartButton?: boolean;
 }
@@ -50,6 +52,7 @@ function ProductCard({
   class: _class,
   hiddenFlags = false,
   hiddenAddToCartButton = true,
+  productFlags,
 }: Props) {
   const { url, image: images, offers, isVariantOf, additionalProperty } =
     product;
@@ -84,6 +87,9 @@ function ProductCard({
     prop.propertyID === "200"
   );
 
+  const propertyIDs = additionalProperty?.map((prop) => prop.propertyID);
+  console.log("propertyIDs", propertyIDs);
+
   const message = encodeURIComponent(
     `Olá, estou interessado nesse produto: ${title}`,
   );
@@ -102,12 +108,27 @@ function ProductCard({
               </span>
             )
             : null}
-          <p class="flag-bf uppercase">
-            Black Friday
-          </p>
-          <p class="flag-superpromo uppercase">
-            super promo
-          </p>
+          {productFlags.map((flag) => {
+            return (
+              <>
+                {propertyIDs?.includes(flag.collectionID) && (
+                  <p 
+                    class="py-2 px-3 text-xs text-white text-semibold z-10 text-center rounded-xl uppercase"
+                    style={{
+                      color: flag.textColor,
+                      backgroundColor: flag.color,
+                      backgroundImage: `url(${flag.backgroundImage ?? ""})`,
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
+                      backgroundSize: "cover"
+                    }}
+                  >
+                    {flag.text}
+                  </p>
+                )}
+              </>
+            )
+          })}
         </div>
         <WishlistButton item={item} variant="icon" />
       </div>

@@ -34,7 +34,6 @@ export default function GallerySlider(props: Props) {
   if (!images) {
     return null;
   }
-  console.log("images", images);
   return (
     <>
       <div id={id} class="flex flex-col">

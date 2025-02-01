@@ -74,9 +74,9 @@ const useUrlRebased = (overrides: string | undefined, base: string) => {
 };
 function PageResult(props: SectionProps<typeof loader>) {
   const {
-    layout,
     startingPage = 0,
-    pixDiscount = 0,
+    pixDiscount,
+    productFlags,
     url,
   } = props;
   const page = props.page!;
@@ -102,6 +102,7 @@ function PageResult(props: SectionProps<typeof loader>) {
         {products?.map((product, index) => (
           <ProductCard
             key={`product-card-${product.productID}`}
+            productFlags={productFlags}
             product={product}
             preload={index === 0}
             pixDiscount={pixDiscount}
@@ -175,7 +176,7 @@ const setPageQuerystring = (page: string, id: string) => {
     return;
   }
   new IntersectionObserver((entries) => {
-    const url = new URL(location.href);
+    const url = new URL(globalThis.location.href);
     const prevPage = url.searchParams.get("page");
     for (let it = 0; it < entries.length; it++) {
       if (entries[it].isIntersecting) {
@@ -195,7 +196,7 @@ function Result(props: SectionProps<typeof loader>) {
   const controls = useId();
   const device = useDevice();
   const page = props.page!;
-  const { startingPage = 0, url, partial, pixDiscount = 0 } = props;
+  const { startingPage = 0, url, partial } = props;
   const { products, filters, breadcrumb, pageInfo, sortOptions, seo = {} } = page;
   const { title: seoTitle = "" } = seo;
   const perPage = pageInfo?.recordPerPage || products.length;
@@ -284,9 +285,6 @@ function Result(props: SectionProps<typeof loader>) {
                       aside={
                         <div class="bg-base-100 flex flex-col h-full divide-y overflow-y-hidden min-w-[85vw]">
                           <div class="flex justify-between items-center bg-primary">
-                            <p class="text-[20px] font-semibold py-[17px] flex items-center text-white px-5">
-                              Filtros
-                            </p>
                             <label class="btn btn-ghost" for={controls}>
                               <Icon id="close-white" />
                             </label>
@@ -329,13 +327,7 @@ function Result(props: SectionProps<typeof loader>) {
               )}
               <div class="grid grid-cols-1 sm:grid-cols-[250px_1fr] gap-12 container">
                 {device === "desktop" && (
-                  <aside class="place-self-start flex flex-col w-full">
-                    <label class="flex justify-between text-base lg:text-lg font-semibold pb-4 flex items-center border-b border-gray-300">
-                      Filtros
-                    </label>
-
-                    <Filters filters={filters} />
-                  </aside>
+                  <Filters filters={filters} />
                 )}
 
                 <div class="flex flex-col gap-10">
@@ -367,13 +359,15 @@ function SearchResult({ page, ...props }: SectionProps<typeof loader>) {
 }
 export const loader = (props: Props, req: Request, ctx: AppContext) => {
   const {
+    productFlags = [],
     pixDiscount = 0,
   } = ctx;
 
   return {
     ...props,
     url: req.url,
-    pixDiscount,
+    productFlags,
+    pixDiscount
   };
 };
 export default SearchResult;

@@ -17,7 +17,10 @@
     {
       "__resolveType": "site/sections/Product/SearchResult.tsx",
       "page": {
-        "__resolveType": "Preview vtex/loaders/intelligentSearch/productListingPage.ts"
+        "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
+        "sort": "OrderByPriceDESC",
+        "count": 12,
+        "filters": "dynamic"
       },
       "layout": {
         "columns": {
