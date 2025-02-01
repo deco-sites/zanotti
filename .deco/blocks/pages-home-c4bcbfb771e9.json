@@ -292,10 +292,10 @@
       "products": {
         "__resolveType": "vtex/loaders/legacy/productList.ts",
         "props": {
-          "sort": "",
+          "sort": "OrderByPriceDESC",
           "term": "fogao",
           "count": 6,
-          "collection": "200"
+          "collection": "196"
         }
       }
     },
@@ -421,15 +421,15 @@
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
-      "title": "Vitrine 1",
+      "title": "Mais vendios",
       "cta": "#",
       "products": {
         "__resolveType": "vtex/loaders/legacy/productList.ts",
         "props": {
-          "sort": "",
+          "sort": "OrderByPriceASC",
           "term": "fogao",
-          "count": 30,
-          "collection": "197"
+          "count": 9,
+          "collection": "144"
         }
       }
     },
@@ -440,7 +440,7 @@
     {
       "__resolveType": "site/sections/Social/InstagramPosts.tsx",
       "nposts": 6,
-      "title": "Siga-nos no @zanotti",
+      "title": "Siga-nos no @zanottirefrigeracao",
       "facebookToken": "aaa"
     },
     {
