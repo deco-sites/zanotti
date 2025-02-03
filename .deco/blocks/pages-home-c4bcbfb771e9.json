@@ -338,7 +338,11 @@
               "Image": "https://placehold.co/320x200",
               "Width": 320,
               "Height": 200
-            }
+            },
+            "link": "/paineis-isotermicos",
+            "alt": "Paineis Isotermicos em EPS voce encontra aqui na Zanotti Refrigeração!",
+            "desktopImage": "https://data.decoassets.com/zanotti/00b3052c-43a8-4f62-ba74-5bedbaee6138/painel1.jpg",
+            "mobileImage": "https://data.decoassets.com/zanotti/8e233aa6-5a47-4032-8871-fa2a32a32011/painel2.jpg"
           },
           {
             "Loading": "eager",
