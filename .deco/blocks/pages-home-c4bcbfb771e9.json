@@ -428,10 +428,10 @@
         "products": {
           "__resolveType": "vtex/loaders/legacy/productList.ts",
           "props": {
-            "sort": "OrderByPriceASC",
+            "sort": "OrderByPriceDESC",
             "term": "fogao",
-            "count": 9,
-            "collection": "145"
+            "count": 12,
+            "collection": "144"
           }
         }
       }
