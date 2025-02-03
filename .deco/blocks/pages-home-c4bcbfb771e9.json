@@ -319,7 +319,8 @@
               "Image": "https://placehold.co/320x200",
               "Width": 320,
               "Height": 200
-            }
+            },
+            "link": "/cafeteiras"
           },
           {
             "Loading": "eager",
@@ -423,7 +424,7 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Product/ProductShelf.tsx",
-        "title": "Mais vendios",
+        "title": "Mais vendidos",
         "cta": "#",
         "products": {
           "__resolveType": "vtex/loaders/legacy/productList.ts",
