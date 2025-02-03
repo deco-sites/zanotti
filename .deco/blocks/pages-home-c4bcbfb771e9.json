@@ -286,16 +286,18 @@
       "size": "medium"
     },
     {
-      "__resolveType": "site/sections/Product/ProductShelf.tsx",
-      "title": "Vitrine 1",
-      "cta": "#",
-      "products": {
-        "__resolveType": "vtex/loaders/legacy/productList.ts",
-        "props": {
-          "sort": "OrderByPriceDESC",
-          "term": "fogao",
-          "count": 6,
-          "collection": "196"
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelf.tsx",
+        "title": "Promoções da Semana",
+        "cta": "#",
+        "products": {
+          "__resolveType": "vtex/loaders/legacy/productList.ts",
+          "props": {
+            "sort": "OrderByPriceASC",
+            "count": 6,
+            "collection": "145"
+          }
         }
       }
     },
