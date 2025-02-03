@@ -320,7 +320,10 @@
               "Width": 320,
               "Height": 200
             },
-            "link": "/cafeteiras"
+            "link": "/cafeteiras",
+            "alt": "Cafeterias automáticas só aqui na Zanotti Refrigeração.",
+            "desktopImage": "https://data.decoassets.com/zanotti/bec5a03b-49e0-4b18-9148-036fbc713756/CAFE.jpg",
+            "mobileImage": "https://data.decoassets.com/zanotti/740760e7-839c-4eae-9f94-201c37f0dacd/CAFE2.jpg"
           },
           {
             "Loading": "eager",
