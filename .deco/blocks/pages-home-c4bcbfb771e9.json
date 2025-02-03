@@ -381,17 +381,17 @@
       "size": "medium"
     },
     {
-      "__resolveType": "site/sections/Product/ProductShelf.tsx",
-      "title": "Vitrine 1",
-      "cta": "#",
-      "products": {
-        "__resolveType": "vtex/loaders/legacy/productList.ts",
-        "props": {
-          "sort": "",
-          "term": "fogao",
-          "count": 31,
-          "fuzzy": "automatic",
-          "query": "geladeira"
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelf.tsx",
+        "title": "Cevejeiras para o seu negócio",
+        "cta": "#",
+        "products": {
+          "__resolveType": "vtex/loaders/legacy/productList.ts",
+          "props": {
+            "term": "cervejeira",
+            "sort": "OrderByPriceASC"
+          }
         }
       }
     },
@@ -420,16 +420,19 @@
       "size": "medium"
     },
     {
-      "__resolveType": "site/sections/Product/ProductShelf.tsx",
-      "title": "Mais vendios",
-      "cta": "#",
-      "products": {
-        "__resolveType": "vtex/loaders/legacy/productList.ts",
-        "props": {
-          "sort": "OrderByPriceASC",
-          "term": "fogao",
-          "count": 9,
-          "collection": "144"
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelf.tsx",
+        "title": "Mais vendios",
+        "cta": "#",
+        "products": {
+          "__resolveType": "vtex/loaders/legacy/productList.ts",
+          "props": {
+            "sort": "OrderByPriceASC",
+            "term": "fogao",
+            "count": 9,
+            "collection": "145"
+          }
         }
       }
     },
