@@ -5,193 +5,103 @@
       "children": [
         {
           "children": [],
-          "url": "#",
-          "name": "Item 1"
+          "url": "/amaciadores-de-carne",
+          "name": "Amaciadores de Carne"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 2"
+          "url": "/amassadeiras",
+          "name": "Amassadeiras"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 3"
+          "url": "/armarios-crescimento-de-paes",
+          "name": "Armários Crescimento de Pães"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 4"
+          "url": "/assadeiras",
+          "name": "Assadeiras"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 5"
+          "url": "/autosservicos",
+          "name": "Autosserviços"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 6"
+          "url": "/balancas",
+          "name": "Balanças"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 7"
+          "url": "/balcoes-estufa",
+          "name": "Balcões Estufa"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 8"
+          "url": "/balcoes-mistos",
+          "name": "Balcões Mistos"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 9"
+          "url": "/balcoes-refrigerados",
+          "name": "Balcões Refrigerados"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 10"
+          "url": "/balcoes-secos",
+          "name": "Balcões Secos"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 11"
+          "url": "/batedeiras",
+          "name": "Batedeiras"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 12"
+          "url": "/batedores-de-milk-shake",
+          "name": "Batedores de Milk Shake"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "url": "/bebedouros",
+          "name": "Bebedouros"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "url": "/buffets",
+          "name": "Buffets"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "url": "/cafeteiras",
+          "name": "Cafeteiras"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "url": "/camaras-climaticas",
+          "name": "Câmaras Climáticas"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "url": "/carrinhos-ambulantes",
+          "name": "Carrinhos Ambulantes"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "url": "/cervejeiras",
+          "name": "Cervejeiras"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "url": "/chapas",
+          "name": "Chapas"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "url": "/char-broilers",
+          "name": "Char Broilers"
         }
       ],
       "name": "Todas as Categorias",
@@ -244,209 +154,6 @@
       "url": "/compre-por-segmentos",
       "name": "Por Segmento",
       "hasNavImage": false
-    },
-    {
-      "children": [],
-      "name": "TVs",
-      "url": "/tv-audio-e-cinema-em-casa/tvs"
-    },
-    {
-      "children": [
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 1"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 2"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 3"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 4"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 5"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 6"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 7"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 8"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 9"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 10"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 11"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 12"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        }
-      ],
-      "name": "Áudio",
-      "url": "/tv-audio-e-cinema-em-casa/audio",
-      "ishighlighted": true,
-      "hasNavImage": true
     },
     {
       "children": [],
