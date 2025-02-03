@@ -409,9 +409,9 @@
           "alt": "Banner BNDS",
           "link": "/"
         },
-        "srcDesktop": "https://placehold.co/1440x400",
-        "srcMobile": "https://placehold.co/640x400",
-        "alt": "imagem",
+        "srcDesktop": "https://data.decoassets.com/zanotti/9130db07-5962-411f-96c6-0507f38fb5cb/retirada.jpg",
+        "srcMobile": "https://data.decoassets.com/zanotti/882dba78-40d9-4272-910f-7fa088b26cb0/retirada2.jpg",
+        "alt": "Banner informando sobre a entrega expressa da Zanotti Refrigeração, compre até as 13:30 e retire no mesmo dia.",
         "link": "#"
       }
     },
@@ -438,10 +438,13 @@
       "size": "medium"
     },
     {
-      "__resolveType": "site/sections/Social/InstagramPosts.tsx",
-      "nposts": 6,
-      "title": "Siga-nos no @zanottirefrigeracao",
-      "facebookToken": "IGAAQUPO4u7mVBZAE1WbGxsY0ZAKLTdaSnJCTllTSjB0d04zd1RiZAk83dzZAtV0RQVFBKZA29rbGw3bjNJV1FCVE9rUTRQcUNhOUIyeXV0ZAE1sZA3dYZAGhLQVcxdHYyVkM0NER6TXhicXlkNWxKSDBVYzJnOE5RTWF0Q3hEdGRHdkllOAZDZD"
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Social/InstagramPosts.tsx",
+        "nposts": 6,
+        "title": "Nos siga no Instagram @zanottirefrigeracao",
+        "facebookToken": "IGAAQUPO4u7mVBZAE1WbGxsY0ZAKLTdaSnJCTllTSjB0d04zd1RiZAk83dzZAtV0RQVFBKZA29rbGw3bjNJV1FCVE9rUTRQcUNhOUIyeXV0ZAE1sZA3dYZAGhLQVcxdHYyVkM0NER6TXhicXlkNWxKSDBVYzJnOE5RTWF0Q3hEdGRHdkllOAZDZD"
+      }
     },
     {
       "__resolveType": "site/sections/Spacer.tsx",
@@ -451,8 +454,8 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Content/SeoComponent.tsx",
-        "title": "Texto base SEO",
-        "content": "<p><span>Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+        "title": "Quem é a Zanotti Refrigeração?",
+        "content": "<p style=\"text-align: justify\"><span style=\"color: rgb(29, 29, 27); font-size: 14px\">A Zanotti Refrigeração é uma empresa com mais de 60 anos de história especializada na comercialização de equipamentos para os segmentos do ramo alimentício e revenda autorizada das principais e melhores marcas para setor gastronômico. Temos todos os equipamentos e instalações para cozinhas industriais, bares, restaurantes, padarias, açougues, supermercados, sorveterias, lojas de conveniências, empórios, entre outros. Além de comercializar tudo que você precisa para iniciar ou expandir um negócio de alimentos, oferecemos também assessoria completa no seu projeto, tirando a sua ideia do papel e tornando realidade o seu sonho de ter o próprio negócio.</span><br><span style=\"color: rgb(29, 29, 27); font-size: 14px\">Possuímos também uma indústria onde fabricamos painéis isotérmicos de EPS que podem ser utilizados como estrutura de câmaras frigoríficas, walk-in coolers, laboratórios, salas limpas, centros de distribuição, áreas de vivência em canteiro de obras, ou qualquer outra área que exija uma montagem de fácil instalação, higiênica e precise de isolação térmica e sonora. Também desenvolvemos projetos dessas aplicações de painéis isotérmicos de EPS simultaneamente com uma assessoria completa, acompanhando você desde a fase inicial do projeto até a montagem e instalação. Nossas indústria é composta por uma moderna linha de produção com máquinas de última geração, onde fabricarmos os painéis isotérmicos, perfis e cantoneiras de forma automatizada. Dessa maneira, fundamentamos a nossa constante busca pela inovação, alinhando qualidade, prazo de produção expresso e preço justo.</span></p>"
       }
     },
     {
