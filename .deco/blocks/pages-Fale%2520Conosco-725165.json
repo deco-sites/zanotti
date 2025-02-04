@@ -26,7 +26,7 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Institutional/Text.tsx",
-        "html": "<h2><strong><span style=\"color: rgb(0, 0, 0)\">Fale conosco</span></strong></h2><p style=\"text-align: start\"><strong>Lorem Ipsum</strong><span style=\"color: rgb(0, 0, 0); font-size: 14px\"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></p>"
+        "html": "<h2><strong><span style=\"color: rgb(0, 0, 0)\">Fale conosco</span></strong></h2><p style=\"text-align: start\">Na Zanotti Refrigeração, estamos sempre prontos para ouvir você. Seja para esclarecer dúvidas, receber sugestões ou prestar suporte, nossa equipe está à disposição para ajudar. Entre em contato conosco através de um dos canais abaixo:<br><strong>Telefone:</strong> Ligue para <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"tel:1639618800\">1639618800</a> de segunda a sexta-feira, das 8h às 18h.</p><p><strong>E-mail:</strong> Envie suas perguntas ou comentários para <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"mailto:atendimento@zanottirefrigeracao.com.br\">atendimento@zanottirefrigeracao.com.br</a></p><p><strong>Formulário de contato:</strong> você também pode preencher o formulário abaixo e retornaremos o mais breve possível.</p>"
       }
     },
     {
