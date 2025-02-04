@@ -5,11 +5,13 @@
       "children": [
         {
           "title": "Sobre a Zanotti",
-          "href": "/sobre-a-zanotti"
+          "href": "/sobre-a-zanotti",
+          "blank": "_blank"
         },
         {
           "href": "/visite-nossa-loja",
-          "title": "Visite Nossa Loja"
+          "title": "Visite Nossa Loja",
+          "blank": "_blank"
         }
       ],
       "title": "Institucional"
@@ -19,13 +21,16 @@
       "children": [
         {
           "title": "Minha Conta",
-          "href": "/account"
+          "href": "/account",
+          "blank": "_blank"
         },
         {
-          "title": "Meus Pedidos"
+          "title": "Meus Pedidos",
+          "blank": "_blank"
         },
         {
-          "title": "Favoritos"
+          "title": "Favoritos",
+          "blank": "_blank"
         }
       ]
     },
@@ -34,23 +39,28 @@
       "children": [
         {
           "title": "Trabalhe Conosco",
-          "href": "/trabalhe-conosco"
+          "href": "/trabalhe-conosco",
+          "blank": "_blank"
         },
         {
           "title": "Dúvidas Frequentes",
-          "href": "/duvidas-frequentes"
+          "href": "/duvidas-frequentes",
+          "blank": "_blank"
         },
         {
           "href": "/politica-de-entrega",
-          "title": "Política de Entrega"
+          "title": "Política de Entrega",
+          "blank": "_blank"
         },
         {
           "href": "/politica-de-privacidade-de-dados",
-          "title": "Política de Privacidade de Dados "
+          "title": "Política de Privacidade de Dados ",
+          "blank": "_blank"
         },
         {
           "title": "Política de troca,  Devolução e Cancelamento",
-          "href": "/politica-de-troca"
+          "href": "/politica-de-troca",
+          "blank": "_blank"
         }
       ],
       "href": "/fale-conosco"
@@ -58,15 +68,18 @@
     {
       "children": [
         {
-          "title": "WhatsApp"
+          "title": "WhatsApp",
+          "blank": "_blank"
         },
         {
           "title": "16 3961-8800",
-          "href": "https://wa.me/1639618800"
+          "href": "https://wa.me/1639618800",
+          "blank": "_blank"
         },
         {
           "title": "sac@zanottirefrigeracao.com.br",
-          "href": "mailto:sac@zanottirefrigeracao.com.br"
+          "href": "mailto:sac@zanottirefrigeracao.com.br",
+          "blank": "_blank"
         }
       ],
       "title": "Sac"

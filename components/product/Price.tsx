@@ -132,9 +132,11 @@ export default function Price({
                   )}
                 </span>
               )}
-            <span class="text-xl font-semibold text-black leading-[1] family-secondary">
+            {
+              /* <span class="text-xl font-semibold text-black leading-[1] family-secondary">
               {formatPrice(price, offers?.priceCurrency)}
-            </span>
+            </span> */
+            }
           </div>
           {hasPixDiscount &&
             (

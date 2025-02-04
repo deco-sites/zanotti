@@ -17,6 +17,11 @@ interface Item {
    * @title Link do item
    */
   href?: string;
+  /**
+   * @title Marque para abrir em uma nova aba?
+   *   * @description Blank em nova aba e noopener manter na aba atual?
+   */
+  blank?: "_blank" | "noopener";
 }
 /** @titleBy title */
 interface Link extends Item {
@@ -70,9 +75,9 @@ interface Props {
    */
   copyright?: string;
 }
-  /**
-   * @titleBy alt
-   */
+/**
+ * @titleBy alt
+ */
 interface Payments {
   /**
    * @title Texto alternativo
@@ -107,9 +112,9 @@ interface Service {
     link?: string;
   };
 }
- /**
-   * @titleBy title
-   */
+/**
+ * @titleBy title
+ */
 interface CertifiedProps {
   /**
    * @title Titulo da sessão de certificados
@@ -255,18 +260,19 @@ function Footer(
                     <>
                       <a
                         class="text-base-200 text-base font-semibold font-secondary"
-                        target="_blank"
+                        target={link?.blank}
                         href={link.href}
                       >
                         {link.title}
                       </a>
                       {link.children && (
                         <ul class="flex flex-col gap-3">
-                          {link.children.map(({ title, href }, subIndex) => (
+                          {link.children.map(({ title, href, blank }, subIndex) => (
                             <li key={subIndex}>
                               <a
                                 class="text-base-200 font-light  family-secondary text-sm"
                                 href={href}
+                                target={blank}
                               >
                                 {title}
                               </a>
@@ -354,14 +360,14 @@ function Footer(
                   >
                     <div class="flex flex-col gap-1 mt-2">
                       {children &&
-                        children.map(({ title, href }) => (
+                        children.map(({ title, href, blank }) => (
                           <li
                             class="flex flex-row gap-1 px-5"
                             key={href}
                           >
                             <a
                               class="text-xs font-normal text-base family-secondary bg-gray-medium py-4 w-full rounded px-2"
-                              target="_blank"
+                              target={blank}
                               href={href}
                             >
                               {title}
