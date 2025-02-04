@@ -17,6 +17,10 @@ interface Item {
    * @title Link do item
    */
   href?: string;
+    /**
+   * @title Abrir em nova aba?
+   */
+  href?: string;
 }
 /** @titleBy title */
 interface Link extends Item {
