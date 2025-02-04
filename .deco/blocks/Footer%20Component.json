@@ -4,12 +4,16 @@
     {
       "children": [
         {
-          "title": "Sobre a Zanotti",
+          "title": "Quem Somos",
           "href": "/sobre-a-zanotti"
         },
         {
           "href": "/visite-nossa-loja",
-          "title": "Visite Nossa Loja"
+          "title": "Visite Nossa Loja Física"
+        },
+        {
+          "title": "Nosso Blog",
+          "href": "https://blog.zanottirefrigeracao.com.br/"
         }
       ],
       "title": "Institucional"
