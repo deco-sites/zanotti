@@ -102,11 +102,175 @@
           "children": [],
           "url": "/char-broilers",
           "name": "Char Broilers"
+        },
+        {
+          "name": "Check-Outs",
+          "url": "/check-outs"
+        },
+        {
+          "name": "Cilindros Laminadores",
+          "url": "/cilindros-laminadores"
+        },
+        {
+          "name": "Conservadores de Frituras",
+          "url": "/conservadores-de-frituras"
+        },
+        {
+          "name": "Cortadores de Frios",
+          "url": "/cortadores-de-frios"
+        },
+        {
+          "name": "Cozedores de Massa",
+          "url": "/cozedores-de-massa"
+        },
+        {
+          "name": "Descascadores e Raladores",
+          "url": "/descascadores-e-raladores"
+        },
+        {
+          "name": "Embaladoras e Seladoras",
+          "url": "/embaladoras-e-seladoras"
+        },
+        {
+          "name": "Ensacadeiras de Linguiça",
+          "url": "/ensacadeiras-de-linguica"
+        },
+        {
+          "name": "Esteiras de Pães",
+          "url": "/esteiras-de-paes"
+        },
+        {
+          "name": "Estufas De Salgados",
+          "url": "/estufas"
+        },
+        {
+          "name": "Extratores de Suco",
+          "url": "/extratores-de-suco"
+        },
+        {
+          "name": "Fogões Industriais",
+          "url": "/fogoes"
+        },
+        {
+          "name": "Fornos",
+          "url": "/fornos"
+        },
+        {
+          "name": "Fornos Combinados",
+          "url": "/fornos-combinados"
+        },
+        {
+          "name": "Frangueiras",
+          "url": "/frangueiras"
+        },
+        {
+          "name": "Freezers",
+          "url": "/freezers"
+        },
+        {
+          "name": "Fritadeiras",
+          "url": "/fritadeiras"
+        },
+        {
+          "name": "Ilhas de Congelados",
+          "url": "/ilhas-de-congelados"
+        },
+        {
+          "name": "Liquidificadores",
+          "url": "/liquidificadores"
+        },
+        {
+          "name": "Máquinas de Crepe",
+          "url": "/maquinas-de-crepe"
+        },
+        {
+          "name": "Máquinas de Gelo",
+          "url": "/maquinas-de-gelo"
+        },
+        {
+          "name": "Marmiteiros",
+          "url": "/marmiteiros"
+        },
+        {
+          "name": "Minicâmaras",
+          "url": "/minicamaras"
+        },
+        {
+          "name": "Misturelas",
+          "url": "/misturelas"
+        },
+        {
+          "name": "Moedores de Café",
+          "url": "/moedores-de-cafe"
+        },
+        {
+          "name": "Moedores de Carne",
+          "url": "/moedores-de-carne"
+        },
+        {
+          "name": "Moinhos de Pão",
+          "url": "/moinhos-de-pao"
+        },
+        {
+          "name": "Panquequeiras",
+          "url": "/panquequeiras"
+        },
+        {
+          "name": "Pass-Throughs",
+          "url": "/pass-throughs"
+        },
+        {
+          "name": "Processadores de Alimentos",
+          "url": "/processadores-de-alimentos"
+        },
+        {
+          "name": "Serras Fita",
+          "url": "/serras-fita"
+        },
+        {
+          "name": "Ultracongeladores",
+          "url": "/ultracongeladores"
+        },
+        {
+          "name": "Visa Coolers",
+          "url": "/visa-coolers"
         }
       ],
-      "name": "Todas as Categorias",
+      "name": "Equipamentos",
       "url": "#",
       "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/2718f014-f059-4fce-affb-0a1bf1cd3a66/alt.svg"
+    },
+    {
+      "children": [
+        {
+          "url": "/acessorios-de-camara-fria",
+          "name": "Acessórios de Camara Fria",
+          "children": []
+        },
+        {
+          "name": "Estantes Para Câmara Fria",
+          "url": "/estantes-para-camara-fria",
+          "children": []
+        },
+        {
+          "name": "Painéis Isotérmicos",
+          "url": "/painéis-isotermicos",
+          "children": []
+        },
+        {
+          "name": "Rebites",
+          "url": "/rebites",
+          "children": []
+        },
+        {
+          "name": "Selantes de PU",
+          "url": "/selantes-de-pu",
+          "children": []
+        }
+      ],
+      "url": "#",
+      "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/2718f014-f059-4fce-affb-0a1bf1cd3a66/alt.svg",
+      "name": "Câmaras Frias"
     },
     {
       "children": [
@@ -151,8 +315,8 @@
           "url": "equipamentos-para-supermercado"
         }
       ],
-      "url": "/compre-por-segmentos",
       "name": "Por Segmento",
+      "url": "/compre-por-segmentos",
       "hasNavImage": false
     },
     {
