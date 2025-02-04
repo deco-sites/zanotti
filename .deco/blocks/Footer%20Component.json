@@ -12,6 +12,11 @@
           "href": "/visite-nossa-loja",
           "title": "Visite Nossa Loja",
           "blank": "_blank"
+        },
+        {
+          "blank": "_blank",
+          "title": "Nosso Blog",
+          "href": "https://blog.zanottirefrigeracao.com.br/"
         }
       ],
       "title": "Institucional"
