@@ -50,20 +50,20 @@
         },
         "questions": [
           {
-            "answer": "<p>resposta aqui</p>",
+            "answer": "<p style=\"text-align: justify\">Fazer uma compra na Zanotti Refrigeração é simples e rápido. Siga os passos abaixo:</p><p style=\"text-align: justify\"><strong>1) Explore nossos produtos:</strong> Se busca equipamentos gastronômicos, pode buscar no menu acima \"Equipamentos\" ou se busca soluções para câmaras frias, acesse o menu acima \"Câmaras Frias\". Ou voce também pode digitar o que procura no campo de busca na parte superior do site.</p><p style=\"text-align: justify\"><strong>2) Selecione o produto desejado:</strong> Clique no produto que acredita melhor atender às suas necessidades para abrir a página do mesmo e verificar sobre as características técnicas. Dentro da página do produto voce também pode conferir os valores e as condições de pagamento.</p><p style=\"text-align: justify\"><strong>3) Para comprar:</strong> Selecione a variação desejada do produto (cor, voltagem, tamanho, etc...) e o adicione ao carrinho. Após isso, siga para o seu cadastro em nosso site. No checkout, faça o pagamento e aguarde a entrega. Você receberá e-mails de todo o processo de compra, por isso é importante colocar os dados corretos no cadastro.</p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\">Se precisar de assistência em qualquer etapa do processo, nossa equipe está à disposição para ajudar!</p>",
             "question": "Como posso fazer um pedido?"
           },
           {
-            "answer": "<p>We accept various payment methods to provide convenience to our customers. You can securely pay for your order using major credit cards like Visa, Mastercard, and American Express. We also accept payments through PayPal for added flexibility. Please note that we do not accept cash on delivery or personal checks at the moment.</p>",
-            "question": "What payment methods are accepted?"
+            "answer": "<p>Aceitamos os meio de pagamento mais comuns do mercado:<br>- PIX à vista<br>- Boleto à vista<br>- Cartão de crédito em até 12x</p>",
+            "question": "Quais métodos de pagamento são aceitos?"
           },
           {
-            "answer": "<p>Absolutely! We want you to be completely satisfied with your purchase. If you change your mind about an item, we offer a hassle-free return and exchange policy. You can initiate a return within 30 days of receiving your order. The item should be in its original condition, unworn, and with all tags attached. Simply contact our customer support team with your order details, and they will guide you through the return or exchange process.</p>",
-            "question": "Can I return or exchange an item?"
+            "answer": "<p>Sim, voce pode, desde que essa ação seja permitido pelo nossos termos de troca e devolução. Visite a nossa página da <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"/politica-de-troca\">política de troca</a> para verificar os termos.</p>",
+            "question": "Posso devolver ou trocar um item?"
           },
           {
-            "answer": "<p>We understand the excitement of awaiting your fashion finds, so we offer order tracking to keep you informed. Once your order is shipped, we will send you a confirmation email containing a tracking number and a link to the courier's website. You can click on the link or visit the courier's website directly and enter the tracking number to check the status and whereabouts of your package.</p><p><br></p>",
-            "question": "How can I track my order?"
+            "answer": "<p>Voce poderá rastrear o seu pedido de diversas maneiras:</p><p><br></p>",
+            "question": "Como posso rastrear meu pedido?"
           },
           {
             "answer": "<p>Yes, we offer international shipping to many countries around the world. During the checkout process, you can select your country from the list of available destinations. Please note that international shipping fees may apply, and additional customs duties or taxes may be charged by your country's customs authorities. These charges are the responsibility of the customer and are not included in the item price or shipping cost.</p>",
