@@ -18,8 +18,9 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Images/FulllBanner.tsx",
-        "srcDesktop": "https://data.decoassets.com/zanotti/f7e1333d-05c6-48ad-9659-2768c820b162/Banner.png",
-        "srcMobile": "https://data.decoassets.com/zanotti/d9b4a55d-f553-4815-8417-dfdd9e10ed77/Frame-37153.png"
+        "srcDesktop": "https://data.decoassets.com/zanotti/432631fe-c78f-4ab1-a53b-de1a266892b6/priv1.jpg",
+        "srcMobile": "https://data.decoassets.com/zanotti/87e6f11a-f26e-44bf-92b0-50ce47d22c74/priv2.jpg",
+        "alt": "POLÍTICA DE PRIVACIDADE DE DADOS DA ZANOTTI REFRIGERAÇÃO"
       }
     },
     {
