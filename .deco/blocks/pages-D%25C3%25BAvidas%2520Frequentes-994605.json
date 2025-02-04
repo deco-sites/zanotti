@@ -62,7 +62,7 @@
             "question": "Posso devolver ou trocar um item?"
           },
           {
-            "answer": "<p>Voce poderá rastrear o seu pedido de diversas maneiras:</p><p><br></p>",
+            "answer": "<p>Voce poderá rastrear o seu pedido de diversas maneiras<br></p>",
             "question": "Como posso rastrear meu pedido?"
           },
           {
