@@ -18,10 +18,9 @@ interface Item {
    */
   href?: string;
   /**
-   * @title Marque para abrir em uma nova aba?
-   *   * @description Blank em nova aba e noopener manter na aba atual?
+   * @title Marque para abrir em uma nova aba
    */
-  blank?: "_blank" | "noopener";
+  blank?: boolean;
 }
 /** @titleBy title */
 interface Link extends Item {
@@ -272,7 +271,7 @@ function Footer(
                               <a
                                 class="text-base-200 font-light  family-secondary text-sm"
                                 href={href}
-                                target={blank}
+                                target={blank && '_blank'}
                               >
                                 {title}
                               </a>
@@ -367,7 +366,7 @@ function Footer(
                           >
                             <a
                               class="text-xs font-normal text-base family-secondary bg-gray-medium py-4 w-full rounded px-2"
-                              target={blank}
+                              target={blank && '_blank'}
                               href={href}
                             >
                               {title}

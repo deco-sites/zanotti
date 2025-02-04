@@ -6,12 +6,12 @@
         {
           "title": "Quem Somos",
           "href": "/sobre-a-zanotti",
-          "blank": "_blank"
+          "blank": false
         },
         {
           "href": "/visite-nossa-loja",
           "title": "Visite Nossa Loja",
-          "blank": "_blank"
+          "blank": false
         }
       ],
       "title": "Institucional"
@@ -22,15 +22,15 @@
         {
           "title": "Minha Conta",
           "href": "/account",
-          "blank": "_blank"
+          "blank": true
         },
         {
           "title": "Meus Pedidos",
-          "blank": "_blank"
+          "blank": true
         },
         {
           "title": "Favoritos",
-          "blank": "_blank"
+          "blank": true
         }
       ]
     },
@@ -40,27 +40,27 @@
         {
           "title": "Trabalhe Conosco",
           "href": "/trabalhe-conosco",
-          "blank": "_blank"
+          "blank": false
         },
         {
           "title": "Dúvidas Frequentes",
           "href": "/duvidas-frequentes",
-          "blank": "_blank"
+          "blank": false
         },
         {
           "href": "/politica-de-entrega",
           "title": "Política de Entrega",
-          "blank": "_blank"
+          "blank": false
         },
         {
           "href": "/politica-de-privacidade-de-dados",
           "title": "Política de Privacidade de Dados ",
-          "blank": "_blank"
+          "blank": false
         },
         {
           "title": "Política de troca,  Devolução e Cancelamento",
           "href": "/politica-de-troca",
-          "blank": "_blank"
+          "blank": false
         }
       ],
       "href": "/fale-conosco"
@@ -69,17 +69,17 @@
       "children": [
         {
           "title": "WhatsApp",
-          "blank": "_blank"
+          "blank": false
         },
         {
           "title": "16 3961-8800",
           "href": "https://wa.me/1639618800",
-          "blank": "_blank"
+          "blank": false
         },
         {
           "title": "sac@zanottirefrigeracao.com.br",
           "href": "mailto:sac@zanottirefrigeracao.com.br",
-          "blank": "_blank"
+          "blank": false
         }
       ],
       "title": "Sac"
