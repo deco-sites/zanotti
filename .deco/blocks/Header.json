@@ -5,406 +5,319 @@
       "children": [
         {
           "children": [],
-          "url": "#",
-          "name": "Item 1"
+          "url": "/amaciadores-de-carne",
+          "name": "Amaciadores de Carne"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 2"
+          "url": "/amassadeiras",
+          "name": "Amassadeiras"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 3"
+          "url": "/armarios-crescimento-de-paes",
+          "name": "Armários Crescimento de Pães"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 4"
+          "url": "/assadeiras",
+          "name": "Assadeiras"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 5"
+          "url": "/autosservicos",
+          "name": "Autosserviços"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 6"
+          "url": "/balancas",
+          "name": "Balanças"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 7"
+          "url": "/balcoes-estufa",
+          "name": "Balcões Estufa"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 8"
+          "url": "/balcoes-mistos",
+          "name": "Balcões Mistos"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 9"
+          "url": "/balcoes-refrigerados",
+          "name": "Balcões Refrigerados"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 10"
+          "url": "/balcoes-secos",
+          "name": "Balcões Secos"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 11"
+          "url": "/batedeiras",
+          "name": "Batedeiras"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 12"
+          "url": "/batedores-de-milk-shake",
+          "name": "Batedores de Milk Shake"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "url": "/bebedouros",
+          "name": "Bebedouros"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "url": "/buffets",
+          "name": "Buffets"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "url": "/cafeteiras",
+          "name": "Cafeteiras"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "url": "/camaras-climaticas",
+          "name": "Câmaras Climáticas"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "url": "/carrinhos-ambulantes",
+          "name": "Carrinhos Ambulantes"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "url": "/cervejeiras",
+          "name": "Cervejeiras"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "url": "/chapas",
+          "name": "Chapas"
         },
         {
           "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "url": "/char-broilers",
+          "name": "Char Broilers"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "name": "Check-Outs",
+          "url": "/check-outs"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "name": "Cilindros Laminadores",
+          "url": "/cilindros-laminadores"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "name": "Conservadores de Frituras",
+          "url": "/conservadores-de-frituras"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "name": "Cortadores de Frios",
+          "url": "/cortadores-de-frios"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "name": "Cozedores de Massa",
+          "url": "/cozedores-de-massa"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "name": "Descascadores e Raladores",
+          "url": "/descascadores-e-raladores"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "name": "Embaladoras e Seladoras",
+          "url": "/embaladoras-e-seladoras"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "name": "Ensacadeiras de Linguiça",
+          "url": "/ensacadeiras-de-linguica"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "name": "Esteiras de Pães",
+          "url": "/esteiras-de-paes"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "name": "Estufas De Salgados",
+          "url": "/estufas"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "name": "Extratores de Suco",
+          "url": "/extratores-de-suco"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "name": "Fogões Industriais",
+          "url": "/fogoes"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "name": "Fornos",
+          "url": "/fornos"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "name": "Fornos Combinados",
+          "url": "/fornos-combinados"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "name": "Frangueiras",
+          "url": "/frangueiras"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "name": "Freezers",
+          "url": "/freezers"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "name": "Fritadeiras",
+          "url": "/fritadeiras"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "name": "Ilhas de Congelados",
+          "url": "/ilhas-de-congelados"
+        },
+        {
+          "name": "Liquidificadores",
+          "url": "/liquidificadores"
+        },
+        {
+          "name": "Máquinas de Crepe",
+          "url": "/maquinas-de-crepe"
+        },
+        {
+          "name": "Máquinas de Gelo",
+          "url": "/maquinas-de-gelo"
+        },
+        {
+          "name": "Marmiteiros",
+          "url": "/marmiteiros"
+        },
+        {
+          "name": "Minicâmaras",
+          "url": "/minicamaras"
+        },
+        {
+          "name": "Misturelas",
+          "url": "/misturelas"
+        },
+        {
+          "name": "Moedores de Café",
+          "url": "/moedores-de-cafe"
+        },
+        {
+          "name": "Moedores de Carne",
+          "url": "/moedores-de-carne"
+        },
+        {
+          "name": "Moinhos de Pão",
+          "url": "/moinhos-de-pao"
+        },
+        {
+          "name": "Panquequeiras",
+          "url": "/panquequeiras"
+        },
+        {
+          "name": "Pass-Throughs",
+          "url": "/pass-throughs"
+        },
+        {
+          "name": "Processadores de Alimentos",
+          "url": "/processadores-de-alimentos"
+        },
+        {
+          "name": "Serras Fita",
+          "url": "/serras-fita"
+        },
+        {
+          "name": "Ultracongeladores",
+          "url": "/ultracongeladores"
+        },
+        {
+          "name": "Visa Coolers",
+          "url": "/visa-coolers"
         }
       ],
-      "name": "Todas as Categorias",
+      "name": "Equipamentos",
       "url": "#",
       "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/2718f014-f059-4fce-affb-0a1bf1cd3a66/alt.svg"
     },
     {
-      "children": [],
-      "name": "Casa",
-      "url": "/casa"
-    },
-    {
-      "children": [],
-      "name": "TVs",
-      "url": "/tv-audio-e-cinema-em-casa/tvs"
+      "children": [
+        {
+          "url": "/acessorios-de-camara-fria",
+          "name": "Acessórios de Camara Fria",
+          "children": []
+        },
+        {
+          "name": "Estantes Para Câmara Fria",
+          "url": "/estantes-para-camara-fria",
+          "children": []
+        },
+        {
+          "name": "Painéis Isotérmicos",
+          "url": "/painéis-isotermicos",
+          "children": []
+        },
+        {
+          "name": "Rebites",
+          "url": "/rebites",
+          "children": []
+        },
+        {
+          "name": "Selantes de PU",
+          "url": "/selantes-de-pu",
+          "children": []
+        }
+      ],
+      "url": "#",
+      "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/2718f014-f059-4fce-affb-0a1bf1cd3a66/alt.svg",
+      "name": "Câmaras Frias"
     },
     {
       "children": [
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 1"
+          "url": "equipamentos-para-acougue",
+          "name": "Equipamentos para Açougue"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 2"
+          "name": "Equipamentos para Cafeteria",
+          "url": "equipamentos-para-cafeteria"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 3"
+          "name": "Equipamentos para Empório",
+          "url": "equipamentos-para-emporio"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 4"
+          "name": "Equipamentos para Hamburgueria",
+          "url": "Equipamentos-para-hamburgueria"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 5"
+          "name": "Equipamentos para Lanchonete e Bar",
+          "url": "equipamentos-para-lanchonete-e-bar"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 6"
+          "name": "Equipamentos para Loja de Conveniência",
+          "url": "equipamentos-para-loja-de-conveniencia"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 7"
+          "name": "Equipamentos para Padaria",
+          "url": "equipamentos-para-padaria"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 8"
+          "name": "Equipamentos para Pizzaria",
+          "url": "https://www.zanottirefrigeracao.com.br/equipamentos-para-pizzaria"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 9"
+          "name": "Equipamentos Residenciais",
+          "url": "equipamentos-residenciais"
         },
         {
-          "children": [],
-          "url": "#",
-          "name": "Item 10"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 11"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 12"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
-        },
-        {
-          "children": [],
-          "url": "#",
-          "name": "Item 13"
+          "name": "Equipamentos para Supermercado",
+          "url": "equipamentos-para-supermercado"
         }
       ],
-      "name": "Áudio",
-      "url": "/tv-audio-e-cinema-em-casa/audio",
-      "ishighlighted": true,
-      "hasNavImage": true
+      "name": "Por Segmento",
+      "url": "/compre-por-segmentos",
+      "hasNavImage": false
     },
     {
       "children": [],
@@ -423,9 +336,9 @@
     }
   },
   "alerts": [
-    "<p>Get 10% off today: <strong>NEW10</strong></p>",
-    "<p>Get 10% off today: <strong>NEW10</strong></p>",
-    "<p>Get 10% off today: <strong>NEW10</strong></p>"
+    "<p>Zanotti Refrigeração, <strong>67 anos de história!</strong></p>",
+    "<p>Sua primeira compra? Use o cupom: <strong>PRIMEIRACOMPRA</strong></p>",
+    "<p><strong>Frete grátis </strong>para Ribeirão Preto/SP e Bonfim Paulista/SP</p>"
   ],
   "variant": "initial",
   "logo": {

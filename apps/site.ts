@@ -9,12 +9,45 @@ import { color as nuvemshop } from "apps/nuvemshop/mod.ts";
 import { rgb24 } from "std/fmt/colors.ts";
 import manifest, { type Manifest } from "../manifest.gen.ts";
 import { type App as A, type AppContext as AC } from "@deco/deco";
+import { Color, ImageWidget } from "apps/admin/widgets.ts";
+/**
+ * @titleBy text
+ */
+export interface ProductFlag {
+  /**
+   * @title Cor do texto
+   */
+  textColor: Color,
+  /**
+   * @title Texto da Flag
+   * @description Aponte o ID da coleção desejada
+   */
+  text: string,
+  /**
+   * @title Cor de fundo da Flag
+   */
+  color: Color,
+  /**
+   * @title ID da coleção do produto
+   * @description Aponte o ID da coleção desejada
+   */
+  collectionID: string,
+  /**
+   * @title Imagem de background da Flag
+   */
+  backgroundImage?: ImageWidget
+}
 export type Props = {
   /**
    * @title Desconto no Pix
    * @description Adicione o valor percentual
    */
   pixDiscount?: number;
+  /**
+   * @title Flags de Produto
+   * @description Aponte o ID da coleção desejada
+   */
+  productFlags?: ProductFlag[],
   /**
    * @title Active Commerce Platform
    * @description Choose the active ecommerce platform

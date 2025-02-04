@@ -5,8 +5,11 @@ import Section, {
 
 /** @titleBy question */
 export interface Question {
+  /** @title Pergunta */
   question: string;
-  answer: HTMLWidget;
+  /** @title Resposta */
+  /** @format rich-text */
+  answer: string;
 }
 
 export interface Contact {

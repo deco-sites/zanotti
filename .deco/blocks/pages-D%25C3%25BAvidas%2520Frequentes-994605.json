@@ -28,7 +28,7 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Institutional/Text.tsx",
-        "html": "<h2><strong><span style=\"color: rgb(0, 0, 0)\">FAQ</span></strong></h2><p style=\"text-align: start\"><span>Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+        "html": "<h2><strong><span style=\"color: rgb(0, 0, 0)\">DÚVIDAS FREQUENTES</span></strong></h2><p style=\"text-align: start\">Nesta seção, você encontrará respostas para as perguntas mais comuns dos nossos clientes. Caso não encontre a informação que procura, não hesite em entrar em contato conosco através dos nossos canais de comunicação. Estamos aqui para ajudar e lhe garantir uma compra segura e rápida.</p>"
       }
     },
     {
@@ -50,8 +50,8 @@
         },
         "questions": [
           {
-            "answer": "<p>Placing an order on our fashion retail website is easy! Simply browse through our collection, select the items you love, choose your preferred size and color, and click on the \"Add to Cart\" button. Once you have finished shopping, proceed to the checkout page, provide your shipping and payment information, and confirm your order. Voila! Your order will be on its way to you soon.</p>",
-            "question": "How can I place an order?"
+            "answer": "<p>resposta aqui</p>",
+            "question": "Como posso fazer um pedido?"
           },
           {
             "answer": "<p>We accept various payment methods to provide convenience to our customers. You can securely pay for your order using major credit cards like Visa, Mastercard, and American Express. We also accept payments through PayPal for added flexibility. Please note that we do not accept cash on delivery or personal checks at the moment.</p>",

@@ -2,11 +2,11 @@
   "seo": {
     "type": "website",
     "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/6e91361f-9633-4b91-8638-8c1040a26c4a/logo-zanotti.svg",
-    "title": "Zanotti",
+    "title": "Zanotti Refrigeração",
     "jsonLDs": [],
     "noIndexing": false,
     "description": "A Zanotti Refrigeração é uma empresa brasileira com 67 anos de história onde você compra os seus equipamentos para qualquer negócio do ramo alimentício.",
-    "favicon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/6e91361f-9633-4b91-8638-8c1040a26c4a/logo-zanotti.svg",
+    "favicon": "https://data.decoassets.com/zanotti/593920ea-afc1-4fcd-9fa0-5ca2e05c4878/icon.png",
     "themeColor": "#004BCC",
     "descriptionTemplate": "%s",
     "titleTemplate": "%s"
@@ -88,5 +88,22 @@
       "channelPrivacy": "public"
     },
     "authToken": {}
-  }
+  },
+  "superPromo": 198,
+  "blackFriday": 197,
+  "productFlags": [
+    {
+      "textColor": "#fff",
+      "color": "#000000",
+      "text": "Black Friday",
+      "collectionID": "198",
+      "backgroundImage": "https://data.decoassets.com/zanotti/9397377b-232b-4497-b3a3-d55842a16ad2/Unsplash-picture.jpg"
+    },
+    {
+      "textColor": "#FFF",
+      "color": "#064cce",
+      "text": "Super ",
+      "collectionID": "198"
+    }
+  ]
 }

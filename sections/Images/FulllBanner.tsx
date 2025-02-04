@@ -20,7 +20,7 @@ interface Props {
   alt: string;
   /**
    * @title  Link da Imagem
-URL caso existir
+   * @description Obrigatório preenchimento para leitores de tela
    */
   link?: string;
 }
@@ -56,7 +56,7 @@ export default function FulllBanner(props: Props) {
           <Image
             height={400}
             width={640}
-            class="rounded-xl"
+            class="rounded-xl w-full"
             src={srcMobile || srcDesktop}
             alt={alt}
           />

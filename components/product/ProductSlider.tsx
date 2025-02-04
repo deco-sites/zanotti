@@ -4,14 +4,16 @@ import { Product } from "apps/commerce/types.ts";
 import Icon from "../ui/Icon.tsx";
 import Slider from "../ui/Slider.tsx";
 import ProductCard from "./ProductCard.tsx";
+import { ProductFlag } from "../../apps/site.ts";
 
 interface Props {
+  productFlags: ProductFlag[];
   products: Product[];
   pixDiscount?: number;
   itemListName?: string;
 }
 
-function ProductSlider({ products, itemListName, pixDiscount = 0 }: Props) {
+function ProductSlider({ products, itemListName, pixDiscount, productFlags }: Props) {
   const id = useId();
   return (
     <>
@@ -32,6 +34,7 @@ function ProductSlider({ products, itemListName, pixDiscount = 0 }: Props) {
                 )}
               >
                 <ProductCard
+                  productFlags={productFlags}
                   index={index}
                   product={product}
                   pixDiscount={pixDiscount}
