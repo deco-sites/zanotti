@@ -35,7 +35,7 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Content/Faq.tsx",
-        "title": "Perguntas frequentes",
+        "title": "Perguntas Frequentes",
         "layout": {
           "variation": "Compact",
           "headerAlignment": "center"
@@ -62,12 +62,12 @@
             "question": "Posso devolver ou trocar um item?"
           },
           {
-            "answer": "<p>Pedidos pelos Correios:</p>",
+            "answer": "<p>Entre em contato com a nossa equipe após a compra para receber os dados de rastreio.</p>",
             "question": "Como posso rastrear meu pedido?"
           },
           {
-            "answer": "<p>Yes, we offer international shipping to many countries around the world. During the checkout process, you can select your country from the list of available destinations. Please note that international shipping fees may apply, and additional customs duties or taxes may be charged by your country's customs authorities. These charges are the responsibility of the customer and are not included in the item price or shipping cost.</p>",
-            "question": "Do you offer international shipping?"
+            "answer": "<p>A Zanotti Refrigeração apenas faz envios para dentro do Brasil</p>",
+            "question": "Vocês oferecem frete internacional?"
           }
         ],
         "description": "Your Questions Answered"
