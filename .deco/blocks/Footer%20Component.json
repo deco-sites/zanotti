@@ -6,12 +6,12 @@
         {
           "title": "Quem Somos",
           "href": "/sobre-a-zanotti",
-          "blank": "_blank"
+          "blank": "noopener"
         },
         {
           "href": "/visite-nossa-loja",
           "title": "Visite Nossa Loja",
-          "blank": "_blank"
+          "blank": "noopener"
         },
         {
           "blank": "_blank",
@@ -27,15 +27,15 @@
         {
           "title": "Minha Conta",
           "href": "/account",
-          "blank": "_blank"
+          "blank": "noopener"
         },
         {
           "title": "Meus Pedidos",
-          "blank": "_blank"
+          "blank": "noopener"
         },
         {
           "title": "Favoritos",
-          "blank": "_blank"
+          "blank": "noopener"
         }
       ]
     },
@@ -45,27 +45,27 @@
         {
           "title": "Trabalhe Conosco",
           "href": "/trabalhe-conosco",
-          "blank": "_blank"
+          "blank": "noopener"
         },
         {
           "title": "Dúvidas Frequentes",
           "href": "/duvidas-frequentes",
-          "blank": "_blank"
+          "blank": "noopener"
         },
         {
           "href": "/politica-de-entrega",
           "title": "Política de Entrega",
-          "blank": "_blank"
+          "blank": "noopener"
         },
         {
           "href": "/politica-de-privacidade-de-dados",
           "title": "Política de Privacidade de Dados ",
-          "blank": "_blank"
+          "blank": "noopener"
         },
         {
           "title": "Política de troca,  Devolução e Cancelamento",
           "href": "/politica-de-troca",
-          "blank": "_blank"
+          "blank": "noopener"
         }
       ],
       "href": "/fale-conosco"
