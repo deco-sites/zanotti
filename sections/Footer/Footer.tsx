@@ -19,7 +19,7 @@ interface Item {
   href?: string;
   /**
    * @title Marque para abrir em uma nova aba?
-   *   * @description Blank em nova aba e noopener manter na aba atual?
+   *   * @description Blank abre em nova aba, noopener mantém na aba atual.
    */
   blank?: "_blank" | "noopener";
 }
