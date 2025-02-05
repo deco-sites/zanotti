@@ -20,8 +20,9 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Images/FulllBanner.tsx",
-        "srcDesktop": "https://data.decoassets.com/zanotti/f7e1333d-05c6-48ad-9659-2768c820b162/Banner.png",
-        "srcMobile": "https://data.decoassets.com/zanotti/d9b4a55d-f553-4815-8417-dfdd9e10ed77/Frame-37153.png"
+        "srcDesktop": "https://data.decoassets.com/zanotti/6a2fdeb1-8928-43ce-847e-7de7900c7220/Unsplash-picture.jpg",
+        "srcMobile": "https://data.decoassets.com/zanotti/6a2fdeb1-8928-43ce-847e-7de7900c7220/Unsplash-picture.jpg",
+        "alt": "Perguntas frequentes"
       }
     },
     {
@@ -35,7 +36,6 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Content/Faq.tsx",
-        "title": "Perguntas Frequentes",
         "layout": {
           "variation": "Compact",
           "headerAlignment": "center"
