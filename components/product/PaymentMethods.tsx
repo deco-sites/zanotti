@@ -45,8 +45,23 @@ function PaymentMethods({ offers }: PaymentMethodsProps) {
           // @ts-ignore showModal exists on DaisyUI
           document.getElementById("payment-methods")?.showModal()
         )}
-        class="underline text-primary text-left"
+        class="underline text-primary text-left flex items-center gap-2 lg:gap-3"
       >
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16.5 3L1.5 3.00002C0.947715 3.00002 0.5 3.44774 0.5 4.00002V14.6C0.5 15.1523 0.947715 15.6 1.5 15.6L16.5 15.6C17.0523 15.6 17.5 15.1523 17.5 14.6V4C17.5 3.44772 17.0523 3 16.5 3Z"
+            stroke="#064cce"
+          >
+          </path>
+          <rect y="6" width="18" height="3" fill="#064cce"></rect>
+        </svg>
+
         Opções de Parcelamento
       </button>
       <dialog id="payment-methods" class="modal">

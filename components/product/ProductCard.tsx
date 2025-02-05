@@ -86,7 +86,6 @@ function ProductCard({
   const isPriceHidden = additionalProperty?.some((prop) =>
     prop.propertyID === "200"
   );
-
   const propertyIDs = additionalProperty?.map((prop) => prop.propertyID);
   console.log("propertyIDs", propertyIDs);
 
@@ -112,7 +111,7 @@ function ProductCard({
             return (
               <>
                 {propertyIDs?.includes(flag.collectionID) && (
-                  <p 
+                  <p
                     class="py-2 px-3 text-xs text-white text-semibold z-10 text-center rounded-xl uppercase"
                     style={{
                       color: flag.textColor,
@@ -120,14 +119,14 @@ function ProductCard({
                       backgroundImage: `url(${flag.backgroundImage ?? ""})`,
                       backgroundPosition: "center",
                       backgroundRepeat: "no-repeat",
-                      backgroundSize: "cover"
+                      backgroundSize: "cover",
                     }}
                   >
                     {flag.text}
                   </p>
                 )}
               </>
-            )
+            );
           })}
         </div>
         <WishlistButton item={item} variant="icon" />
@@ -162,7 +161,7 @@ function ProductCard({
                 Consultar Preço
               </a>
             )
-            : (
+            :  (
               <Price
                 type="shelf"
                 pixDiscount={pixDiscount}
