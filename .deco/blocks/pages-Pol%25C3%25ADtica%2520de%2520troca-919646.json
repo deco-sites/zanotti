@@ -7,6 +7,20 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "website/sections/Seo/SeoV2.tsx",
+        "title": "Zanotti Refrigeração - Política de Troca",
+        "titleTemplate": "Zanotti Refrigeração - Política de Troca",
+        "description": "A Zanotti Refrigeração é uma empresa brasileira com 67 anos de história onde você compra os seus equipamentos para qualquer negócio do ramo alimentício. Aqui voce encontra nossa política de troca e devolução.",
+        "favicon": "https://data.decoassets.com/zanotti/593920ea-afc1-4fcd-9fa0-5ca2e05c4878/icon.png",
+        "descriptionTemplate": "%s",
+        "type": "website",
+        "jsonLDs": [],
+        "image": "https://data.decoassets.com/zanotti/593920ea-afc1-4fcd-9fa0-5ca2e05c4878/icon.png"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "Header"
       }
     },

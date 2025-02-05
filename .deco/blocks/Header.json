@@ -236,9 +236,25 @@
           "url": "/visa-coolers"
         }
       ],
-      "name": "Equipamentos",
+      "name": "Equip. De Cocção",
       "url": "#",
       "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/2718f014-f059-4fce-affb-0a1bf1cd3a66/alt.svg"
+    },
+    {
+      "children": [],
+      "name": "Equip. De Produção"
+    },
+    {
+      "children": [],
+      "name": "Eletroportáteis Profissionais"
+    },
+    {
+      "children": [],
+      "name": "Expositores"
+    },
+    {
+      "children": [],
+      "name": "Móveis Comerciais"
     },
     {
       "children": [
@@ -268,62 +284,13 @@
           "children": []
         }
       ],
+      "name": "Câmaras Frias",
       "url": "#",
-      "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/2718f014-f059-4fce-affb-0a1bf1cd3a66/alt.svg",
-      "name": "Câmaras Frias"
-    },
-    {
-      "children": [
-        {
-          "url": "equipamentos-para-acougue",
-          "name": "Equipamentos para Açougue"
-        },
-        {
-          "name": "Equipamentos para Cafeteria",
-          "url": "equipamentos-para-cafeteria"
-        },
-        {
-          "name": "Equipamentos para Empório",
-          "url": "equipamentos-para-emporio"
-        },
-        {
-          "name": "Equipamentos para Hamburgueria",
-          "url": "Equipamentos-para-hamburgueria"
-        },
-        {
-          "name": "Equipamentos para Lanchonete e Bar",
-          "url": "equipamentos-para-lanchonete-e-bar"
-        },
-        {
-          "name": "Equipamentos para Loja de Conveniência",
-          "url": "equipamentos-para-loja-de-conveniencia"
-        },
-        {
-          "name": "Equipamentos para Padaria",
-          "url": "equipamentos-para-padaria"
-        },
-        {
-          "name": "Equipamentos para Pizzaria",
-          "url": "https://www.zanottirefrigeracao.com.br/equipamentos-para-pizzaria"
-        },
-        {
-          "name": "Equipamentos Residenciais",
-          "url": "equipamentos-residenciais"
-        },
-        {
-          "name": "Equipamentos para Supermercado",
-          "url": "equipamentos-para-supermercado"
-        }
-      ],
-      "name": "Por Segmento",
-      "url": "/compre-por-segmentos",
-      "hasNavImage": false
+      "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/2718f014-f059-4fce-affb-0a1bf1cd3a66/alt.svg"
     },
     {
       "children": [],
-      "name": "Promoções",
-      "url": "#",
-      "ishighlighted": true
+      "name": "Promoções"
     }
   ],
   "searchbar": {
@@ -336,7 +303,7 @@
     }
   },
   "alerts": [
-    "<p>Zanotti Refrigeração, <strong>67 anos de história!</strong></p>",
+    "<p>Zanotti Refrigeração, <strong>68 anos de história!</strong></p>",
     "<p>Sua primeira compra? Use o cupom: <strong>PRIMEIRACOMPRA</strong></p>",
     "<p><strong>Frete grátis </strong>para Ribeirão Preto/SP e Bonfim Paulista/SP</p>"
   ],

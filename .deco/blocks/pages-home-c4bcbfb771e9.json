@@ -14,24 +14,29 @@
       "__resolveType": "site/sections/Images/Carousel.tsx",
       "images": [
         {
-          "desktop": "https://placehold.co/1920x600",
-          "alt": "/",
+          "desktop": "https://data.decoassets.com/zanotti/8767c244-c387-4a3a-9b53-7b49b27b684f/01-d.jpg",
           "action": {
             "href": "/",
             "label": "Confira"
           },
-          "mobile": "https://placehold.co/640x600",
-          "href": "#"
+          "mobile": "https://data.decoassets.com/zanotti/a323dd71-0427-461e-9d3b-1b0b8c1c5961/01-m.jpg",
+          "alt": "Saldão Zanotti"
         },
         {
-          "desktop": "https://placehold.co/1920x600",
-          "alt": "/",
+          "desktop": "https://data.decoassets.com/zanotti/557a1045-46a7-41b0-8e69-4a353751cfe8/01.-2.png",
           "action": {
             "href": "/",
             "label": "Confira"
           },
-          "mobile": "https://placehold.co/640x600",
-          "href": "#"
+          "mobile": "https://data.decoassets.com/zanotti/27608861-0ac6-4cd4-8d79-c07bb942fcea/02---mobile-2.png",
+          "alt": "Cervejeira 402l vcfc 402 v",
+          "href": "/cervejeira-402l-vcfc-402-v-porta-de-vidro-preta-fricon/p"
+        },
+        {
+          "desktop": "https://data.decoassets.com/zanotti/3b0f95ad-ad6f-4e07-8897-9bd66fe504db/01.-5.png",
+          "mobile": "https://data.decoassets.com/zanotti/12169de8-53f7-44c0-a139-8a164c9fa0a7/02---mobile-5.png",
+          "alt": "Chapa eletrica 100cm pr-1000",
+          "href": "/chapa-eletrica-100cm-pr-1000-e-style-progas/p"
         }
       ],
       "preload": true
@@ -42,7 +47,7 @@
     },
     {
       "__resolveType": "site/sections/Category/CarouselCategory.tsx",
-      "title": "Compre Por Categorias",
+      "title": "Compre Por Segmentos",
       "category": [
         {
           "image": "https://placehold.co/113x105",
@@ -226,59 +231,49 @@
       "visibleItems": 8,
       "categories": [
         {
-          "label": "categoria 1",
+          "label": "Açougue",
           "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg"
         },
         {
-          "label": "categoria 1",
+          "label": "Cafeteria",
           "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg"
         },
         {
-          "label": "categoria 1",
+          "label": "Empório",
           "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg"
         },
         {
-          "label": "categoria 1",
+          "label": "Hamburgueria",
           "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg"
         },
         {
-          "label": "categoria 1",
+          "label": "Lanchonete e Bar",
           "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg"
         },
         {
-          "label": "categoria 1",
+          "label": "Loja de Conveniência",
           "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg"
         },
         {
-          "label": "categoria 1",
+          "label": "Padaria",
           "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg"
         },
         {
-          "label": "categoria 1",
+          "label": "Pizzarias",
           "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg"
         },
         {
-          "label": "categoria 1",
+          "label": "Residenciais",
           "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg"
         },
         {
-          "label": "categoria 1",
+          "label": "Restaurantes",
           "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg"
         },
         {
-          "label": "categoria 1",
+          "label": "Supermercado",
           "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg"
-        },
-        {
-          "label": "categoria 1",
-          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg"
-        },
-        {
-          "label": "categoria 1",
-          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg"
-        },
-        {},
-        {}
+        }
       ]
     },
     {

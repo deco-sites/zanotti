@@ -5,7 +5,15 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "Seov2"
+        "__resolveType": "website/sections/Seo/SeoV2.tsx",
+        "title": "Zanotti Refrigeração - Fale Conosco",
+        "titleTemplate": "Zanotti Refrigeração - Fale Conosco",
+        "description": "A Zanotti Refrigeração é uma empresa brasileira com 67 anos de história onde você compra os seus equipamentos para qualquer negócio do ramo alimentício. Nessa página voce encontra as maneiras de falar conosco.",
+        "favicon": "https://data.decoassets.com/zanotti/593920ea-afc1-4fcd-9fa0-5ca2e05c4878/icon.png",
+        "descriptionTemplate": "A Zanotti Refrigeração é uma empresa brasileira com 67 anos de história onde você compra os seus equipamentos para qualquer negócio do ramo alimentício. Nessa página voce encontra as maneiras de falar conosco.",
+        "type": "website",
+        "jsonLDs": [],
+        "image": "https://data.decoassets.com/zanotti/593920ea-afc1-4fcd-9fa0-5ca2e05c4878/icon.png"
       }
     },
     {
@@ -18,8 +26,9 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Images/FulllBanner.tsx",
-        "srcDesktop": "https://data.decoassets.com/zanotti/f7e1333d-05c6-48ad-9659-2768c820b162/Banner.png",
-        "srcMobile": "https://data.decoassets.com/zanotti/d9b4a55d-f553-4815-8417-dfdd9e10ed77/Frame-37153.png"
+        "srcDesktop": "https://data.decoassets.com/zanotti/7f59e949-30d0-4c03-b564-82ff693d454b/Unsplash-picture.jpg",
+        "srcMobile": "https://data.decoassets.com/zanotti/7f59e949-30d0-4c03-b564-82ff693d454b/Unsplash-picture.jpg",
+        "alt": "Como falar com a Zanotti Refrigeração"
       }
     },
     {

@@ -5,6 +5,20 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "website/sections/Seo/SeoV2.tsx",
+        "title": "Zanotti Refrigeração - %s",
+        "titleTemplate": "Zanotti Refrigeração - %s",
+        "description": "A Zanotti Refrigeração é uma empresa brasileira com 67 anos de história onde você compra os seus equipamentos para qualquer negócio do ramo alimentício.",
+        "favicon": "https://data.decoassets.com/zanotti/593920ea-afc1-4fcd-9fa0-5ca2e05c4878/icon.png",
+        "descriptionTemplate": "%s",
+        "type": "website",
+        "jsonLDs": [],
+        "image": "https://data.decoassets.com/zanotti/593920ea-afc1-4fcd-9fa0-5ca2e05c4878/icon.png"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "Header"
       }
     },
@@ -37,14 +51,14 @@
         "__resolveType": "site/sections/Product/ProductShelf.tsx",
         "products": {
           "__resolveType": "vtex/loaders/legacy/relatedProductsLoader.ts",
-          "crossSelling": "whosawalsosaw",
-          "count": 10,
+          "crossSelling": "similars",
           "slug": {
             "__resolveType": "website/functions/requestToParam.ts",
             "param": "slug"
-          }
+          },
+          "count": 6
         },
-        "title": "Quem viu, viu também"
+        "title": "Produtos Similares"
       }
     },
     {
@@ -63,30 +77,6 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "Footer Component"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Spacer.tsx"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Spacer.tsx"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Spacer.tsx"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "Seov2"
       }
     }
   ],

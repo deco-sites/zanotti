@@ -12,9 +12,15 @@
           "href": "/visite-nossa-loja",
           "title": "Visite Nossa Loja",
           "blank": false
+        },
+        {
+          "title": "Nosso Blog",
+          "href": "https://blog.zanottirefrigeracao.com.br/",
+          "blank": true
         }
       ],
-      "title": "Institucional"
+      "title": "Institucional",
+      "blank": false
     },
     {
       "title": "Conta",
@@ -22,15 +28,17 @@
         {
           "title": "Minha Conta",
           "href": "/account",
-          "blank": true
+          "blank": false
         },
         {
           "title": "Meus Pedidos",
-          "blank": true
+          "blank": false,
+          "href": "/account#orders"
         },
         {
-          "title": "Favoritos",
-          "blank": true
+          "title": "Meus Favoritos",
+          "blank": false,
+          "href": "/wishlist"
         }
       ]
     },
@@ -88,16 +96,16 @@
   "social": [
     {
       "alt": "facebook",
-      "href": "facebook",
+      "href": "https://www.facebook.com/zntrefrigeracao/",
       "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/1ad5aee3-d446-4a8e-95f5-ee52d23fda88/Frame-(1).svg",
-      "title": "facebook",
+      "title": "Facebook",
       "imageDesktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/1ad5aee3-d446-4a8e-95f5-ee52d23fda88/Frame-(1).svg",
       "imageMobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/722b1dc9-046a-4662-adf6-69cf1dbbf0d6/Frame-(3).svg"
     },
     {
       "alt": "Instagram",
       "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/02c476f1-3c77-4c2d-9b72-bf31c9557d7c/Vector-(1).svg",
-      "href": "Instagram",
+      "href": "https://www.instagram.com/zanottirefrigeracao/",
       "title": "Instagram",
       "imageDesktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/02c476f1-3c77-4c2d-9b72-bf31c9557d7c/Vector-(1).svg",
       "imageMobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/d90d7122-1a60-4da3-be47-77161963d29c/Frame-(5).svg"
@@ -105,8 +113,8 @@
     {
       "alt": "youtube",
       "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/fc559024-cac5-455d-bce0-2edd99a4ec70/Frame.svg",
-      "title": "youtube",
-      "href": "https://www.instagram.com/",
+      "title": "Youtube",
+      "href": "https://www.youtube.com/c/zanottirefrigeracao",
       "imageDesktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/fc559024-cac5-455d-bce0-2edd99a4ec70/Frame.svg",
       "imageMobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/b5b95878-bc15-4293-8d42-6eee110b70e2/Frame-(4).svg"
     }
