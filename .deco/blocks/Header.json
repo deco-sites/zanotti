@@ -40,11 +40,6 @@
         },
         {
           "children": [],
-          "url": "/balcoes-mistos",
-          "name": "Balcões Mistos"
-        },
-        {
-          "children": [],
           "url": "/balcoes-refrigerados",
           "name": "Balcões Refrigerados"
         },
@@ -80,11 +75,6 @@
         },
         {
           "children": [],
-          "url": "/camaras-climaticas",
-          "name": "Câmaras Climáticas"
-        },
-        {
-          "children": [],
           "url": "/carrinhos-ambulantes",
           "name": "Carrinhos Ambulantes"
         },
@@ -104,16 +94,12 @@
           "name": "Char Broilers"
         },
         {
-          "name": "Check-Outs",
-          "url": "/check-outs"
+          "url": "/check-outs",
+          "name": "Check-Outs"
         },
         {
-          "name": "Cilindros Laminadores",
-          "url": "/cilindros-laminadores"
-        },
-        {
-          "name": "Conservadores de Frituras",
-          "url": "/conservadores-de-frituras"
+          "url": "/conservadores-de-frituras",
+          "name": "Conservadores de Frituras"
         },
         {
           "name": "Cortadores de Frios",
@@ -212,10 +198,6 @@
           "url": "/moinhos-de-pao"
         },
         {
-          "name": "Panquequeiras",
-          "url": "/panquequeiras"
-        },
-        {
           "name": "Pass-Throughs",
           "url": "/pass-throughs"
         },
@@ -228,33 +210,13 @@
           "url": "/serras-fita"
         },
         {
-          "name": "Ultracongeladores",
-          "url": "/ultracongeladores"
-        },
-        {
           "name": "Visa Coolers",
           "url": "/visa-coolers"
         }
       ],
-      "name": "Equip. De Cocção",
       "url": "#",
-      "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/2718f014-f059-4fce-affb-0a1bf1cd3a66/alt.svg"
-    },
-    {
-      "children": [],
-      "name": "Equip. De Produção"
-    },
-    {
-      "children": [],
-      "name": "Eletroportáteis Profissionais"
-    },
-    {
-      "children": [],
-      "name": "Expositores"
-    },
-    {
-      "children": [],
-      "name": "Móveis Comerciais"
+      "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/2718f014-f059-4fce-affb-0a1bf1cd3a66/alt.svg",
+      "name": "Categorias"
     },
     {
       "children": [
@@ -270,7 +232,7 @@
         },
         {
           "name": "Painéis Isotérmicos",
-          "url": "/painéis-isotermicos",
+          "url": "/paineis-isotermicos",
           "children": []
         },
         {
@@ -286,7 +248,7 @@
       ],
       "name": "Câmaras Frias",
       "url": "#",
-      "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/2718f014-f059-4fce-affb-0a1bf1cd3a66/alt.svg"
+      "icon": "https://data.decoassets.com/zanotti/1945ffc5-0b95-4866-bb00-3d6e77bbe642/flacha.png"
     },
     {
       "children": [],
@@ -309,10 +271,10 @@
   ],
   "variant": "initial",
   "logo": {
-    "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/6e91361f-9633-4b91-8638-8c1040a26c4a/logo-zanotti.svg",
+    "src": "https://data.decoassets.com/zanotti/26e31637-2c45-4926-90eb-e2ac6d8bd6cd/LOGO-04-ZNT.png",
     "alt": "Zanotti",
-    "width": 128,
-    "height": 43
+    "width": 150,
+    "height": 30
   },
   "menu": {
     "navItems": [
