@@ -102,7 +102,7 @@ const Desktop = ({
                   <div class="bg-base-100 shadow rounded-box rounded-t-none">
                     <div className="container p-5 grid grid-cols-4 gap-5">
                       <ul>
-                        {item.children.slice(0, 15).map((children) => (
+                        {item.children.slice(0, 14).map((children) => (
                           <li>
                             <a class="text-black" href={children.url || "#"}>
                               {children.name}
@@ -111,7 +111,7 @@ const Desktop = ({
                         ))}
                       </ul>
                       <ul>
-                        {item.children.slice(15, 30).map((children) => (
+                        {item.children.slice(14, 28).map((children) => (
                           <li>
                             <a href={children.url || "#"}>{children.name}</a>
                           </li>
@@ -131,7 +131,7 @@ const Desktop = ({
                         : (
                           <>
                             <ul>
-                              {item.children.slice(30, 45).map((children) => (
+                              {item.children.slice(28, 42).map((children) => (
                                 <li>
                                   <a href={children.url || "#"}>
                                     {children.name}
@@ -140,7 +140,7 @@ const Desktop = ({
                               ))}
                             </ul>
                             <ul>
-                              {item.children.slice(45, 60).map((children) => (
+                              {item.children.slice(44, 56).map((children) => (
                                 <li>
                                   <a href={children.url || "#"}>
                                     {children.name}
