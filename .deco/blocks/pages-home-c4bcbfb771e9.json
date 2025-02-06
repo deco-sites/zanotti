@@ -329,10 +329,10 @@
               "Width": 320,
               "Height": 200
             },
-            "link": "/cafeteiras",
-            "alt": "Cafeterias automáticas só aqui na Zanotti Refrigeração.",
-            "desktopImage": "https://data.decoassets.com/zanotti/bec5a03b-49e0-4b18-9148-036fbc713756/CAFE.jpg",
-            "mobileImage": "https://data.decoassets.com/zanotti/740760e7-839c-4eae-9f94-201c37f0dacd/CAFE2.jpg"
+            "link": "/paineis-isotermicos",
+            "alt": "Painéis Isotérmicos só aqui na Zanotti Refrigeração.",
+            "desktopImage": "https://data.decoassets.com/zanotti/6916c161-5501-40f1-9ea3-6e54b0d30ea4/painel.jpg",
+            "mobileImage": "https://data.decoassets.com/zanotti/4cbdc85a-c10b-4575-8526-e9564b47f2d3/paine2.jpg"
           },
           {
             "Loading": "eager",
