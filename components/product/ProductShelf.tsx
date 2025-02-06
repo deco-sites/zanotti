@@ -14,7 +14,7 @@ export interface Props extends SectionHeaderProps {
   products: Product[] | null;
   
   /** @title Botão de comprar
-   * @description desmarque para mostrar o botão de comprar na vitrine 
+   * @description Marque para mostrar o botão de comprar na vitrine 
    * */
   hiddenAddToCart?:boolean;
 }
