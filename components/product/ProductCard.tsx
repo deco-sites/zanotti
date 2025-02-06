@@ -170,7 +170,7 @@ function ProductCard({
               />
             )}
         </a>
-        {!isPriceHidden && !hiddenAddToCartButton && inStock &&
+        {!isPriceHidden && hiddenAddToCartButton && inStock &&
           (
             <MinicartAdd
               product={product}
