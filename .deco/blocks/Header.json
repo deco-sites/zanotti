@@ -316,16 +316,16 @@
     }
   },
   "alerts": [
-    "<p>Zanotti Refrigeração, <strong>68 anos de história!</strong></p>",
-    "<p>Sua primeira compra? Use o cupom: <strong>PRIMEIRACOMPRA</strong></p>",
-    "<p><strong>Frete grátis </strong>para Ribeirão Preto/SP e Bonfim Paulista/SP</p>"
+    "<p>Zanotti Refrigeração <strong>68 anos !</strong></p>",
+    "<p>Primeira compra? Use o cupom <strong>PRIMEIRACOMPRA</strong></p>",
+    "<p><strong>Frete grátis </strong>para Ribeirão Preto/SP</p>"
   ],
   "variant": "initial",
   "logo": {
     "src": "https://data.decoassets.com/zanotti/26e31637-2c45-4926-90eb-e2ac6d8bd6cd/LOGO-04-ZNT.png",
-    "alt": "Zanotti",
-    "width": 150,
-    "height": 30
+    "alt": "Zanotti Refrigeração",
+    "width": 200,
+    "height": 40
   },
   "menu": {
     "navItems": [
