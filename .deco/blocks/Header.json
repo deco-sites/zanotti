@@ -251,8 +251,59 @@
       "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/2718f014-f059-4fce-affb-0a1bf1cd3a66/alt.svg"
     },
     {
+      "children": [
+        {
+          "name": "Açougue",
+          "url": "/184?map=productClusterIds"
+        },
+        {
+          "name": "Bar",
+          "url": "/190?map=productClusterIds"
+        },
+        {
+          "name": "Cafeteria",
+          "url": "185?map=productClusterIds"
+        },
+        {
+          "name": "Conveniência",
+          "url": "/186?map=productClusterIds"
+        },
+        {
+          "name": "Empório",
+          "url": "/185?map=productClusterIds"
+        },
+        {
+          "name": "Hamburgueria",
+          "url": "/188?map=productClusterIds"
+        },
+        {
+          "name": "Padaria",
+          "url": "/191?map=productClusterIds"
+        },
+        {
+          "name": "Pizzarias",
+          "url": "/194?map=productClusterIds"
+        },
+        {
+          "name": "Residenciais",
+          "url": "/189?map=productClusterIds"
+        },
+        {
+          "name": "Restaurantes",
+          "url": "/192?map=productClusterIds"
+        },
+        {
+          "name": "Supermercado",
+          "url": "/193?map=productClusterIds"
+        }
+      ],
+      "name": "Segmentos",
+      "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/2718f014-f059-4fce-affb-0a1bf1cd3a66/alt.svg"
+    },
+    {
       "children": [],
-      "name": "Promoções"
+      "name": "Promoções",
+      "url": "/145?map=productClusterIds"
     }
   ],
   "searchbar": {
