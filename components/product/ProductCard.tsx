@@ -26,6 +26,7 @@ interface Props {
   hiddenFlags?: boolean;
   productFlags: ProductFlag[];
   productGroupID?: string;
+    /** @description Marque para ocultar botão de compra */
   hiddenAddToCartButton?: boolean;
 }
 

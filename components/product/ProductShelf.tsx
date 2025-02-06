@@ -12,6 +12,11 @@ import type { SectionProps } from "@deco/deco";
 
 export interface Props extends SectionHeaderProps {
   products: Product[] | null;
+  
+  /** @title Botão de comprar
+   * @description desmarque para mostrar o botão de comprar na vitrine 
+   * */
+  hiddenAddToCart?:boolean;
 }
 
 export const loader = (props: Props, _req: Request, ctx: AppContext) => {
@@ -24,6 +29,7 @@ export default function ProductShelf({
   products,
   title,
   productFlags,
+  hiddenAddToCart = true,
 }: SectionProps<typeof loader>) {
   const id = useId();
   if (!products || products.length === 0) {
@@ -61,6 +67,7 @@ export default function ProductShelf({
           products={products}
           pixDiscount={pixDiscount}
           itemListName={title}
+          hiddenAddToCart={hiddenAddToCart}
         />
       </div>
     </div>

@@ -11,9 +11,10 @@ interface Props {
   products: Product[];
   pixDiscount?: number;
   itemListName?: string;
+  hiddenAddToCart?:boolean;
 }
 
-function ProductSlider({ products, itemListName, pixDiscount, productFlags }: Props) {
+function ProductSlider({ products, itemListName, pixDiscount, productFlags, hiddenAddToCart }: Props) {
   const id = useId();
   return (
     <>
@@ -40,6 +41,7 @@ function ProductSlider({ products, itemListName, pixDiscount, productFlags }: Pr
                   pixDiscount={pixDiscount}
                   itemListName={itemListName}
                   class="w-[287px] sm:w-[300px]"
+                  hiddenAddToCartButton={hiddenAddToCart}
                 />
               </Slider.Item>
             ))}
