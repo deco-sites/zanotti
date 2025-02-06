@@ -232,19 +232,19 @@
       "categories": [
         {
           "label": "Açougue",
-          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg"
+          "image": "https://data.decoassets.com/zanotti/5f888530-a53d-460b-a48b-3c38333d5df4/acougue.jpg"
         },
         {
           "label": "Cafeteria",
-          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg"
+          "image": "https://data.decoassets.com/zanotti/da6b73a0-7ccb-4772-9c17-b1755b67d9c0/acougue2.jpg"
         },
         {
           "label": "Empório",
-          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg"
+          "image": "https://data.decoassets.com/zanotti/8965bd6e-a1ee-4ed6-9189-d987974309ed/acougue3.jpg"
         },
         {
           "label": "Hamburgueria",
-          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg"
+          "image": "https://data.decoassets.com/zanotti/f99d44f0-ad35-4cc7-b4da-8485de150f4b/acougue4.jpg"
         },
         {
           "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg",
@@ -290,7 +290,7 @@
           "__resolveType": "vtex/loaders/legacy/productList.ts",
           "props": {
             "sort": "OrderByPriceASC",
-            "count": 6,
+            "count": 12,
             "collection": "145"
           }
         },
