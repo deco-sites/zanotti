@@ -232,47 +232,58 @@
       "categories": [
         {
           "label": "Açougue",
-          "image": "https://data.decoassets.com/zanotti/5f888530-a53d-460b-a48b-3c38333d5df4/acougue.jpg"
+          "image": "https://data.decoassets.com/zanotti/7b19e59b-67a5-4c06-8db5-d6c618b47104/acougue5.jpg",
+          "link": "/184?map=productClusterIds"
+        },
+        {
+          "label": "Bar",
+          "image": "https://data.decoassets.com/zanotti/36ce1327-2e6f-4b7b-8bdc-0c61bb4a4bcb/bar.jpg",
+          "link": "/190?map=productClusterIds"
         },
         {
           "label": "Cafeteria",
-          "image": "https://data.decoassets.com/zanotti/da6b73a0-7ccb-4772-9c17-b1755b67d9c0/acougue2.jpg"
-        },
-        {
-          "label": "Empório",
-          "image": "https://data.decoassets.com/zanotti/8965bd6e-a1ee-4ed6-9189-d987974309ed/acougue3.jpg"
-        },
-        {
-          "label": "Hamburgueria",
-          "image": "https://data.decoassets.com/zanotti/f99d44f0-ad35-4cc7-b4da-8485de150f4b/acougue4.jpg"
-        },
-        {
-          "image": "https://data.decoassets.com/zanotti/7b19e59b-67a5-4c06-8db5-d6c618b47104/acougue5.jpg",
-          "label": "Bar"
+          "image": "https://data.decoassets.com/zanotti/213cd8e3-4373-464f-9924-e1a0e3191c9f/cafe.jpg",
+          "link": "/185?map=productClusterIds"
         },
         {
           "label": "Conveniência",
-          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg"
+          "image": "https://data.decoassets.com/zanotti/e0a1fd1d-64aa-4105-a35e-8cba8490cc49/conv.jpg",
+          "link": "/186?map=productClusterIds"
+        },
+        {
+          "image": "https://data.decoassets.com/zanotti/47b50d3d-fe81-4b15-840d-5d4e9c5565be/emporio.jpg",
+          "label": "Empório",
+          "link": "/185?map=productClusterIds"
+        },
+        {
+          "label": "Hamburgueria",
+          "image": "https://data.decoassets.com/zanotti/5da426d4-cbd1-44f2-b8fa-920070fdbe91/hamburg.jpg",
+          "link": "/188?map=productClusterIds"
         },
         {
           "label": "Padaria",
-          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg"
+          "image": "https://data.decoassets.com/zanotti/f026a39e-2814-4035-97ad-ed2dcc91c17b/padar.jpg",
+          "link": "/191?map=productClusterIds"
         },
         {
           "label": "Pizzarias",
-          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg"
+          "image": "https://data.decoassets.com/zanotti/b7af1332-2af9-4fe2-bc1b-3498ea23558c/pizza.jpg",
+          "link": "/194?map=productClusterIds"
         },
         {
           "label": "Residenciais",
-          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg"
+          "image": "https://data.decoassets.com/zanotti/cfde7bcf-cf04-407c-b2aa-27d34295a524/resi.jpg",
+          "link": "/189?map=productClusterIds"
         },
         {
           "label": "Restaurantes",
-          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg"
+          "image": "https://data.decoassets.com/zanotti/5ca81a1e-cd8d-4d7e-9b00-9de6294189f0/rest.jpg",
+          "link": "/192?map=productClusterIds"
         },
         {
           "label": "Supermercado",
-          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/zanotti/ecccbbb0-2486-4baa-9f34-76735dfa9e9e/Rectangle-49.svg"
+          "image": "https://data.decoassets.com/zanotti/82f20021-14bc-422c-986a-c7dabee216eb/super.jpg",
+          "link": "/193?map=productClusterIds"
         }
       ]
     },
