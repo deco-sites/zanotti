@@ -1,5 +1,4 @@
 {
-  "name": "Departamento",
   "path": "/*",
   "default": {
     "possiblePaths": []
@@ -13,22 +12,6 @@
     },
     {
       "__resolveType": "Header"
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Category/CategoryBanner.tsx",
-        "banners": [
-          {
-            "image": {
-              "desktop": "https://data.decoassets.com/zanotti/f3e6c67a-78a8-4b2b-84ab-5e20624ad983/01.jpg",
-              "alt": "amaciador de carne",
-              "mobile": "https://data.decoassets.com/zanotti/f3e6c67a-78a8-4b2b-84ab-5e20624ad983/01.jpg"
-            },
-            "matcher": "/amaciadores-de-carne"
-          }
-        ]
-      }
     },
     {
       "__resolveType": "site/sections/Product/SearchResult.tsx",
@@ -58,5 +41,6 @@
       "__resolveType": "Footer Component"
     }
   ],
-  "__resolveType": "website/pages/Page.tsx"
+  "__resolveType": "website/pages/Page.tsx",
+  "name": "Categoria"
 }
