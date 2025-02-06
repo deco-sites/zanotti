@@ -346,10 +346,10 @@
               "Width": 320,
               "Height": 200
             },
-            "link": "/paineis-isotermicos",
-            "alt": "Paineis Isotermicos em EPS voce encontra aqui na Zanotti Refrigeração!",
-            "desktopImage": "https://data.decoassets.com/zanotti/00b3052c-43a8-4f62-ba74-5bedbaee6138/painel1.jpg",
-            "mobileImage": "https://data.decoassets.com/zanotti/8e233aa6-5a47-4032-8871-fa2a32a32011/painel2.jpg"
+            "link": "/liquidificadores",
+            "alt": "Liquidificadores industriais voce encontra aqui na Zanotti Refrigeração!",
+            "desktopImage": "https://data.decoassets.com/zanotti/b7306a65-8c72-4222-aa41-b1b4ee1264c8/liquid-d.jpg",
+            "mobileImage": "https://data.decoassets.com/zanotti/b29543dc-bcd1-4933-807e-0a381505690f/liquid-m.jpg"
           },
           {
             "Loading": "eager",
@@ -362,7 +362,11 @@
               "Image": "https://placehold.co/320x200",
               "Width": 320,
               "Height": 200
-            }
+            },
+            "desktopImage": "https://data.decoassets.com/zanotti/e9920073-34a1-4e46-85e8-682fad127ba3/bebe-d.jpg",
+            "mobileImage": "https://data.decoassets.com/zanotti/1778a192-7d4f-42fe-9e62-c3c1bfa78782/bebe-m.jpg",
+            "link": "/bebedouros",
+            "alt": "Bebedouros industriais e residenciais você encontra aqui na Zanotti!"
           },
           {
             "Loading": "eager",
@@ -375,7 +379,11 @@
               "Image": "https://placehold.co/320x200",
               "Width": 320,
               "Height": 200
-            }
+            },
+            "link": "/estufas",
+            "alt": "Estufas para salgados voce encontra aqui na Zanotti Refrigeração!",
+            "desktopImage": "https://data.decoassets.com/zanotti/30f1d4ca-e2f6-4d45-959e-93d14a80b6a9/estufa-d.jpg",
+            "mobileImage": "https://data.decoassets.com/zanotti/a8df7884-87fa-48c7-9e5c-98fc50cda0e8/estufa-m.jpg"
           },
           {
             "Loading": "eager",
@@ -388,7 +396,11 @@
               "Image": "https://placehold.co/320x200",
               "Height": 200,
               "Width": 320
-            }
+            },
+            "desktopImage": "https://data.decoassets.com/zanotti/b9a77402-f4a3-431f-8689-33f804d8d9c0/cort-d.jpg",
+            "mobileImage": "https://data.decoassets.com/zanotti/b765f4b6-6c71-48f4-831e-528a0241fe7e/cort-m.jpg",
+            "link": "/cortadores-de-frios",
+            "alt": "Cortadores de frios você encontra aqui na Zanotti Refrigeração!"
           }
         ]
       }
